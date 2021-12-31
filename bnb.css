@@ -1,34 +1,78 @@
-.charsheet .sheet-grid-section{
-	display: grid;
-	grid-template-columns: 400px 200px;
-	grid-template-rows:  60px 150px 150px 150px;
-	grid-template-areas:"namelvl hp     "
-						"skills  stat   "
-						"skills  equip  "
-						"notes   equip  ";
-	grid-gap: 5px;
-  }
-  .charsheet .sheet-block{
-	display: grid;
-	justify-content: center;
-	padding: 5px;
-	border: 3px solid black;
-  }
-  .charsheet .sheet-namelvl{
-	grid-area: namelvl;
-  }
-  .charsheet .sheet-hp{
-	grid-area: hp;
-  }
-  .charsheet .sheet-stat{
-	grid-area: stat;
-  }
-  .charsheet .sheet-skills{
-	grid-area: skills;
-  }
-  .charsheet .sheet-equip{
-	grid-area: equip;
-  }
-  .charsheet .sheet-notes{
-	grid-area: notes;
-  }
+.charsheet{
+    background-color: white;
+    width:80%;
+    margin-left:10%;
+}
+
+#header {
+    display:grid;
+    grid-template-rows: 75px;
+    grid-template-columns: 20%;
+    grid-template-areas: "title archetype archetype class class"
+                         "name name bg bg level"
+                         "skill skill skill skill skill";
+}
+#header .item {
+    background-color: lightblue;
+    display:block;
+    border: solid black 2px;
+    overflow: hidden;
+}
+#header .item .box_label {
+    float:left;
+    vertical-align: top;
+    padding-right:20px;
+}
+#header .item .main_content {
+    float: left;
+    vertical-align: middle;
+}
+#class{
+    grid-area: class;
+}
+#title{
+    grid-area:title;
+}
+#name{
+    grid-area:name;
+}
+#arch{
+    grid-area:archetype;
+}
+#bg{
+    grid-area: bg;
+}
+#lvl{
+    grid-area:level;
+}
+#skill {
+    grid-area:skill;
+    height:100px;
+}
+
+.modifier{
+    float:right;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: solid black 2px;
+    display:grid;
+    grid-template-areas: "mod"
+                         "mod"
+                         "small";
+    grid-template-rows: 10px;
+    grid-template-columns: 40px;
+    height:40px;
+    width:40px;
+    overflow: hidden;
+    vertical-align: bottom;
+}
+.modifier .small{
+    font-size: 10px;
+    grid-area: small;
+    margin:0px;
+}
+.modifier .mod{
+    margin:0px;
+    font-size: 25px;
+    grid-area: mod;
+}
