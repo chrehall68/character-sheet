@@ -4,6 +4,8 @@
     margin-left:10%;
 }
 
+/** -------------HEADER STYLES------------- 
+(name, lvl, background, etc) */
 #header {
     display:grid;
     grid-template-rows: 75px;
@@ -50,6 +52,8 @@
     height:100px;
 }
 
+/** -------------MODIFIER BOX STYLES-------------
+used for those small boxes with +1's or +2's, etc */
 .modifier{
     float:right;
     border-top-left-radius: 10px;
@@ -75,4 +79,54 @@
     margin:0px;
     font-size: 25px;
     grid-area: mod;
+}
+
+#main_page {
+    display:grid;
+    
+    padding: 0px 8px;  /* 0 hor, 8 vert */
+    /*grid-template-columns: repeat(auto-fit, 5%);
+    grid-template-rows: repeat(auto-fit, 40px);*/
+    /* 36 rows, 16 cols?*/
+    /*
+    grid-template-areas: ". accHead accHead dmgHead dmgHead speedHead speedHead mastHead mastHead initHead initHead initNumbers initNumbers initNumbers initNumbers gun1"
+                         ". accBody accBody dmgBody dmgBody speedBody speedBody mastBody mastBody initHead initHead initNumbers initNumbers initNumbers initNumbers gun1"
+                         ". accBody accBody dmgBody dmgBody speedBody speedBody mastBody mastBody moveHead moveHead moveNumbers moveNumbers moveNumbers moveNumbers gun1"
+                         ". hpHead  hpHead  hpHead  hpHead  checkHead checkHead checkHead checkHead checkHead moveHead moveNumbers moveNumbers moveNumbers moveNumbers gun1"
+                         ". curHp   curHp   maxHp   hpRegen checkBody checkBody checkBody checkBody checkBody meeleDieHead meeleDieHead"
+                         ""
+                         ""
+                         ""
+                         ""
+                         ""
+                         ""
+                         ""
+                         ""
+                         ""
+                         ""
+                         ""
+                         ""
+                         ""
+                         ""
+                         ""
+                         ""
+                         ""
+                         ""
+                         ""
+                         ""
+                         ""
+                         ""
+                         ""
+                         ""
+                         ""
+                         ""
+                         ""
+                         ""
+                         ""
+                         ""
+                         "";
+                         */
+    justify-content: center;
+    height:80%;
+    border:2px solid black;
 }

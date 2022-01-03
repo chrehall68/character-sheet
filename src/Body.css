@@ -1,0 +1,156 @@
+.body{
+    display:grid;
+    height: 500px;
+    grid-template-columns: repeat(auto-fit, 60px);
+    grid-template-rows:repeat(auto-fit, 12.5px);
+    border: 2px solid black;
+    gap: 8px;
+    grid-auto-flow: dense;
+}
+
+/** ----------SmallAttr styles---------- */
+.smallAttr{
+    grid-column: span 2;
+    grid-row: span 4;
+    overflow:hidden;
+
+    display:grid;
+    grid-template-areas: "header header header"
+                         "value value mod";
+
+    grid-template-columns: 60px;
+
+    border: 2px solid black;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+}
+.smallAttr .header{
+    text-align: center;
+    /*  margin/padding: all  
+        margin/padding: vertical | horizontal*/
+    margin: 0px auto;
+    padding: 0px auto;
+    grid-area: header;
+    border-bottom: solid black 1px;
+}
+.smallAttr .value{
+    text-align:right;
+    grid-area: value;
+    display:inline;
+    padding: auto auto;
+    margin: 0px auto;
+}
+.smallAttr .attr_mod{
+    grid-area: mod;
+    display:inline;
+    vertical-align: middle;
+    float:right;
+}
+
+/** ----------GunBar styles---------- */
+.gunBar{
+    border: solid black 2px;
+    grid-column: span 1;
+    grid-row: span 12;
+    overflow:hidden;
+    display:block;
+
+    width:66.6%;
+    transform: translateX(33.3%);
+}
+.gunBar p{
+    text-align: center;
+    overflow:visible;
+    width:max-content;
+    transform: rotateZ(-90deg) translateX(-100px) translateY(-50%);
+}
+
+/** ----------LongAttr styles---------- */
+.longAttrHeader{
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    width:136px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.oneRow{
+    grid-column:span 2;
+    grid-row:span 2;
+    height: 25px;
+    margin: 0px auto;
+    padding: 0px auto;
+    text-align: center;
+}
+.twoRow{
+    grid-column:span 2;
+    grid-row:span 4;
+    margin: 0px auto;
+    padding: 0px auto;
+}
+.longAttr{
+    grid-column:span 4;
+    grid-row:span 4;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+/** ----------MainAndLabelBox styles---------- */
+.mainAndLabelBox{
+    display:grid;
+    grid-template-areas: "main"
+                         "main"
+                         "label";
+    height: 45px;
+    grid-template-rows: 15px;
+    
+    border: 1px solid black;
+    overflow: hidden;
+} 
+.mainAndLabelBox .main{
+    grid-area: main;
+    font-size:25px;
+    font-weight: bold;
+    padding: 0px auto;
+    margin: 0px auto;
+}
+.mainAndLabelBox .label{
+    grid-area: label;
+    font-size:8px;
+    padding: 0px auto;
+    margin: 0px auto;
+}
+
+.headerCurMaxMod{
+    grid-column: span 4;
+    grid-row: span 4;
+    display: grid;
+    grid-template-areas: "header header header"
+                         "cur max mod";
+    overflow:hidden;
+    border: 1px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.headerCurMaxMod .header {
+    grid-area:header;
+    margin: 0px auto;
+    padding: 0px auto;
+}
+.headerCurMaxMod .current {
+    grid-area:cur;
+    width:105px;
+}
+.headerCurMaxMod .max {
+    grid-area:max;
+    width:105px;
+}
+.headerCurMaxMod .mod {
+    grid-area:mod;
+    width:46px;
+}

@@ -1,0 +1,64 @@
+.modifier{
+    float:right;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: solid black 2px;
+    display: grid;
+    grid-template-areas: "mod"
+                         "mod"
+                         "desc";
+    grid-template-rows: 13px;
+    grid-template-columns: 40px;
+    height:40px;
+    width:40px;
+    vertical-align: bottom;
+    margin: 0px;
+}
+.modifier .small{
+    vertical-align: top;
+    float:left;
+    font-size: 10px;
+    grid-area: desc;
+    margin:0px;
+    padding:0px;
+}
+.modifier .mod{
+    margin:0px;
+    padding:0px;
+    font-size: 25px;
+    grid-area: mod;
+    font-weight:bold;
+}
+
+.largeModifier{
+    float:right;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: solid black 2px;
+    display: grid;
+    grid-template-areas: "mod"
+                         "mod"
+                         "desc";
+    grid-template-rows: 20px;
+    grid-template-columns: 60px;
+    height:60px;
+    width:60px;
+    vertical-align: bottom;
+    margin: 0px;
+}
+.largeModifier .small{
+    vertical-align: top;
+    float:left;
+    font-size: 10px;
+    grid-area: desc;
+    margin:0px;
+    padding:0px;
+}
+.largeModifier .mod{
+    margin:0px;
+    padding:0px;
+    font-size: 30px;
+    grid-area: mod;
+    text-align: center;
+    font-weight:bold;
+}

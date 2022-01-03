@@ -1,0 +1,47 @@
+#header {
+    display:grid;
+    grid-template-rows: 75px;
+    grid-template-columns: 20%;
+    grid-template-areas: "title archetype archetype class class"
+                         "name name bg bg level"
+                         "skill skill skill skill skill";
+}
+#header .item {
+    background-color: lightblue;
+    display:block;
+    border: solid black 2px;
+    overflow: hidden;
+    height:75px;
+}
+#header .item .box_label {
+    float:left;
+    vertical-align: top;
+    padding-right:20px;
+    margin:0px;
+}
+#header .item .main_content {
+    float: left;
+    vertical-align: middle;
+}
+#header .class{
+    grid-area: class;
+}
+#header .title{
+    grid-area:title;
+}
+#header .name{
+    grid-area:name;
+}
+#header .arch{
+    grid-area:archetype;
+}
+#header .bg{
+    grid-area: bg;
+}
+#header .lvl{
+    grid-area:level;
+}
+#header .skill {
+    grid-area:skill;
+    height:100px;
+}
