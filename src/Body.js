@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Body.css"
 
-import { ModifierBox, LargeModifierBox } from './ModifierBox'
+import { ModifierBox, LargeModifierBox, LongModifierBox } from './ModifierBox'
 
 class SmallAttr extends React.Component {
     constructor(props) {
@@ -117,7 +117,38 @@ class Checks extends React.Component {
     }
 
     render() {
-        return <div></div>
+        return <div className="checks">
+            <p className="header">Checks</p>
+            <ChecksItem title="Interact" mod1name="acc" mod2name="misc" mod1val="1" mod2val="0" />
+            <ChecksItem title="Talk" mod1name="spd" mod2name="misc" mod1val="1" mod2val="0" />
+            <ChecksItem title="Insight" mod1name="acc" mod2name="misc" mod1val="1" mod2val="0" />
+            <ChecksItem title="Sneak" mod1name="MST" mod2name="misc" mod1val="1" mod2val="0" />
+        </div>
+    }
+}
+class ChecksItem extends React.Component {
+    constructor(props) {
+        super(props)
+        this.title = this.props.title
+        this.mod1name = this.props.mod1name
+        this.mod2name = this.props.mod2name
+        this.mod1val = this.props.mod1val
+        this.mod2val = this.props.mod2val
+
+        this.finalVal = `${Number(this.mod1val) + Number(this.mod2val)}`
+        this.finalVal = (this.finalVal >= 0 ? "+" + this.finalVal : "" + this.finalVal)
+    }
+    render() {
+        return (
+            <div className="checksItem">
+                <h2 className='checksItemTitle'>{this.title}</h2>
+                <LongModifierBox small_desc={this.mod1name} modifier={this.mod1val} className="val1" style={{ height: "40px", marginTop: "10px" }} />
+                <p className="plus">+</p>
+                <LongModifierBox small_desc={this.mod2name} modifier={this.mod2val} className="val2" style={{ height: "40px", marginTop: "10px" }} />
+                <p className="equals">=</p>
+                <LargeModifierBox small_desc="" modifier={this.finalVal} className="val3" style={{ height: "40px", marginTop: "10px" }} />
+            </div>
+        )
     }
 }
 
@@ -136,6 +167,7 @@ export class Body extends React.Component {
                 <GunBar>Current Gun</GunBar>
 
                 <Health />
+                <Checks />
             </div>
         )
     }

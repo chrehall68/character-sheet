@@ -154,3 +154,32 @@
     grid-area:mod;
     width:46px;
 }
+
+/* Checks stuff */
+.checks{
+    grid-column: span 5;
+    grid-row: span 13;
+    border: 1px solid black;
+}
+.checks .header {
+    grid-row: span 1;
+    text-align: center;
+    background-color: azure;
+    margin: 0px auto;
+    padding: 0px auto;
+    border-bottom: 1px solid black;
+}
+
+.checksItem{
+    display:grid;
+    grid-template-areas: "header val1 plus val2 equals val3";
+}
+.checksItem .val1{
+    grid-area:val1;
+}
+.checksItem .val2{
+    grid-area:val2;
+}
+.checksItem .val3{
+    grid-area:val3;
+}

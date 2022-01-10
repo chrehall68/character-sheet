@@ -34,3 +34,21 @@ export class LargeModifierBox extends React.Component {
             </span>)
     }
 }
+
+export class LongModifierBox extends React.Component {
+    constructor(props) {
+        super(props)
+        this.modifier = props.modifier
+        this.small_desc = props.small_desc
+        if (typeof (this.props.className) == "string") this.cn = this.props.className + " longModifier"
+        else this.cn = "longModifier"
+    }
+    render() {
+        return (
+            <span className={this.cn} style={this.props.style}>
+                <p className="mod">{this.modifier}</p>
+                <p className="small">{this.small_desc} <br />mod</p>
+            </span>
+        )
+    }
+}

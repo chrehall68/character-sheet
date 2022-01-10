@@ -62,3 +62,21 @@
     text-align: center;
     font-weight:bold;
 }
+
+.longModifier {
+    display:grid;
+    grid-template-areas: "small mod";
+    border: 1px solid black;
+    width:60px;
+    height: 60px;
+}
+.longModifier .small{
+    grid-area: small;
+    font-size: 10px;
+    margin: auto auto;
+}
+.longModifier .mod{
+    grid-area: mod;
+    font-size: 20px;
+    margin: auto auto;
+}
