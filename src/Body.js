@@ -52,13 +52,21 @@ class LongAttr extends React.Component {
         this.small_descs = this.props.small_descs
         this.items = this.mods.map((element, index) => {
             if (this.small_descs[index] != null) {
-                return <LargeModifierBox style={{ float: "left", margin: "auto 0.5px" }} small_desc={this.small_descs[index]} modifier={element} />
+                return <LargeModifierBox style={{ float: "left", margin: "auto auto" }} small_desc={this.small_descs[index]} modifier={element} />
             }
             else return <h1>{this.modifier}</h1>
         });
+
+        // add pluses and equals
+        for (var i = 0; i < this.mods.length - 1; i++) {
+            this.items.splice(i * 2 + 1, 0, <p>+</p>)
+        }
+        this.items.splice(this.items.length * 2 - 2, 0, <p>=</p>)
+
+        // get total for the last box
         let total = 0
         this.mods.forEach((element) => { if (typeof (element) == "number") total += element })
-        this.items.push(<LargeModifierBox style={{ float: "left", margin: "auto 0.5px" }} small_desc="" modifier={"+" + total} />)
+        this.items.push(<ModifierBox style={{ float: "left", margin: "auto auto", width: "40px", height: "40 px" }} small_desc="" modifier={"+" + total} />)
     }
 
     render() {
@@ -111,10 +119,6 @@ class MainAndLabelBox extends React.Component {
 }
 
 class Checks extends React.Component {
-    constructor(props) {
-        super(props)
-        // todo
-    }
 
     render() {
         return <div className="checks">
@@ -123,6 +127,8 @@ class Checks extends React.Component {
             <ChecksItem title="Talk" mod1name="spd" mod2name="misc" mod1val="1" mod2val="0" />
             <ChecksItem title="Insight" mod1name="acc" mod2name="misc" mod1val="1" mod2val="0" />
             <ChecksItem title="Sneak" mod1name="MST" mod2name="misc" mod1val="1" mod2val="0" />
+            <ChecksItem title="Search" mod1name="MST" mod2name="misc" mod1val="1" mod2val="0" />
+            <ChecksItem title="Traverse" mod1name="SPD" mod2name="misc" mod1val="2" mod2val="0" />
         </div>
     }
 }
@@ -141,12 +147,12 @@ class ChecksItem extends React.Component {
     render() {
         return (
             <div className="checksItem">
-                <h2 className='checksItemTitle'>{this.title}</h2>
-                <LongModifierBox small_desc={this.mod1name} modifier={this.mod1val} className="val1" style={{ height: "40px", marginTop: "10px" }} />
+                <h2 className='ChecksItemTitle'>{this.title}</h2>
+                <LongModifierBox small_desc={this.mod1name} modifier={this.mod1val} className="val1" style={{ height: "40px" }} />
                 <p className="plus">+</p>
-                <LongModifierBox small_desc={this.mod2name} modifier={this.mod2val} className="val2" style={{ height: "40px", marginTop: "10px" }} />
+                <LongModifierBox small_desc={this.mod2name} modifier={this.mod2val} className="val2" style={{ height: "40px" }} />
                 <p className="equals">=</p>
-                <LargeModifierBox small_desc="" modifier={this.finalVal} className="val3" style={{ height: "40px", marginTop: "10px" }} />
+                <LargeModifierBox small_desc="" modifier={this.finalVal} className="val3" style={{ height: "40px" }} />
             </div>
         )
     }
@@ -168,6 +174,7 @@ export class Body extends React.Component {
 
                 <Health />
                 <Checks />
+                <LongAttr mods={[3, 2, "_"]} small_descs={["static mod", "SPD Mod", "MISC Mod"]} />
             </div>
         )
     }

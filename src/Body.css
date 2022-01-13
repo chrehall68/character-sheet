@@ -158,7 +158,7 @@
 /* Checks stuff */
 .checks{
     grid-column: span 5;
-    grid-row: span 13;
+    grid-row: span 15;
     border: 1px solid black;
 }
 .checks .header {
@@ -174,12 +174,28 @@
     display:grid;
     grid-template-areas: "header val1 plus val2 equals val3";
 }
+.checksItem .ChecksItemTitle{
+    grid-area: header;
+    margin: auto auto;
+    width: 100px;
+}
 .checksItem .val1{
     grid-area:val1;
+    margin: auto auto;
 }
 .checksItem .val2{
     grid-area:val2;
+    margin: auto auto;
 }
 .checksItem .val3{
     grid-area:val3;
+    margin: auto auto;
+}
+.checksItem .equals{
+    grid-area: equals;
+    margin: auto auto;
+}
+.checksItem .plus{
+    grid-area: plus;
+    margin: auto auto;
 }
