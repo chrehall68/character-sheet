@@ -36,7 +36,7 @@ class LongAttrHeader extends React.Component {
         this.title = this.props.title
     }
     render() {
-        return <h2 className={this.header_class + " longAttrHeader"}>{this.title}</h2>
+        return <h2 style={this.props.style} className={this.header_class + " longAttrHeader"}>{this.title}</h2>
     }
 }
 class LongAttr extends React.Component {
@@ -70,7 +70,7 @@ class LongAttr extends React.Component {
     }
 
     render() {
-        return <div className="longAttr">
+        return <div className="longAttr" style={this.props.style}>
             {this.items}
         </div>
     }
@@ -78,7 +78,7 @@ class LongAttr extends React.Component {
 
 class Health extends React.Component {
     render() {
-        return <HeaderCurMaxMod header="health" cur="1" max="25" oth="_" oth_label="Regen" />
+        return <HeaderCurMaxMod header="health" cur="1" max="25" oth="_" oth_label="Regen" style={this.props.style} />
     }
 }
 class HeaderCurMaxMod extends React.Component {
@@ -93,7 +93,7 @@ class HeaderCurMaxMod extends React.Component {
     }
 
     render() {
-        return <div className='headerCurMaxMod'>
+        return <div className='headerCurMaxMod' style={this.props.style}>
             <h3 className="header">{this.header}</h3>
             <MainAndLabelBox className="current" main={this.cur} label="current" />
             <MainAndLabelBox className="max" main={this.max} label="max" />
@@ -121,7 +121,7 @@ class MainAndLabelBox extends React.Component {
 class Checks extends React.Component {
 
     render() {
-        return <div className="checks">
+        return <div className="checks" style={this.props.style}>
             <p className="header">Checks</p>
             <ChecksItem title="Interact" mod1name="acc" mod2name="misc" mod1val="1" mod2val="0" />
             <ChecksItem title="Talk" mod1name="spd" mod2name="misc" mod1val="1" mod2val="0" />
@@ -174,6 +174,7 @@ export class Body extends React.Component {
 
                 <Health />
                 <Checks />
+                <LongAttrHeader title="Movement" header_rows="1" />
                 <LongAttr mods={[3, 2, "_"]} small_descs={["static mod", "SPD Mod", "MISC Mod"]} />
             </div>
         )
