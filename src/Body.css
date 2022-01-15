@@ -52,7 +52,7 @@
 .gunBar{
     border: solid black 2px;
     grid-column: span 1;
-    grid-row: span 12;
+    grid-row: span 15;
     overflow:hidden;
     display:block;
 
@@ -63,7 +63,7 @@
     text-align: center;
     overflow:visible;
     width:max-content;
-    transform: rotateZ(-90deg) translateX(-100px) translateY(-50%);
+    transform: rotateZ(-90deg) translateX(-150%) translateY(-50%);
 }
 
 /** ----------LongAttr styles---------- */
@@ -222,4 +222,10 @@
 }
 .melee .mod{
     grid-area: mod;
+}
+
+.shields{
+    grid-column: span 4;
+    grid-template-rows: inherit;
+    grid-template-columns: inherit;
 }

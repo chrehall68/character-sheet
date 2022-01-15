@@ -52,21 +52,21 @@ class LongAttr extends React.Component {
         this.small_descs = this.props.small_descs
         this.items = this.mods.map((element, index) => {
             if (this.small_descs[index] != null) {
-                return <LargeModifierBox style={{ float: "left", margin: "auto auto" }} small_desc={this.small_descs[index]} modifier={element} />
+                return <LargeModifierBox key={index} style={{ float: "left", margin: "auto auto" }} small_desc={this.small_descs[index]} modifier={element} />
             }
             else return <h1>{this.modifier}</h1>
         });
 
         // add pluses and equals
         for (var i = 0; i < this.mods.length - 1; i++) {
-            this.items.splice(i * 2 + 1, 0, <p>+</p>)
+            this.items.splice(i * 2 + 1, 0, <p key={"+" + i}>+</p>)
         }
-        this.items.splice(this.items.length * 2 - 2, 0, <p>=</p>)
+        this.items.splice(this.items.length * 2 - 2, 0, <p key="=">=</p>)
 
         // get total for the last box
         let total = 0
         this.mods.forEach((element) => { if (typeof (element) == "number") total += element })
-        this.items.push(<ModifierBox style={{ float: "left", margin: "auto auto", width: "40px", height: "40 px" }} small_desc="" modifier={"+" + total} />)
+        this.items.push(<ModifierBox key={this.items.length} style={{ float: "left", margin: "auto auto", width: "40px", height: "40 px" }} small_desc="" modifier={"+" + total} />)
     }
 
     render() {
@@ -78,7 +78,7 @@ class LongAttr extends React.Component {
 
 class Health extends React.Component {
     render() {
-        return <HeaderCurMaxMod header="health" cur="1" max="25" oth="_" oth_label="Regen" style={this.props.style} />
+        return <HeaderCurMaxMod header="health" cur="1" max="25" mod="_" mod_label="Regen" style={this.props.style} />
     }
 }
 class HeaderCurMaxMod extends React.Component {
@@ -88,8 +88,7 @@ class HeaderCurMaxMod extends React.Component {
         this.header = this.props.header
         this.max = this.props.max
         this.mod = this.props.mod
-        this.oth = this.props.oth
-        this.oth_label = this.props.oth_label
+        this.mod_label = this.props.mod_label
     }
 
     render() {
@@ -97,7 +96,7 @@ class HeaderCurMaxMod extends React.Component {
             <h3 className="header">{this.header}</h3>
             <MainAndLabelBox className="current" main={this.cur} label="current" />
             <MainAndLabelBox className="max" main={this.max} label="max" />
-            <MainAndLabelBox className="mod" main={this.oth} label={this.oth_label} />
+            <MainAndLabelBox className="mod" main={this.mod} label={this.mod_label} />
         </div>
     }
 }
@@ -168,6 +167,14 @@ class Melee extends React.Component {
     }
 }
 
+class Shields extends React.Component {
+    render() {
+        return <div className="shields" style={this.props.style}>
+            <HeaderCurMaxMod header="shields" cur="2" max="15" mod="5" mod_label="Recharge" />
+        </div>
+    }
+}
+
 export class Body extends React.Component {
     render() {
         return (
@@ -188,6 +195,7 @@ export class Body extends React.Component {
                 <Health style={{ gridRow: "7/span 4" }} />
                 <Checks style={{ gridRow: "7/span 15" }} />
                 <Melee style={{ gridRow: "9/span 4" }} />
+                <Shields style={{ gridRow: "11 / span 4" }} />
             </div>
         )
     }
