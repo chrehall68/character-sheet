@@ -158,6 +158,16 @@ class ChecksItem extends React.Component {
     }
 }
 
+class Melee extends React.Component {
+    render() {
+        return <div className='melee' style={this.props.style}>
+            <h3 className="header">Melee</h3>
+            <MainAndLabelBox main="1d10" label="" className="die" />
+            <ModifierBox className="mod" modifier="+3" small_desc="+DMG" />
+        </div>
+    }
+}
+
 export class Body extends React.Component {
     render() {
         return (
@@ -177,7 +187,7 @@ export class Body extends React.Component {
 
                 <Health style={{ gridRow: "7/span 4" }} />
                 <Checks style={{ gridRow: "7/span 15" }} />
-
+                <Melee style={{ gridRow: "9/span 4" }} />
             </div>
         )
     }

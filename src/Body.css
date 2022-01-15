@@ -157,7 +157,7 @@
 
 /* Checks stuff */
 .checks{
-    grid-column: span 5;
+    grid-column: span 6;
     grid-row: span 15;
     border: 1px solid black;
 }
@@ -198,4 +198,28 @@
 .checksItem .plus{
     grid-area: plus;
     margin: auto auto;
+}
+
+/*Melee box*/
+.melee{
+    grid-column:span 4;
+    grid-row: span 4;
+    display:grid;
+    grid-template-areas: "header header header"
+                         "die die mod";
+    border:1px solid black;
+}
+.melee .header{
+    grid-area: header;
+    height:min-content;
+    text-align: center;
+    padding: 0px auto;
+    margin: 0px auto;
+}
+.melee .die{
+    grid-area:die;
+    width:210px;
+}
+.melee .mod{
+    grid-area: mod;
 }
