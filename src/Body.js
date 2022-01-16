@@ -161,7 +161,7 @@ class ChecksItem extends React.Component {
 class Melee extends React.Component {
     render() {
         return <div className='melee' style={this.props.style}>
-            <h3 className="header">Melee</h3>
+            <h3 className="header">Melee Die</h3>
             <MainAndLabelBox main="1d10" label="" className="die" />
             <ModifierBox className="mod" modifier="+3" small_desc="+DMG" />
         </div>
@@ -171,7 +171,7 @@ class Melee extends React.Component {
 class Shields extends React.Component {
     render() {
         return <div className="shields" style={this.props.style}>
-            <HeaderCurMaxMod header="shields" cur="2" max="15" mod="5" mod_label="Recharge" />
+            <HeaderCurMaxMod header="shields" cur="2" max="15" mod="5" mod_label="Recharge" style={{ border: "none" }} />
             <span className="shieldInput"><h5>shield type: </h5><p><Editable callback={() => { console.log("no") }} /></p></span>
             <span className="shieldInput"><h5>info: </h5><p><Editable initialVal="hi" /></p></span>
         </div>

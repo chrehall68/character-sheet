@@ -229,6 +229,9 @@
     grid-row: span 7;
     border:1px solid black;
     overflow: hidden;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .shields .shieldInput{
