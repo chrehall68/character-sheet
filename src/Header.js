@@ -1,5 +1,7 @@
 import React from 'react'
 import { ModifierBox } from './ModifierBox'
+import { Editable } from './Editable'
+
 import "./Header.css"
 
 class Item extends React.Component {
@@ -14,16 +16,8 @@ class Item extends React.Component {
     render() {
         return <span className={this.cn} >
             <h3 className="box_label">{this.box_label}</h3>
-            <h2 className="main_content" contentEditable="true" suppressContentEditableWarning={true} onKeyPress={this.onKeyPress}>{this.main_content}</h2>
+            <h2 className="main_content"><Editable initialVal={this.main_content} /></h2>
         </span>
-    }
-
-    onKeyPress = (event) => {
-        if (event.key === "Enter") {
-            event.preventDefault()
-            console.log("yes")
-            document.activeElement.blur()
-        }
     }
 }
 

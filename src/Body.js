@@ -2,6 +2,7 @@ import React from 'react'
 import "./Body.css"
 
 import { ModifierBox, LargeModifierBox, LongModifierBox } from './ModifierBox'
+import { Editable } from './Editable'
 
 class SmallAttr extends React.Component {
     constructor(props) {
@@ -171,6 +172,8 @@ class Shields extends React.Component {
     render() {
         return <div className="shields" style={this.props.style}>
             <HeaderCurMaxMod header="shields" cur="2" max="15" mod="5" mod_label="Recharge" />
+            <span className="shieldInput"><h5>shield type: </h5><p><Editable callback={() => { console.log("no") }} /></p></span>
+            <span className="shieldInput"><h5>info: </h5><p><Editable initialVal="hi" /></p></span>
         </div>
     }
 }
@@ -195,7 +198,7 @@ export class Body extends React.Component {
                 <Health style={{ gridRow: "7/span 4" }} />
                 <Checks style={{ gridRow: "7/span 15" }} />
                 <Melee style={{ gridRow: "9/span 4" }} />
-                <Shields style={{ gridRow: "11 / span 4" }} />
+                <Shields style={{ gridRow: "11 / span 7" }} />
             </div>
         )
     }

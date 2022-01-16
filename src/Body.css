@@ -226,6 +226,19 @@
 
 .shields{
     grid-column: span 4;
-    grid-template-rows: inherit;
-    grid-template-columns: inherit;
+    grid-row: span 7;
+    border:1px solid black;
+    overflow: hidden;
+}
+
+.shields .shieldInput{
+    display: block;
+    width : 240px;
+    overflow: hidden;
+}
+.shields .shieldInput p, .shields .shieldInput h5{
+    display:inline-block;
+    margin: auto auto;
+    padding: auto auto;
+    font-size: smaller;
 }
