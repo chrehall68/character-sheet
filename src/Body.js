@@ -178,6 +178,12 @@ class Shields extends React.Component {
     }
 }
 
+class Gold extends React.Component {
+    render() {
+        // TODO
+    }
+}
+
 export class Body extends React.Component {
     render() {
         return (
