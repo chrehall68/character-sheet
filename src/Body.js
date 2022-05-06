@@ -178,9 +178,21 @@ class Shields extends React.Component {
     }
 }
 
+class BARank extends React.Component {
+    render() {
+        return <div className="BARank">
+            <div className="header"><h3>Baddass Rank</h3><p>1</p></div>
+            <div className="tokens"><p>Badass Tokens</p><input type="text" /></div>
+        </div>
+    }
+}
+
 class Gold extends React.Component {
     render() {
-        // TODO
+        return <div className="gold" style={this.props.style}>
+            <h3 className="header">Gold</h3>
+            <h3 className="value">120</h3>
+        </div>
     }
 }
 
@@ -205,6 +217,8 @@ export class Body extends React.Component {
                 <Checks style={{ gridRow: "7/span 15" }} />
                 <Melee style={{ gridRow: "9/span 4" }} />
                 <Shields style={{ gridRow: "11 / span 7" }} />
+                <BARank />
+                <Gold style={{ gridRow: "13/ span 3" }} />
             </div>
         )
     }

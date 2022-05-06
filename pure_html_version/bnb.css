@@ -1,3 +1,16 @@
+/** Editable Styles */
+.editable {
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    display: inherit;
+    margin: inherit;
+    padding: inherit;
+    background-color: inherit;
+    border: none;
+}
+
+/** ----------Body Styles-----------------*/
 .body {
     display: grid;
     height: 500px;
@@ -271,96 +284,91 @@
     font-size: smaller;
 }
 
-.gold {
-    grid-column: span 4;
-    grid-row: span 3;
-    border: 1px solid black;
-    overflow: hidden;
+.modifier {
+    float: right;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: solid black 2px;
+    display: grid;
+    grid-template-areas: "mod"
+        "mod"
+        "desc";
+    grid-template-rows: 13px;
+    grid-template-columns: 40px;
+    height: 40px;
+    width: 40px;
+    vertical-align: bottom;
+    margin: 0px;
 }
 
-.gold .header {
-    margin: 0% 50% 0% 0%;
-    padding: 0%;
-    height: 100%;
-    display: inline-flex;
-    background-color: gray;
-    text-align: center;
-    align-items: center;
-}
-
-.gold .value {
-    height: 100%;
-    margin: 0%;
-    padding: 0%;
-    display: inline-flex;
-    text-align: center;
-    align-items: center;
-}
-
-.BARank {
-    grid-column: span 4;
-    grid-row: span 4;
-    border: 1px solid black;
-    overflow: hidden;
-}
-
-.BARank div.header {
-    width: 50%;
-    height: 100%;
-    display: inline-block;
-    overflow: hidden;
+.modifier .small {
+    vertical-align: top;
+    float: left;
+    font-size: 10px;
+    grid-area: desc;
     margin: 0px;
     padding: 0px;
-    align-items: flex-start;
 }
 
-.BARank div.header h3 {
-    width: 100%;
-    overflow: hidden;
-    display: block;
+.modifier .mod {
     margin: 0px;
     padding: 0px;
-    font-size: smaller;
-}
-
-.BARank div.header p {
-    width: 100%;
-    overflow: hidden;
-    display: block;
-    margin: 0px auto;
-    padding: 0px auto;
-    font-size: 2em;
+    font-size: 25px;
+    grid-area: mod;
     font-weight: bold;
-    text-align: center;
 }
 
-.BARank div.tokens {
+.largeModifier {
+    float: right;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: solid black 2px;
+    display: grid;
+    grid-template-areas: "mod"
+        "mod"
+        "desc";
+    grid-template-rows: 20px;
+    grid-template-columns: 60px;
+    height: 60px;
+    width: 60px;
+    vertical-align: bottom;
+    margin: 0px;
+}
+
+.largeModifier .small {
+    vertical-align: top;
+    float: left;
+    font-size: 10px;
+    grid-area: desc;
     margin: 0px;
     padding: 0px;
-    width: 50%;
-    display: inline-block;
-    border: 0px;
 }
 
-.BARank div.tokens input {
-    width: 50%;
-    overflow: hidden;
+.largeModifier .mod {
+    margin: 0px;
+    padding: 0px;
+    font-size: 30px;
+    grid-area: mod;
+    text-align: center;
+    font-weight: bold;
 }
 
-.Grenades {
-    grid-template-areas: "grenades grenades grenades grenades"
-        "type type damage damage"
-        "info info current max";
+.longModifier {
+    display: grid;
+    grid-template-areas: "small mod";
+    border: 1px solid black;
+    width: 60px;
+    height: 60px;
 }
 
-.Grenades .info {
-    grid-area: info;
+.longModifier .small {
+    grid-area: small;
+    font-size: 10px;
+    margin: auto auto;
 }
 
-.Grenades .current {
-    grid-area: current;
-}
-
-.Grenades .max {
-    grid-area: max;
+.longModifier .mod {
+    grid-area: mod;
+    font-size: 20px;
+    margin: auto auto;
 }
