@@ -348,13 +348,37 @@
 }
 
 .Grenades {
+    grid-column: span 1; /* sobs what */
+    grid-row: span 4;
+    display: grid;
+    font-size: smaller;
     grid-template-areas: "grenades grenades grenades grenades"
         "type type damage damage"
         "info info current max";
+    border: 1px solid black
+}
+
+.Grenades div.header h1{
+    width: 100%;
+    overflow: hidden;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    font-size: smaller;
+}
+
+.Grenades.header {
+    grid-area: header;
+    height: min-content;
+    text-align: center;
+    font-size:small;
+    padding: 0px auto;
+    margin: 0px auto;
 }
 
 .Grenades .info {
     grid-area: info;
+    width: 210px;
 }
 
 .Grenades .current {
