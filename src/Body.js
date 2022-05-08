@@ -195,8 +195,8 @@ class Shields extends React.Component {
 class BARank extends React.Component {
     render() {
         return <div className="BARank">
-            <div className="header"><h3>Baddass Rank</h3><p>1</p></div>
-            <div className="tokens"><p>Badass Tokens</p><input type="text" /></div>
+            <div className="header"><h3>Baddass Rank</h3><input type="number" defaultValue={1} /></div>
+            <div className="tokens"><p>Badass Tokens</p><input type="number" /></div>
         </div>
     }
 }
