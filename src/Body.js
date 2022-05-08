@@ -169,11 +169,15 @@ class Melee extends React.Component {
 }
 
 class Grenades extends React.Component {
-    render(){
+    render() {
         return <div className="grenades" style={this.props.style}>
-            <h1 className="header">Grenades
-            <span className="grenade"><h5>damage: </h5><p><Editable callback={() => { console.log("no") }} /></p></span>
-            <HeaderCurMaxMod header="grenade" info="" current="none" max="3" style={this.props.style} /></h1>
+
+            <div className='header'><h3>Grenades</h3></div>
+            <div className="type"><input type="text"></input><p>TYPE</p></div>
+            <div className="damage"><input type="text"></input><p>DAMAGE</p></div>
+            <div className="info"><p>INFO</p><textarea style={{ "resize": "none" }}></textarea></div>
+            <div className='current'><input type="number" /><p>CURRENT</p></div>
+            <div className='max'><input type="number" /><p>MAX</p></div>
         </div>
     }
 }
@@ -227,7 +231,7 @@ export class Body extends React.Component {
                 <Checks style={{ gridRow: "7/span 15" }} />
                 <Melee style={{ gridRow: "9/span 4" }} />
                 <Shields style={{ gridRow: "11 / span 7" }} />
-                <Grenades style={{ gridRow: "/span 3"}} />
+                <Grenades />
                 <BARank />
                 <Gold style={{ gridRow: "13/ span 3" }} />
 
