@@ -498,3 +498,35 @@
     border-left: 0px;
     font-size: large;
 }
+
+.potions {
+    grid-column: span 4;
+    grid-row: 27 / span 9;
+    display: inline-block;
+    font-size: smaller;
+    font-style: normal;
+    border: 1px black solid;
+    overflow: hidden;
+}
+
+.potions .header {
+    height: 10%;
+    overflow: hidden;
+}
+
+.potions .header h3{
+    padding: 0px;
+    margin:0px;
+    text-align: center;
+}
+
+.potions .txtbox {
+    height:85%;
+}
+.potions .txtbox textarea{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px grey solid;
+    font-size: large;
+}
