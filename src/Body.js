@@ -183,7 +183,7 @@ class Grenades extends React.Component {
 }
 
 class Potions extends React.Component {
-    render(){
+    render() {
         return <div className="potions" style={this.props.style}>
             <div className="header"><h3>Potions</h3></div>
             <div className="txtbox"><textarea style={{ "resize": "none" }}></textarea></div>
@@ -219,6 +219,34 @@ class Gold extends React.Component {
     }
 }
 
+class GunItem extends React.Component {
+    constructor(props) {
+        super(props)
+        this.gun = props.gunName
+    }
+    render() {
+        return <label className="gunItem">
+            <input type="checkbox" />
+            <img src={"images/" + this.gun + ".png"} alt={this.gun} />
+            <p>{this.gun.toUpperCase()}</p>
+        </label>
+    }
+}
+class FavoredGun extends React.Component {
+
+    render() {
+        return <div className='favoredGun' style={this.props.style}>
+            <div className='header'><h4>Favored Gun</h4></div>
+            <GunItem gunName='pistol' />
+            <GunItem gunName='smg' />
+            <GunItem gunName='combat rifle' />
+            <GunItem gunName='shotgun' />
+            <GunItem gunName='sniper' />
+            <GunItem gunName='rocket launcher' />
+        </div >
+    }
+}
+
 export class Body extends React.Component {
     render() {
         return (
@@ -240,11 +268,12 @@ export class Body extends React.Component {
                 <Checks style={{ gridRow: "7/span 15" }} />
                 <Melee style={{ gridRow: "9/span 4" }} />
                 <Shields style={{ gridRow: "11 / span 7" }} />
-                <Potions />
                 <Grenades />
+                <Potions />
                 <BARank />
                 <Gold style={{ gridRow: "13/ span 3" }} />
 
+                <FavoredGun />
             </div>
         )
     }

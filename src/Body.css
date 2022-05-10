@@ -514,19 +514,52 @@
     overflow: hidden;
 }
 
-.potions .header h3{
+.potions .header h3 {
     padding: 0px;
-    margin:0px;
+    margin: 0px;
     text-align: center;
 }
 
 .potions .txtbox {
-    height:85%;
+    height: 85%;
 }
-.potions .txtbox textarea{
+
+.potions .txtbox textarea {
     height: 100%;
     width: 100%;
     overflow: hidden;
     border-bottom: 1px grey solid;
     font-size: large;
+}
+
+.favoredGun {
+    display: block;
+    grid-row: 36 / span 13;
+    grid-column: span 4;
+    border: 1px solid black;
+}
+
+.favoredGun .header * {
+    display: block;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    background-color: blanchedalmond;
+}
+
+.favoredGun label.gunItem {
+    display: block;
+}
+
+.favoredGun .gunItem * {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    vertical-align: top;
+    font-size: small;
+}
+
+.favoredGun .gunItem img {
+    width: 30%;
+    height: auto;
 }
