@@ -302,8 +302,10 @@ class BGandTraits extends React.Component {
     render(){
         return <div className='bgtraits'>
             <div className="header"><h3>Background & Traits</h3></div>
-            <div className="bgbar"><p>Background</p></div>
+            <div className="bgbox"><div className="bgbar"><p>Background</p></div>
             <div className="bginfo"><textarea style= {{"resize" : "none"}}></textarea></div>
+            </div>
+            
             <GunBar>Traits</GunBar> 
             <div className="traitsinfo"><textarea style= {{"resize" : "none"}}></textarea></div>
         </div>

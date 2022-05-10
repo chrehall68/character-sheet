@@ -711,10 +711,11 @@
     grid-row: 30 / span 15;
     grid-column: 5 / span 10;
     border: 1px black solid;
+    margin: 0px;
 }
 
 .bgtraits .header {
-    height: 15%;
+    height: 10%;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -722,21 +723,29 @@
     background-color: azure;
 }
 
-.bgtraits .bgbar {
+.bgtraits .bgbox {
+    height: 45%;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+
+.bgtraits .bgbox .bgbar {
     border: solid black 1px;
     grid-column: span 1;
     grid-row: span 15;
     overflow: hidden;
-    display: block;
-
+    display: flex;
+    color: white;
     width: 20%;
-    height: 10%;
-    transform: translateX(-33%) rotateZ(-90deg) translateY(-27%);
+    height: 25%;
+    transform: rotateZ(-90deg);
 }
 
-.bgtraits .bgbar p {
+.bgtraits .bgbox .bgbar p {
     text-align: center;
     overflow: visible;
+    color: black;
     width: max-content;
-    transform: rotateZ(-90deg) translateX(-150%) translateY(-50%);
+    transform: rotateX(-90);
 }
