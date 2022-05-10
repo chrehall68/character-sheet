@@ -213,8 +213,8 @@ class BARank extends React.Component {
 class Gold extends React.Component {
     render() {
         return <div className="gold" style={this.props.style}>
-            <h3 className="header">Gold</h3>
-            <h3 className="value">120</h3>
+            <div className='header'><h3>Gold</h3></div>
+            <div className='value'><input title='goldVal' type="number" className="value" defaultValue={0} /></div>
         </div>
     }
 }

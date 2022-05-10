@@ -278,23 +278,31 @@
     overflow: hidden;
 }
 
-.gold .header {
-    margin: 0% 50% 0% 0%;
+.gold div.header {
+    margin: 0px;
     padding: 0%;
+    width: max-content;
     height: 100%;
+    vertical-align: top;
+    align-items: center;
     display: inline-flex;
     background-color: gray;
-    text-align: center;
-    align-items: center;
 }
 
 .gold .value {
     height: 100%;
-    margin: 0%;
-    padding: 0%;
+    width: 30%;
+    margin: 0px;
+    padding: 0px;
     display: inline-flex;
+    float: right;
+}
+
+.gold .value input {
+    width: 100%;
+    height: 100%;
     text-align: center;
-    align-items: center;
+    font-size: x-large;
 }
 
 .BARank {
@@ -548,7 +556,8 @@
 }
 
 .favoredGun label.gunItem {
-    display: block;
+    display: flex;
+    align-items: center;
 }
 
 .favoredGun .gunItem * {
