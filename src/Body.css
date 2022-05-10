@@ -574,7 +574,7 @@
 }
 
 .skills {
-    grid-row: 22 / span 6;
+    grid-row: 22 / span 8;
     grid-column: 5/ span 10;
     border: 1px solid black;
 }
@@ -610,6 +610,7 @@
     height: 90%;
     border: 1px solid black;
     vertical-align: middle;
+    text-align: center;
 }
 
 .skills .item .itemHeader {

@@ -249,12 +249,14 @@ class FavoredGun extends React.Component {
 class SkillsItem extends React.Component {
     constructor(props) {
         super(props)
+        this.props = props;
+        this.header = props.header;
     }
 
     render() {
         return <div className='item'>
-            <div className='itemHeader'>Quick Draw</div>
-            <div className='content'>+2 Initiative Mod/SL.<br />+1/SL on Interact Checks</div>
+            <div className='itemHeader'>{this.header}</div>
+            <div className='content'>{this.props.children}</div>
             <div className='level'>
                 <input type="checkbox" title="level1" name="skillLevel" />
                 <input type="checkbox" title="level3" name="skillLevel" />
@@ -269,10 +271,24 @@ class Skills extends React.Component {
         return <div className='skills'>
             <div className='header'><h3>Skills</h3></div>
             <div className='itemWrapper'>
-                <SkillsItem />
-                <SkillsItem />
-                <SkillsItem />
-                <SkillsItem />
+                <SkillsItem header="Quick Draw">
+                    +2 Initiative Mod/SL.<br />+1/SL on Interact Checks
+                </SkillsItem>
+                <SkillsItem header="Filled to The Brim">
+                    Increase max grenades by
+                    1/SL. Increase max potions by 1+MST Mod
+                </SkillsItem>
+                <SkillsItem header="Incite">
+                    The first time you take
+                    Damage during an encounter,
+                    gain Extra Movement.
+                    +1/SL on Traverse Checks.
+                </SkillsItem>
+                <SkillsItem header="Hard to Kill">
+                    10+MST Mod Health.<br />
+                    +5 Health Regen/SL.
+                </SkillsItem>
+
             </div>
 
         </div>
