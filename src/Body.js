@@ -337,6 +337,8 @@ export class Body extends React.Component {
                 <LongAttr mods={[1, 2, "_"]} small_descs={["Baddass Rank", "SPD Mod", "MISC Mod"]} />
 
                 <GunBar>Current Gun</GunBar>
+                <GunBar>Gun Slot 2</GunBar> 
+                <GunBar>Gun Slot 3</GunBar>
 
                 <LongAttrHeader title="Movement" header_rows="1" style={{ gridColumn: "9/span 2", gridrow: "5 / span 2" }} />
                 <LongAttr mods={[3, 2, "_"]} small_descs={["static mod", "SPD Mod", "MISC Mod"]} style={{ gridColumn: "11 / span 4" }} />
