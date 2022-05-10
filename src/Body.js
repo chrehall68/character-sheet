@@ -182,14 +182,26 @@ class Grenades extends React.Component {
     }
 }
 
+class Lock extends React.Component {
+    constructor(props) {
+        super(props)
+        this.lock = props.lockName
+    }
+    render() {
+        return <label className="lock">
+            <img src={"images/lock.png"} alt={this.lock}/>
+        </label>
+    }
+}
+
 class Potions extends React.Component {
     render() {
         return <div className="potions" style={this.props.style}>
             <div className="header"><h3>Potions</h3></div>
             <div className="txtbox"><textarea style={{ "resize": "none" }}></textarea></div>
             <div className="txtbox1"><textarea style={{ "resize": "none" }}></textarea></div>
-            <div className="txtbox2"><textarea style={{ "resize": "none" }}></textarea></div>
-            <div className="txtbox3"><textarea style={{ "resize": "none" }}></textarea></div>
+            <div className="txtbox2"><Lock lockname="lock1"></Lock><textarea style={{ "resize": "none" }}></textarea></div>
+            <div className="txtbox3"><Lock lockname="lock2"></Lock><textarea style={{ "resize": "none" }}></textarea></div>
         </div>
     }
 }

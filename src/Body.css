@@ -291,7 +291,7 @@
 
 .gold .value {
     height: 100%;
-    width: 30%;
+    width: 84%;
     margin: 0px;
     padding: 0px;
     display: inline-flex;
@@ -301,7 +301,7 @@
 .gold .value input {
     width: 100%;
     height: 100%;
-    text-align: center;
+    text-align: right;
     font-size: x-large;
 }
 
@@ -615,6 +615,17 @@
     font-size: large;
 }
 
+.potions .lock * {
+    display: inline-flex;
+    margin: 0px;
+    padding: 0px;
+}
+
+.potions .lock img {
+    width: 6%;
+    height: auto;
+}
+
 .favoredGun {
     display: block;
     grid-row: 36 / span 13;
@@ -721,6 +732,7 @@
     justify-content: center;
     align-self: flex-end;
     background-color: azure;
+    border-bottom: 1px black solid;
 }
 
 .bgtraits .header h3 {
@@ -732,39 +744,40 @@
     height: 45%;
     width: 100%;
     display: flex;
-    margin:0px;
+    margin:1px;
     padding: 0px;
 }
 
 .bgtraits .bgbox .bgbar {
     border: solid black 1px;
+    margin-top: 5px;
+    margin-left: 1px;
     overflow: hidden;
     display: flex;
     background-color: lightgrey;
     justify-content: center;
-    width: 25%;
-    height: 20%;
-    transform: rotateZ(-90deg) translate(-50px, -50px);
+    width: 5%;
+    height: 90%;
 }
 
 .bgtraits .bgbox .bgbar p {
-    overflow: visible;
     color: black;
     margin: 0px;
     padding: 0px;
-    
+    transform-origin: center top;
+    transform: rotate(-90deg);
 }
 
 .bgtraits .bgbox .bginfo {
     align-self: flex-start;
-    transform: translate(-80px,0);
     width:100%;
-    height: 100%
+    height: 100%;
+    margin-left: 5px;
 }
 
 .bgtraits .bgbox .bginfo textarea {
     display: flex;
-    width: 100%;
+    width: 95%;
     height: 95%;
     margin: 0px;
     padding: 0px;
@@ -781,29 +794,33 @@
 
 .bgtraits .traitsbox .traitsbar {
     border: solid black 1px;
+    margin-top: 5px;
+    margin-left: 1px;
     overflow: hidden;
     display: flex;
     background-color: lightgrey;
     justify-content: center;
-    width: 20%;
-    height: 20%;
-    transform: rotateZ(-90deg) translate(-50px, -50px);
+    width: 5%;
+    height: 90%;
 }
 
 .bgtraits .traitsbox .traitsbar p {
     margin: 0px;
     padding: 0px;
+    transform-origin: center top;
+    transform: rotate(-90deg);
 }
 
 .bgtraits .traitsbox .traitsinfo {
-    display: flex;
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
+    align-self: flex-start;
+    width:100%;
+    height: 100%;
+    margin-left: 5px;
 }
 
 .bgtraits .traitsbox .traitsinfo textarea {
-    width: 100%;
+    display: flex;
+    width: 95%;
     height: 95%;
     margin: 0px;
     padding: 0px;
