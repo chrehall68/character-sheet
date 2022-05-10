@@ -187,6 +187,9 @@ class Potions extends React.Component {
         return <div className="potions" style={this.props.style}>
             <div className="header"><h3>Potions</h3></div>
             <div className="txtbox"><textarea style={{ "resize": "none" }}></textarea></div>
+            <div className="txtbox1"><textarea style={{ "resize": "none" }}></textarea></div>
+            <div className="txtbox2"><textarea style={{ "resize": "none" }}></textarea></div>
+            <div className="txtbox3"><textarea style={{ "resize": "none" }}></textarea></div>
         </div>
     }
 }
@@ -295,6 +298,18 @@ class Skills extends React.Component {
     }
 }
 
+class BGandTraits extends React.Component {
+    render(){
+        return <div className='bgtraits'>
+            <div className="header"><h3>Background & Traits</h3></div>
+            <div className="bgbar"><p>Background</p></div>
+            <div className="bginfo"><textarea style= {{"resize" : "none"}}></textarea></div>
+            <GunBar>Traits</GunBar> 
+            <div className="traitsinfo"><textarea style= {{"resize" : "none"}}></textarea></div>
+        </div>
+    }
+}
+
 export class Body extends React.Component {
     render() {
         return (
@@ -320,6 +335,7 @@ export class Body extends React.Component {
                 <Potions />
                 <BARank />
                 <Gold style={{ gridRow: "13/ span 3" }} />
+                <BGandTraits />
 
                 <Skills />
 

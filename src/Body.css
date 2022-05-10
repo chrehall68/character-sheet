@@ -518,8 +518,11 @@
 }
 
 .potions .header {
-    height: 10%;
-    overflow: hidden;
+    display: block;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    background-color: cornsilk;
 }
 
 .potions .header h3 {
@@ -529,13 +532,85 @@
 }
 
 .potions .txtbox {
-    height: 85%;
+    height: 15%;
+    width: 95%;
+    margin: 3px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-bottom: 5px;
 }
 
 .potions .txtbox textarea {
+    display: flex;
     height: 100%;
     width: 100%;
     overflow: hidden;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px grey solid;
+    font-size: large;
+}
+
+.potions .txtbox1 {
+    height: 15%;
+    width: 95%;
+    margin: 3px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-bottom: 5px;
+}
+
+.potions .txtbox1 textarea {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px grey solid;
+    font-size: large;
+}
+
+.potions .txtbox2 {
+    height: 15%;
+    width: 95%;
+    margin: 3px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-bottom: 5px;
+}
+
+.potions .txtbox2 textarea {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px grey solid;
+    font-size: large;
+}
+
+.potions .txtbox3 {
+    height: 15%;
+    width: 95%;
+    margin: 3px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-bottom: 5px;
+}
+
+.potions .txtbox3 textarea {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
     border-bottom: 1px grey solid;
     font-size: large;
 }
@@ -630,4 +705,38 @@
     width: 100%;
     align-self: flex-end;
     justify-content: center;
+}
+
+.bgtraits {
+    grid-row: 30 / span 15;
+    grid-column: 5 / span 10;
+    border: 1px black solid;
+}
+
+.bgtraits .header {
+    height: 15%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-self: flex-end;
+    background-color: azure;
+}
+
+.bgtraits .bgbar {
+    border: solid black 1px;
+    grid-column: span 1;
+    grid-row: span 15;
+    overflow: hidden;
+    display: block;
+
+    width: 20%;
+    height: 10%;
+    transform: translateX(-33%) rotateZ(-90deg) translateY(-27%);
+}
+
+.bgtraits .bgbar p {
+    text-align: center;
+    overflow: visible;
+    width: max-content;
+    transform: rotateZ(-90deg) translateX(-150%) translateY(-50%);
 }
