@@ -233,7 +233,6 @@ class GunItem extends React.Component {
     }
 }
 class FavoredGun extends React.Component {
-
     render() {
         return <div className='favoredGun' style={this.props.style}>
             <div className='header'><h4>Favored Gun</h4></div>
@@ -244,6 +243,39 @@ class FavoredGun extends React.Component {
             <GunItem gunName='sniper' />
             <GunItem gunName='rocket launcher' />
         </div >
+    }
+}
+
+class SkillsItem extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+
+    render() {
+        return <div className='item'>
+            <div className='itemHeader'>Quick Draw</div>
+            <div className='content'>+2 Initiative Mod/SL.<br />+1/SL on Interact Checks</div>
+            <div className='level'>
+                <input type="checkbox" title="level1" name="skillLevel" />
+                <input type="checkbox" title="level3" name="skillLevel" />
+                <input type="checkbox" title="level2" name="skillLevel" />
+            </div>
+        </div>
+    }
+}
+class Skills extends React.Component {
+
+    render() {
+        return <div className='skills'>
+            <div className='header'><h3>Skills</h3></div>
+            <div className='itemWrapper'>
+                <SkillsItem />
+                <SkillsItem />
+                <SkillsItem />
+                <SkillsItem />
+            </div>
+
+        </div>
     }
 }
 
@@ -272,6 +304,8 @@ export class Body extends React.Component {
                 <Potions />
                 <BARank />
                 <Gold style={{ gridRow: "13/ span 3" }} />
+
+                <Skills />
 
                 <FavoredGun />
             </div>

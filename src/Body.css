@@ -572,3 +572,61 @@
     width: 30%;
     height: auto;
 }
+
+.skills {
+    grid-row: 22 / span 6;
+    grid-column: 5/ span 10;
+    border: 1px solid black;
+}
+
+.skills .header {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: violet;
+}
+
+.skills .header h3 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.skills .itemWrapper {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    vertical-align: middle;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.skills .item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 20%;
+    height: 90%;
+    border: 1px solid black;
+    vertical-align: middle;
+}
+
+.skills .item .itemHeader {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.skills .item .content {
+    display: flex;
+    width: 100%;
+    font-size: small;
+}
+
+.skills .item .level {
+    display: flex;
+    width: 100%;
+    align-self: flex-end;
+    justify-content: center;
+}
