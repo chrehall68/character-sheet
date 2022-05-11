@@ -776,6 +776,13 @@
 
 .bgtraits textarea {
     width: 100%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    border-left: 0px;
+    border-right: 0px;
+    line-height: 1.3;
+    background-image:
+        repeating-linear-gradient(white, white 15%, lightgrey 15%, lightgrey 15%, lightgrey 15.3%);
 }
 
 /*
