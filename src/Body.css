@@ -283,6 +283,7 @@
     padding: 0%;
     width: max-content;
     height: 100%;
+    width: 15%;
     vertical-align: top;
     align-items: center;
     display: inline-flex;
@@ -291,7 +292,7 @@
 
 .gold .value {
     height: 100%;
-    width: 84%;
+    width: 85%;
     margin: 0px;
     padding: 0px;
     display: inline-flex;
@@ -786,119 +787,28 @@
         repeating-linear-gradient(white, white 15%, lightgrey 15%, lightgrey 15%, lightgrey 15.3%);
 }
 
-/*
-.bgtraits {
-    grid-row: 30 / span 15;
+.archetypeFeat {
+    grid-row: 45 / span 4;
     grid-column: 5 / span 10;
-    border: 1px black solid;
-    margin: 0px;
     display: flex;
     flex-wrap: wrap;
-    align-content: flex-start;
 }
 
-.bgtraits .header {
-    height: 10%;
+.archetypeFeat .header {
+    width: 100%;
+    height: max-content;
+    background-color: aliceblue;
     display: flex;
-
     justify-content: center;
-    align-self: flex-end;
-    background-color: azure;
-    border-bottom: 1px black solid;
 }
 
-.bgtraits .header h3 {
-    margin: 0px;
-    padding: 0px;
-}
-
-.bgtraits .bgbox {
-    height: 45%;
+.archetypeFeat .content {
     width: 100%;
     display: flex;
-    margin: 1px;
-    padding: 0px;
+    align-items: center;
+    justify-content: center;
 }
 
-.bgtraits .bgbox .bgbar {
-    border: solid black 1px;
-    margin-top: 5px;
-    margin-left: 1px;
-    overflow: hidden;
-    display: flex;
-    background-color: lightgrey;
-    text-align: center;
-    width: 5%;
-    height: 90%;
+.archetypeFeat .content #title {
+    font-weight: bold;
 }
-
-.bgtraits .bgbox .bgbar p {
-    color: black;
-    margin: 0px;
-    padding: 0px;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    transform: rotate(180deg);
-}
-
-.bgtraits .bgbox .bginfo {
-    align-self: flex-start;
-    width: 100%;
-    height: 100%;
-    margin-left: 5px;
-    justify-content: flex-start;
-}
-
-.bgtraits .bgbox .bginfo textarea {
-    display: flex;
-    width: 95%;
-    height: 95%;
-    margin: 0px;
-    padding: 0px;
-    background-image:
-        repeating-linear-gradient(white, white 15%, lightgrey 15%, lightgrey 15%, white 15.5%);
-}
-
-.bgtraits .traitsbox {
-    height: 45%;
-    width: 100%;
-    align-content: center;
-    display: flex;
-    margin: 0px;
-    padding: 0px;
-}
-
-.bgtraits .traitsbox .traitsbar {
-    border: solid black 1px;
-    margin-top: 5px;
-    margin-left: 1px;
-    overflow: hidden;
-    display: flex;
-    background-color: lightgrey;
-    text-align: center;
-    width: 5%;
-    height: 90%;
-}
-
-.bgtraits .traitsbox .traitsbar p {
-    margin: 0px;
-    padding: 0px;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    transform: rotate(180deg);
-}
-
-.bgtraits .traitsbox .traitsinfo {
-    align-self: flex-start;
-    width: 100%;
-    height: 100%;
-    margin-left: 5px;
-}
-
-.bgtraits .traitsbox .traitsinfo textarea {
-    display: flex;
-    width: 95%;
-    height: 95%;
-    margin: 0px;
-    padding: 0px;
-}*/

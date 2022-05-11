@@ -326,6 +326,19 @@ class BGandTraits extends React.Component {
     }
 }
 
+class ArchetypeFeat extends React.Component {
+    constructor(props) {
+        super(props)
+        this.props = props
+    }
+    render() {
+        return <div className='archetypeFeat'>
+            <div className='header'><p>Archetype Feat</p></div>
+            <div className='content'><p id="title">{this.props.title}</p><p>: {this.props.children}</p></div>
+        </div>
+    }
+}
+
 export class Body extends React.Component {
     render() {
         return (
@@ -353,11 +366,13 @@ export class Body extends React.Component {
                 <Potions />
                 <BARank />
                 <Gold style={{ gridRow: "13/ span 3" }} />
-                <BGandTraits />
-
                 <Skills />
-
+                <BGandTraits />
                 <FavoredGun />
+                <ArchetypeFeat title="FLEX">
+                    The first time your Shields
+                    are depleted in an encounter, gain 1 Badass Token.
+                </ArchetypeFeat>
             </div>
         )
     }
