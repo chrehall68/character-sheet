@@ -9,12 +9,7 @@ export class LimitedTextarea extends React.Component {
     }
 
     handleChange = (event) => {
-        // STACK OVERFLOW!!  
-        // https://stackoverflow.com/questions/42110855/how-to-set-max-rows-to-textarea-input-tag   
-
-        console.log("maxlines" + this.maxLines);
         let lines = event.target.value.split('\n').length;
-        console.log(lines);
         if (lines > this.maxLines) {
             return false;
         }
