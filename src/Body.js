@@ -174,11 +174,15 @@ class Grenades extends React.Component {
         return <div className="grenades" style={this.props.style}>
 
             <div className='header'><h3>Grenades</h3></div>
-            <div className="type"><input type="text"></input><p>TYPE</p></div>
-            <div className="damage"><input type="text"></input><p>DAMAGE</p></div>
-            <div className="info"><p>INFO</p><textarea style={{ "resize": "none" }}></textarea></div>
-            <div className='current'><input type="number" /><p>CURRENT</p></div>
-            <div className='max'><input type="number" /><p>MAX</p></div>
+            <div className="row1">
+                <div className="type"><input type="text"></input><p>TYPE</p></div>
+                <div className="damage"><input type="number"></input><p>DAMAGE</p></div>
+            </div>
+            <div className="row2">
+                <div className="info"><p>INFO</p><textarea style={{ "resize": "none" }}></textarea></div>
+                <div className='current'><input type="number" /><p>CURRENT</p></div>
+                <div className='max'><input type="number" /><p>MAX</p></div>
+            </div>
         </div>
     }
 }

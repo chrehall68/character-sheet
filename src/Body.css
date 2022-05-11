@@ -380,14 +380,16 @@
 .grenades {
     grid-column: span 4;
     grid-row: 18 / span 9;
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
     font-size: smaller;
     border: 1px black solid;
-    overflow: hidden;
+    align-items: flex-start;
 }
 
 .grenades .header {
     height: 10%;
+    width: 100%;
     overflow: hidden;
     background-color: lightcoral;
 }
@@ -398,16 +400,36 @@
     text-align: center;
 }
 
-.grenades .type {
+.grenades .row1 {
     height: 35%;
-    width: 60%;
-    text-align: center;
-    overflow: hidden;
-    border: 1px solid black;
-    display: inline-block;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
 }
 
-.grenades .type input {
+.grenades .row1 .type,
+.grenades .row1 .damage,
+.grenades .row2 .info,
+.grenades .row2 .current,
+.grenades .row2 .max {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+.grenades .row1 .type {
+    width: 60%;
+}
+
+.grenades .row1 .damage {
+    width: 40%;
+}
+
+.grenades .row1 .type input,
+.grenades .row1 .damage input {
     width: 80%;
     height: 50%;
     border-top: 0px;
@@ -418,42 +440,23 @@
     text-align: center;
 }
 
-
-.grenades .damage {
-    height: 35%;
-    width: 37%;
-    text-align: center;
-    overflow: hidden;
-    border: 1px solid black;
-    display: inline-block;
+.grenades .row2 {
+    height: 50%;
+    display: flex;
+    justify-content: flex-start;
 }
 
-.grenades .damage input {
-    width: 80%;
-    height: 50%;
-    border-top: 0px;
-    border-bottom: 1px solid black;
-    border-right: 0px;
-    border-left: 0px;
-    font-size: large;
-    text-align: center;
-}
-
-.grenades .info {
-    height: 50%;
+.grenades .row2 .info {
     width: 60%;
-    overflow: hidden;
-    border: 1px solid black;
-    display: inline-block;
 }
 
-.grenades .info p {
+.grenades .row2 .info p {
     margin: 0px;
     padding: 0px;
     height: 20%;
 }
 
-.grenades .info textarea {
+.grenades .row2 .info textarea {
     width: 80%;
     height: 80%;
     margin: 0px;
@@ -465,17 +468,14 @@
     font-size: small;
 }
 
-
-.grenades .current {
-    height: 50%;
-    width: 18%;
-    overflow: hidden;
-    border: 1px solid black;
-    display: inline-block;
+.grenades .row2 .max,
+.grenades .row2 .current {
+    width: 20%;
     font-size: xx-small;
 }
 
-.grenades .current input {
+.grenades .row2 .max input,
+.grenades .row2 .current input {
     width: 90%;
     height: 60%;
     margin: 0px;
@@ -485,27 +485,7 @@
     border-right: 0px;
     border-left: 0px;
     font-size: large;
-}
-
-.grenades .max {
-    height: 50%;
-    width: 17%;
-    overflow: hidden;
-    border: 1px solid black;
-    display: inline-block;
-    font-size: xx-small;
-}
-
-.grenades .max input {
-    width: 90%;
-    height: 60%;
-    margin: 0px;
-    padding: 0px;
-    border-top: 0px;
-    border-bottom: 1px solid black;
-    border-right: 0px;
-    border-left: 0px;
-    font-size: large;
+    text-align: center;
 }
 
 .potions {
