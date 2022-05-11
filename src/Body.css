@@ -774,6 +774,7 @@
     width:100%;
     height: 100%;
     margin-left: 5px;
+    justify-content: flex-start;
 }
 
 .bgtraits .bgbox .bginfo textarea {
@@ -782,6 +783,8 @@
     height: 95%;
     margin: 0px;
     padding: 0px;
+    background-image:
+        repeating-linear-gradient(white, white 15%, lightgrey 15%, lightgrey 15%, white 15.5%);
 }
 
 .bgtraits .traitsbox {
