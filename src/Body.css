@@ -792,6 +792,7 @@
     grid-column: 5 / span 10;
     display: flex;
     flex-wrap: wrap;
+    border: 1px solid black;
 }
 
 .archetypeFeat .header {
@@ -800,6 +801,11 @@
     background-color: aliceblue;
     display: flex;
     justify-content: center;
+}
+
+.archetypeFeat .header * {
+    margin: 0px;
+    padding: 0px;
 }
 
 .archetypeFeat .content {

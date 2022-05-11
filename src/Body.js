@@ -333,7 +333,7 @@ class ArchetypeFeat extends React.Component {
     }
     render() {
         return <div className='archetypeFeat'>
-            <div className='header'><p>Archetype Feat</p></div>
+            <div className='header'><h3>Archetype Feat</h3></div>
             <div className='content'><p id="title">{this.props.title}</p><p>: {this.props.children}</p></div>
         </div>
     }
