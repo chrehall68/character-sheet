@@ -755,16 +755,16 @@
     display: flex;
     width: 5%;
     height: 100%;
-    align-items: flex-end;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
     background-color: lightgrey;
 }
 
 .bgtraits .bgbox .bgbar p,
 .bgtraits .traitsbox .traitsbar p {
-    position: absolute;
-    transform-origin: top left;
-    transform: rotate(-90deg);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(-180deg);
 }
 
 .bgtraits .bgbox .bginfo,
@@ -819,7 +819,7 @@
     overflow: hidden;
     display: flex;
     background-color: lightgrey;
-    justify-content: center;
+    text-align: center;
     width: 5%;
     height: 90%;
 }
@@ -828,8 +828,9 @@
     color: black;
     margin: 0px;
     padding: 0px;
-    transform-origin: center top;
-    transform: rotate(-90deg);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
 }
 
 .bgtraits .bgbox .bginfo {
@@ -863,7 +864,7 @@
     overflow: hidden;
     display: flex;
     background-color: lightgrey;
-    justify-content: center;
+    text-align: center;
     width: 5%;
     height: 90%;
 }
@@ -871,8 +872,9 @@
 .bgtraits .traitsbox .traitsbar p {
     margin: 0px;
     padding: 0px;
-    transform-origin: bottom left;
-    transform: rotate(-90deg);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
 }
 
 .bgtraits .traitsbox .traitsinfo {
