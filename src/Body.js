@@ -189,7 +189,7 @@ class Lock extends React.Component {
     }
     render() {
         return <label className="lock">
-            <img src={"images/lock.png"} alt={this.lock}/>
+            <img src={"images/lock.png"} alt={this.lock} />
         </label>
     }
 }
@@ -311,14 +311,16 @@ class Skills extends React.Component {
 }
 
 class BGandTraits extends React.Component {
-    render(){
+    render() {
         return <div className='bgtraits'>
             <div className="header"><h3>Background & Traits</h3></div>
-            <div className="bgbox"><div className="bgbar"><p>Background</p></div>
-            <div className="bginfo"><textarea style= {{"resize" : "none"}}></textarea></div>
+            <div className="bgbox">
+                <div className="bgbar"><p>Background</p></div>
+                <div className="bginfo"><textarea style={{ "resize": "none" }}></textarea></div>
             </div>
-            <div className="traitsbox"><div className="traitsbar"><p>Traits</p></div>
-            <div className="traitsinfo"><textarea style= {{"resize" : "none"}}></textarea></div>
+            <div className="traitsbox">
+                <div className="traitsbar"><p>Traits</p></div>
+                <div className="traitsinfo"><textarea style={{ "resize": "none" }}></textarea></div>
             </div>
         </div>
     }
@@ -337,7 +339,7 @@ export class Body extends React.Component {
                 <LongAttr mods={[1, 2, "_"]} small_descs={["Baddass Rank", "SPD Mod", "MISC Mod"]} />
 
                 <GunBar>Current Gun</GunBar>
-                <GunBar>Gun Slot 2</GunBar> 
+                <GunBar>Gun Slot 2</GunBar>
                 <GunBar>Gun Slot 3</GunBar>
 
                 <LongAttrHeader title="Movement" header_rows="1" style={{ gridColumn: "9/span 2", gridrow: "5 / span 2" }} />
