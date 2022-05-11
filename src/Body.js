@@ -3,6 +3,7 @@ import "./Body.css"
 
 import { ModifierBox, LargeModifierBox, LongModifierBox } from './ModifierBox'
 import { Editable } from './Editable'
+import { LimitedTextarea } from './limitedTextarea'
 
 class SmallAttr extends React.Component {
     constructor(props) {
@@ -316,11 +317,11 @@ class BGandTraits extends React.Component {
             <div className="header"><h3>Background & Traits</h3></div>
             <div className="bgbox">
                 <div className="bgbar"><p>Background</p></div>
-                <div className="bginfo"><textarea style={{ "resize": "none" }}></textarea></div>
+                <div className="bginfo"><LimitedTextarea maxLines={5} style={{ "resize": "none" }} /></div>
             </div>
             <div className="traitsbox">
                 <div className="traitsbar"><p>Traits</p></div>
-                <div className="traitsinfo"><textarea style={{ "resize": "none" }}></textarea></div>
+                <div className="traitsinfo"><LimitedTextarea maxLines={5} style={{ "resize": "none" }} /></div>
             </div>
         </div>
     }
