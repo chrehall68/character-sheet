@@ -187,26 +187,31 @@ class Grenades extends React.Component {
     }
 }
 
-class Lock extends React.Component {
+class Potions extends React.Component {
     constructor(props) {
         super(props)
-        this.lock = props.lockName
+        this.state = { value1: "\t", value2: "\t" }
     }
-    render() {
-        return <label className="lock">
-            <img src={"images/lock.png"} alt={this.lock} />
-        </label>
+    lock_text = (box, event) => {
+        if (box === 1) {
+            if (event.target.value.length !== 0 && event.target.value[0] === "\t") {
+                this.setState({ value1: event.target.value, value2: this.state.value2 })
+            }
+        }
+        else {
+            if (event.target.value.length !== 0 && event.target.value[0] === "\t") {
+                this.setState({ value1: this.state.value1, value2: event.target.value })
+            }
+        }
     }
-}
-
-class Potions extends React.Component {
     render() {
         return <div className="potions" style={this.props.style}>
             <div className="header"><h3>Potions</h3></div>
-            <div className="txtbox"><textarea style={{ "resize": "none" }}></textarea></div>
-            <div className="txtbox1"><textarea style={{ "resize": "none" }}></textarea></div>
-            <div className="txtbox2"><Lock lockname="lock1"></Lock><textarea style={{ "resize": "none" }}></textarea></div>
-            <div className="txtbox3"><Lock lockname="lock2"></Lock><textarea style={{ "resize": "none" }}></textarea></div>
+            <div className="txtbox"><input type="text" /></div>
+            <div className="txtbox"><input type="text" /></div>
+            <div className="txtbox"><input type="text" /></div>
+            <div className="txtbox lockable"><input value={this.state.value1} type="text" onChange={(event) => { this.lock_text(1, event) }} /></div>
+            <div className="txtbox lockable"><input value={this.state.value2} type="text" onChange={(event) => { this.lock_text(2, event) }} /></div>
         </div>
     }
 }

@@ -491,120 +491,50 @@
 .potions {
     grid-column: span 4;
     grid-row: 27 / span 9;
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
     font-size: smaller;
     font-style: normal;
     border: 1px black solid;
     overflow: hidden;
+    justify-content: center;
 }
 
 .potions .header {
-    display: block;
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     background-color: cornsilk;
 }
 
 .potions .header h3 {
     padding: 0px;
     margin: 0px;
-    text-align: center;
 }
 
 .potions .txtbox {
-    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 12.5%;
     width: 95%;
-    margin: 3px;
-    padding-left: 1px;
-    padding-right: 1px;
-    padding-bottom: 5px;
 }
 
-.potions .txtbox textarea {
-    display: flex;
+.potions .txtbox input {
     height: 100%;
     width: 100%;
-    overflow: hidden;
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
     border-bottom: 1px grey solid;
     font-size: large;
+    background-color: transparent;
 }
 
-.potions .txtbox1 {
-    height: 15%;
-    width: 95%;
-    margin: 3px;
-    padding-left: 1px;
-    padding-right: 1px;
-    padding-bottom: 5px;
-}
-
-.potions .txtbox1 textarea {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    border-bottom: 1px grey solid;
-    font-size: large;
-}
-
-.potions .txtbox2 {
-    height: 15%;
-    width: 95%;
-    margin: 3px;
-    padding-left: 1px;
-    padding-right: 1px;
-    padding-bottom: 5px;
-}
-
-.potions .txtbox2 textarea {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    border-bottom: 1px grey solid;
-    font-size: large;
-}
-
-.potions .txtbox3 {
-    height: 15%;
-    width: 95%;
-    margin: 3px;
-    padding-left: 1px;
-    padding-right: 1px;
-    padding-bottom: 5px;
-}
-
-.potions .txtbox3 textarea {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    border-bottom: 1px grey solid;
-    font-size: large;
-}
-
-.potions .lock * {
-    display: inline-flex;
-    margin: 0px;
-    padding: 0px;
-}
-
-.potions .lock img {
-    width: 6%;
-    height: auto;
+.potions .txtbox.lockable {
+    background-image: url("/public/images/lock.png");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
 }
 
 .favoredGun {
