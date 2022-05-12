@@ -148,12 +148,12 @@ class ChecksItem extends React.Component {
     render() {
         return (
             <div className="checksItem">
-                <h2 className='ChecksItemTitle'>{this.title}</h2>
-                <LongModifierBox small_desc={this.mod1name} modifier={this.mod1val} className="val1" style={{ height: "40px" }} />
-                <p className="plus">+</p>
-                <LongModifierBox small_desc={this.mod2name} modifier={this.mod2val} className="val2" style={{ height: "40px" }} />
-                <p className="equals">=</p>
-                <LargeModifierBox small_desc="" modifier={this.finalVal} className="val3" style={{ height: "40px" }} />
+                <h2 className='checksItemTitle'>{this.title}</h2>
+                <LongModifierBox small_desc={this.mod1name} modifier={this.mod1val} className="val1" />
+                <p>+</p>
+                <LongModifierBox small_desc={this.mod2name} modifier={this.mod2val} className="val2" />
+                <p>=</p>
+                <LargeModifierBox small_desc="" modifier={this.finalVal} className="val3" />
             </div>
         )
     }
@@ -197,10 +197,16 @@ class Potions extends React.Component {
             if (event.target.value.length !== 0 && event.target.value[0] === "\t") {
                 this.setState({ value1: event.target.value, value2: this.state.value2 })
             }
+            else {
+                this.setState({ value1: "\t", value2: this.state.value2 })
+            }
         }
         else {
             if (event.target.value.length !== 0 && event.target.value[0] === "\t") {
                 this.setState({ value1: this.state.value1, value2: event.target.value })
+            }
+            else {
+                this.setState({ value1: this.state.value1, value2: "\t" })
             }
         }
     }
