@@ -197,10 +197,16 @@ class Potions extends React.Component {
             if (event.target.value.length !== 0 && event.target.value[0] === "\t") {
                 this.setState({ value1: event.target.value, value2: this.state.value2 })
             }
+            else {
+                this.setState({ value1: "\t", value2: this.state.value2 })
+            }
         }
         else {
             if (event.target.value.length !== 0 && event.target.value[0] === "\t") {
                 this.setState({ value1: this.state.value1, value2: event.target.value })
+            }
+            else {
+                this.setState({ value1: this.state.value1, value2: "\t" })
             }
         }
     }
