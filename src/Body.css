@@ -689,8 +689,8 @@
     width: 100%;
     margin-left: 2.5%;
     margin-right: 2.5%;
-    border-left: 0px;
-    border-right: 0px;
+    margin-bottom: 0.3em;
+    border: 0px;
     line-height: 1.7em;
     background-image: repeating-linear-gradient(white, white 1.5em, lightgrey 1.5em, lightgrey 1.7em, white 1.7em);
 }
