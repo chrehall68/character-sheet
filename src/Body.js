@@ -148,12 +148,12 @@ class ChecksItem extends React.Component {
     render() {
         return (
             <div className="checksItem">
-                <h2 className='ChecksItemTitle'>{this.title}</h2>
-                <LongModifierBox small_desc={this.mod1name} modifier={this.mod1val} className="val1" style={{ height: "40px" }} />
-                <p className="plus">+</p>
-                <LongModifierBox small_desc={this.mod2name} modifier={this.mod2val} className="val2" style={{ height: "40px" }} />
-                <p className="equals">=</p>
-                <LargeModifierBox small_desc="" modifier={this.finalVal} className="val3" style={{ height: "40px" }} />
+                <h2 className='checksItemTitle'>{this.title}</h2>
+                <LongModifierBox small_desc={this.mod1name} modifier={this.mod1val} className="val1" />
+                <p>+</p>
+                <LongModifierBox small_desc={this.mod2name} modifier={this.mod2val} className="val2" />
+                <p>=</p>
+                <LargeModifierBox small_desc="" modifier={this.finalVal} className="val3" />
             </div>
         )
     }
