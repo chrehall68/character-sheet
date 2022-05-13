@@ -13,42 +13,45 @@
     grid-column: span 2;
     grid-row: span 4;
     overflow: hidden;
-
-    display: grid;
-    grid-template-areas: "header header header"
-        "value value mod";
-
-    grid-template-columns: 60px;
-
+    display: flex;
+    flex-wrap: wrap;
     border: 2px solid black;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-
 }
 
 .smallAttr .header {
+    width: 100%;
+    height: 30%;
     text-align: center;
-    /*  margin/padding: all  
-        margin/padding: vertical | horizontal*/
-    margin: 0px auto;
-    padding: 0px auto;
-    grid-area: header;
     border-bottom: solid black 1px;
+    margin: 0px;
 }
 
-.smallAttr .value {
-    text-align: right;
-    grid-area: value;
-    display: inline;
-    padding: auto auto;
-    margin: 0px auto;
+
+.smallAttr .contentRow {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.smallAttr input.value {
+    width: 50%;
+    text-align: center;
+    border: 0px;
+    font-size: larger;
+}
+
+.smallAttr input.value::-webkit-outer-spin-button,
+.smallAttr input.value::-webkit-inner-spin-button {
+    display: none;
 }
 
 .smallAttr .attr_mod {
-    grid-area: mod;
     display: inline;
     vertical-align: middle;
-    float: right;
 }
 
 /** ----------GunBar styles---------- */
@@ -109,38 +112,53 @@
 
 /** ----------MainAndLabelBox styles---------- */
 .mainAndLabelBox {
-    display: grid;
-    grid-template-areas: "main"
-        "main"
-        "label";
-    height: 45px;
-    grid-template-rows: 15px;
-
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
     border: 1px solid black;
-    overflow: hidden;
 }
 
 .mainAndLabelBox .main {
-    grid-area: main;
+    height: 66.6%;
+    width: 100%;
     font-size: 25px;
     font-weight: bold;
     padding: 0px auto;
     margin: 0px auto;
+    text-align: center;
+}
+
+.mainAndLabelBox input.main {
+    border: 0px;
+}
+
+.mainAndLabelBox input.main::-webkit-outer-spin-button,
+.mainAndLabelBox input.main::-webkit-inner-spin-button {
+    display: none;
 }
 
 .mainAndLabelBox .label {
-    grid-area: label;
+    height: 33.3%;
+    width: 100%;
     font-size: 8px;
     padding: 0px auto;
     margin: 0px auto;
+    text-align: center;
+}
+
+.health {
+    grid-column: span 4;
+    grid-row: span 4;
 }
 
 .headerCurMaxMod {
-    grid-column: span 4;
-    grid-row: span 4;
-    display: grid;
-    grid-template-areas: "header header header"
-        "cur max mod";
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     overflow: hidden;
     border: 1px solid black;
     border-top-left-radius: 10px;
@@ -148,24 +166,29 @@
 }
 
 .headerCurMaxMod .header {
-    grid-area: header;
-    margin: 0px auto;
-    padding: 0px auto;
+    width: 100%;
+    height: 30%;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
 }
 
-.headerCurMaxMod .current {
-    grid-area: cur;
-    width: 105px;
+.headerCurMaxMod .contentRow {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: flex-start;
 }
 
+.headerCurMaxMod .current,
 .headerCurMaxMod .max {
-    grid-area: max;
-    width: 105px;
+    display: flex;
+    width: 40%;
 }
 
 .headerCurMaxMod .mod {
-    grid-area: mod;
-    width: 46px;
+    display: flex;
+    width: 20%;
 }
 
 /* Checks stuff */
@@ -241,19 +264,40 @@
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shields .row1 {
+    height: 50%;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+.shields .row2 {
+    height: 50%;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .shields .shieldInput {
-    display: block;
-    width: 240px;
+    display: flex;
+    justify-content: flex-start;
     overflow: hidden;
+    align-items: center;
+    height: 50%;
 }
 
 .shields .shieldInput p,
 .shields .shieldInput h5 {
-    display: inline-block;
-    margin: auto auto;
-    padding: auto auto;
+    font-size: smaller;
+    width: 35%;
+}
+
+.shields .shieldInput textarea {
+    height: 75%;
+    width: 65%;
     font-size: smaller;
 }
 

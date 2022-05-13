@@ -9,17 +9,24 @@ class SmallAttr extends React.Component {
     constructor(props) {
         super(props)
         this.header = props.header
-        this.value = props.value
-        this.modifier = props.modifier
         this.small_desc = props.small_desc
+
+        this.state = { value: props.value, modifier: props.value / 2 }
+    }
+
+    getModifier = (event) => {
+        if (Math.abs(event.target.value) < 1000) { this.setState({ value: event.target.value, modifier: event.target.value / 2 }, () => console.log(this.state)) }
+        else { this.setState({ value: 999 * Math.sign(event.target.value), modifier: 999 * Math.sign(event.target.value) / 2 }, () => console.log(this.state)) }
     }
 
     render() {
         return (
             <span className='smallAttr'>
-                <h4 className="header">{this.header}</h4>
-                <h1 className="value">{this.value}</h1>
-                <ModifierBox small_desc={this.small_desc} modifier={this.modifier} className="attr_mod" />
+                <h4 className='header'>{this.header}</h4>
+                <div className="contentRow">
+                    <input className="value" type="number" value={this.state.value} onChange={this.getModifier} />
+                    <ModifierBox key={this.state.modifier} small_desc={this.small_desc} modifier={this.state.modifier} className="attr_mod" />
+                </div>
             </span>)
     }
 }
@@ -80,7 +87,9 @@ class LongAttr extends React.Component {
 
 class Health extends React.Component {
     render() {
-        return <HeaderCurMaxMod header="health" cur="1" max="25" mod="_" mod_label="Regen" style={this.props.style} />
+        return <div className='health' style={this.props.style}>
+            <HeaderCurMaxMod header="health" cur="1" max="25" mod="0" mod_label="Regen" curEditable={true} modEditable={true} />
+        </div>
     }
 }
 class HeaderCurMaxMod extends React.Component {
@@ -91,14 +100,22 @@ class HeaderCurMaxMod extends React.Component {
         this.max = this.props.max
         this.mod = this.props.mod
         this.mod_label = this.props.mod_label
+        this.className = ""
+        if (typeof (this.props.className) == "string") this.className = this.props.className
+
+        this.curEditable = this.props.curEditable || false;
+        this.maxEditable = this.props.maxEditable || false;
+        this.modEditable = this.props.modEditable || false;
     }
 
     render() {
         return <div className='headerCurMaxMod' style={this.props.style}>
             <h3 className="header">{this.header}</h3>
-            <MainAndLabelBox className="current" main={this.cur} label="current" />
-            <MainAndLabelBox className="max" main={this.max} label="max" />
-            <MainAndLabelBox className="mod" main={this.mod} label={this.mod_label} />
+            <div className="contentRow" >
+                <MainAndLabelBox className="current" main={this.cur} label="current" editable={this.curEditable} />
+                <MainAndLabelBox className="max" main={this.max} label="max" editable={this.maxEditable} />
+                <MainAndLabelBox className="mod" main={this.mod} label={this.mod_label} editable={this.modEditable} />
+            </div>
         </div>
     }
 }
@@ -109,11 +126,13 @@ class MainAndLabelBox extends React.Component {
         this.label = props.label
         this.className = "mainAndLabelBox"
         if (typeof (this.props.className) == "string") this.className += " " + this.props.className
+        this.editable = this.props.editable || false;
     }
 
     render() {
         return <span className={this.className} >
-            <p className="main" > {this.main}</p >
+            {!this.editable && <p className="main" > {this.main}</p >}
+            {this.editable && <input className="main" defaultValue={this.main} type="number" />}
             <p className="label">{this.label}</p>
         </span >
     }
@@ -225,9 +244,13 @@ class Potions extends React.Component {
 class Shields extends React.Component {
     render() {
         return <div className="shields" style={this.props.style}>
-            <HeaderCurMaxMod header="shields" cur="2" max="15" mod="5" mod_label="Recharge" style={{ border: "none" }} />
-            <span className="shieldInput"><h5>shield type: </h5><p><Editable callback={() => { console.log("no") }} /></p></span>
-            <span className="shieldInput"><h5>info: </h5><p><Editable initialVal="hi" /></p></span>
+            <div className='row1'>
+                <HeaderCurMaxMod header="shields" cur="2" max="15" mod="5" mod_label="Recharge" style={{ border: "none" }} curEditable={true} />
+            </div>
+            <div className="row2" >
+                <span className="shieldInput"><h5>shield type: </h5><p><Editable callback={() => { console.log("no") }} /></p></span>
+                <span className="shieldInput"><h5>info: </h5><textarea style={{ resize: "none" }} /></span>
+            </div>
         </div>
     }
 }
@@ -359,10 +382,10 @@ export class Body extends React.Component {
     render() {
         return (
             <div className="body">
-                <SmallAttr header="Accuracy (ACC)" value="2" modifier="+1" small_desc="mod" />
-                <SmallAttr header="Damage (DMG)" value="6" modifier="+3" small_desc="mod" />
-                <SmallAttr header="Speed (SPD)" value="4" modifier="+2" small_desc="mod" />
-                <SmallAttr header="Mastery (MST)" value="2" modifier="+1" small_desc="mod" />
+                <SmallAttr header="Accuracy (ACC)" value="4" small_desc="mod" />
+                <SmallAttr header="Damage (DMG)" value="6" small_desc="mod" />
+                <SmallAttr header="Speed (SPD)" value="4" small_desc="mod" />
+                <SmallAttr header="Mastery (MST)" value="2" small_desc="mod" />
 
                 <LongAttrHeader title="Initiative" header_rows="2" />
                 <LongAttr mods={[1, 2, "_"]} small_descs={["Baddass Rank", "SPD Mod", "MISC Mod"]} />

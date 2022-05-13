@@ -12,7 +12,7 @@ export class ModifierBox extends React.Component {
     render() {
         return (
             <span className={this.cn} style={this.props.style}>
-                <p className="mod">{this.modifier}</p>
+                <div className="mod"><p>{this.modifier}</p></div>
                 <p className="small">{this.small_desc}</p>
             </span>)
     }
