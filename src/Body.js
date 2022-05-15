@@ -12,11 +12,12 @@ class SmallAttr extends React.Component {
         this.small_desc = props.small_desc
 
         this.state = { value: props.value, modifier: props.value / 2 }
+        this.changeHandler = this.props.changeHandler || function (t) { console.log(t) }
     }
 
     getModifier = (event) => {
-        if (Math.abs(event.target.value) < 1000) { this.setState({ value: event.target.value, modifier: event.target.value / 2 }, () => console.log(this.state)) }
-        else { this.setState({ value: 999 * Math.sign(event.target.value), modifier: 999 * Math.sign(event.target.value) / 2 }, () => console.log(this.state)) }
+        if (Math.abs(event.target.value) < 1000) { this.setState({ value: event.target.value, modifier: event.target.value / 2 }, () => this.changeHandler(this)) }
+        else { this.setState({ value: 999 * Math.sign(event.target.value), modifier: 999 * Math.sign(event.target.value) / 2 }, () => this.changeHandler(this)) }
     }
 
     render() {
@@ -139,16 +140,30 @@ class MainAndLabelBox extends React.Component {
 }
 
 class Checks extends React.Component {
+    constructor(props) {
+        super(props)
+        this.spdMod = props.spdMod;
+        this.accMod = props.accMod;
+        this.mstMod = props.mstMod;
+    }
+    componentDidUpdate() {
+
+        console.log("spd" + this.spdMod)
+        console.log("acc" + this.accMod)
+        console.log("mst" + this.mstMod)
+    }
 
     render() {
+        // the lists in the keys are merely to provide stability to the key system
+        // by making each key unique
         return <div className="checks" style={this.props.style}>
             <p className="header">Checks</p>
-            <ChecksItem title="Interact" mod1name="acc" mod2name="misc" mod1val="1" mod2val="0" />
-            <ChecksItem title="Talk" mod1name="spd" mod2name="misc" mod1val="1" mod2val="0" />
-            <ChecksItem title="Insight" mod1name="acc" mod2name="misc" mod1val="1" mod2val="0" />
-            <ChecksItem title="Sneak" mod1name="MST" mod2name="misc" mod1val="1" mod2val="0" />
-            <ChecksItem title="Search" mod1name="MST" mod2name="misc" mod1val="1" mod2val="0" />
-            <ChecksItem title="Traverse" mod1name="SPD" mod2name="misc" mod1val="2" mod2val="0" />
+            <ChecksItem title="Interact" mod1name="acc" mod2name="misc" mod1val={this.accMod} mod2val="0" key={[this.accMod, 0]} />
+            <ChecksItem title="Talk" mod1name="spd" mod2name="misc" mod1val={this.spdMod} mod2val="0" key={[this.spdMod, 1]} />
+            <ChecksItem title="Insight" mod1name="acc" mod2name="misc" mod1val={this.accMod} mod2val="0" key={[this.accMod, 2]} />
+            <ChecksItem title="Sneak" mod1name="MST" mod2name="misc" mod1val={this.mstMod} mod2val="0" key={[this.mstMod, 3]} />
+            <ChecksItem title="Search" mod1name="MST" mod2name="misc" mod1val={this.mstMod} mod2val="0" key={[this.mstMod, 4]} />
+            <ChecksItem title="Traverse" mod1name="SPD" mod2name="misc" mod1val={this.spdMod} mod2val="0" key={[this.spdMod, 5]} />
         </div>
     }
 }
@@ -179,11 +194,15 @@ class ChecksItem extends React.Component {
 }
 
 class Melee extends React.Component {
+    constructor(props) {
+        super(props)
+        this.mod = props.mod
+    }
     render() {
         return <div className='melee' style={this.props.style}>
             <h3 className="header">Melee Die</h3>
             <MainAndLabelBox main="1d10" label="" className="die" />
-            <ModifierBox className="mod" modifier="+3" small_desc="+DMG" />
+            <ModifierBox className="mod" modifier={"+" + this.mod} small_desc="+DMG" />
         </div>
     }
 }
@@ -401,39 +420,78 @@ class XPBar extends React.Component {
 }
 
 export class Body extends React.Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            spdMod: 0,
+            accMod: 0,
+            dmgMod: 0,
+            mstMod: 0
+        }
+    }
+    attrChangeHandler = (obj) => {
+        if (obj.header === "Accuracy (ACC)") {
+            this.setState({ spdMod: this.state.spdMod, accMod: obj.state.modifier, dmgMod: this.state.dmgMod, mstMod: this.state.mstMod }, () => console.log(this.state))
+        }
+        if (obj.header === "Damage (DMG)") {
+            this.setState({ spdMod: this.state.spdMod, accMod: this.state.accMod, dmgMod: obj.state.modifier, mstMod: this.state.mstMod })
+        }
+        if (obj.header === "Speed (SPD)") {
+            this.setState({ spdMod: obj.state.modifier, accMod: this.state.accMod, dmgMod: this.state.dmgMod, mstMod: this.state.mstMod })
+        }
+        if (obj.header === "Mastery (MST)") {
+            this.setState({ spdMod: this.state.spdMod, accMod: this.state.accMod, dmgMod: this.state.dmgMod, mstMod: obj.state.modifier })
+        }
+    }
     render() {
         return (
             <div className="body">
-                <SmallAttr header="Accuracy (ACC)" value="4" small_desc="mod" />
-                <SmallAttr header="Damage (DMG)" value="6" small_desc="mod" />
-                <SmallAttr header="Speed (SPD)" value="4" small_desc="mod" />
-                <SmallAttr header="Mastery (MST)" value="2" small_desc="mod" />
+                <SmallAttr header="Accuracy (ACC)" value={this.state.accMod} small_desc="mod" changeHandler={this.attrChangeHandler} />
+                <SmallAttr header="Damage (DMG)" value={this.state.dmgMod} small_desc="mod" changeHandler={this.attrChangeHandler} />
+                <SmallAttr header="Speed (SPD)" value={this.state.spdMod} small_desc="mod" changeHandler={this.attrChangeHandler} />
+                <SmallAttr header="Mastery (MST)" value={this.state.mstMod} small_desc="mod" changeHandler={this.attrChangeHandler} />
 
                 <LongAttrHeader title="Initiative" header_rows="2" />
-                <LongAttr mods={[1, 2, "_"]} small_descs={["Baddass Rank", "SPD Mod", "MISC Mod"]} />
+                <LongAttr mods={[1, this.state.spdMod, "_"]} small_descs={["Baddass Rank", "SPD Mod", "MISC Mod"]} key={[this.state.spdMod, 0]} />
 
                 <GunBar>Current Gun</GunBar>
                 <GunBar>Gun Slot 2</GunBar>
                 <GunBar>Gun Slot 3</GunBar>
 
                 <LongAttrHeader title="Movement" header_rows="1" style={{ gridColumn: "9/span 2", gridrow: "5 / span 2" }} />
-                <LongAttr mods={[3, 2, "_"]} small_descs={["static mod", "SPD Mod", "MISC Mod"]} style={{ gridColumn: "11 / span 4" }} />
+                <LongAttr mods={[3, this.state.spdMod, "_"]} small_descs={["static mod", "SPD Mod", "MISC Mod"]} style={{ gridColumn: "11 / span 4" }}
+                    key={[this.state.spdMod, 1]} />
 
                 <Health style={{ gridRow: "7/span 4" }} />
-                <Checks style={{ gridRow: "7/span 15" }} />
-                <Melee style={{ gridRow: "9/span 4" }} />
+
+                <Checks style={{ gridRow: "7/span 15" }} spdMod={this.state.spdMod}
+                    accMod={this.state.accMod} mstMod={this.state.mstMod}
+                    key={[this.state.accMod, this.state.dmgMod, this.state.spdMod, this.state.mstMod]} />
+
+                <Melee style={{ gridRow: "9/span 4" }} key={this.state.dmgMod} mod={this.state.dmgMod} />
+
                 <Shields style={{ gridRow: "11 / span 7" }} />
+
                 <Grenades />
+
                 <Potions />
+
                 <BARank />
+
                 <Gold style={{ gridRow: "13/ span 3" }} />
+
                 <Skills />
+
                 <BGandTraits />
+
                 <FavoredGun />
+
                 <ArchetypeFeat title="FLEX">
                     The first time your Shields
                     are depleted in an encounter, gain 1 Badass Token.
                 </ArchetypeFeat>
+
                 <XPBar />
             </div>
         )
