@@ -62,7 +62,7 @@ class LongAttr extends React.Component {
         this.small_descs = this.props.small_descs
         this.items = this.mods.map((element, index) => {
             if (this.small_descs[index] != null) {
-                return <LargeModifierBox key={index} style={{ float: "left", margin: "auto auto" }} small_desc={this.small_descs[index]} modifier={element} />
+                return <LargeModifierBox key={index} small_desc={this.small_descs[index]} modifier={element} />
             }
             else return <h1>{this.modifier}</h1>
         });
@@ -76,7 +76,7 @@ class LongAttr extends React.Component {
         // get total for the last box
         let total = 0
         this.mods.forEach((element) => { if (typeof (element) == "number") total += element })
-        this.items.push(<ModifierBox key={this.items.length} style={{ float: "left", margin: "auto auto", width: "40px", height: "40 px" }} small_desc="" modifier={"+" + total} />)
+        this.items.push(<ModifierBox key={this.items.length} style={{ width: "40px", height: "40 px" }} small_desc="" modifier={"+" + total} />)
     }
 
     render() {
@@ -432,7 +432,7 @@ export class Body extends React.Component {
     }
     attrChangeHandler = (obj) => {
         if (obj.header === "Accuracy (ACC)") {
-            this.setState({ spdMod: this.state.spdMod, accMod: obj.state.modifier, dmgMod: this.state.dmgMod, mstMod: this.state.mstMod }, () => console.log(this.state))
+            this.setState({ spdMod: this.state.spdMod, accMod: obj.state.modifier, dmgMod: this.state.dmgMod, mstMod: this.state.mstMod })
         }
         if (obj.header === "Damage (DMG)") {
             this.setState({ spdMod: this.state.spdMod, accMod: this.state.accMod, dmgMod: obj.state.modifier, mstMod: this.state.mstMod })

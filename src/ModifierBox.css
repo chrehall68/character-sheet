@@ -38,36 +38,28 @@
 }
 
 .largeModifier {
-    float: right;
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;
     border: solid black 2px;
-    display: grid;
-    grid-template-areas: "mod"
-        "mod"
-        "desc";
-    grid-template-rows: 20px;
-    grid-template-columns: 60px;
+    display: flex;
+    flex-wrap: wrap;
     height: 60px;
     width: 60px;
-    vertical-align: bottom;
     margin: 0px;
+    padding: 0px;
 }
 
 .largeModifier .small {
-    vertical-align: top;
-    float: left;
     font-size: 10px;
-    grid-area: desc;
     margin: 0px;
     padding: 0px;
 }
 
 .largeModifier .mod {
+    width: 100%;
     margin: 0px;
     padding: 0px;
     font-size: 30px;
-    grid-area: mod;
     text-align: center;
     font-weight: bold;
 }
