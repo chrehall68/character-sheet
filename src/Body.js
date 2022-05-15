@@ -378,6 +378,28 @@ class ArchetypeFeat extends React.Component {
     }
 }
 
+class XPBar extends React.Component {
+    constructor(props) {
+        super(props)
+        this.XP_PER_BOX = 100
+        this.state = { xp: this.props.xp || 0 }
+    }
+
+    updateBar = () => {
+
+    }
+
+    render() {
+        return <div className="xpbar">
+            <div className='xpstuff' >
+                <h5 className='label'>XP Bar</h5>
+                <input className="content" type="number" />
+            </div>
+        </div>
+    }
+
+}
+
 export class Body extends React.Component {
     render() {
         return (
@@ -412,6 +434,7 @@ export class Body extends React.Component {
                     The first time your Shields
                     are depleted in an encounter, gain 1 Badass Token.
                 </ArchetypeFeat>
+                <XPBar />
             </div>
         )
     }
