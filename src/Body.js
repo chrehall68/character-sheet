@@ -4,6 +4,7 @@ import "./Body.css"
 import { ModifierBox, LargeModifierBox, LongModifierBox } from './ModifierBox'
 import { Editable } from './Editable'
 import { LimitedTextarea } from './limitedTextarea'
+import { wait } from '@testing-library/user-event/dist/utils'
 
 class SmallAttr extends React.Component {
     constructor(props) {
@@ -147,10 +148,6 @@ class Checks extends React.Component {
         this.mstMod = props.mstMod;
     }
     componentDidUpdate() {
-
-        console.log("spd" + this.spdMod)
-        console.log("acc" + this.accMod)
-        console.log("mst" + this.mstMod)
     }
 
     render() {
@@ -267,7 +264,7 @@ class Shields extends React.Component {
                 <HeaderCurMaxMod header="shields" cur="2" max="15" mod="5" mod_label="Recharge" style={{ border: "none" }} curEditable={true} />
             </div>
             <div className="row2" >
-                <span className="shieldInput"><h5>shield type: </h5><p><Editable callback={() => { console.log("no") }} /></p></span>
+                <span className="shieldInput"><h5>shield type: </h5><p><Editable /></p></span>
                 <span className="shieldInput"><h5>info: </h5><textarea style={{ resize: "none" }} /></span>
             </div>
         </div>
@@ -401,18 +398,43 @@ class XPBar extends React.Component {
     constructor(props) {
         super(props)
         this.XP_PER_BOX = 100
+        this.BOXES = 10
         this.state = { xp: this.props.xp || 0 }
+        this.good = true
     }
 
-    updateBar = () => {
+    updateBar = async (event) => {
+        if (event.target.value < 0) return;
 
+        if (event.target.value < this.state.xp) {
+            for (let i = this.state.xp; i >= event.target.value && this.good; i--) {
+                this.setState({ xp: i })
+                await wait(0.001)
+            }
+        }
+        else {
+            for (let i = this.state.xp; i <= event.target.value && this.good; i++) {
+                this.setState({ xp: i })
+                await wait(0.001)
+            }
+        }
+    }
+
+    componentWillUnmount() {
+        this.good = false;
+    }
+    componentDidMount() {
+        this.good = true;
     }
 
     render() {
         return <div className="xpbar">
             <div className='xpstuff' >
                 <h5 className='label'>XP Bar</h5>
-                <input className="content" type="number" />
+                <input className="content" type="number" value={this.props.xp} onChange={this.updateBar} />
+            </div>
+            <div className='bar'>
+                <div key={this.state.xp} style={{ width: (this.state.xp / 100 * this.XP_PER_BOX / this.BOXES) + "%" }} />
             </div>
         </div>
     }

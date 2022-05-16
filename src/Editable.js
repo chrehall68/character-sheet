@@ -34,7 +34,6 @@ export class Editable extends React.Component {
 
     onChange = (event) => {
         this.setState({ value: event.target.value })
-        console.log(this.state.value)
     }
 
     getCharacterLength() {
