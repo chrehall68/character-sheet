@@ -1,411 +1,398 @@
-<link href="./bnb.css" rel="stylesheet" />
-
-<body>
-    <div id="root">
-        <div class="App">
-            <div id="header"><span class="item">
-                    <h1 class="main_content title">BNB</h1>
-                </span><span class="item arch">
-                    <h3 class="box_label">Archetype: </h3>
-                    <h2 class="main_content"><input type="text" maxlength="12" val="Enforcer" class="editable"
-                            value="Enforcer" style="border-bottom: none; width: 10ch;"></h2>
-                </span><span class="item class">
-                    <h3 class="box_label">Class: </h3>
-                    <h2 class="main_content"><input type="text" maxlength="12" val="Gunzerker" class="editable"
-                            value="Gunzerker" style="border-bottom: none; width: 10.7ch;"></h2>
-                </span><span class="item name">
-                    <h3 class="box_label">Name: </h3>
-                    <h2 class="main_content"><input type="text" maxlength="12" val="" class="editable" value=""
-                            style="border-bottom: 1px solid black; width: 10ch;"></h2>
-                </span><span class="item bg">
-                    <h3 class="box_label">Background: </h3>
-                    <h2 class="main_content"><input type="text" maxlength="12" val="Buff" class="editable" value="Buff"
-                            style="border-bottom: none; width: 10ch;"></h2>
-                </span><span class="item lvl">
-                    <h3 class="box_label">Level: </h3>
-                    <h2 class="main_content"><input type="text" maxlength="12" val="1" class="editable" value="1"
-                            style="border-bottom: none; width: 10ch;"></h2>
-                </span><span class="item skill">
-                    <h3 class="box_label">Action Skill: </h3>
-                    <p class="main_content">Gunzerking: Gunzerker gains the ability to wield 2 equipped guns at once for
-                        2 turns. Each Ranged Attack fires both guns at a single target. While Gunzerking, Gunzerker
-                        gains Health Regen. (MST Mod per Day+Once per Encounter)</p><span class="modifier"
-                        style="transform: translateY(-38px);">
-                        <div class="mod">
-                            <p>+1</p>
-                        </div>
-                        <p class="small">MST</p>
-                    </span>
-                </span></div>
-            <div class="body"><span class="smallAttr">
-                    <h4 class="header">Accuracy (ACC)</h4>
-                    <div class="contentRow"><input class="value" type="number" value="0"><span
-                            class="attr_mod modifier">
-                            <div class="mod">
-                                <p>0</p>
-                            </div>
-                            <p class="small">mod</p>
-                        </span></div>
-                </span><span class="smallAttr">
-                    <h4 class="header">Damage (DMG)</h4>
-                    <div class="contentRow"><input class="value" type="number" value="0"><span
-                            class="attr_mod modifier">
-                            <div class="mod">
-                                <p>0</p>
-                            </div>
-                            <p class="small">mod</p>
-                        </span></div>
-                </span><span class="smallAttr">
-                    <h4 class="header">Speed (SPD)</h4>
-                    <div class="contentRow"><input class="value" type="number" value="0"><span
-                            class="attr_mod modifier">
-                            <div class="mod">
-                                <p>0</p>
-                            </div>
-                            <p class="small">mod</p>
-                        </span></div>
-                </span><span class="smallAttr">
-                    <h4 class="header">Mastery (MST)</h4>
-                    <div class="contentRow"><input class="value" type="number" value="0"><span
-                            class="attr_mod modifier">
-                            <div class="mod">
-                                <p>0</p>
-                            </div>
-                            <p class="small">mod</p>
-                        </span></div>
+<div id="root">
+    <div class="App">
+        <div id="header"><span class="item">
+                <h1 class="main_content title">BNB</h1>
+            </span><span class="item arch">
+                <h3 class="box_label">Archetype: </h3>
+                <h2 class="main_content"><input type="text" maxlength="12" val="Enforcer" class="editable"
+                        value="Enforcer" style="border-bottom: none; width: 10ch;"></h2>
+            </span><span class="item class">
+                <h3 class="box_label">Class: </h3>
+                <h2 class="main_content"><input type="text" maxlength="12" val="Gunzerker" class="editable"
+                        value="Gunzerker" style="border-bottom: none; width: 10.7ch;"></h2>
+            </span><span class="item name">
+                <h3 class="box_label">Name: </h3>
+                <h2 class="main_content"><input type="text" maxlength="12" val="" class="editable" value=""
+                        style="border-bottom: 1px solid black; width: 10ch;"></h2>
+            </span><span class="item bg">
+                <h3 class="box_label">Background: </h3>
+                <h2 class="main_content"><input type="text" maxlength="12" val="Buff" class="editable" value="Buff"
+                        style="border-bottom: none; width: 10ch;"></h2>
+            </span><span class="item lvl">
+                <h3 class="box_label">Level: </h3>
+                <h2 class="main_content"><input type="text" maxlength="12" val="1" class="editable" value="1"
+                        style="border-bottom: none; width: 10ch;"></h2>
+            </span><span class="item skill">
+                <h3 class="box_label">Action Skill: </h3>
+                <p class="main_content">Gunzerking: Gunzerker gains the ability to wield 2 equipped guns at once for 2
+                    turns. Each Ranged Attack fires both guns at a single target. While Gunzerking, Gunzerker gains
+                    Health Regen. (MST Mod per Day+Once per Encounter)</p><span class="modifier"
+                    style="transform: translateY(-38px);">
+                    <div class="mod">
+                        <p>+1</p>
+                    </div>
+                    <p class="small">MST</p>
                 </span>
-                <h2 class="twoRow longAttrHeader">Initiative</h2>
-                <div class="longAttr"><span class="largeModifier">
-                        <p class="mod">1</p>
-                        <p class="small">Baddass Rank</p>
-                    </span>
-                    <p>+</p><span class="largeModifier">
-                        <p class="mod">0</p>
-                        <p class="small">SPD Mod</p>
-                    </span>
-                    <p>+</p><span class="largeModifier">
-                        <p class="mod">_</p>
-                        <p class="small">MISC Mod</p>
-                    </span>
-                    <p>=</p><span class="modifier" style="width: 40px;">
+            </span></div>
+        <div class="body"><span class="smallAttr">
+                <h4 class="header">Accuracy (ACC)</h4>
+                <div class="contentRow"><input class="value" type="number" value="0"><span class="attr_mod modifier">
                         <div class="mod">
-                            <p>+1</p>
+                            <p>0</p>
                         </div>
-                        <p class="small"></p>
-                    </span>
-                </div><span class="gunBar">
-                    <p>Current Gun</p>
-                </span><span class="gunBar">
-                    <p>Gun Slot 2</p>
-                </span><span class="gunBar">
-                    <p>Gun Slot 3</p>
+                        <p class="small">mod</p>
+                    </span></div>
+            </span><span class="smallAttr">
+                <h4 class="header">Damage (DMG)</h4>
+                <div class="contentRow"><input class="value" type="number" value="0"><span class="attr_mod modifier">
+                        <div class="mod">
+                            <p>0</p>
+                        </div>
+                        <p class="small">mod</p>
+                    </span></div>
+            </span><span class="smallAttr">
+                <h4 class="header">Speed (SPD)</h4>
+                <div class="contentRow"><input class="value" type="number" value="0"><span class="attr_mod modifier">
+                        <div class="mod">
+                            <p>0</p>
+                        </div>
+                        <p class="small">mod</p>
+                    </span></div>
+            </span><span class="smallAttr">
+                <h4 class="header">Mastery (MST)</h4>
+                <div class="contentRow"><input class="value" type="number" value="0"><span class="attr_mod modifier">
+                        <div class="mod">
+                            <p>0</p>
+                        </div>
+                        <p class="small">mod</p>
+                    </span></div>
+            </span>
+            <h2 class="twoRow longAttrHeader">Initiative</h2>
+            <div class="longAttr"><span class="largeModifier">
+                    <p class="mod">1</p>
+                    <p class="small">Baddass Rank</p>
                 </span>
-                <h2 class="oneRow longAttrHeader" style="grid-column: 9 / span 2;">Movement</h2>
-                <div class="longAttr" style="grid-column: 11 / span 4;"><span class="largeModifier">
-                        <p class="mod">3</p>
-                        <p class="small">static mod</p>
-                    </span>
-                    <p>+</p><span class="largeModifier">
+                <p>+</p><span class="largeModifier">
+                    <p class="mod">0</p>
+                    <p class="small">SPD Mod</p>
+                </span>
+                <p>+</p><span class="largeModifier">
+                    <p class="mod">_</p>
+                    <p class="small">MISC Mod</p>
+                </span>
+                <p>=</p><span class="modifier" style="width: 40px;">
+                    <div class="mod">
+                        <p>+1</p>
+                    </div>
+                    <p class="small"></p>
+                </span>
+            </div><span class="gunBar">
+                <p>Current Gun</p>
+            </span><span class="gunBar">
+                <p>Gun Slot 2</p>
+            </span><span class="gunBar">
+                <p>Gun Slot 3</p>
+            </span>
+            <h2 class="oneRow longAttrHeader" style="grid-column: 9 / span 2;">Movement</h2>
+            <div class="longAttr" style="grid-column: 11 / span 4;"><span class="largeModifier">
+                    <p class="mod">3</p>
+                    <p class="small">static mod</p>
+                </span>
+                <p>+</p><span class="largeModifier">
+                    <p class="mod">0</p>
+                    <p class="small">SPD Mod</p>
+                </span>
+                <p>+</p><span class="largeModifier">
+                    <p class="mod">_</p>
+                    <p class="small">MISC Mod</p>
+                </span>
+                <p>=</p><span class="modifier" style="width: 40px;">
+                    <div class="mod">
+                        <p>+3</p>
+                    </div>
+                    <p class="small"></p>
+                </span>
+            </div>
+            <div class="health" style="grid-row: 7 / span 4;">
+                <div class="headerCurMaxMod">
+                    <h3 class="header">health</h3>
+                    <div class="contentRow"><span class="mainAndLabelBox current"><input class="main" type="number"
+                                value="1">
+                            <p class="label">current</p>
+                        </span><span class="mainAndLabelBox max">
+                            <p class="main"> 25</p>
+                            <p class="label">max</p>
+                        </span><span class="mainAndLabelBox mod"><input class="main" type="number" value="0">
+                            <p class="label">Regen</p>
+                        </span></div>
+                </div>
+            </div>
+            <div class="checks" style="grid-row: 7 / span 15;">
+                <p class="header">Checks</p>
+                <div class="checksItem">
+                    <h2 class="checksItemTitle">Interact</h2><span class="val1 longModifier">
                         <p class="mod">0</p>
-                        <p class="small">SPD Mod</p>
+                        <p class="small">acc <br>mod</p>
                     </span>
-                    <p>+</p><span class="largeModifier">
-                        <p class="mod">_</p>
-                        <p class="small">MISC Mod</p>
+                    <p>+</p><span class="val2 longModifier">
+                        <p class="mod">0</p>
+                        <p class="small">misc <br>mod</p>
                     </span>
-                    <p>=</p><span class="modifier" style="width: 40px;">
-                        <div class="mod">
-                            <p>+3</p>
-                        </div>
+                    <p>=</p><span class="val3 largeModifier">
+                        <p class="mod">+0</p>
                         <p class="small"></p>
                     </span>
                 </div>
-                <div class="health" style="grid-row: 7 / span 4;">
-                    <div class="headerCurMaxMod">
-                        <h3 class="header">health</h3>
+                <div class="checksItem">
+                    <h2 class="checksItemTitle">Talk</h2><span class="val1 longModifier">
+                        <p class="mod">0</p>
+                        <p class="small">spd <br>mod</p>
+                    </span>
+                    <p>+</p><span class="val2 longModifier">
+                        <p class="mod">0</p>
+                        <p class="small">misc <br>mod</p>
+                    </span>
+                    <p>=</p><span class="val3 largeModifier">
+                        <p class="mod">+0</p>
+                        <p class="small"></p>
+                    </span>
+                </div>
+                <div class="checksItem">
+                    <h2 class="checksItemTitle">Insight</h2><span class="val1 longModifier">
+                        <p class="mod">0</p>
+                        <p class="small">acc <br>mod</p>
+                    </span>
+                    <p>+</p><span class="val2 longModifier">
+                        <p class="mod">0</p>
+                        <p class="small">misc <br>mod</p>
+                    </span>
+                    <p>=</p><span class="val3 largeModifier">
+                        <p class="mod">+0</p>
+                        <p class="small"></p>
+                    </span>
+                </div>
+                <div class="checksItem">
+                    <h2 class="checksItemTitle">Sneak</h2><span class="val1 longModifier">
+                        <p class="mod">0</p>
+                        <p class="small">MST <br>mod</p>
+                    </span>
+                    <p>+</p><span class="val2 longModifier">
+                        <p class="mod">0</p>
+                        <p class="small">misc <br>mod</p>
+                    </span>
+                    <p>=</p><span class="val3 largeModifier">
+                        <p class="mod">+0</p>
+                        <p class="small"></p>
+                    </span>
+                </div>
+                <div class="checksItem">
+                    <h2 class="checksItemTitle">Search</h2><span class="val1 longModifier">
+                        <p class="mod">0</p>
+                        <p class="small">MST <br>mod</p>
+                    </span>
+                    <p>+</p><span class="val2 longModifier">
+                        <p class="mod">0</p>
+                        <p class="small">misc <br>mod</p>
+                    </span>
+                    <p>=</p><span class="val3 largeModifier">
+                        <p class="mod">+0</p>
+                        <p class="small"></p>
+                    </span>
+                </div>
+                <div class="checksItem">
+                    <h2 class="checksItemTitle">Traverse</h2><span class="val1 longModifier">
+                        <p class="mod">0</p>
+                        <p class="small">SPD <br>mod</p>
+                    </span>
+                    <p>+</p><span class="val2 longModifier">
+                        <p class="mod">0</p>
+                        <p class="small">misc <br>mod</p>
+                    </span>
+                    <p>=</p><span class="val3 largeModifier">
+                        <p class="mod">+0</p>
+                        <p class="small"></p>
+                    </span>
+                </div>
+            </div>
+            <div class="melee" style="grid-row: 9 / span 4;">
+                <h3 class="header">Melee Die</h3><span class="mainAndLabelBox die">
+                    <p class="main"> 1d10</p>
+                    <p class="label"></p>
+                </span><span class="mod modifier">
+                    <div class="mod">
+                        <p>+0</p>
+                    </div>
+                    <p class="small">+DMG</p>
+                </span>
+            </div>
+            <div class="shields" style="grid-row: 11 / span 7;">
+                <div class="row1">
+                    <div class="headerCurMaxMod" style="border: none;">
+                        <h3 class="header">shields</h3>
                         <div class="contentRow"><span class="mainAndLabelBox current"><input class="main" type="number"
-                                    value="1">
+                                    value="2">
                                 <p class="label">current</p>
                             </span><span class="mainAndLabelBox max">
-                                <p class="main"> 25</p>
+                                <p class="main"> 15</p>
                                 <p class="label">max</p>
-                            </span><span class="mainAndLabelBox mod"><input class="main" type="number" value="0">
-                                <p class="label">Regen</p>
+                            </span><span class="mainAndLabelBox mod">
+                                <p class="main"> 5</p>
+                                <p class="label">Recharge</p>
                             </span></div>
                     </div>
                 </div>
-                <div class="checks" style="grid-row: 7 / span 15;">
-                    <p class="header">Checks</p>
-                    <div class="checksItem">
-                        <h2 class="checksItemTitle">Interact</h2><span class="val1 longModifier">
-                            <p class="mod">0</p>
-                            <p class="small">acc <br>mod</p>
-                        </span>
-                        <p>+</p><span class="val2 longModifier">
-                            <p class="mod">0</p>
-                            <p class="small">misc <br>mod</p>
-                        </span>
-                        <p>=</p><span class="val3 largeModifier">
-                            <p class="mod">+0</p>
-                            <p class="small"></p>
-                        </span>
+                <div class="row2"><span class="shieldInput">
+                        <h5>shield type: </h5>
+                        <p><input type="text" maxlength="12" val="" class="editable" value=""
+                                style="border-bottom: 1px solid black; width: 10ch;"></p>
+                    </span><span class="shieldInput">
+                        <h5>info: </h5><textarea style="resize: none;"></textarea>
+                    </span></div>
+            </div>
+            <div class="grenades">
+                <div class="header">
+                    <h3>Grenades</h3>
+                </div>
+                <div class="row1">
+                    <div class="type"><input type="text">
+                        <p>TYPE</p>
                     </div>
-                    <div class="checksItem">
-                        <h2 class="checksItemTitle">Talk</h2><span class="val1 longModifier">
-                            <p class="mod">0</p>
-                            <p class="small">spd <br>mod</p>
-                        </span>
-                        <p>+</p><span class="val2 longModifier">
-                            <p class="mod">0</p>
-                            <p class="small">misc <br>mod</p>
-                        </span>
-                        <p>=</p><span class="val3 largeModifier">
-                            <p class="mod">+0</p>
-                            <p class="small"></p>
-                        </span>
-                    </div>
-                    <div class="checksItem">
-                        <h2 class="checksItemTitle">Insight</h2><span class="val1 longModifier">
-                            <p class="mod">0</p>
-                            <p class="small">acc <br>mod</p>
-                        </span>
-                        <p>+</p><span class="val2 longModifier">
-                            <p class="mod">0</p>
-                            <p class="small">misc <br>mod</p>
-                        </span>
-                        <p>=</p><span class="val3 largeModifier">
-                            <p class="mod">+0</p>
-                            <p class="small"></p>
-                        </span>
-                    </div>
-                    <div class="checksItem">
-                        <h2 class="checksItemTitle">Sneak</h2><span class="val1 longModifier">
-                            <p class="mod">0</p>
-                            <p class="small">MST <br>mod</p>
-                        </span>
-                        <p>+</p><span class="val2 longModifier">
-                            <p class="mod">0</p>
-                            <p class="small">misc <br>mod</p>
-                        </span>
-                        <p>=</p><span class="val3 largeModifier">
-                            <p class="mod">+0</p>
-                            <p class="small"></p>
-                        </span>
-                    </div>
-                    <div class="checksItem">
-                        <h2 class="checksItemTitle">Search</h2><span class="val1 longModifier">
-                            <p class="mod">0</p>
-                            <p class="small">MST <br>mod</p>
-                        </span>
-                        <p>+</p><span class="val2 longModifier">
-                            <p class="mod">0</p>
-                            <p class="small">misc <br>mod</p>
-                        </span>
-                        <p>=</p><span class="val3 largeModifier">
-                            <p class="mod">+0</p>
-                            <p class="small"></p>
-                        </span>
-                    </div>
-                    <div class="checksItem">
-                        <h2 class="checksItemTitle">Traverse</h2><span class="val1 longModifier">
-                            <p class="mod">0</p>
-                            <p class="small">SPD <br>mod</p>
-                        </span>
-                        <p>+</p><span class="val2 longModifier">
-                            <p class="mod">0</p>
-                            <p class="small">misc <br>mod</p>
-                        </span>
-                        <p>=</p><span class="val3 largeModifier">
-                            <p class="mod">+0</p>
-                            <p class="small"></p>
-                        </span>
+                    <div class="damage"><input type="number">
+                        <p>DAMAGE</p>
                     </div>
                 </div>
-                <div class="melee" style="grid-row: 9 / span 4;">
-                    <h3 class="header">Melee Die</h3><span class="mainAndLabelBox die">
-                        <p class="main"> 1d10</p>
-                        <p class="label"></p>
-                    </span><span class="mod modifier">
-                        <div class="mod">
-                            <p>+0</p>
-                        </div>
-                        <p class="small">+DMG</p>
-                    </span>
-                </div>
-                <div class="shields" style="grid-row: 11 / span 7;">
-                    <div class="row1">
-                        <div class="headerCurMaxMod" style="border: none;">
-                            <h3 class="header">shields</h3>
-                            <div class="contentRow"><span class="mainAndLabelBox current"><input class="main"
-                                        type="number" value="2">
-                                    <p class="label">current</p>
-                                </span><span class="mainAndLabelBox max">
-                                    <p class="main"> 15</p>
-                                    <p class="label">max</p>
-                                </span><span class="mainAndLabelBox mod">
-                                    <p class="main"> 5</p>
-                                    <p class="label">Recharge</p>
-                                </span></div>
-                        </div>
+                <div class="row2">
+                    <div class="info">
+                        <p>INFO</p><textarea style="resize: none;"></textarea>
                     </div>
-                    <div class="row2"><span class="shieldInput">
-                            <h5>shield type: </h5>
-                            <p><input type="text" maxlength="12" val="" class="editable" value=""
-                                    style="border-bottom: 1px solid black; width: 10ch;"></p>
-                        </span><span class="shieldInput">
-                            <h5>info: </h5><textarea style="resize: none;"></textarea>
-                        </span></div>
-                </div>
-                <div class="grenades">
-                    <div class="header">
-                        <h3>Grenades</h3>
+                    <div class="current"><input type="number">
+                        <p>CURRENT</p>
                     </div>
-                    <div class="row1">
-                        <div class="type"><input type="text">
-                            <p>TYPE</p>
-                        </div>
-                        <div class="damage"><input type="number">
-                            <p>DAMAGE</p>
-                        </div>
-                    </div>
-                    <div class="row2">
-                        <div class="info">
-                            <p>INFO</p><textarea style="resize: none;"></textarea>
-                        </div>
-                        <div class="current"><input type="number">
-                            <p>CURRENT</p>
-                        </div>
-                        <div class="max"><input type="number">
-                            <p>MAX</p>
-                        </div>
+                    <div class="max"><input type="number">
+                        <p>MAX</p>
                     </div>
                 </div>
-                <div class="potions">
-                    <div class="header">
-                        <h3>Potions</h3>
-                    </div>
-                    <div class="txtbox"><input type="text"></div>
-                    <div class="txtbox"><input type="text"></div>
-                    <div class="txtbox"><input type="text"></div>
-                    <div class="txtbox lockable"><input type="text" value="	"></div>
-                    <div class="txtbox lockable"><input type="text" value="	"></div>
+            </div>
+            <div class="potions">
+                <div class="header">
+                    <h3>Potions</h3>
                 </div>
-                <div class="BARank">
-                    <div class="header">
-                        <h3>Baddass Rank</h3><input type="number" value="1">
-                    </div>
-                    <div class="tokens">
-                        <p>Badass Tokens</p><input type="number">
-                    </div>
+                <div class="txtbox"><input type="text"></div>
+                <div class="txtbox"><input type="text"></div>
+                <div class="txtbox"><input type="text"></div>
+                <div class="txtbox lockable"><input type="text" value="	"></div>
+                <div class="txtbox lockable"><input type="text" value="	"></div>
+            </div>
+            <div class="BARank">
+                <div class="header">
+                    <h3>Baddass Rank</h3><input type="number" value="1">
                 </div>
-                <div class="gold" style="grid-row: 13 / span 3;">
-                    <div class="header">
-                        <h3>Gold</h3>
-                    </div>
-                    <div class="value"><input title="goldVal" type="number" class="value" value="0"></div>
+                <div class="tokens">
+                    <p>Badass Tokens</p><input type="number">
                 </div>
-                <div class="skills">
-                    <div class="header">
-                        <h3>Skills</h3>
-                    </div>
-                    <div class="itemWrapper">
-                        <div class="item">
-                            <div class="itemHeader">Quick Draw</div>
-                            <div class="content">+2 Initiative Mod/SL.<br>+1/SL on Interact Checks</div>
-                            <div class="level"><input type="checkbox" title="level1" name="skillLevel"><input
-                                    type="checkbox" title="level3" name="skillLevel"><input type="checkbox"
-                                    title="level2" name="skillLevel"></div>
+            </div>
+            <div class="gold" style="grid-row: 13 / span 3;">
+                <div class="header">
+                    <h3>Gold</h3>
+                </div>
+                <div class="value"><input title="goldVal" type="number" class="value" value="0"></div>
+            </div>
+            <div class="skills">
+                <div class="header">
+                    <h3>Skills</h3>
+                </div>
+                <div class="itemWrapper">
+                    <div class="item">
+                        <div class="itemHeader">Quick Draw</div>
+                        <div class="content"><textarea
+                                style="resize: none;">+2 Initiative Mod/SL.,[object Object],+1/SL on Interact Checks</textarea>
                         </div>
-                        <div class="item">
-                            <div class="itemHeader">Filled to The Brim</div>
-                            <div class="content">Increase max grenades by 1/SL. Increase max potions by 1+MST Mod</div>
-                            <div class="level"><input type="checkbox" title="level1" name="skillLevel"><input
-                                    type="checkbox" title="level3" name="skillLevel"><input type="checkbox"
-                                    title="level2" name="skillLevel"></div>
+                        <div class="level"><input type="checkbox" title="level1" name="skillLevel"><input
+                                type="checkbox" title="level3" name="skillLevel"><input type="checkbox" title="level2"
+                                name="skillLevel"></div>
+                    </div>
+                    <div class="item">
+                        <div class="itemHeader">Filled to The Brim</div>
+                        <div class="content"><textarea
+                                style="resize: none;">Increase max grenades by 1/SL. Increase max potions by 1+MST Mod</textarea>
                         </div>
-                        <div class="item">
-                            <div class="itemHeader">Incite</div>
-                            <div class="content">The first time you take Damage during an encounter, gain Extra
-                                Movement. +1/SL on Traverse Checks.</div>
-                            <div class="level"><input type="checkbox" title="level1" name="skillLevel"><input
-                                    type="checkbox" title="level3" name="skillLevel"><input type="checkbox"
-                                    title="level2" name="skillLevel"></div>
+                        <div class="level"><input type="checkbox" title="level1" name="skillLevel"><input
+                                type="checkbox" title="level3" name="skillLevel"><input type="checkbox" title="level2"
+                                name="skillLevel"></div>
+                    </div>
+                    <div class="item">
+                        <div class="itemHeader">Incite</div>
+                        <div class="content"><textarea
+                                style="resize: none;">The first time you take Damage during an encounter, gain Extra Movement. +1/SL on Traverse Checks.</textarea>
                         </div>
-                        <div class="item">
-                            <div class="itemHeader">Hard to Kill</div>
-                            <div class="content">10+MST Mod Health.<br>+5 Health Regen/SL.</div>
-                            <div class="level"><input type="checkbox" title="level1" name="skillLevel"><input
-                                    type="checkbox" title="level3" name="skillLevel"><input type="checkbox"
-                                    title="level2" name="skillLevel"></div>
+                        <div class="level"><input type="checkbox" title="level1" name="skillLevel"><input
+                                type="checkbox" title="level3" name="skillLevel"><input type="checkbox" title="level2"
+                                name="skillLevel"></div>
+                    </div>
+                    <div class="item">
+                        <div class="itemHeader">Hard to Kill</div>
+                        <div class="content"><textarea
+                                style="resize: none;">10+MST Mod Health.,[object Object],+5 Health Regen/SL.</textarea>
                         </div>
+                        <div class="level"><input type="checkbox" title="level1" name="skillLevel"><input
+                                type="checkbox" title="level3" name="skillLevel"><input type="checkbox" title="level2"
+                                name="skillLevel"></div>
                     </div>
                 </div>
-                <div class="bgtraits">
-                    <div class="header">
-                        <h3>Background &amp; Traits</h3>
-                    </div>
-                    <div class="bgbox">
-                        <div class="bgbar">
-                            <p>Background</p>
-                        </div>
-                        <div class="bginfo"><textarea class="" style="resize: none;"></textarea></div>
-                    </div>
-                    <div class="traitsbox">
-                        <div class="traitsbar">
-                            <p>Traits</p>
-                        </div>
-                        <div class="traitsinfo"><textarea class="" style="resize: none;"></textarea></div>
-                    </div>
+            </div>
+            <div class="bgtraits">
+                <div class="header">
+                    <h3>Background &amp; Traits</h3>
                 </div>
-                <div class="favoredGun">
-                    <div class="header">
-                        <h4>Favored Gun</h4>
-                    </div><label class="gunItem"><input type="checkbox"><img
-                            src="https://raw.githubusercontent.com/chrehall68/character-sheet/main/public/images/pistol.png"
-                            alt="pistol">
-                        <p>PISTOL</p>
-                    </label><label class="gunItem"><input type="checkbox"><img
-                            src="https://raw.githubusercontent.com/chrehall68/character-sheet/main/public/images/smg.png"
-                            alt="smg">
-                        <p>SMG</p>
-                    </label><label class="gunItem"><input type="checkbox"><img
-                            src="https://raw.githubusercontent.com/chrehall68/character-sheet/main/public/images/combat%20rifle.png"
-                            alt="combat rifle">
-                        <p>COMBAT RIFLE</p>
-                    </label><label class="gunItem"><input type="checkbox"><img
-                            src="https://raw.githubusercontent.com/chrehall68/character-sheet/main/public/images/shotgun.png"
-                            alt="shotgun">
-                        <p>SHOTGUN</p>
-                    </label><label class="gunItem"><input type="checkbox"><img
-                            src="https://raw.githubusercontent.com/chrehall68/character-sheet/main/public/images/sniper.png"
-                            alt="sniper">
-                        <p>SNIPER</p>
-                    </label><label class="gunItem"><input type="checkbox"><img
-                            src="https://raw.githubusercontent.com/chrehall68/character-sheet/main/public/images/rocket%20launcher.png"
-                            alt="rocket launcher">
-                        <p>ROCKET LAUNCHER</p>
-                    </label>
+                <div class="bgbox">
+                    <div class="bgbar">
+                        <p>Background</p>
+                    </div>
+                    <div class="bginfo"><textarea class="" style="resize: none;"></textarea></div>
                 </div>
-                <div class="archetypeFeat">
-                    <div class="header">
-                        <h3>Archetype Feat</h3>
+                <div class="traitsbox">
+                    <div class="traitsbar">
+                        <p>Traits</p>
                     </div>
-                    <div class="content">
-                        <p id="title">FLEX</p>
-                        <p>: The first time your Shields are depleted in an encounter, gain 1 Badass Token.</p>
-                    </div>
+                    <div class="traitsinfo"><textarea class="" style="resize: none;"></textarea></div>
                 </div>
-                <div class="xpbar">
-                    <div class="xpstuff">
-                        <h5 class="label">XP Bar</h5><input class="content" type="number" value="">
-                    </div>
-                    <div class="bar">
-                        <div style="width: 0%;"></div>
-                    </div>
+            </div>
+            <div class="favoredGun">
+                <div class="header">
+                    <h4>Favored Gun</h4>
+                </div><label class="gunItem"><input type="checkbox"><img src="images/pistol.png" alt="pistol">
+                    <p>PISTOL</p>
+                </label><label class="gunItem"><input type="checkbox"><img src="images/smg.png" alt="smg">
+                    <p>SMG</p>
+                </label><label class="gunItem"><input type="checkbox"><img src="images/combat rifle.png"
+                        alt="combat rifle">
+                    <p>COMBAT RIFLE</p>
+                </label><label class="gunItem"><input type="checkbox"><img src="images/shotgun.png" alt="shotgun">
+                    <p>SHOTGUN</p>
+                </label><label class="gunItem"><input type="checkbox"><img src="images/sniper.png" alt="sniper">
+                    <p>SNIPER</p>
+                </label><label class="gunItem"><input type="checkbox"><img src="images/rocket launcher.png"
+                        alt="rocket launcher">
+                    <p>ROCKET LAUNCHER</p>
+                </label>
+            </div>
+            <div class="archetypeFeat">
+                <div class="header">
+                    <h3>Archetype Feat</h3>
+                </div>
+                <div class="content">
+                    <p id="title">FLEX</p>
+                    <p>: The first time your Shields are depleted in an encounter, gain 1 Badass Token.</p>
+                </div>
+            </div>
+            <div class="xpbar">
+                <div class="xpstuff">
+                    <h5 class="label">XP Bar</h5><input class="content" type="number" value="">
+                </div>
+                <div class="bar">
+                    <div style="width: 100%;"></div>
                 </div>
             </div>
         </div>
     </div>
-
-
-</body>
+</div>

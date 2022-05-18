@@ -326,7 +326,7 @@ class SkillsItem extends React.Component {
     render() {
         return <div className='item'>
             <div className='itemHeader'>{this.header}</div>
-            <div className='content'>{this.props.children}</div>
+            <div className='content'><textarea style={{ "resize": "none" }} defaultValue={this.props.children} /></div>
             <div className='level'>
                 <input type="checkbox" title="level1" name="skillLevel" />
                 <input type="checkbox" title="level3" name="skillLevel" />
