@@ -1,374 +1,982 @@
-/** Editable Styles */
+.modifier {
+    border: 2px solid #000;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    float: right;
+    margin: 0;
+    min-height: 30px;
+    min-width: 40px;
+    vertical-align: bottom
+}
+
+.modifier .small {
+    float: left;
+    font-size: 10px;
+    height: 30%;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    width: 100%
+}
+
+.modifier .mod {
+    align-items: center;
+    display: flex;
+    height: 70%;
+    justify-content: center;
+    width: 100%
+}
+
+.modifier .mod * {
+    font-size: x-large;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    text-align: center
+}
+
+.largeModifier {
+    border: 2px solid #000;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    width: 60px
+}
+
+.largeModifier .small {
+    font-size: 10px;
+    margin: 0;
+    padding: 0
+}
+
+.largeModifier .mod {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%
+}
+
+.longModifier {
+    border: 1px solid #000;
+    display: grid;
+    grid-template-areas: "small mod";
+    height: 60px;
+    width: 60px
+}
+
+.longModifier .small {
+    font-size: 10px;
+    grid-area: small;
+    margin: auto
+}
+
+.longModifier .mod {
+    font-size: 20px;
+    grid-area: mod;
+    margin: auto
+}
+
 .editable {
-    font-size: inherit;
-    font-weight: inherit;
-    font-family: inherit;
-    display: inherit;
-    margin: inherit;
-    padding: inherit;
     background-color: inherit;
     border: none;
+    display: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: inherit;
+    padding: inherit
 }
 
-/** ----------Body Styles-----------------*/
-.body {
+#header {
     display: grid;
-    height: 500px;
-    grid-template-columns: repeat(auto-fit, 60px);
-    grid-template-rows: repeat(auto-fit, 12.5px);
-    border: 2px solid black;
+    grid-template-areas: "title archetype archetype class class""name name bg bg level""skill skill skill skill skill";
+    grid-template-columns: 20%;
+    grid-template-rows: 75px
+}
+
+#header .item {
+    background-color: #add8e6;
+    border: 2px solid #000;
+    display: block;
+    height: 75px;
+    overflow: hidden
+}
+
+#header .item .box_label {
+    float: left;
+    margin: 0;
+    padding-right: 20px;
+    vertical-align: top
+}
+
+#header .item .main_content {
+    float: left;
+    vertical-align: middle
+}
+
+#header .class {
+    grid-area: class
+}
+
+#header .title {
+    grid-area: title
+}
+
+#header .name {
+    grid-area: name
+}
+
+#header .arch {
+    grid-area: archetype
+}
+
+#header .bg {
+    grid-area: bg
+}
+
+#header .lvl {
+    grid-area: level
+}
+
+#header .skill {
+    grid-area: skill;
+    height: 100px
+}
+
+.body {
+    grid-gap: 8px;
+    display: grid;
     gap: 8px;
     grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fit, 60px);
+    grid-template-rows: repeat(auto-fit, 12.5px);
+    height: 80%
 }
 
-/** ----------SmallAttr styles---------- */
+.body,
 .smallAttr {
-    grid-column: span 2;
-    grid-row: span 4;
-    overflow: hidden;
+    border: 2px solid #000
+}
 
-    display: grid;
-    grid-template-areas: "header header header"
-        "value value mod";
-
-    grid-template-columns: 60px;
-
-    border: 2px solid black;
+.smallAttr {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: span 2;
+    grid-row: span 4;
+    overflow: hidden
 }
 
 .smallAttr .header {
+    border-bottom: 1px solid #000;
+    height: 30%;
+    margin: 0;
     text-align: center;
-    /*  margin/padding: all  
-        margin/padding: vertical | horizontal*/
-    margin: 0px auto;
-    padding: 0px auto;
-    grid-area: header;
-    border-bottom: solid black 1px;
+    width: 100%
 }
 
-.smallAttr .value {
-    text-align: right;
-    grid-area: value;
-    display: inline;
-    padding: auto auto;
-    margin: 0px auto;
+.smallAttr .contentRow {
+    align-items: center;
+    display: flex;
+    height: 70%;
+    justify-content: space-around;
+    width: 100%
+}
+
+.smallAttr input.value {
+    border: 0;
+    font-size: larger;
+    text-align: center;
+    width: 50%
+}
+
+.smallAttr input.value::-webkit-inner-spin-button,
+.smallAttr input.value::-webkit-outer-spin-button {
+    display: none
 }
 
 .smallAttr .attr_mod {
-    grid-area: mod;
     display: inline;
-    vertical-align: middle;
-    float: right;
+    vertical-align: middle
 }
 
-/** ----------GunBar styles---------- */
 .gunBar {
-    border: solid black 2px;
+    border: 2px solid #000;
+    display: block;
     grid-column: span 1;
     grid-row: span 15;
     overflow: hidden;
-    display: block;
-
-    width: 66.6%;
+    -webkit-transform: translateX(33.3%);
     transform: translateX(33.3%);
+    width: 66.6%
 }
 
 .gunBar p {
-    text-align: center;
     overflow: visible;
-    width: max-content;
-    transform: rotateZ(-90deg) translateX(-150%) translateY(-50%);
+    text-align: center;
+    -webkit-transform: rotate(-90deg) translateX(-150%) translateY(-50%);
+    transform: rotate(-90deg) translateX(-150%) translateY(-50%);
+    width: -webkit-max-content;
+    width: max-content
 }
 
-/** ----------LongAttr styles---------- */
 .longAttrHeader {
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
-    border-top: 1px solid black;
-    width: 136px;
-    display: flex;
     align-items: center;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    border-top: 1px solid #000;
+    display: flex;
     justify-content: center;
+    width: 136px
 }
 
 .oneRow {
-    grid-column: span 2;
     grid-row: span 2;
     height: 33px;
-    margin: 0px auto;
-    padding: 0px auto;
-    text-align: center;
+    text-align: center
+}
+
+.oneRow,
+.twoRow {
+    grid-column: span 2;
+    margin: 0 auto;
+    padding: 0 auto
 }
 
 .twoRow {
-    grid-column: span 2;
-    grid-row: span 4;
-    margin: 0px auto;
-    padding: 0px auto;
+    grid-row: span 4
 }
 
 .longAttr {
-    grid-column: span 4;
-    grid-row: span 4;
-
-    display: flex;
     align-items: center;
-    justify-content: center;
-    border: 1px solid black;
+    grid-column: span 4;
+    grid-row: span 4
 }
 
-/** ----------MainAndLabelBox styles---------- */
+.longAttr,
 .mainAndLabelBox {
-    display: grid;
-    grid-template-areas: "main"
-        "main"
-        "label";
-    height: 45px;
-    grid-template-rows: 15px;
+    border: 1px solid #000;
+    display: flex;
+    height: 100%;
+    justify-content: center
+}
 
-    border: 1px solid black;
-    overflow: hidden;
+.mainAndLabelBox {
+    flex-wrap: wrap;
+    width: 100%
 }
 
 .mainAndLabelBox .main {
-    grid-area: main;
     font-size: 25px;
-    font-weight: bold;
-    padding: 0px auto;
-    margin: 0px auto;
+    font-weight: 700;
+    height: 66.6%;
+    margin: 0 auto;
+    padding: 0 auto;
+    text-align: center;
+    width: 100%
+}
+
+.mainAndLabelBox input.main {
+    border: 0
+}
+
+.mainAndLabelBox input.main::-webkit-inner-spin-button,
+.mainAndLabelBox input.main::-webkit-outer-spin-button {
+    display: none
 }
 
 .mainAndLabelBox .label {
-    grid-area: label;
     font-size: 8px;
-    padding: 0px auto;
-    margin: 0px auto;
+    height: 33.3%;
+    margin: 0 auto;
+    padding: 0 auto;
+    text-align: center;
+    width: 100%
+}
+
+.health {
+    grid-column: span 4;
+    grid-row: span 4
 }
 
 .headerCurMaxMod {
-    grid-column: span 4;
-    grid-row: span 4;
-    display: grid;
-    grid-template-areas: "header header header"
-        "cur max mod";
-    overflow: hidden;
-    border: 1px solid black;
+    border: 1px solid #000;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: flex-start;
+    overflow: hidden;
+    width: 100%
 }
 
 .headerCurMaxMod .header {
-    grid-area: header;
-    margin: 0px auto;
-    padding: 0px auto;
+    height: 30%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%
 }
 
-.headerCurMaxMod .current {
-    grid-area: cur;
-    width: 105px;
+.headerCurMaxMod .contentRow {
+    display: flex;
+    height: 70%;
+    justify-content: flex-start;
+    width: 100%
 }
 
+.headerCurMaxMod .current,
 .headerCurMaxMod .max {
-    grid-area: max;
-    width: 105px;
+    display: flex;
+    width: 40%
 }
 
 .headerCurMaxMod .mod {
-    grid-area: mod;
-    width: 46px;
+    display: flex;
+    width: 20%
 }
 
-/* Checks stuff */
 .checks {
+    border: 1px solid #000;
+    display: flex;
+    flex-wrap: wrap;
     grid-column: span 6;
-    grid-row: span 15;
-    border: 1px solid black;
+    grid-row: span 15
 }
 
 .checks .header {
-    grid-row: span 1;
-    text-align: center;
     background-color: azure;
-    margin: 0px auto;
-    padding: 0px auto;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #000;
+    height: -webkit-min-content;
+    height: min-content;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%
 }
 
 .checksItem {
-    display: grid;
-    grid-template-areas: "header val1 plus val2 equals val3";
+    align-items: center;
+    display: flex;
+    height: 15%;
+    justify-content: space-between;
+    width: 100%
 }
 
-.checksItem .ChecksItemTitle {
-    grid-area: header;
-    margin: auto auto;
-    width: 100px;
+.checksItem .checksItemTitle {
+    width: 20%
 }
 
-.checksItem .val1 {
-    grid-area: val1;
-    margin: auto auto;
-}
-
-.checksItem .val2 {
-    grid-area: val2;
-    margin: auto auto;
-}
-
+.checksItem .val1,
+.checksItem .val2,
 .checksItem .val3 {
-    grid-area: val3;
-    margin: auto auto;
+    height: 80%
 }
 
-.checksItem .equals {
-    grid-area: equals;
-    margin: auto auto;
-}
-
-.checksItem .plus {
-    grid-area: plus;
-    margin: auto auto;
-}
-
-/*Melee box*/
 .melee {
+    border: 1px solid #000;
+    display: grid;
     grid-column: span 4;
     grid-row: span 4;
-    display: grid;
-    grid-template-areas: "header header header"
-        "die die mod";
-    border: 1px solid black;
+    grid-template-areas: "header header header""die die mod"
 }
 
 .melee .header {
     grid-area: header;
+    height: -webkit-min-content;
     height: min-content;
-    text-align: center;
-    padding: 0px auto;
-    margin: 0px auto;
+    margin: 0 auto;
+    padding: 0 auto;
+    text-align: center
 }
 
 .melee .die {
     grid-area: die;
-    width: 210px;
+    width: 210px
 }
 
 .melee .mod {
-    grid-area: mod;
+    grid-area: mod
 }
 
 .shields {
-    grid-column: span 4;
-    grid-row: span 7;
-    border: 1px solid black;
-    overflow: hidden;
-    border-top-right-radius: 10px;
+    border: 1px solid #000;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: span 4;
+    grid-row: span 7;
+    overflow: hidden
+}
+
+.shields .row1 {
+    border-bottom: 1px solid #000;
+    height: 50%;
+    width: 100%
+}
+
+.shields .row2 {
+    flex-wrap: wrap;
+    width: 100%
+}
+
+.shields .row2,
+.shields .shieldInput {
+    height: 50%;
+    justify-content: flex-start
 }
 
 .shields .shieldInput {
-    display: block;
-    width: 240px;
-    overflow: hidden;
+    align-items: center;
+    display: flex;
+    overflow: hidden
 }
 
-.shields .shieldInput p,
-.shields .shieldInput h5 {
-    display: inline-block;
-    margin: auto auto;
-    padding: auto auto;
+.shields .shieldInput h5,
+.shields .shieldInput p {
     font-size: smaller;
+    width: 35%
 }
 
-.modifier {
-    float: right;
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border: solid black 2px;
-    display: grid;
-    grid-template-areas: "mod"
-        "mod"
-        "desc";
-    grid-template-rows: 13px;
-    grid-template-columns: 40px;
-    height: 40px;
-    width: 40px;
-    vertical-align: bottom;
-    margin: 0px;
+.shields .shieldInput textarea {
+    font-size: smaller;
+    height: 75%;
+    width: 65%
 }
 
-.modifier .small {
+.gold {
+    border: 1px solid #000;
+    grid-column: span 4;
+    grid-row: span 3;
+    overflow: hidden
+}
+
+.gold div.header {
+    align-items: center;
+    background-color: gray;
     vertical-align: top;
-    float: left;
-    font-size: 10px;
-    grid-area: desc;
-    margin: 0px;
-    padding: 0px;
+    width: -webkit-max-content;
+    width: max-content;
+    width: 15%
 }
 
-.modifier .mod {
-    margin: 0px;
-    padding: 0px;
-    font-size: 25px;
-    grid-area: mod;
-    font-weight: bold;
+.gold .value,
+.gold div.header {
+    display: inline-flex;
+    height: 100%;
+    margin: 0;
+    padding: 0
 }
 
-.largeModifier {
+.gold .value {
     float: right;
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border: solid black 2px;
-    display: grid;
-    grid-template-areas: "mod"
-        "mod"
-        "desc";
-    grid-template-rows: 20px;
-    grid-template-columns: 60px;
-    height: 60px;
-    width: 60px;
-    vertical-align: bottom;
-    margin: 0px;
+    width: 85%
 }
 
-.largeModifier .small {
+.gold .value input {
+    font-size: x-large;
+    height: 100%;
+    text-align: right;
+    width: 100%
+}
+
+.BARank {
+    border: 1px solid #000;
+    grid-column: span 4;
+    grid-row: span 4;
+    overflow: hidden
+}
+
+.BARank div.header {
+    align-items: flex-start;
+    display: inline-block;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 50%
+}
+
+.BARank div.header h3 {
+    font-size: smaller;
+    margin: 0;
+    padding: 0;
+    width: 100%
+}
+
+.BARank div.header h3,
+.BARank div.header input {
+    display: block;
+    overflow: hidden;
+    text-align: center
+}
+
+.BARank div.header input {
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    font-size: 2em;
+    font-weight: 700;
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 80%
+}
+
+.BARank div.tokens {
+    border: 0;
     vertical-align: top;
-    float: left;
-    font-size: 10px;
-    grid-area: desc;
-    margin: 0px;
-    padding: 0px;
+    width: 50%
 }
 
-.largeModifier .mod {
-    margin: 0px;
-    padding: 0px;
-    font-size: 30px;
-    grid-area: mod;
+.BARank div.tokens,
+.BARank div.tokens p {
+    display: inline-block;
+    margin: 0;
+    padding: 0
+}
+
+.BARank div.tokens input {
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    display: block;
+    font-size: 2em;
+    font-weight: 700;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 auto;
     text-align: center;
-    font-weight: bold;
+    width: 80%
 }
 
-.longModifier {
-    display: grid;
-    grid-template-areas: "small mod";
-    border: 1px solid black;
-    width: 60px;
-    height: 60px;
+.grenades {
+    align-items: flex-start;
+    border: 1px solid #000;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: smaller;
+    grid-column: span 4;
+    grid-row: 18/span 9
 }
 
-.longModifier .small {
-    grid-area: small;
-    font-size: 10px;
-    margin: auto auto;
+.grenades .header {
+    background-color: #f08080;
+    height: 10%;
+    overflow: hidden;
+    width: 100%
 }
 
-.longModifier .mod {
-    grid-area: mod;
-    font-size: 20px;
-    margin: auto auto;
+.grenades .header h3 {
+    margin: 0;
+    padding: 0;
+    text-align: center
+}
+
+.grenades .row1 {
+    display: flex;
+    height: 35%;
+    justify-content: flex-start;
+    width: 100%
+}
+
+.grenades .row1 .damage,
+.grenades .row1 .type,
+.grenades .row2 .current,
+.grenades .row2 .info,
+.grenades .row2 .max {
+    border: 1px solid #000;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+    overflow: hidden
+}
+
+.grenades .row1 .type {
+    width: 60%
+}
+
+.grenades .row1 .damage {
+    width: 40%
+}
+
+.grenades .row1 .damage input,
+.grenades .row1 .type input {
+    border: 0;
+    border-bottom: 1px solid #000;
+    font-size: large;
+    height: 50%;
+    text-align: center;
+    width: 80%
+}
+
+.grenades .row2 {
+    display: flex;
+    height: 50%;
+    justify-content: flex-start
+}
+
+.grenades .row2 .info {
+    width: 60%
+}
+
+.grenades .row2 .info p {
+    height: 20%;
+    margin: 0;
+    padding: 0
+}
+
+.grenades .row2 .info textarea {
+    border: 0;
+    border-bottom: 1px solid #000;
+    font-size: small;
+    height: 80%;
+    margin: 0;
+    padding: 0;
+    width: 80%
+}
+
+.grenades .row2 .current,
+.grenades .row2 .max {
+    font-size: xx-small;
+    width: 20%
+}
+
+.grenades .row2 .current input,
+.grenades .row2 .max input {
+    border: 0;
+    border-bottom: 1px solid #000;
+    font-size: large;
+    height: 60%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 90%
+}
+
+.potions {
+    border: 1px solid #000;
+    flex-wrap: wrap;
+    font-size: smaller;
+    font-style: normal;
+    grid-column: span 4;
+    grid-row: 27/span 9;
+    overflow: hidden
+}
+
+.potions,
+.potions .header {
+    display: flex;
+    justify-content: center
+}
+
+.potions .header {
+    background-color: #fff8dc;
+    width: 100%
+}
+
+.potions .header h3 {
+    margin: 0;
+    padding: 0
+}
+
+.potions .txtbox {
+    align-items: center;
+    display: flex;
+    height: 12.5%;
+    justify-content: center;
+    width: 95%
+}
+
+.potions .txtbox input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid grey;
+    font-size: large;
+    height: 100%;
+    width: 100%
+}
+
+.potions .txtbox.lockable {
+    background-image: url(data:image/png;base64,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);
+    background-repeat: no-repeat;
+    background-size: auto 100%
+}
+
+.favoredGun {
+    border: 1px solid #000;
+    display: block;
+    grid-column: span 4;
+    grid-row: 36/span 13
+}
+
+.favoredGun .header * {
+    background-color: #ffebcd;
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: center
+}
+
+.favoredGun label.gunItem {
+    align-items: center;
+    display: flex
+}
+
+.favoredGun .gunItem * {
+    display: inline-block;
+    font-size: small;
+    margin: 0;
+    padding: 0;
+    vertical-align: top
+}
+
+.favoredGun .gunItem img {
+    height: auto;
+    width: 30%
+}
+
+.skills {
+    border: 1px solid #000;
+    grid-column: 5/span 10;
+    grid-row: 22/span 8
+}
+
+.skills .header {
+    align-items: center;
+    background-color: violet;
+    display: flex;
+    height: 20%;
+    justify-content: center;
+    text-align: center
+}
+
+.skills .header h3 {
+    margin: 0;
+    padding: 0
+}
+
+.skills .itemWrapper {
+    align-content: center;
+    height: 80%;
+    justify-content: space-around;
+    width: 100%
+}
+
+.skills .item,
+.skills .itemWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    vertical-align: middle
+}
+
+.skills .item {
+    border: 1px solid #000;
+    height: 90%;
+    text-align: center;
+    width: 20%
+}
+
+.skills .item .itemHeader {
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+
+.skills .item .content {
+    display: flex;
+    font-size: small;
+    width: 100%
+}
+
+.skills .item .level {
+    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+
+.bgtraits {
+    align-content: space-between;
+    border: 1px solid #000;
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 5/span 10;
+    grid-row: 30/span 15;
+    margin: 0
+}
+
+.bgtraits .header {
+    align-items: center;
+    display: flex;
+    height: -webkit-max-content;
+    height: max-content;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%
+}
+
+.bgtraits .header h3 {
+    margin: 0;
+    padding: 0
+}
+
+.bgtraits .bgbox,
+.bgtraits .traitsbox {
+    display: flex;
+    height: 40%;
+    width: 100%
+}
+
+.bgtraits .bgbox .bgbar,
+.bgtraits .traitsbox .traitsbar {
+    align-items: center;
+    background-color: #d3d3d3;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 5%
+}
+
+.bgtraits .bgbox .bgbar p,
+.bgtraits .traitsbox .traitsbar p {
+    -webkit-text-orientation: mixed;
+    text-orientation: mixed;
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl
+}
+
+.bgtraits .bgbox .bginfo,
+.bgtraits .traitsbox .traitsinfo {
+    display: flex;
+    height: 100%;
+    width: 95%
+}
+
+.bgtraits textarea {
+    background-image: repeating-linear-gradient(#fff, #fff 1.5em, #d3d3d3 0, #d3d3d3 1.7em, #fff 0);
+    border: 0;
+    line-height: 1.7em;
+    margin-bottom: .3em;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    width: 100%
+}
+
+.archetypeFeat {
+    border: 1px solid #000;
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 5/span 10;
+    grid-row: 45/span 4
+}
+
+.archetypeFeat .header {
+    background-color: #f0f8ff;
+    display: flex;
+    height: -webkit-max-content;
+    height: max-content;
+    justify-content: center;
+    width: 100%
+}
+
+.archetypeFeat .header * {
+    margin: 0;
+    padding: 0
+}
+
+.archetypeFeat .content {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+
+.archetypeFeat .content #title {
+    font-weight: 700
+}
+
+.xpbar {
+    display: flex;
+    grid-column: 1/span 14;
+    grid-row: 49/span 3;
+    height: 100%;
+    width: 100%
+}
+
+.xpbar .xpstuff {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 20%
+}
+
+.xpbar .xpstuff:after {
+    background-color: #000;
+    bottom: 0;
+    content: "";
+    height: 3px;
+    left: 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    width: 100%
+}
+
+.xpbar .xpstuff:hover:after {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    transition-duration: .5s
+}
+
+.xpbar .xpstuff .label {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%
+}
+
+.xpbar .xpstuff .content {
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    text-align: center;
+    width: 80%
+}
+
+.xpbar .xpstuff input.content::-webkit-inner-spin-button,
+.xpbar .xpstuff input.content::-webkit-outer-spin-button {
+    display: none
+}
+
+.xpbar .bar {
+    background-color: beige;
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+    width: 80%
+}
+
+.xpbar .bar div {
+    background-color: #000
+}
+
+.App {
+    border: 1px solid #000;
+    height: 1320px;
+    width: 1020px
 }

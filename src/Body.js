@@ -292,12 +292,12 @@ class Gold extends React.Component {
 class GunItem extends React.Component {
     constructor(props) {
         super(props)
-        this.gun = props.gunName
+        this.gun = props.gunName.replace(" ", "%20")
     }
     render() {
         return <label className="gunItem">
             <input type="checkbox" />
-            <img src={"images/" + this.gun + ".png"} alt={this.gun} />
+            <img src={"https://raw.githubusercontent.com/chrehall68/character-sheet/main/public/images/" + this.gun + ".png"} alt={this.gun} />
             <p>{this.gun.toUpperCase()}</p>
         </label>
     }
