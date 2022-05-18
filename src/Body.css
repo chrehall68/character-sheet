@@ -1,10 +1,11 @@
 .body {
     display: grid;
     height: 80%;
-    grid-template-columns: repeat(auto-fit, 60px);
-    grid-template-rows: repeat(auto-fit, 12.5px);
+    grid-template-columns: repeat(auto-fit, 6.16%);
+    grid-template-rows: repeat(auto-fit, 1.5%);
+    row-gap: 0.5%;
+    column-gap: 0.5%;
     border: 2px solid black;
-    gap: 8px;
     grid-auto-flow: dense;
 }
 
@@ -121,13 +122,14 @@
     border: 1px solid black;
 }
 
-.mainAndLabelBox .main {
+.mainAndLabelBox p.main,
+.mainAndLabelBox input.main {
     height: 66.6%;
     width: 100%;
     font-size: 25px;
     font-weight: bold;
-    padding: 0px auto;
-    margin: 0px auto;
+    padding: 0px;
+    margin: 0px;
     text-align: center;
 }
 
@@ -144,8 +146,8 @@
     height: 33.3%;
     width: 100%;
     font-size: 8px;
-    padding: 0px auto;
-    margin: 0px auto;
+    padding: 0px;
+    margin: 0px;
     text-align: center;
 }
 
@@ -300,6 +302,8 @@
     height: 75%;
     width: 65%;
     font-size: smaller;
+    margin: 0px;
+    padding: 0px;
 }
 
 .gold {
@@ -342,67 +346,74 @@
     grid-row: span 4;
     border: 1px solid black;
     overflow: hidden;
+    display: flex;
 }
 
 .BARank div.header {
     width: 50%;
     height: 100%;
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
     overflow: hidden;
     margin: 0px;
     padding: 0px;
-    align-items: flex-start;
+    border-right: 1px solid black;
+    justify-content: center;
 }
 
 .BARank div.header h3 {
     width: 100%;
+    height: 30%;
+    background-color: grey;
     overflow: hidden;
     display: block;
     margin: 0px;
     padding: 0px;
-    font-size: smaller;
     text-align: center;
+    align-self: flex-start;
 }
 
 .BARank div.header input {
     padding-top: 5%;
     width: 80%;
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
+    height: 70%;
+    border: 0px;
     overflow: hidden;
     display: block;
-    margin: 0px auto;
-    padding: 0px auto;
+    margin: 0px;
+    padding: 0px;
     font-size: 2em;
     font-weight: bold;
     text-align: center;
+    align-self: flex-end;
 }
 
 .BARank div.tokens {
     margin: 0px;
     padding: 0px;
     width: 50%;
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
     vertical-align: top;
+    justify-content: center;
     border: 0px;
 }
 
 .BARank div.tokens p {
     margin: 0px;
     padding: 0px;
-    display: inline-block;
+    height: 30%;
+    width: 100%;
+    text-align: start;
 }
 
 .BARank div.tokens input {
     width: 80%;
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
+    height: 70%;
+    border: 0px;
     overflow: hidden;
-    display: block;
-    margin: 0px auto;
-    padding: 0px auto;
+    margin: 0px;
+    padding: 0px;
     font-size: 2em;
     font-weight: bold;
     text-align: center;
@@ -569,23 +580,32 @@
 }
 
 .favoredGun {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     grid-row: 36 / span 13;
     grid-column: span 4;
     border: 1px solid black;
+    align-content: space-between;
+}
+
+.favoredGun .header {
+    width: 100%;
+    display: flex;
+    background-color: blanchedalmond;
+    height: 15%;
 }
 
 .favoredGun .header * {
-    display: block;
     text-align: center;
     margin: 0px;
     padding: 0px;
-    background-color: blanchedalmond;
 }
 
 .favoredGun label.gunItem {
     display: flex;
     align-items: center;
+    height: 14.16%;
+    width: 100%;
 }
 
 .favoredGun .gunItem * {
@@ -658,6 +678,9 @@
 .skills .item .content textarea {
     font-size: small;
     text-align: center;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
 }
 
 .skills .item .content textarea::-webkit-scrollbar {

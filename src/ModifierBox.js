@@ -28,10 +28,10 @@ export class LargeModifierBox extends React.Component {
     }
     render() {
         return (
-            <span className={this.cn} style={this.props.style}>
+            <div className={this.cn} style={this.props.style}>
                 <p className="mod">{this.modifier}</p>
-                <p className="small">{this.small_desc}</p>
-            </span>)
+                {this.small_desc !== "" && <p className="small">{this.small_desc}</p>}
+            </div>)
     }
 }
 

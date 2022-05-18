@@ -132,11 +132,11 @@ class MainAndLabelBox extends React.Component {
     }
 
     render() {
-        return <span className={this.className} >
+        return <div className={this.className} >
             {!this.editable && <p className="main" > {this.main}</p >}
             {this.editable && <input className="main" defaultValue={this.main} type="number" />}
             <p className="label">{this.label}</p>
-        </span >
+        </div>
     }
 }
 
@@ -292,12 +292,12 @@ class Gold extends React.Component {
 class GunItem extends React.Component {
     constructor(props) {
         super(props)
-        this.gun = props.gunName.replace(" ", "%20")
+        this.gun = props.gunName
     }
     render() {
         return <label className="gunItem">
             <input type="checkbox" />
-            <img src={"https://raw.githubusercontent.com/chrehall68/character-sheet/main/public/images/" + this.gun + ".png"} alt={this.gun} />
+            <img src={"https://raw.githubusercontent.com/chrehall68/character-sheet/main/public/images/" + this.gun.replace(" ", "%20") + ".png"} alt={this.gun} />
             <p>{this.gun.toUpperCase()}</p>
         </label>
     }
@@ -404,7 +404,7 @@ class XPBar extends React.Component {
     }
 
     updateBar = async (event) => {
-        if (event.target.value < 0) return;
+        if (event.target.value < 0 || event.target.value > 1000) return;
 
         if (event.target.value < this.state.xp) {
             for (let i = this.state.xp; i >= event.target.value && this.good; i--) {
@@ -501,7 +501,7 @@ export class Body extends React.Component {
 
                 <BARank />
 
-                <Gold style={{ gridRow: "13/ span 3" }} />
+                <Gold style={{ gridRow: "17/ span 3" }} />
 
                 <Skills />
 

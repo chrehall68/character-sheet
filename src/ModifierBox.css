@@ -43,25 +43,29 @@
     border: solid black 2px;
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
+    align-items: center;
     height: 60px;
     width: 60px;
     margin: 0px;
     padding: 0px;
 }
 
-.largeModifier .small {
+.largeModifier p.small {
     font-size: 10px;
     margin: 0px;
     padding: 0px;
+    max-height: 30%;
 }
 
-.largeModifier .mod {
+.largeModifier p.mod {
     width: 100%;
     margin: 0px;
     padding: 0px;
     font-size: 30px;
     text-align: center;
     font-weight: bold;
+    min-height: 70%;
 }
 
 .longModifier {

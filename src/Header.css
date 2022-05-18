@@ -1,47 +1,77 @@
 #header {
-    display:grid;
-    grid-template-rows: 75px;
-    grid-template-columns: 20%;
-    grid-template-areas: "title archetype archetype class class"
-                         "name name bg bg level"
-                         "skill skill skill skill skill";
+    display: flex;
+    flex-wrap: wrap;
+    height: 20%;
 }
+
 #header .item {
     background-color: lightblue;
-    display:block;
+    display: flex;
     border: solid black 2px;
     overflow: hidden;
-    height:75px;
+    height: 75px;
 }
+
 #header .item .box_label {
-    float:left;
+    justify-self: flex-start;
     vertical-align: top;
-    padding-right:20px;
-    margin:0px;
+    width: 20%;
+    margin: 0px;
 }
+
 #header .item .main_content {
-    float: left;
+    justify-self: flex-start;
     vertical-align: middle;
 }
-#header .class{
-    grid-area: class;
+
+#header .row {
+    height: 33.3%;
+    display: flex;
+    width: 100%;
 }
-#header .title{
-    grid-area:title;
+
+#header .class,
+#header .name,
+#header .arch,
+#header .bg {
+    display: flex;
+    width: 40%;
+    height: 100%;
 }
-#header .name{
-    grid-area:name;
+
+#header .title,
+#header .lvl {
+    width: 20%;
+    display: flex;
+    height: 100%;
 }
-#header .arch{
-    grid-area:archetype;
-}
-#header .bg{
-    grid-area: bg;
-}
-#header .lvl{
-    grid-area:level;
-}
+
 #header .skill {
-    grid-area:skill;
-    height:100px;
+    width: 100%;
+    display: flex;
+    height: 100%;
+}
+
+#header .skill textarea.last {
+    width: 75%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+#header .skill textarea.last::-webkit-scrollbar {
+    display: none;
+}
+
+#header .skill .mod_wrapper {
+    height: 100%;
+    width: 5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#header .skill .mod_wrapper .mod {
+    height: 50%;
+    width: 100%;
 }

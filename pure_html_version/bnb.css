@@ -38,6 +38,7 @@
 }
 
 .largeModifier {
+    align-items: center;
     border: 2px solid #000;
     border-bottom-right-radius: 10px;
     border-top-left-radius: 10px;
@@ -45,20 +46,23 @@
     flex-wrap: wrap;
     height: 60px;
     margin: 0;
+    overflow: hidden;
     padding: 0;
     width: 60px
 }
 
-.largeModifier .small {
+.largeModifier p.small {
     font-size: 10px;
     margin: 0;
+    max-height: 30%;
     padding: 0
 }
 
-.largeModifier .mod {
+.largeModifier p.mod {
     font-size: 30px;
     font-weight: 700;
     margin: 0;
+    min-height: 70%;
     padding: 0;
     text-align: center;
     width: 100%
@@ -96,69 +100,91 @@
 }
 
 #header {
-    display: grid;
-    grid-template-areas: "title archetype archetype class class""name name bg bg level""skill skill skill skill skill";
-    grid-template-columns: 20%;
-    grid-template-rows: 75px
+    display: flex;
+    flex-wrap: wrap;
+    height: 20%
 }
 
 #header .item {
     background-color: #add8e6;
     border: 2px solid #000;
-    display: block;
+    display: flex;
     height: 75px;
     overflow: hidden
 }
 
 #header .item .box_label {
-    float: left;
+    justify-self: flex-start;
     margin: 0;
-    padding-right: 20px;
-    vertical-align: top
+    vertical-align: top;
+    width: 20%
 }
 
 #header .item .main_content {
-    float: left;
+    justify-self: flex-start;
     vertical-align: middle
 }
 
-#header .class {
-    grid-area: class
+#header .row {
+    display: flex;
+    height: 33.3%;
+    width: 100%
 }
 
-#header .title {
-    grid-area: title
-}
-
+#header .arch,
+#header .bg,
+#header .class,
 #header .name {
-    grid-area: name
+    display: flex;
+    height: 100%;
+    width: 40%
 }
 
-#header .arch {
-    grid-area: archetype
-}
-
-#header .bg {
-    grid-area: bg
-}
-
-#header .lvl {
-    grid-area: level
+#header .lvl,
+#header .title {
+    display: flex;
+    height: 100%;
+    width: 20%
 }
 
 #header .skill {
-    grid-area: skill;
-    height: 100px
+    display: flex;
+    height: 100%;
+    width: 100%
+}
+
+#header .skill textarea.last {
+    width: 75%
+}
+
+#header .skill textarea.last::-webkit-scrollbar {
+    display: none
+}
+
+#header .skill .mod_wrapper {
+    align-items: flex-end;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    width: 5%
+}
+
+#header .skill .mod_wrapper .mod {
+    height: 50%;
+    width: 100%
 }
 
 .body {
-    grid-gap: 8px;
+    grid-row-gap: .5%;
+    grid-column-gap: .5%;
+    -webkit-column-gap: .5%;
+    column-gap: .5%;
     display: grid;
-    gap: 8px;
     grid-auto-flow: dense;
-    grid-template-columns: repeat(auto-fit, 60px);
-    grid-template-rows: repeat(auto-fit, 12.5px);
-    height: 80%
+    grid-template-columns: repeat(auto-fit, 6.16%);
+    grid-template-rows: repeat(auto-fit, 1.5%);
+    height: 80%;
+    row-gap: .5%
 }
 
 .body,
@@ -275,12 +301,13 @@
     width: 100%
 }
 
-.mainAndLabelBox .main {
+.mainAndLabelBox input.main,
+.mainAndLabelBox p.main {
     font-size: 25px;
     font-weight: 700;
     height: 66.6%;
-    margin: 0 auto;
-    padding: 0 auto;
+    margin: 0;
+    padding: 0;
     text-align: center;
     width: 100%
 }
@@ -297,8 +324,8 @@
 .mainAndLabelBox .label {
     font-size: 8px;
     height: 33.3%;
-    margin: 0 auto;
-    padding: 0 auto;
+    margin: 0;
+    padding: 0;
     text-align: center;
     width: 100%
 }
@@ -494,15 +521,18 @@
 
 .BARank {
     border: 1px solid #000;
+    display: flex;
     grid-column: span 4;
     grid-row: span 4;
     overflow: hidden
 }
 
 .BARank div.header {
-    align-items: flex-start;
-    display: inline-block;
+    border-right: 1px solid #000;
+    display: flex;
+    flex-wrap: wrap;
     height: 100%;
+    justify-content: center;
     margin: 0;
     overflow: hidden;
     padding: 0;
@@ -510,53 +540,57 @@
 }
 
 .BARank div.header h3 {
-    font-size: smaller;
-    margin: 0;
-    padding: 0;
+    align-self: flex-start;
+    background-color: grey;
+    height: 30%;
     width: 100%
 }
 
 .BARank div.header h3,
 .BARank div.header input {
     display: block;
+    margin: 0;
     overflow: hidden;
+    padding: 0;
     text-align: center
 }
 
 .BARank div.header input {
-    border-left: 0;
-    border-right: 0;
-    border-top: 0;
+    align-self: flex-end;
+    border: 0;
     font-size: 2em;
     font-weight: 700;
-    margin: 0 auto;
-    padding: 0 auto;
+    height: 70%;
     width: 80%
 }
 
 .BARank div.tokens {
     border: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
     vertical-align: top;
     width: 50%
 }
 
-.BARank div.tokens,
 .BARank div.tokens p {
-    display: inline-block;
+    height: 30%;
     margin: 0;
-    padding: 0
+    padding: 0;
+    text-align: start;
+    width: 100%
 }
 
 .BARank div.tokens input {
-    border-left: 0;
-    border-right: 0;
-    border-top: 0;
-    display: block;
+    border: 0;
     font-size: 2em;
     font-weight: 700;
-    margin: 0 auto;
+    height: 70%;
+    margin: 0;
     overflow: hidden;
-    padding: 0 auto;
+    padding: 0;
     text-align: center;
     width: 80%
 }
@@ -791,14 +825,25 @@
 
 .skills .item .itemHeader {
     display: flex;
+    height: 20%;
     justify-content: center;
+    overflow: hidden;
     width: 100%
 }
 
 .skills .item .content {
     display: flex;
-    font-size: small;
+    height: 60%;
     width: 100%
+}
+
+.skills .item .content textarea {
+    font-size: small;
+    text-align: center
+}
+
+.skills .item .content textarea::-webkit-scrollbar {
+    display: none
 }
 
 .skills .item .level {
@@ -977,6 +1022,7 @@
 
 .App {
     border: 1px solid #000;
+    font-family: Times New Roman, Times, serif;
     height: 1320px;
     width: 1020px
 }
