@@ -26,19 +26,19 @@ export class Header extends React.Component {
     render() {
         return (
             <div id="header">
-                <div className="row">
+                <div className="aRow">
                     <div className="title item">
                         <h1 className="main_content">BNB</h1>
                     </div>
                     <Item box_label="Archetype: " main_content="Enforcer" className="arch" />
                     <Item box_label="Class: " main_content="Gunzerker" className="class" />
                 </div>
-                <div className="row">
+                <div className="aRow">
                     <Item box_label="Name: " main_content="" className="name" />
                     <Item box_label="Background: " main_content="Buff" className="bg" />
                     <Item box_label="Level: " main_content="1" className="lvl" />
                 </div>
-                <div className="row">
+                <div className="aRow">
                     <div className="item skill">
                         <h3 className="box_label">Action Skill: </h3>
                         <textarea className="main_content last" style={{ "resize": "none" }} />

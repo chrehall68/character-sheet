@@ -44,7 +44,7 @@
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
-    align-items: center;
+    align-content: center;
     height: 60px;
     width: 60px;
     margin: 0px;
@@ -56,6 +56,7 @@
     margin: 0px;
     padding: 0px;
     max-height: 30%;
+    width: 100%;
 }
 
 .largeModifier p.mod {

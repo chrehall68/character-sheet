@@ -14,17 +14,17 @@
 
 #header .item .box_label {
     justify-self: flex-start;
-    vertical-align: top;
+    align-self: flex-start;
     width: 20%;
     margin: 0px;
 }
 
 #header .item .main_content {
     justify-self: flex-start;
-    vertical-align: middle;
+    align-self: center;
 }
 
-#header .row {
+#header .aRow {
     height: 33.3%;
     display: flex;
     width: 100%;

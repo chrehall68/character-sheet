@@ -38,7 +38,7 @@
 }
 
 .largeModifier {
-    align-items: center;
+    align-content: center;
     border: 2px solid #000;
     border-bottom-right-radius: 10px;
     border-top-left-radius: 10px;
@@ -55,7 +55,8 @@
     font-size: 10px;
     margin: 0;
     max-height: 30%;
-    padding: 0
+    padding: 0;
+    width: 100%
 }
 
 .largeModifier p.mod {
@@ -114,15 +115,15 @@
 }
 
 #header .item .box_label {
+    align-self: flex-start;
     justify-self: flex-start;
     margin: 0;
-    vertical-align: top;
     width: 20%
 }
 
 #header .item .main_content {
-    justify-self: flex-start;
-    vertical-align: middle
+    align-self: center;
+    justify-self: flex-start
 }
 
 #header .row {
@@ -154,6 +155,9 @@
 }
 
 #header .skill textarea.last {
+    height: 100%;
+    margin: 0;
+    padding: 0;
     width: 75%
 }
 
@@ -218,15 +222,15 @@
     width: 100%
 }
 
-.smallAttr input.value {
+.smallAttr input[type=number].value {
     border: 0;
     font-size: larger;
     text-align: center;
     width: 50%
 }
 
-.smallAttr input.value::-webkit-inner-spin-button,
-.smallAttr input.value::-webkit-outer-spin-button {
+.smallAttr input[type=number].value::-webkit-inner-spin-button,
+.smallAttr input[type=number].value::-webkit-outer-spin-button {
     display: none
 }
 
@@ -301,7 +305,7 @@
     width: 100%
 }
 
-.mainAndLabelBox input.main,
+.mainAndLabelBox input[type=number].main,
 .mainAndLabelBox p.main {
     font-size: 25px;
     font-weight: 700;
@@ -312,12 +316,12 @@
     width: 100%
 }
 
-.mainAndLabelBox input.main {
+.mainAndLabelBox input[type=number].main {
     border: 0
 }
 
-.mainAndLabelBox input.main::-webkit-inner-spin-button,
-.mainAndLabelBox input.main::-webkit-outer-spin-button {
+.mainAndLabelBox input[type=number].main::-webkit-inner-spin-button,
+.mainAndLabelBox input[type=number].main::-webkit-outer-spin-button {
     display: none
 }
 
@@ -480,6 +484,8 @@
 .shields .shieldInput textarea {
     font-size: smaller;
     height: 75%;
+    margin: 0;
+    padding: 0;
     width: 65%
 }
 
@@ -512,7 +518,7 @@
     width: 85%
 }
 
-.gold .value input {
+.gold .value input[type=number] {
     font-size: x-large;
     height: 100%;
     text-align: right;
@@ -547,7 +553,7 @@
 }
 
 .BARank div.header h3,
-.BARank div.header input {
+.BARank div.header input[type=number] {
     display: block;
     margin: 0;
     overflow: hidden;
@@ -555,7 +561,7 @@
     text-align: center
 }
 
-.BARank div.header input {
+.BARank div.header input[type=number] {
     align-self: flex-end;
     border: 0;
     font-size: 2em;
@@ -583,7 +589,7 @@
     width: 100%
 }
 
-.BARank div.tokens input {
+.BARank div.tokens input[type=number] {
     border: 0;
     font-size: 2em;
     font-weight: 700;
@@ -646,8 +652,8 @@
     width: 40%
 }
 
-.grenades .row1 .damage input,
-.grenades .row1 .type input {
+.grenades .row1 .damage input[type=number],
+.grenades .row1 .type input[type=text] {
     border: 0;
     border-bottom: 1px solid #000;
     font-size: large;
@@ -688,8 +694,8 @@
     width: 20%
 }
 
-.grenades .row2 .current input,
-.grenades .row2 .max input {
+.grenades .row2 .current input[type=number],
+.grenades .row2 .max input[type=number] {
     border: 0;
     border-bottom: 1px solid #000;
     font-size: large;
@@ -734,7 +740,7 @@
     width: 95%
 }
 
-.potions .txtbox input {
+.potions .txtbox input[type=text] {
     background-color: transparent;
     border: 0;
     border-bottom: 1px solid grey;
@@ -750,23 +756,35 @@
 }
 
 .favoredGun {
+    align-content: space-between;
     border: 1px solid #000;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     grid-column: span 4;
     grid-row: 36/span 13
 }
 
-.favoredGun .header * {
+.favoredGun .header {
     background-color: #ffebcd;
-    display: block;
+    display: flex;
+    height: 10%;
+    width: 100%
+}
+
+.favoredGun .header * {
     margin: 0;
     padding: 0;
-    text-align: center
+    text-align: center;
+    width: 100%
 }
 
 .favoredGun label.gunItem {
     align-items: center;
-    display: flex
+    display: flex;
+    height: 14.16%;
+    margin: 0;
+    padding: 0;
+    width: 100%
 }
 
 .favoredGun .gunItem * {
@@ -834,11 +852,16 @@
 .skills .item .content {
     display: flex;
     height: 60%;
+    margin: 0;
+    padding: 0;
     width: 100%
 }
 
 .skills .item .content textarea {
     font-size: small;
+    height: 100%;
+    margin: 0;
+    padding: 0;
     text-align: center
 }
 
@@ -949,23 +972,30 @@
     align-items: center;
     display: flex;
     justify-content: center;
+    margin: 0;
+    padding: 0;
     width: 100%
 }
 
 .archetypeFeat .content #title {
-    font-weight: 700
+    font-weight: 700;
+    margin: 0;
+    padding: 0
 }
 
 .xpbar {
-    display: flex;
     grid-column: 1/span 14;
-    grid-row: 49/span 3;
-    height: 100%;
+    grid-row: 49/span 2;
     width: 100%
 }
 
+.xpbar,
 .xpbar .xpstuff {
     display: flex;
+    height: 100%
+}
+
+.xpbar .xpstuff {
     flex-wrap: wrap;
     justify-content: center;
     width: 20%
@@ -999,12 +1029,14 @@
     border-left: 0;
     border-right: 0;
     border-top: 0;
+    margin: 0;
+    padding: 0;
     text-align: center;
     width: 80%
 }
 
-.xpbar .xpstuff input.content::-webkit-inner-spin-button,
-.xpbar .xpstuff input.content::-webkit-outer-spin-button {
+.xpbar .xpstuff input[type=number].content::-webkit-inner-spin-button,
+.xpbar .xpstuff input[type=number].content::-webkit-outer-spin-button {
     display: none
 }
 
@@ -1025,4 +1057,9 @@
     font-family: Times New Roman, Times, serif;
     height: 1320px;
     width: 1020px
+}
+
+.root .App p {
+    font-family: Times New Roman, Times, serif !important;
+    line-height: unset !important
 }
