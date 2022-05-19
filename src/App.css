@@ -11,3 +11,9 @@ p {
     font-family: 'Times New Roman', Times, serif !important;
     line-height: unset !important;
 }
+
+@font-face {
+    font-family: 'MyWebFont';
+    src: url('myfont.woff2') format('woff2'),
+        url('myfont.woff') format('woff');
+}
