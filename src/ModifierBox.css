@@ -11,11 +11,10 @@
     min-height: 30px;
 }
 
-.modifier .small {
-    vertical-align: top;
+.modifier p.small {
     float: left;
     font-size: 10px;
-    height: 30%;
+    max-height: 40%;
     width: 100%;
     margin: 0px;
     padding: 0px;
@@ -25,11 +24,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70%;
+    min-height: 60%;
     width: 100%;
 }
 
-.modifier .mod * {
+.modifier .mod p {
     font-size: x-large;
     font-weight: bold;
     text-align: center;
@@ -51,22 +50,33 @@
     padding: 0px;
 }
 
-.largeModifier p.small {
-    font-size: 10px;
-    margin: 0px;
-    padding: 0px;
+.largeModifier div.small {
+    display: flex;
     max-height: 30%;
     width: 100%;
 }
 
-.largeModifier p.mod {
+.largeModifier .small p {
+    font-size: 10px;
+    margin: 0px;
+    padding: 0px;
     width: 100%;
+}
+
+.largeModifier div.mod {
+    width: 100%;
+    min-height: 70%;
+    max-height: 100%;
+    display: flex;
+}
+
+.largeModifier .mod p {
     margin: 0px;
     padding: 0px;
     font-size: 30px;
     text-align: center;
     font-weight: bold;
-    min-height: 70%;
+    width: 100%;
 }
 
 .longModifier {

@@ -4,7 +4,7 @@
     <div id="root">
         <div class="App">
             <div id="header">
-                <div class="row">
+                <div class="aRow">
                     <div class="title item">
                         <h1 class="main_content">BNB</h1>
                     </div>
@@ -19,7 +19,7 @@
                                 value="Gunzerker" style="border-bottom: none; width: 10.7ch;"></h2>
                     </div>
                 </div>
-                <div class="row">
+                <div class="aRow">
                     <div class="item name">
                         <h3 class="box_label">Name: </h3>
                         <h2 class="main_content"><input type="text" maxlength="12" val="" class="editable" value=""
@@ -36,78 +36,97 @@
                                 style="border-bottom: none; width: 10ch;"></h2>
                     </div>
                 </div>
-                <div class="row">
+                <div class="aRow">
                     <div class="item skill">
                         <h3 class="box_label">Action Skill: </h3><textarea class="main_content last"
                             style="resize: none;"></textarea>
-                        <div class="mod_wrapper"><span class="mod modifier">
+                        <div class="mod_wrapper">
+                            <div class="mod modifier">
                                 <div class="mod">
                                     <p>+1</p>
                                 </div>
                                 <p class="small">MST</p>
-                            </span></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="body"><span class="smallAttr">
                     <h4 class="header">Accuracy (ACC)</h4>
-                    <div class="contentRow"><input class="value" type="number" value="0"><span
-                            class="attr_mod modifier">
+                    <div class="contentRow"><input class="value" type="number" value="0">
+                        <div class="attr_mod modifier">
                             <div class="mod">
                                 <p>0</p>
                             </div>
                             <p class="small">mod</p>
-                        </span></div>
+                        </div>
+                    </div>
                 </span><span class="smallAttr">
                     <h4 class="header">Damage (DMG)</h4>
-                    <div class="contentRow"><input class="value" type="number" value="0"><span
-                            class="attr_mod modifier">
+                    <div class="contentRow"><input class="value" type="number" value="0">
+                        <div class="attr_mod modifier">
                             <div class="mod">
                                 <p>0</p>
                             </div>
                             <p class="small">mod</p>
-                        </span></div>
+                        </div>
+                    </div>
                 </span><span class="smallAttr">
                     <h4 class="header">Speed (SPD)</h4>
-                    <div class="contentRow"><input class="value" type="number" value="0"><span
-                            class="attr_mod modifier">
+                    <div class="contentRow"><input class="value" type="number" value="0">
+                        <div class="attr_mod modifier">
                             <div class="mod">
                                 <p>0</p>
                             </div>
                             <p class="small">mod</p>
-                        </span></div>
+                        </div>
+                    </div>
                 </span><span class="smallAttr">
                     <h4 class="header">Mastery (MST)</h4>
-                    <div class="contentRow"><input class="value" type="number" value="0"><span
-                            class="attr_mod modifier">
+                    <div class="contentRow"><input class="value" type="number" value="0">
+                        <div class="attr_mod modifier">
                             <div class="mod">
                                 <p>0</p>
                             </div>
                             <p class="small">mod</p>
-                        </span></div>
+                        </div>
+                    </div>
                 </span>
                 <h2 class="twoRow longAttrHeader">Initiative</h2>
                 <div class="longAttr">
                     <div class="largeModifier">
-                        <p class="mod">1</p>
-                        <p class="small">Baddass Rank</p>
+                        <div class="mod">
+                            <p>1</p>
+                        </div>
+                        <div class="small">
+                            <p>Baddass Rank</p>
+                        </div>
                     </div>
                     <p>+</p>
                     <div class="largeModifier">
-                        <p class="mod">0</p>
-                        <p class="small">SPD Mod</p>
+                        <div class="mod">
+                            <p>0</p>
+                        </div>
+                        <div class="small">
+                            <p>SPD Mod</p>
+                        </div>
                     </div>
                     <p>+</p>
                     <div class="largeModifier">
-                        <p class="mod">_</p>
-                        <p class="small">MISC Mod</p>
+                        <div class="mod">
+                            <p>_</p>
+                        </div>
+                        <div class="small">
+                            <p>MISC Mod</p>
+                        </div>
                     </div>
-                    <p>=</p><span class="modifier" style="width: 40px;">
+                    <p>=</p>
+                    <div class="modifier" style="width: 40px;">
                         <div class="mod">
                             <p>+1</p>
                         </div>
                         <p class="small"></p>
-                    </span>
+                    </div>
                 </div><span class="gunBar">
                     <p>Current Gun</p>
                 </span><span class="gunBar">
@@ -118,25 +137,38 @@
                 <h2 class="oneRow longAttrHeader" style="grid-column: 9 / span 2;">Movement</h2>
                 <div class="longAttr" style="grid-column: 11 / span 4;">
                     <div class="largeModifier">
-                        <p class="mod">3</p>
-                        <p class="small">static mod</p>
+                        <div class="mod">
+                            <p>3</p>
+                        </div>
+                        <div class="small">
+                            <p>static mod</p>
+                        </div>
                     </div>
                     <p>+</p>
                     <div class="largeModifier">
-                        <p class="mod">0</p>
-                        <p class="small">SPD Mod</p>
+                        <div class="mod">
+                            <p>0</p>
+                        </div>
+                        <div class="small">
+                            <p>SPD Mod</p>
+                        </div>
                     </div>
                     <p>+</p>
                     <div class="largeModifier">
-                        <p class="mod">_</p>
-                        <p class="small">MISC Mod</p>
+                        <div class="mod">
+                            <p>_</p>
+                        </div>
+                        <div class="small">
+                            <p>MISC Mod</p>
+                        </div>
                     </div>
-                    <p>=</p><span class="modifier" style="width: 40px;">
+                    <p>=</p>
+                    <div class="modifier" style="width: 40px;">
                         <div class="mod">
                             <p>+3</p>
                         </div>
                         <p class="small"></p>
-                    </span>
+                    </div>
                 </div>
                 <div class="health" style="grid-row: 7 / span 4;">
                     <div class="headerCurMaxMod">
@@ -158,101 +190,128 @@
                 <div class="checks" style="grid-row: 7 / span 15;">
                     <p class="header">Checks</p>
                     <div class="checksItem">
-                        <h2 class="checksItemTitle">Interact</h2><span class="val1 longModifier">
+                        <h2 class="checksItemTitle">Interact</h2>
+                        <div class="val1 longModifier">
                             <p class="mod">0</p>
                             <p class="small">acc <br>mod</p>
-                        </span>
-                        <p>+</p><span class="val2 longModifier">
+                        </div>
+                        <p>+</p>
+                        <div class="val2 longModifier">
                             <p class="mod">0</p>
                             <p class="small">misc <br>mod</p>
-                        </span>
+                        </div>
                         <p>=</p>
                         <div class="val3 largeModifier">
-                            <p class="mod">+0</p>
+                            <div class="mod">
+                                <p>+0</p>
+                            </div>
                         </div>
                     </div>
                     <div class="checksItem">
-                        <h2 class="checksItemTitle">Talk</h2><span class="val1 longModifier">
+                        <h2 class="checksItemTitle">Talk</h2>
+                        <div class="val1 longModifier">
                             <p class="mod">0</p>
                             <p class="small">spd <br>mod</p>
-                        </span>
-                        <p>+</p><span class="val2 longModifier">
+                        </div>
+                        <p>+</p>
+                        <div class="val2 longModifier">
                             <p class="mod">0</p>
                             <p class="small">misc <br>mod</p>
-                        </span>
+                        </div>
                         <p>=</p>
                         <div class="val3 largeModifier">
-                            <p class="mod">+0</p>
+                            <div class="mod">
+                                <p>+0</p>
+                            </div>
                         </div>
                     </div>
                     <div class="checksItem">
-                        <h2 class="checksItemTitle">Insight</h2><span class="val1 longModifier">
+                        <h2 class="checksItemTitle">Insight</h2>
+                        <div class="val1 longModifier">
                             <p class="mod">0</p>
                             <p class="small">acc <br>mod</p>
-                        </span>
-                        <p>+</p><span class="val2 longModifier">
+                        </div>
+                        <p>+</p>
+                        <div class="val2 longModifier">
                             <p class="mod">0</p>
                             <p class="small">misc <br>mod</p>
-                        </span>
+                        </div>
                         <p>=</p>
                         <div class="val3 largeModifier">
-                            <p class="mod">+0</p>
+                            <div class="mod">
+                                <p>+0</p>
+                            </div>
                         </div>
                     </div>
                     <div class="checksItem">
-                        <h2 class="checksItemTitle">Sneak</h2><span class="val1 longModifier">
+                        <h2 class="checksItemTitle">Sneak</h2>
+                        <div class="val1 longModifier">
                             <p class="mod">0</p>
                             <p class="small">MST <br>mod</p>
-                        </span>
-                        <p>+</p><span class="val2 longModifier">
+                        </div>
+                        <p>+</p>
+                        <div class="val2 longModifier">
                             <p class="mod">0</p>
                             <p class="small">misc <br>mod</p>
-                        </span>
+                        </div>
                         <p>=</p>
                         <div class="val3 largeModifier">
-                            <p class="mod">+0</p>
+                            <div class="mod">
+                                <p>+0</p>
+                            </div>
                         </div>
                     </div>
                     <div class="checksItem">
-                        <h2 class="checksItemTitle">Search</h2><span class="val1 longModifier">
+                        <h2 class="checksItemTitle">Search</h2>
+                        <div class="val1 longModifier">
                             <p class="mod">0</p>
                             <p class="small">MST <br>mod</p>
-                        </span>
-                        <p>+</p><span class="val2 longModifier">
+                        </div>
+                        <p>+</p>
+                        <div class="val2 longModifier">
                             <p class="mod">0</p>
                             <p class="small">misc <br>mod</p>
-                        </span>
+                        </div>
                         <p>=</p>
                         <div class="val3 largeModifier">
-                            <p class="mod">+0</p>
+                            <div class="mod">
+                                <p>+0</p>
+                            </div>
                         </div>
                     </div>
                     <div class="checksItem">
-                        <h2 class="checksItemTitle">Traverse</h2><span class="val1 longModifier">
+                        <h2 class="checksItemTitle">Traverse</h2>
+                        <div class="val1 longModifier">
                             <p class="mod">0</p>
                             <p class="small">SPD <br>mod</p>
-                        </span>
-                        <p>+</p><span class="val2 longModifier">
+                        </div>
+                        <p>+</p>
+                        <div class="val2 longModifier">
                             <p class="mod">0</p>
                             <p class="small">misc <br>mod</p>
-                        </span>
+                        </div>
                         <p>=</p>
                         <div class="val3 largeModifier">
-                            <p class="mod">+0</p>
+                            <div class="mod">
+                                <p>+0</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="melee" style="grid-row: 9 / span 4;">
                     <h3 class="header">Melee Die</h3>
-                    <div class="mainAndLabelBox die">
-                        <p class="main"> 1d10</p>
-                        <p class="label"></p>
-                    </div><span class="mod modifier">
-                        <div class="mod">
-                            <p>+0</p>
+                    <div class="row1">
+                        <div class="mainAndLabelBox die">
+                            <p class="main"> 1d10</p>
+                            <p class="label"></p>
                         </div>
-                        <p class="small">+DMG</p>
-                    </span>
+                        <div class="dmgmd modifier">
+                            <div class="mod">
+                                <p>+0</p>
+                            </div>
+                            <p class="small">+DMG</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="shields" style="grid-row: 11 / span 7;">
                     <div class="row1">
@@ -438,5 +497,4 @@
             </div>
         </div>
     </div>
-
 </body>

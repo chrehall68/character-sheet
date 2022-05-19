@@ -236,27 +236,36 @@
 .melee {
     grid-column: span 4;
     grid-row: span 4;
-    display: grid;
-    grid-template-areas: "header header header"
-        "die die mod";
+    display: flex;
+    flex-wrap: wrap;
     border: 1px solid black;
 }
 
 .melee .header {
-    grid-area: header;
-    height: min-content;
+    width: 100%;
+    height: 30%;
     text-align: center;
-    padding: 0px auto;
-    margin: 0px auto;
+    padding: 0px;
+    margin: 0px;
+}
+
+.melee .row1 {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
 }
 
 .melee .die {
-    grid-area: die;
-    width: 210px;
+    width: 80%;
+    height: 100%;
+    display: flex;
 }
 
-.melee .mod {
-    grid-area: mod;
+.melee .dmgmd {
+    width: 20%;
+    height: 100%;
+    display: flex;
 }
 
 .shields {
@@ -814,7 +823,8 @@
     width: 20%;
     height: 100%;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .xpbar .xpstuff::after {
@@ -838,7 +848,7 @@
 .xpbar .xpstuff .label {
     margin: 0px;
     padding: 0px;
-    width: 100%;
+    width: 40%;
     text-align: center;
 }
 
@@ -847,7 +857,7 @@
     border-right: 0px;
     border-top: 0px;
     text-align: center;
-    width: 80%;
+    width: 50%;
     margin: 0px;
     padding: 0px;
 }

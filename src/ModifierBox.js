@@ -11,10 +11,10 @@ export class ModifierBox extends React.Component {
     }
     render() {
         return (
-            <span className={this.cn} style={this.props.style}>
+            <div className={this.cn} style={this.props.style}>
                 <div className="mod"><p>{this.modifier}</p></div>
                 <p className="small">{this.small_desc}</p>
-            </span>)
+            </div>)
     }
 }
 
@@ -29,8 +29,8 @@ export class LargeModifierBox extends React.Component {
     render() {
         return (
             <div className={this.cn} style={this.props.style}>
-                <p className="mod">{this.modifier}</p>
-                {this.small_desc !== "" && <p className="small">{this.small_desc}</p>}
+                <div className="mod"><p>{this.modifier}</p></div>
+                {this.small_desc !== "" && <div className="small"><p>{this.small_desc}</p></div>}
             </div>)
     }
 }
@@ -45,10 +45,10 @@ export class LongModifierBox extends React.Component {
     }
     render() {
         return (
-            <span className={this.cn} style={this.props.style}>
+            <div className={this.cn} style={this.props.style}>
                 <p className="mod">{this.modifier}</p>
                 <p className="small">{this.small_desc} <br />mod</p>
-            </span>
+            </div>
         )
     }
 }

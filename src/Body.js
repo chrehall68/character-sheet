@@ -27,7 +27,7 @@ class SmallAttr extends React.Component {
                 <h4 className='header'>{this.header}</h4>
                 <div className="contentRow">
                     <input className="value" type="number" value={this.state.value} onChange={this.getModifier} />
-                    <ModifierBox key={this.state.modifier} small_desc={this.small_desc} modifier={this.state.modifier} className="attr_mod" />
+                    <ModifierBox key={this.state.modifier} small_desc={this.small_desc} modifier={this.state.modifier} className="attr_mod" style={{ "height": "44px" }} />
                 </div>
             </span>)
     }
@@ -198,8 +198,10 @@ class Melee extends React.Component {
     render() {
         return <div className='melee' style={this.props.style}>
             <h3 className="header">Melee Die</h3>
-            <MainAndLabelBox main="1d10" label="" className="die" />
-            <ModifierBox className="mod" modifier={"+" + this.mod} small_desc="+DMG" />
+            <div className='row1'>
+                <MainAndLabelBox main="1d10" label="" className="die" />
+                <ModifierBox className="dmgmd" modifier={"+" + this.mod} small_desc="+DMG" />
+            </div>
         </div>
     }
 }

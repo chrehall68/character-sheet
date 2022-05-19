@@ -11,25 +11,24 @@
     vertical-align: bottom
 }
 
-.modifier .small {
+.modifier p.small {
     float: left;
     font-size: 10px;
-    height: 30%;
     margin: 0;
+    max-height: 40%;
     padding: 0;
-    vertical-align: top;
     width: 100%
 }
 
 .modifier .mod {
     align-items: center;
     display: flex;
-    height: 70%;
     justify-content: center;
+    min-height: 60%;
     width: 100%
 }
 
-.modifier .mod * {
+.modifier .mod p {
     font-size: x-large;
     font-weight: 700;
     margin: 0;
@@ -51,19 +50,30 @@
     width: 60px
 }
 
-.largeModifier p.small {
+.largeModifier div.small {
+    display: flex;
+    max-height: 30%;
+    width: 100%
+}
+
+.largeModifier .small p {
     font-size: 10px;
     margin: 0;
-    max-height: 30%;
     padding: 0;
     width: 100%
 }
 
-.largeModifier p.mod {
+.largeModifier div.mod {
+    display: flex;
+    max-height: 100%;
+    min-height: 70%;
+    width: 100%
+}
+
+.largeModifier .mod p {
     font-size: 30px;
     font-weight: 700;
     margin: 0;
-    min-height: 70%;
     padding: 0;
     text-align: center;
     width: 100%
@@ -126,7 +136,7 @@
     justify-self: flex-start
 }
 
-#header .row {
+#header .aRow {
     display: flex;
     height: 33.3%;
     width: 100%
@@ -416,28 +426,37 @@
 
 .melee {
     border: 1px solid #000;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     grid-column: span 4;
-    grid-row: span 4;
-    grid-template-areas: "header header header""die die mod"
+    grid-row: span 4
 }
 
 .melee .header {
-    grid-area: header;
-    height: -webkit-min-content;
-    height: min-content;
-    margin: 0 auto;
-    padding: 0 auto;
-    text-align: center
+    height: 30%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%
+}
+
+.melee .row1 {
+    display: flex;
+    height: 70%;
+    overflow: hidden;
+    width: 100%
 }
 
 .melee .die {
-    grid-area: die;
-    width: 210px
+    display: flex;
+    height: 100%;
+    width: 80%
 }
 
-.melee .mod {
-    grid-area: mod
+.melee .dmgmd {
+    display: flex;
+    height: 100%;
+    width: 20%
 }
 
 .shields {
@@ -1059,7 +1078,7 @@
     width: 1020px
 }
 
-.root .App p {
+p {
     font-family: Times New Roman, Times, serif !important;
     line-height: unset !important
 }
