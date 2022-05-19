@@ -1,4 +1,4 @@
-.modifier {
+.sheet-modifier {
     border: 2px solid #000;
     border-bottom-right-radius: 10px;
     border-top-left-radius: 10px;
@@ -11,7 +11,7 @@
     vertical-align: bottom
 }
 
-.modifier p.small {
+.sheet-modifier p.sheet-small {
     float: left;
     font-size: 10px;
     margin: 0;
@@ -20,7 +20,7 @@
     width: 100%
 }
 
-.modifier .mod {
+.sheet-modifier .sheet-mod {
     align-items: center;
     display: flex;
     justify-content: center;
@@ -28,7 +28,7 @@
     width: 100%
 }
 
-.modifier .mod p {
+.sheet-modifier .sheet-mod p {
     font-size: x-large;
     font-weight: 700;
     margin: 0;
@@ -36,7 +36,7 @@
     text-align: center
 }
 
-.largeModifier {
+.sheet-largeModifier {
     align-content: center;
     border: 2px solid #000;
     border-bottom-right-radius: 10px;
@@ -50,27 +50,27 @@
     width: 60px
 }
 
-.largeModifier div.small {
+.sheet-largeModifier div.sheet-small {
     display: flex;
     max-height: 30%;
     width: 100%
 }
 
-.largeModifier .small p {
+.sheet-largeModifier .sheet-small p {
     font-size: 10px;
     margin: 0;
     padding: 0;
     width: 100%
 }
 
-.largeModifier div.mod {
+.sheet-largeModifier div.sheet-mod {
     display: flex;
     max-height: 100%;
     min-height: 70%;
     width: 100%
 }
 
-.largeModifier .mod p {
+.sheet-largeModifier .sheet-mod p {
     font-size: 30px;
     font-weight: 700;
     margin: 0;
@@ -79,7 +79,7 @@
     width: 100%
 }
 
-.longModifier {
+.sheet-longModifier {
     border: 1px solid #000;
     display: grid;
     grid-template-areas: "small mod";
@@ -87,13 +87,13 @@
     width: 60px
 }
 
-.longModifier .small {
+.sheet-longModifier .sheet-small {
     font-size: 10px;
     grid-area: small;
     margin: auto
 }
 
-.longModifier .mod {
+.sheet-longModifier .sheet-mod {
     font-size: 20px;
     grid-area: mod;
     margin: auto

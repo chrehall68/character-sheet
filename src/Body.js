@@ -2,7 +2,6 @@ import React from 'react'
 import "./Body.css"
 
 import { ModifierBox, LargeModifierBox, LongModifierBox } from './ModifierBox'
-import { Editable } from './Editable'
 import { LimitedTextarea } from './limitedTextarea'
 import { wait } from '@testing-library/user-event/dist/utils'
 
@@ -26,7 +25,7 @@ class SmallAttr extends React.Component {
             <span className='sheet-smallAttr'>
                 <h4 className='sheet-header'>{this.header}</h4>
                 <div className="sheet-contentRow">
-                    <input name={"raw_" + this.header.substring(this.header.indexOf("(") + 1, this.header.indexOf(")")).toLowerCase()} className="sheet-value" type="number" value={this.state.value} onChange={this.getModifier} />
+                    <input name={"attr_raw_" + this.header.substring(this.header.indexOf("(") + 1, this.header.indexOf(")")).toLowerCase()} className="sheet-value" type="number" value={this.state.value} onChange={this.getModifier} />
                     <ModifierBox key={this.state.modifier} small_desc={this.small_desc} modifier={this.state.modifier} className="sheet-attr_mod" style={{ "height": "44px" }} />
                 </div>
             </span>)
@@ -215,13 +214,13 @@ class Grenades extends React.Component {
 
             <div className='sheet-header'><h3>Grenades</h3></div>
             <div className="sheet-row1">
-                <div className="sheet-type"><input type="text"></input><p>TYPE</p></div>
-                <div className="sheet-damage"><input type="number"></input><p>DAMAGE</p></div>
+                <div className="sheet-type"><input type="text" name="attr_grenade_type"></input><p>TYPE</p></div>
+                <div className="sheet-damage"><input type="number" name="attr_grenade_damage"></input><p>DAMAGE</p></div>
             </div>
             <div className="sheet-row2">
-                <div className="sheet-info"><p>INFO</p><textarea style={{ "resize": "none" }}></textarea></div>
-                <div className='sheet-current'><input type="number" /><p>CURRENT</p></div>
-                <div className='sheet-max'><input type="number" /><p>MAX</p></div>
+                <div className="sheet-info"><p>INFO</p><textarea name="attr_grenade_info" style={{ "resize": "none" }}></textarea></div>
+                <div className='sheet-current'><input type="number" name="attr_grenade_current" /><p>CURRENT</p></div>
+                <div className='sheet-max'><input type="number" name="attr_grenade_mx" /><p>MAX</p></div>
             </div>
         </div>
     }
@@ -253,11 +252,11 @@ class Potions extends React.Component {
     render() {
         return <div className="sheet-potions" style={this.props.style}>
             <div className="sheet-header"><h3>Potions</h3></div>
-            <div className="sheet-txtbox"><input type="text" /></div>
-            <div className="sheet-txtbox"><input type="text" /></div>
-            <div className="sheet-txtbox"><input type="text" /></div>
-            <div className="sheet-txtbox sheet-lockable"><input value={this.state.value1} type="text" onChange={(event) => { this.lock_text(1, event) }} /></div>
-            <div className="sheet-txtbox sheet-lockable"><input value={this.state.value2} type="text" onChange={(event) => { this.lock_text(2, event) }} /></div>
+            <div className="sheet-txtbox"><input type="text" name="attr_potions_1" /></div>
+            <div className="sheet-txtbox"><input type="text" name="attr_potions_2" /></div>
+            <div className="sheet-txtbox"><input type="text" name="attr_potions_3" /></div>
+            <div className="sheet-txtbox sheet-lockable"><input name="attr_potions_4" value={this.state.value1} type="text" onChange={(event) => { this.lock_text(1, event) }} /></div>
+            <div className="sheet-txtbox sheet-lockable"><input name="attr_potions_5" value={this.state.value2} type="text" onChange={(event) => { this.lock_text(2, event) }} /></div>
         </div>
     }
 }
@@ -269,8 +268,8 @@ class Shields extends React.Component {
                 <HeaderCurMaxMod header="shields" cur="2" max="15" mod="5" mod_label="Recharge" style={{ border: "none" }} curEditable={true} curName="attr_current_shields" />
             </div>
             <div className="sheet-row2" >
-                <span className="sheet-shieldInput"><h5>shield type: </h5><p><Editable /></p></span>
-                <span className="sheet-shieldInput"><h5>info: </h5><textarea style={{ resize: "none" }} /></span>
+                <span className="sheet-shieldInput"><h5>shield type: </h5><p><input type="text" name="attr_shield_type" /></p></span>
+                <span className="sheet-shieldInput"><h5>info: </h5><textarea name="attr_shield_info" style={{ resize: "none" }} /></span>
             </div>
         </div>
     }
@@ -279,8 +278,8 @@ class Shields extends React.Component {
 class BARank extends React.Component {
     render() {
         return <div className="sheet-BARank">
-            <div className="sheet-header"><h3>Baddass Rank</h3><input type="number" defaultValue={1} /></div>
-            <div className="sheet-tokens"><p>Badass Tokens</p><input type="number" /></div>
+            <div className="sheet-header"><h3>Baddass Rank</h3><input type="number" defaultValue={1} name="attr_BARank" /></div>
+            <div className="sheet-tokens"><p>Badass Tokens</p><input type="number" name="attr_BATokens" /></div>
         </div>
     }
 }
@@ -289,7 +288,7 @@ class Gold extends React.Component {
     render() {
         return <div className="sheet-gold" style={this.props.style}>
             <div className='sheet-header'><h3>Gold</h3></div>
-            <div className='sheet-value'><input name='goldVal' type="number" className="sheet-value" defaultValue={0} /></div>
+            <div className='sheet-value'><input name='attr_goldVal' type="number" className="sheet-value" defaultValue={0} /></div>
         </div>
     }
 }
@@ -326,12 +325,13 @@ class SkillsItem extends React.Component {
         super(props)
         this.props = props;
         this.header = props.header;
+        this.number = props.number;
     }
 
     render() {
         return <div className='sheet-item'>
-            <div className='sheet-itemHeader'>{this.header}</div>
-            <div className='sheet-content'><textarea style={{ "resize": "none" }} defaultValue={this.props.children} /></div>
+            <div className='sheet-itemHeader'><input type="text" defaultValue={this.header} name={"attr_skillname_" + this.number} /></div>
+            <div className='sheet-content'><textarea style={{ "resize": "none" }} defaultValue={this.props.children} name={"attr_skillcontent_" + this.number} /></div>
             <div className='sheet-level'>
                 <input type="checkbox" title="level1" name="skillLevel" />
                 <input type="checkbox" title="level3" name="skillLevel" />
@@ -346,20 +346,20 @@ class Skills extends React.Component {
         return <div className='sheet-skills'>
             <div className='sheet-header'><h3>Skills</h3></div>
             <div className='sheet-itemWrapper'>
-                <SkillsItem header="Quick Draw">
+                <SkillsItem header="Quick Draw" number='1'>
                     +2 Initiative Mod/SL.<br />+1/SL on Interact Checks
                 </SkillsItem>
-                <SkillsItem header="Filled to The Brim">
+                <SkillsItem header="Filled to The Brim" number='2'>
                     Increase max grenades by
                     1/SL. Increase max potions by 1+MST Mod
                 </SkillsItem>
-                <SkillsItem header="Incite">
+                <SkillsItem header="Incite" number='3'>
                     The first time you take
                     Damage during an encounter,
                     gain Extra Movement.
                     +1/SL on Traverse Checks.
                 </SkillsItem>
-                <SkillsItem header="Hard to Kill">
+                <SkillsItem header="Hard to Kill" number='4'>
                     10+MST Mod Health.<br />
                     +5 Health Regen/SL.
                 </SkillsItem>
