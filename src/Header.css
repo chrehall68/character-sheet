@@ -1,10 +1,10 @@
-#header {
+#sheet-header {
     display: flex;
     flex-wrap: wrap;
     height: 20%;
 }
 
-#header .item {
+#sheet-header .sheet-item {
     background-color: lightblue;
     display: flex;
     border: solid black 2px;
@@ -12,20 +12,20 @@
     height: 75px;
 }
 
-#header .item .box_label {
+#sheet-header .sheet-item .sheet-box_label {
     justify-self: flex-start;
     align-self: flex-start;
     width: 20%;
     margin: 0px;
 }
 
-#header .item .main_content {
+#sheet-header .sheet-item .sheet-main_content {
     justify-self: flex-start;
     align-self: center;
 
 }
 
-#header .item .main_content input {
+#sheet-header .sheet-item .sheet-main_content input {
     background-color: inherit;
     width: 80%;
     border-left: 0px;
@@ -35,46 +35,46 @@
     font-size: inherit;
 }
 
-#header .aRow {
+#sheet-header .sheet-row {
     height: 33.3%;
     display: flex;
     width: 100%;
 }
 
-#header .class,
-#header .name,
-#header .arch,
-#header .bg {
+#sheet-header .sheet-class,
+#sheet-header .sheet-name,
+#sheet-header .sheet-arch,
+#sheet-header .sheet-bg {
     display: flex;
     width: 40%;
     height: 100%;
 }
 
-#header .title,
-#header .lvl {
+#sheet-header .sheet-title,
+#sheet-header .sheet-lvl {
     width: 20%;
     display: flex;
     height: 100%;
 }
 
-#header .skill {
+#sheet-header .sheet-skill {
     width: 100%;
     display: flex;
     height: 100%;
 }
 
-#header .skill textarea.last {
+#sheet-header .sheet-skill textarea.sheet-last {
     width: 75%;
     height: 100%;
     padding: 0px;
     margin: 0px;
 }
 
-#header .skill textarea.last::-webkit-scrollbar {
+#sheet-header .sheet-skill textarea.sheet-last::-webkit-scrollbar {
     display: none;
 }
 
-#header .skill .mod_wrapper {
+#sheet-header .sheet-skill .sheet-mod_wrapper {
     height: 100%;
     width: 5%;
     display: flex;
@@ -82,7 +82,7 @@
     align-items: flex-end;
 }
 
-#header .skill .mod_wrapper .mod {
+#sheet-header .sheet-skill .sheet-mod_wrapper .sheet-mod {
     height: 50%;
     width: 100%;
 }

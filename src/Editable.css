@@ -1,4 +1,4 @@
-.editable{
+.sheet-editable {
     font-size: inherit;
     font-weight: inherit;
     font-family: inherit;
@@ -6,5 +6,5 @@
     margin: inherit;
     padding: inherit;
     background-color: inherit;
-    border:none;
+    border: none;
 }

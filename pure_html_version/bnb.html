@@ -1,42 +1,42 @@
 <link href="bnb.css" rel="stylesheet" />
 
-<body>
+<body class="charsheet">
     <div id="root">
-        <div class="App">
-            <div id="header">
-                <div class="aRow">
-                    <div class="title item">
-                        <h1 class="main_content">BNB</h1>
+        <div class="sheet-App">
+            <div id="sheet-header">
+                <div class="sheet-row">
+                    <div class="sheet-title sheet-item">
+                        <h1 class="sheet-main_content">BNB</h1>
                     </div>
-                    <div class="item arch">
-                        <h3 class="box_label">Archetype: </h3>
-                        <h2 class="main_content"><input name="attr_Archetype" value="Enforcer"></h2>
+                    <div class="sheet-item sheet-arch">
+                        <h3 class="sheet-box_label">Archetype: </h3>
+                        <h2 class="sheet-main_content"><input name="attr_Archetype" type="text" value="Enforcer"></h2>
                     </div>
-                    <div class="item class">
-                        <h3 class="box_label">Class: </h3>
-                        <h2 class="main_content"><input name="attr_Class" value="Gunzerker"></h2>
-                    </div>
-                </div>
-                <div class="aRow">
-                    <div class="item name">
-                        <h3 class="box_label">Name: </h3>
-                        <h2 class="main_content"><input name="attr_Name" value=""></h2>
-                    </div>
-                    <div class="item bg">
-                        <h3 class="box_label">Background: </h3>
-                        <h2 class="main_content"><input name="attr_Background" value="Buff"></h2>
-                    </div>
-                    <div class="item lvl">
-                        <h3 class="box_label">Level: </h3>
-                        <h2 class="main_content"><input name="attr_Level" value="1"></h2>
+                    <div class="sheet-item sheet-class">
+                        <h3 class="sheet-box_label">Class: </h3>
+                        <h2 class="sheet-main_content"><input name="attr_Class" type="text" value="Gunzerker"></h2>
                     </div>
                 </div>
-                <div class="aRow">
-                    <div class="item skill">
-                        <h3 class="box_label">Action Skill: </h3><textarea class="main_content last"
+                <div class="sheet-row">
+                    <div class="sheet-item sheet-name">
+                        <h3 class="sheet-box_label">Name: </h3>
+                        <h2 class="sheet-main_content"><input name="attr_Name" type="text" value=""></h2>
+                    </div>
+                    <div class="sheet-item sheet-bg">
+                        <h3 class="sheet-box_label">Background: </h3>
+                        <h2 class="sheet-main_content"><input name="attr_Background" type="text" value="Buff"></h2>
+                    </div>
+                    <div class="sheet-item sheet-lvl">
+                        <h3 class="sheet-box_label">Level: </h3>
+                        <h2 class="sheet-main_content"><input name="attr_Level" type="text" value="1"></h2>
+                    </div>
+                </div>
+                <div class="sheet-row">
+                    <div class="sheet-item sheet-skill">
+                        <h3 class="sheet-box_label">Action Skill: </h3><textarea class="sheet-main_content sheet-last"
                             style="resize: none;"></textarea>
-                        <div class="mod_wrapper">
-                            <div class="mod modifier">
+                        <div class="sheet-mod_wrapper">
+                            <div class="sheet-mod modifier">
                                 <div class="mod">
                                     <p>+1</p>
                                 </div>
@@ -46,40 +46,40 @@
                     </div>
                 </div>
             </div>
-            <div class="body"><span class="smallAttr">
-                    <h4 class="header">Accuracy (ACC)</h4>
-                    <div class="contentRow"><input class="value" type="number" value="0">
-                        <div class="attr_mod modifier" style="height: 44px;">
+            <div class="sheet-body"><span class="sheet-smallAttr">
+                    <h4 class="sheet-header">Accuracy (ACC)</h4>
+                    <div class="sheet-contentRow"><input class="sheet-value" type="number" value="0">
+                        <div class="sheet-attr_mod modifier" style="height: 44px;">
                             <div class="mod">
                                 <p>0</p>
                             </div>
                             <p class="small">mod</p>
                         </div>
                     </div>
-                </span><span class="smallAttr">
-                    <h4 class="header">Damage (DMG)</h4>
-                    <div class="contentRow"><input class="value" type="number" value="0">
-                        <div class="attr_mod modifier" style="height: 44px;">
+                </span><span class="sheet-smallAttr">
+                    <h4 class="sheet-header">Damage (DMG)</h4>
+                    <div class="sheet-contentRow"><input class="sheet-value" type="number" value="0">
+                        <div class="sheet-attr_mod modifier" style="height: 44px;">
                             <div class="mod">
                                 <p>0</p>
                             </div>
                             <p class="small">mod</p>
                         </div>
                     </div>
-                </span><span class="smallAttr">
-                    <h4 class="header">Speed (SPD)</h4>
-                    <div class="contentRow"><input class="value" type="number" value="0">
-                        <div class="attr_mod modifier" style="height: 44px;">
+                </span><span class="sheet-smallAttr">
+                    <h4 class="sheet-header">Speed (SPD)</h4>
+                    <div class="sheet-contentRow"><input class="sheet-value" type="number" value="0">
+                        <div class="sheet-attr_mod modifier" style="height: 44px;">
                             <div class="mod">
                                 <p>0</p>
                             </div>
                             <p class="small">mod</p>
                         </div>
                     </div>
-                </span><span class="smallAttr">
-                    <h4 class="header">Mastery (MST)</h4>
-                    <div class="contentRow"><input class="value" type="number" value="0">
-                        <div class="attr_mod modifier" style="height: 44px;">
+                </span><span class="sheet-smallAttr">
+                    <h4 class="sheet-header">Mastery (MST)</h4>
+                    <div class="sheet-contentRow"><input class="sheet-value" type="number" value="0">
+                        <div class="sheet-attr_mod modifier" style="height: 44px;">
                             <div class="mod">
                                 <p>0</p>
                             </div>
@@ -87,8 +87,8 @@
                         </div>
                     </div>
                 </span>
-                <h2 class="twoRow longAttrHeader">Initiative</h2>
-                <div class="longAttr">
+                <h2 class="sheet-twoRow sheet-longAttrHeader">Initiative</h2>
+                <div class="sheet-longAttr">
                     <div class="largeModifier">
                         <div class="mod">
                             <p>1</p>
@@ -122,15 +122,15 @@
                         </div>
                         <p class="small"></p>
                     </div>
-                </div><span class="gunBar">
+                </div><span class="sheet-gunBar">
                     <p>Current Gun</p>
-                </span><span class="gunBar">
+                </span><span class="sheet-gunBar">
                     <p>Gun Slot 2</p>
-                </span><span class="gunBar">
+                </span><span class="sheet-gunBar">
                     <p>Gun Slot 3</p>
                 </span>
-                <h2 class="oneRow longAttrHeader" style="grid-column: 9 / span 2;">Movement</h2>
-                <div class="longAttr" style="grid-column: 11 / span 4;">
+                <h2 class="sheet-oneRow sheet-longAttrHeader" style="grid-column: 9 / span 2;">Movement</h2>
+                <div class="sheet-longAttr" style="grid-column: 11 / span 4;">
                     <div class="largeModifier">
                         <div class="mod">
                             <p>3</p>
@@ -165,142 +165,144 @@
                         <p class="small"></p>
                     </div>
                 </div>
-                <div class="health" style="grid-row: 7 / span 4;">
-                    <div class="headerCurMaxMod">
-                        <h3 class="header">health</h3>
-                        <div class="contentRow">
-                            <div class="mainAndLabelBox current"><input class="main" type="number" value="1">
-                                <p class="lbel">current</p>
+                <div class="sheet-health" style="grid-row: 7 / span 4;">
+                    <div class="sheet-headerCurMaxMod">
+                        <h3 class="sheet-header">health</h3>
+                        <div class="sheet-contentRow">
+                            <div class="sheet-mainAndLabelBox sheet-current"><input class="sheet-main" type="number"
+                                    value="1">
+                                <p class="sheet-lbel">current</p>
                             </div>
-                            <div class="mainAndLabelBox max">
-                                <p class="main"> 25</p>
-                                <p class="lbel">max</p>
+                            <div class="sheet-mainAndLabelBox sheet-max">
+                                <p class="sheet-main"> 25</p>
+                                <p class="sheet-lbel">max</p>
                             </div>
-                            <div class="mainAndLabelBox mod"><input class="main" type="number" value="0">
-                                <p class="lbel">Regen</p>
+                            <div class="sheet-mainAndLabelBox sheet-mod"><input class="sheet-main" type="number"
+                                    value="0">
+                                <p class="sheet-lbel">Regen</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="checks" style="grid-row: 7 / span 15;">
-                    <p class="header">Checks</p>
-                    <div class="checksItem">
-                        <h2 class="checksItemTitle">Interact</h2>
-                        <div class="val1 longModifier">
+                <div class="sheet-checks" style="grid-row: 7 / span 15;">
+                    <p class="sheet-header">Checks</p>
+                    <div class="sheet-checksItem">
+                        <h2 class="sheet-checksItemTitle">Interact</h2>
+                        <div class="sheet-val1 longModifier">
                             <p class="mod">0</p>
                             <p class="small">acc <br>mod</p>
                         </div>
                         <p>+</p>
-                        <div class="val2 longModifier">
+                        <div class="sheet-val2 longModifier">
                             <p class="mod">0</p>
                             <p class="small">misc <br>mod</p>
                         </div>
                         <p>=</p>
-                        <div class="val3 largeModifier">
+                        <div class="sheet-val3 largeModifier">
                             <div class="mod">
                                 <p>+0</p>
                             </div>
                         </div>
                     </div>
-                    <div class="checksItem">
-                        <h2 class="checksItemTitle">Talk</h2>
-                        <div class="val1 longModifier">
+                    <div class="sheet-checksItem">
+                        <h2 class="sheet-checksItemTitle">Talk</h2>
+                        <div class="sheet-val1 longModifier">
                             <p class="mod">0</p>
                             <p class="small">spd <br>mod</p>
                         </div>
                         <p>+</p>
-                        <div class="val2 longModifier">
+                        <div class="sheet-val2 longModifier">
                             <p class="mod">0</p>
                             <p class="small">misc <br>mod</p>
                         </div>
                         <p>=</p>
-                        <div class="val3 largeModifier">
+                        <div class="sheet-val3 largeModifier">
                             <div class="mod">
                                 <p>+0</p>
                             </div>
                         </div>
                     </div>
-                    <div class="checksItem">
-                        <h2 class="checksItemTitle">Insight</h2>
-                        <div class="val1 longModifier">
+                    <div class="sheet-checksItem">
+                        <h2 class="sheet-checksItemTitle">Insight</h2>
+                        <div class="sheet-val1 longModifier">
                             <p class="mod">0</p>
                             <p class="small">acc <br>mod</p>
                         </div>
                         <p>+</p>
-                        <div class="val2 longModifier">
+                        <div class="sheet-val2 longModifier">
                             <p class="mod">0</p>
                             <p class="small">misc <br>mod</p>
                         </div>
                         <p>=</p>
-                        <div class="val3 largeModifier">
+                        <div class="sheet-val3 largeModifier">
                             <div class="mod">
                                 <p>+0</p>
                             </div>
                         </div>
                     </div>
-                    <div class="checksItem">
-                        <h2 class="checksItemTitle">Sneak</h2>
-                        <div class="val1 longModifier">
+                    <div class="sheet-checksItem">
+                        <h2 class="sheet-checksItemTitle">Sneak</h2>
+                        <div class="sheet-val1 longModifier">
                             <p class="mod">0</p>
                             <p class="small">MST <br>mod</p>
                         </div>
                         <p>+</p>
-                        <div class="val2 longModifier">
+                        <div class="sheet-val2 longModifier">
                             <p class="mod">0</p>
                             <p class="small">misc <br>mod</p>
                         </div>
                         <p>=</p>
-                        <div class="val3 largeModifier">
+                        <div class="sheet-val3 largeModifier">
                             <div class="mod">
                                 <p>+0</p>
                             </div>
                         </div>
                     </div>
-                    <div class="checksItem">
-                        <h2 class="checksItemTitle">Search</h2>
-                        <div class="val1 longModifier">
+                    <div class="sheet-checksItem">
+                        <h2 class="sheet-checksItemTitle">Search</h2>
+                        <div class="sheet-val1 longModifier">
                             <p class="mod">0</p>
                             <p class="small">MST <br>mod</p>
                         </div>
                         <p>+</p>
-                        <div class="val2 longModifier">
+                        <div class="sheet-val2 longModifier">
                             <p class="mod">0</p>
                             <p class="small">misc <br>mod</p>
                         </div>
                         <p>=</p>
-                        <div class="val3 largeModifier">
+                        <div class="sheet-val3 largeModifier">
                             <div class="mod">
                                 <p>+0</p>
                             </div>
                         </div>
                     </div>
-                    <div class="checksItem">
-                        <h2 class="checksItemTitle">Traverse</h2>
-                        <div class="val1 longModifier">
+                    <div class="sheet-checksItem">
+                        <h2 class="sheet-checksItemTitle">Traverse</h2>
+                        <div class="sheet-val1 longModifier">
                             <p class="mod">0</p>
                             <p class="small">SPD <br>mod</p>
                         </div>
                         <p>+</p>
-                        <div class="val2 longModifier">
+                        <div class="sheet-val2 longModifier">
                             <p class="mod">0</p>
                             <p class="small">misc <br>mod</p>
                         </div>
                         <p>=</p>
-                        <div class="val3 largeModifier">
+                        <div class="sheet-val3 largeModifier">
                             <div class="mod">
                                 <p>+0</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="melee" style="grid-row: 9 / span 4;">
-                    <h3 class="header">Melee Die</h3>
-                    <div class="row1">
-                        <div class="mainAndLabelBox die">
-                            <p class="main"> 1d10</p>
-                            <p class="lbel"></p>
+                <div class="sheet-melee" style="grid-row: 9 / span 4;">
+                    <h3 class="sheet-header">Melee Die</h3>
+                    <div class="sheet-row1">
+                        <div class="sheet-mainAndLabelBox sheet-die">
+                            <p class="sheet-main"> 1d10</p>
+                            <p class="sheet-lbel"></p>
                         </div>
-                        <div class="dmgmd modifier">
+                        <div class="sheet-dmgmd modifier">
                             <div class="mod">
                                 <p>+0</p>
                             </div>
@@ -308,189 +310,189 @@
                         </div>
                     </div>
                 </div>
-                <div class="shields" style="grid-row: 11 / span 7;">
-                    <div class="row1">
-                        <div class="headerCurMaxMod" style="border: none;">
-                            <h3 class="header">shields</h3>
-                            <div class="contentRow">
-                                <div class="mainAndLabelBox current"><input class="main" type="number" value="2">
-                                    <p class="lbel">current</p>
+                <div class="sheet-shields" style="grid-row: 11 / span 7;">
+                    <div class="sheet-row1">
+                        <div class="sheet-headerCurMaxMod" style="border: none;">
+                            <h3 class="sheet-header">shields</h3>
+                            <div class="sheet-contentRow">
+                                <div class="sheet-mainAndLabelBox sheet-current"><input class="sheet-main" type="number"
+                                        value="2">
+                                    <p class="sheet-lbel">current</p>
                                 </div>
-                                <div class="mainAndLabelBox max">
-                                    <p class="main"> 15</p>
-                                    <p class="lbel">max</p>
+                                <div class="sheet-mainAndLabelBox sheet-max">
+                                    <p class="sheet-main"> 15</p>
+                                    <p class="sheet-lbel">max</p>
                                 </div>
-                                <div class="mainAndLabelBox mod">
-                                    <p class="main"> 5</p>
-                                    <p class="lbel">Recharge</p>
+                                <div class="sheet-mainAndLabelBox sheet-mod">
+                                    <p class="sheet-main"> 5</p>
+                                    <p class="sheet-lbel">Recharge</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row2"><span class="shieldInput">
+                    <div class="sheet-row2"><span class="sheet-shieldInput">
                             <h5>shield type: </h5>
-                            <p><input type="text" maxlength="12" val="" class="editable" value=""
+                            <p><input type="text" maxlength="12" val="" class="sheet-editable" value=""
                                     style="border-bottom: 1px solid black; width: 10ch;"></p>
-                        </span><span class="shieldInput">
+                        </span><span class="sheet-shieldInput">
                             <h5>info: </h5><textarea style="resize: none;"></textarea>
                         </span></div>
                 </div>
-                <div class="grenades">
-                    <div class="header">
+                <div class="sheet-grenades">
+                    <div class="sheet-header">
                         <h3>Grenades</h3>
                     </div>
-                    <div class="row1">
-                        <div class="type"><input type="text">
+                    <div class="sheet-row1">
+                        <div class="sheet-type"><input type="text">
                             <p>TYPE</p>
                         </div>
-                        <div class="damage"><input type="number">
+                        <div class="sheet-damage"><input type="number">
                             <p>DAMAGE</p>
                         </div>
                     </div>
-                    <div class="row2">
-                        <div class="info">
+                    <div class="sheet-row2">
+                        <div class="sheet-info">
                             <p>INFO</p><textarea style="resize: none;"></textarea>
                         </div>
-                        <div class="current"><input type="number">
+                        <div class="sheet-current"><input type="number">
                             <p>CURRENT</p>
                         </div>
-                        <div class="max"><input type="number">
+                        <div class="sheet-max"><input type="number">
                             <p>MAX</p>
                         </div>
                     </div>
                 </div>
-                <div class="potions">
-                    <div class="header">
+                <div class="sheet-potions">
+                    <div class="sheet-header">
                         <h3>Potions</h3>
                     </div>
-                    <div class="txtbox"><input type="text"></div>
-                    <div class="txtbox"><input type="text"></div>
-                    <div class="txtbox"><input type="text"></div>
-                    <div class="txtbox lockable"><input type="text" value="	"></div>
-                    <div class="txtbox lockable"><input type="text" value="	"></div>
+                    <div class="sheet-txtbox"><input type="text"></div>
+                    <div class="sheet-txtbox"><input type="text"></div>
+                    <div class="sheet-txtbox"><input type="text"></div>
+                    <div class="sheet-txtbox sheet-lockable"><input type="text" value="	"></div>
+                    <div class="sheet-txtbox sheet-lockable"><input type="text" value="	"></div>
                 </div>
-                <div class="BARank">
-                    <div class="header">
+                <div class="sheet-BARank">
+                    <div class="sheet-header">
                         <h3>Baddass Rank</h3><input type="number" value="1">
                     </div>
-                    <div class="tokens">
+                    <div class="sheet-tokens">
                         <p>Badass Tokens</p><input type="number">
                     </div>
                 </div>
-                <div class="gold" style="grid-row: 17 / span 3;">
-                    <div class="header">
+                <div class="sheet-gold" style="grid-row: 17 / span 3;">
+                    <div class="sheet-header">
                         <h3>Gold</h3>
                     </div>
-                    <div class="value"><input title="goldVal" type="number" class="value" value="0"></div>
+                    <div class="sheet-value"><input name="goldVal" type="number" class="sheet-value" value="0"></div>
                 </div>
-                <div class="skills">
-                    <div class="header">
+                <div class="sheet-skills">
+                    <div class="sheet-header">
                         <h3>Skills</h3>
                     </div>
-                    <div class="itemWrapper">
-                        <div class="item">
-                            <div class="itemHeader">Quick Draw</div>
-                            <div class="content"><textarea
+                    <div class="sheet-itemWrapper">
+                        <div class="sheet-item">
+                            <div class="sheet-itemHeader">Quick Draw</div>
+                            <div class="sheet-content"><textarea
                                     style="resize: none;">+2 Initiative Mod/SL.,[object Object],+1/SL on Interact Checks</textarea>
                             </div>
-                            <div class="level"><input type="checkbox" title="level1" name="skillLevel"><input
+                            <div class="sheet-level"><input type="checkbox" title="level1" name="skillLevel"><input
                                     type="checkbox" title="level3" name="skillLevel"><input type="checkbox"
                                     title="level2" name="skillLevel"></div>
                         </div>
-                        <div class="item">
-                            <div class="itemHeader">Filled to The Brim</div>
-                            <div class="content"><textarea
+                        <div class="sheet-item">
+                            <div class="sheet-itemHeader">Filled to The Brim</div>
+                            <div class="sheet-content"><textarea
                                     style="resize: none;">Increase max grenades by 1/SL. Increase max potions by 1+MST Mod</textarea>
                             </div>
-                            <div class="level"><input type="checkbox" title="level1" name="skillLevel"><input
+                            <div class="sheet-level"><input type="checkbox" title="level1" name="skillLevel"><input
                                     type="checkbox" title="level3" name="skillLevel"><input type="checkbox"
                                     title="level2" name="skillLevel"></div>
                         </div>
-                        <div class="item">
-                            <div class="itemHeader">Incite</div>
-                            <div class="content"><textarea
+                        <div class="sheet-item">
+                            <div class="sheet-itemHeader">Incite</div>
+                            <div class="sheet-content"><textarea
                                     style="resize: none;">The first time you take Damage during an encounter, gain Extra Movement. +1/SL on Traverse Checks.</textarea>
                             </div>
-                            <div class="level"><input type="checkbox" title="level1" name="skillLevel"><input
+                            <div class="sheet-level"><input type="checkbox" title="level1" name="skillLevel"><input
                                     type="checkbox" title="level3" name="skillLevel"><input type="checkbox"
                                     title="level2" name="skillLevel"></div>
                         </div>
-                        <div class="item">
-                            <div class="itemHeader">Hard to Kill</div>
-                            <div class="content"><textarea
+                        <div class="sheet-item">
+                            <div class="sheet-itemHeader">Hard to Kill</div>
+                            <div class="sheet-content"><textarea
                                     style="resize: none;">10+MST Mod Health.,[object Object],+5 Health Regen/SL.</textarea>
                             </div>
-                            <div class="level"><input type="checkbox" title="level1" name="skillLevel"><input
+                            <div class="sheet-level"><input type="checkbox" title="level1" name="skillLevel"><input
                                     type="checkbox" title="level3" name="skillLevel"><input type="checkbox"
                                     title="level2" name="skillLevel"></div>
                         </div>
                     </div>
                 </div>
-                <div class="bgtraits">
-                    <div class="header">
+                <div class="sheet-bgtraits">
+                    <div class="sheet-header">
                         <h3>Background &amp; Traits</h3>
                     </div>
-                    <div class="bgbox">
-                        <div class="bgbar">
+                    <div class="sheet-bgbox">
+                        <div class="sheet-bgbar">
                             <p>Background</p>
                         </div>
-                        <div class="bginfo"><textarea class="" style="resize: none;"></textarea></div>
+                        <div class="sheet-bginfo"><textarea class="" style="resize: none;"></textarea></div>
                     </div>
-                    <div class="traitsbox">
-                        <div class="traitsbar">
+                    <div class="sheet-traitsbox">
+                        <div class="sheet-traitsbar">
                             <p>Traits</p>
                         </div>
-                        <div class="traitsinfo"><textarea class="" style="resize: none;"></textarea></div>
+                        <div class="sheet-traitsinfo"><textarea class="" style="resize: none;"></textarea></div>
                     </div>
                 </div>
-                <div class="favoredGun">
-                    <div class="header">
+                <div class="sheet-favoredGun">
+                    <div class="sheet-header">
                         <h4>Favored Gun</h4>
-                    </div><label class="gunItem"><input type="checkbox"><img
+                    </div><label class="sheet-gunItem"><input type="checkbox"><img
                             src="https://raw.githubusercontent.com/chrehall68/character-sheet/main/public/images/pistol.png"
                             alt="pistol">
                         <p>PISTOL</p>
-                    </label><label class="gunItem"><input type="checkbox"><img
+                    </label><label class="sheet-gunItem"><input type="checkbox"><img
                             src="https://raw.githubusercontent.com/chrehall68/character-sheet/main/public/images/smg.png"
                             alt="smg">
                         <p>SMG</p>
-                    </label><label class="gunItem"><input type="checkbox"><img
+                    </label><label class="sheet-gunItem"><input type="checkbox"><img
                             src="https://raw.githubusercontent.com/chrehall68/character-sheet/main/public/images/combat%20rifle.png"
                             alt="combat rifle">
                         <p>COMBAT RIFLE</p>
-                    </label><label class="gunItem"><input type="checkbox"><img
+                    </label><label class="sheet-gunItem"><input type="checkbox"><img
                             src="https://raw.githubusercontent.com/chrehall68/character-sheet/main/public/images/shotgun.png"
                             alt="shotgun">
                         <p>SHOTGUN</p>
-                    </label><label class="gunItem"><input type="checkbox"><img
+                    </label><label class="sheet-gunItem"><input type="checkbox"><img
                             src="https://raw.githubusercontent.com/chrehall68/character-sheet/main/public/images/sniper.png"
                             alt="sniper">
                         <p>SNIPER</p>
-                    </label><label class="gunItem"><input type="checkbox"><img
+                    </label><label class="sheet-gunItem"><input type="checkbox"><img
                             src="https://raw.githubusercontent.com/chrehall68/character-sheet/main/public/images/rocket%20launcher.png"
                             alt="rocket launcher">
                         <p>ROCKET LAUNCHER</p>
                     </label>
                 </div>
-                <div class="archetypeFeat">
-                    <div class="header">
+                <div class="sheet-archetypeFeat">
+                    <div class="sheet-header">
                         <h3>Archetype Feat</h3>
                     </div>
-                    <div class="content">
+                    <div class="sheet-content">
                         <p id="title">FLEX</p>
                         <p>: The first time your Shields are depleted in an encounter, gain 1 Badass Token.</p>
                     </div>
                 </div>
-                <div class="xpbar">
-                    <div class="xpstuff">
-                        <h5 class="lbel">XP Bar</h5><input class="content" type="number" value="">
+                <div class="sheet-xpbar">
+                    <div class="sheet-xpstuff">
+                        <h5 class="sheet-lbel">XP Bar</h5><input class="sheet-content" type="number" value="">
                     </div>
-                    <div class="bar">
+                    <div class="sheet-bar">
                         <div style="width: 0%;"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </body>

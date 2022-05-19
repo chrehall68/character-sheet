@@ -1,4 +1,4 @@
-.body {
+.sheet-body {
     display: grid;
     height: 80%;
     grid-template-columns: repeat(auto-fit, 6.16%);
@@ -10,7 +10,7 @@
 }
 
 /** ----------SmallAttr styles---------- */
-.smallAttr {
+.sheet-smallAttr {
     grid-column: span 2;
     grid-row: span 4;
     overflow: hidden;
@@ -21,7 +21,7 @@
     border-bottom-right-radius: 15px;
 }
 
-.smallAttr .header {
+.sheet-smallAttr .sheet-header {
     width: 100%;
     height: 30%;
     text-align: center;
@@ -30,7 +30,7 @@
 }
 
 
-.smallAttr .contentRow {
+.sheet-smallAttr .sheet-contentRow {
     width: 100%;
     height: 70%;
     display: flex;
@@ -38,25 +38,25 @@
     justify-content: space-around;
 }
 
-.smallAttr input[type=number].value {
+.sheet-smallAttr input[type=number].sheet-value {
     width: 50%;
     text-align: center;
     border: 0px;
     font-size: larger;
 }
 
-.smallAttr input[type=number].value::-webkit-outer-spin-button,
-.smallAttr input[type=number].value::-webkit-inner-spin-button {
+.sheet-smallAttr input[type=number].sheet-value::-webkit-outer-spin-button,
+.sheet-smallAttr input[type=number].sheet-value::-webkit-inner-spin-button {
     display: none;
 }
 
-.smallAttr .attr_mod {
+.sheet-smallAttr .sheet-attr_mod {
     display: inline;
     vertical-align: middle;
 }
 
 /** ----------GunBar styles---------- */
-.gunBar {
+.sheet-gunBar {
     border: solid black 2px;
     grid-column: span 1;
     grid-row: span 15;
@@ -67,7 +67,7 @@
     transform: translateX(33.3%);
 }
 
-.gunBar p {
+.sheet-gunBar p {
     text-align: center;
     overflow: visible;
     width: max-content;
@@ -75,7 +75,7 @@
 }
 
 /** ----------LongAttr styles---------- */
-.longAttrHeader {
+.sheet-longAttrHeader {
     border-bottom: 1px solid black;
     border-left: 1px solid black;
     border-top: 1px solid black;
@@ -85,7 +85,7 @@
     justify-content: center;
 }
 
-.oneRow {
+.sheet-oneRow {
     grid-column: span 2;
     grid-row: span 2;
     height: 33px;
@@ -94,14 +94,14 @@
     text-align: center;
 }
 
-.twoRow {
+.sheet-twoRow {
     grid-column: span 2;
     grid-row: span 4;
     margin: 0px auto;
     padding: 0px auto;
 }
 
-.longAttr {
+.sheet-longAttr {
     grid-column: span 4;
     grid-row: span 4;
 
@@ -113,7 +113,7 @@
 }
 
 /** ----------MainAndLabelBox styles---------- */
-.mainAndLabelBox {
+.sheet-mainAndLabelBox {
     display: flex;
     flex-wrap: wrap;
     height: 100%;
@@ -122,8 +122,8 @@
     border: 1px solid black;
 }
 
-.mainAndLabelBox p.main,
-.mainAndLabelBox input[type=number].main {
+.sheet-mainAndLabelBox p.sheet-main,
+.sheet-mainAndLabelBox input[type=number].sheet-main {
     height: 66.6%;
     width: 100%;
     font-size: 25px;
@@ -133,16 +133,16 @@
     text-align: center;
 }
 
-.mainAndLabelBox input[type=number].main {
+.sheet-mainAndLabelBox input[type=number].sheet-main {
     border: 0px;
 }
 
-.mainAndLabelBox input[type=number].main::-webkit-outer-spin-button,
-.mainAndLabelBox input[type=number].main::-webkit-inner-spin-button {
+.sheet-mainAndLabelBox input[type=number].sheet-main::-webkit-outer-spin-button,
+.sheet-mainAndLabelBox input[type=number].sheet-main::-webkit-inner-spin-button {
     display: none;
 }
 
-.mainAndLabelBox .lbel {
+.sheet-mainAndLabelBox .sheet-lbel {
     height: 33.3%;
     width: 100%;
     font-size: 8px;
@@ -151,12 +151,12 @@
     text-align: center;
 }
 
-.health {
+.sheet-health {
     grid-column: span 4;
     grid-row: span 4;
 }
 
-.headerCurMaxMod {
+.sheet-headerCurMaxMod {
     width: 100%;
     height: 100%;
     display: flex;
@@ -168,7 +168,7 @@
     border-top-right-radius: 10px;
 }
 
-.headerCurMaxMod .header {
+.sheet-headerCurMaxMod .sheet-header {
     width: 100%;
     height: 30%;
     margin: 0px;
@@ -176,26 +176,26 @@
     text-align: center;
 }
 
-.headerCurMaxMod .contentRow {
+.sheet-headerCurMaxMod .sheet-contentRow {
     width: 100%;
     height: 70%;
     display: flex;
     justify-content: flex-start;
 }
 
-.headerCurMaxMod .current,
-.headerCurMaxMod .max {
+.sheet-headerCurMaxMod .sheet-current,
+.sheet-headerCurMaxMod .sheet-max {
     display: flex;
     width: 40%;
 }
 
-.headerCurMaxMod .mod {
+.sheet-headerCurMaxMod .sheet-mod {
     display: flex;
     width: 20%;
 }
 
 /* Checks stuff */
-.checks {
+.sheet-checks {
     grid-column: span 6;
     grid-row: span 15;
     border: 1px solid black;
@@ -203,7 +203,7 @@
     flex-wrap: wrap;
 }
 
-.checks .header {
+.sheet-checks .sheet-header {
     width: 100%;
     height: min-content;
     text-align: center;
@@ -213,7 +213,7 @@
     border-bottom: 1px solid black;
 }
 
-.checksItem {
+.sheet-checksItem {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -221,19 +221,19 @@
     height: 15%;
 }
 
-.checksItem .checksItemTitle {
+.sheet-checksItem .sheet-checksItemTitle {
     width: 20%;
 }
 
-.checksItem .val1,
-.checksItem .val2,
-.checksItem .val3 {
+.sheet-checksItem .sheet-val1,
+.sheet-checksItem .sheet-val2,
+.sheet-checksItem .sheet-val3 {
     height: 80%;
 }
 
 
 /*Melee box*/
-.melee {
+.sheet-melee {
     grid-column: span 4;
     grid-row: span 4;
     display: flex;
@@ -241,7 +241,7 @@
     border: 1px solid black;
 }
 
-.melee .header {
+.sheet-melee .sheet-header {
     width: 100%;
     height: 30%;
     text-align: center;
@@ -249,26 +249,26 @@
     margin: 0px;
 }
 
-.melee .row1 {
+.sheet-melee .sheet-row1 {
     height: 70%;
     width: 100%;
     display: flex;
     overflow: hidden;
 }
 
-.melee .die {
+.sheet-melee .sheet-die {
     width: 80%;
     height: 100%;
     display: flex;
 }
 
-.melee .dmgmd {
+.sheet-melee .sheet-dmgmd {
     width: 20%;
     height: 100%;
     display: flex;
 }
 
-.shields {
+.sheet-shields {
     grid-column: span 4;
     grid-row: span 7;
     border: 1px solid black;
@@ -280,20 +280,20 @@
     flex-wrap: wrap;
 }
 
-.shields .row1 {
+.sheet-shields .sheet-row1 {
     height: 50%;
     width: 100%;
     border-bottom: 1px solid black;
 }
 
-.shields .row2 {
+.sheet-shields .sheet-row2 {
     height: 50%;
     width: 100%;
     justify-content: flex-start;
     flex-wrap: wrap;
 }
 
-.shields .shieldInput {
+.sheet-shields .sheet-shieldInput {
     display: flex;
     justify-content: flex-start;
     overflow: hidden;
@@ -301,13 +301,13 @@
     height: 50%;
 }
 
-.shields .shieldInput p,
-.shields .shieldInput h5 {
+.sheet-shields .sheet-shieldInput p,
+.sheet-shields .sheet-shieldInput h5 {
     font-size: smaller;
     width: 35%;
 }
 
-.shields .shieldInput textarea {
+.sheet-shields .sheet-shieldInput textarea {
     height: 75%;
     width: 65%;
     font-size: smaller;
@@ -315,14 +315,14 @@
     padding: 0px;
 }
 
-.gold {
+.sheet-gold {
     grid-column: span 4;
     grid-row: span 3;
     border: 1px solid black;
     overflow: hidden;
 }
 
-.gold div.header {
+.sheet-gold div.sheet-header {
     margin: 0px;
     padding: 0%;
     width: max-content;
@@ -334,7 +334,7 @@
     background-color: gray;
 }
 
-.gold .value {
+.sheet-gold .sheet-value {
     height: 100%;
     width: 85%;
     margin: 0px;
@@ -343,14 +343,14 @@
     float: right;
 }
 
-.gold .value input[type=number] {
+.sheet-gold .sheet-value input[type=number] {
     width: 100%;
     height: 100%;
     text-align: right;
     font-size: x-large;
 }
 
-.BARank {
+.sheet-BARank {
     grid-column: span 4;
     grid-row: span 4;
     border: 1px solid black;
@@ -358,7 +358,7 @@
     display: flex;
 }
 
-.BARank div.header {
+.sheet-BARank div.sheet-header {
     width: 50%;
     height: 100%;
     display: flex;
@@ -370,7 +370,7 @@
     justify-content: center;
 }
 
-.BARank div.header h3 {
+.sheet-BARank div.sheet-header h3 {
     width: 100%;
     height: 30%;
     background-color: grey;
@@ -382,7 +382,7 @@
     align-self: flex-start;
 }
 
-.BARank div.header input[type=number] {
+.sheet-BARank div.sheet-header input[type=number] {
     padding-top: 5%;
     width: 80%;
     height: 70%;
@@ -397,7 +397,7 @@
     align-self: flex-end;
 }
 
-.BARank div.tokens {
+.sheet-BARank div.sheet-tokens {
     margin: 0px;
     padding: 0px;
     width: 50%;
@@ -408,7 +408,7 @@
     border: 0px;
 }
 
-.BARank div.tokens p {
+.sheet-BARank div.sheet-tokens p {
     margin: 0px;
     padding: 0px;
     height: 30%;
@@ -416,7 +416,7 @@
     text-align: start;
 }
 
-.BARank div.tokens input[type=number] {
+.sheet-BARank div.sheet-tokens input[type=number] {
     width: 80%;
     height: 70%;
     border: 0px;
@@ -428,7 +428,7 @@
     text-align: center;
 }
 
-.grenades {
+.sheet-grenades {
     grid-column: span 4;
     grid-row: 18 / span 9;
     display: flex;
@@ -438,31 +438,31 @@
     align-items: flex-start;
 }
 
-.grenades .header {
+.sheet-grenades .sheet-header {
     height: 10%;
     width: 100%;
     overflow: hidden;
     background-color: lightcoral;
 }
 
-.grenades .header h3 {
+.sheet-grenades .sheet-header h3 {
     padding: 0px;
     margin: 0px;
     text-align: center;
 }
 
-.grenades .row1 {
+.sheet-grenades .sheet-row1 {
     height: 35%;
     width: 100%;
     display: flex;
     justify-content: flex-start;
 }
 
-.grenades .row1 .type,
-.grenades .row1 .damage,
-.grenades .row2 .info,
-.grenades .row2 .current,
-.grenades .row2 .max {
+.sheet-grenades .sheet-row1 .sheet-type,
+.sheet-grenades .sheet-row1 .sheet-damage,
+.sheet-grenades .sheet-row2 .sheet-info,
+.sheet-grenades .sheet-row2 .sheet-current,
+.sheet-grenades .sheet-row2 .sheet-max {
     height: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -471,16 +471,16 @@
     border: 1px solid black;
 }
 
-.grenades .row1 .type {
+.sheet-grenades .sheet-row1 .sheet-type {
     width: 60%;
 }
 
-.grenades .row1 .damage {
+.sheet-grenades .sheet-row1 .sheet-damage {
     width: 40%;
 }
 
-.grenades .row1 .type input[type=text],
-.grenades .row1 .damage input[type=number] {
+.sheet-grenades .sheet-row1 .sheet-type input[type=text],
+.sheet-grenades .sheet-row1 .sheet-damage input[type=number] {
     width: 80%;
     height: 50%;
     border-top: 0px;
@@ -491,17 +491,17 @@
     text-align: center;
 }
 
-.grenades .row2 {
+.sheet-grenades .sheet-row2 {
     height: 50%;
     display: flex;
     justify-content: flex-start;
 }
 
-.grenades .row2 .info {
+.sheet-grenades .sheet-row2 .sheet-info {
     width: 60%;
 }
 
-.grenades .row2 .info p {
+.sheet-grenades .sheet-row2 .sheet-info p {
     margin: 0px;
     padding: 0px;
     height: 20%;
@@ -509,7 +509,7 @@
     text-align: center;
 }
 
-.grenades .row2 .info textarea {
+.sheet-grenades .sheet-row2 .sheet-info textarea {
     width: 80%;
     height: 80%;
     margin: 0px;
@@ -521,18 +521,18 @@
     font-size: small;
 }
 
-.grenades .row2 .max,
-.grenades .row2 .current {
+.sheet-grenades .sheet-row2 .sheet-max,
+.sheet-grenades .sheet-row2 .sheet-current {
     width: 20%;
 }
 
-.grenades .row2 .max p,
-.grenades .row2 .current p {
+.sheet-grenades .sheet-row2 .sheet-max p,
+.sheet-grenades .sheet-row2 .sheet-current p {
     font-size: 70%;
 }
 
-.grenades .row2 .max input[type=number],
-.grenades .row2 .current input[type=number] {
+.sheet-grenades .sheet-row2 .sheet-max input[type=number],
+.sheet-grenades .sheet-row2 .sheet-current input[type=number] {
     width: 90%;
     height: 60%;
     margin: 0px;
@@ -545,7 +545,7 @@
     text-align: center;
 }
 
-.potions {
+.sheet-potions {
     grid-column: span 4;
     grid-row: 27 / span 9;
     display: flex;
@@ -557,19 +557,19 @@
     justify-content: center;
 }
 
-.potions .header {
+.sheet-potions .sheet-header {
     width: 100%;
     display: flex;
     justify-content: center;
     background-color: cornsilk;
 }
 
-.potions .header h3 {
+.sheet-potions .sheet-header h3 {
     padding: 0px;
     margin: 0px;
 }
 
-.potions .txtbox {
+.sheet-potions .sheet-txtbox {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -577,7 +577,7 @@
     width: 95%;
 }
 
-.potions .txtbox input[type=text] {
+.sheet-potions .sheet-txtbox input[type=text] {
     height: 100%;
     width: 100%;
     border-top: 0px;
@@ -588,13 +588,13 @@
     background-color: transparent;
 }
 
-.potions .txtbox.lockable {
+.sheet-potions .sheet-txtbox.sheet-lockable {
     background-image: url("/public/images/lock.png");
     background-size: auto 100%;
     background-repeat: no-repeat;
 }
 
-.favoredGun {
+.sheet-favoredGun {
     display: flex;
     flex-wrap: wrap;
     grid-row: 36 / span 13;
@@ -603,21 +603,21 @@
     align-content: space-between;
 }
 
-.favoredGun .header {
+.sheet-favoredGun .sheet-header {
     width: 100%;
     display: flex;
     background-color: blanchedalmond;
     height: 10%;
 }
 
-.favoredGun .header * {
+.sheet-favoredGun .sheet-header * {
     text-align: center;
     margin: 0px;
     padding: 0px;
     width: 100%;
 }
 
-.favoredGun label.gunItem {
+.sheet-favoredGun label.sheet-gunItem {
     display: flex;
     align-items: center;
     height: 14.16%;
@@ -626,7 +626,7 @@
     padding: 0px;
 }
 
-.favoredGun .gunItem * {
+.sheet-favoredGun .sheet-gunItem * {
     display: inline-block;
     margin: 0px;
     padding: 0px;
@@ -634,18 +634,18 @@
     font-size: small;
 }
 
-.favoredGun .gunItem img {
+.sheet-favoredGun .sheet-gunItem img {
     width: 30%;
     height: auto;
 }
 
-.skills {
+.sheet-skills {
     grid-row: 22 / span 8;
     grid-column: 5/ span 10;
     border: 1px solid black;
 }
 
-.skills .header {
+.sheet-skills .sheet-header {
     height: 20%;
     display: flex;
     align-items: center;
@@ -654,12 +654,12 @@
     background-color: violet;
 }
 
-.skills .header h3 {
+.sheet-skills .sheet-header h3 {
     margin: 0px;
     padding: 0px;
 }
 
-.skills .itemWrapper {
+.sheet-skills .sheet-itemWrapper {
     width: 100%;
     height: 80%;
     display: flex;
@@ -669,7 +669,7 @@
     flex-wrap: wrap;
 }
 
-.skills .item {
+.sheet-skills .sheet-item {
     display: flex;
     flex-wrap: wrap;
     width: 20%;
@@ -679,7 +679,7 @@
     text-align: center;
 }
 
-.skills .item .itemHeader {
+.sheet-skills .sheet-item .sheet-itemHeader {
     display: flex;
     width: 100%;
     height: 20%;
@@ -687,7 +687,7 @@
     justify-content: center;
 }
 
-.skills .item .content {
+.sheet-skills .sheet-item .sheet-content {
     display: flex;
     width: 100%;
     height: 60%;
@@ -695,7 +695,7 @@
     padding: 0px;
 }
 
-.skills .item .content textarea {
+.sheet-skills .sheet-item .sheet-content textarea {
     font-size: small;
     text-align: center;
     height: 100%;
@@ -703,11 +703,11 @@
     padding: 0px;
 }
 
-.skills .item .content textarea::-webkit-scrollbar {
+.sheet-skills .sheet-item .sheet-content textarea::-webkit-scrollbar {
     display: none;
 }
 
-.skills .item .level {
+.sheet-skills .sheet-item .sheet-level {
     display: flex;
     width: 100%;
     align-self: flex-end;
@@ -715,7 +715,7 @@
 }
 
 
-.bgtraits {
+.sheet-bgtraits {
     grid-row: 30 / span 15;
     grid-column: 5 / span 10;
     border: 1px black solid;
@@ -725,7 +725,7 @@
     align-content: space-between;
 }
 
-.bgtraits .header {
+.sheet-bgtraits .sheet-header {
     display: flex;
     width: 100%;
     height: max-content;
@@ -734,20 +734,20 @@
     overflow: hidden;
 }
 
-.bgtraits .header h3 {
+.sheet-bgtraits .sheet-header h3 {
     margin: 0px;
     padding: 0px;
 }
 
-.bgtraits .bgbox,
-.bgtraits .traitsbox {
+.sheet-bgtraits .sheet-bgbox,
+.sheet-bgtraits .sheet-traitsbox {
     display: flex;
     width: 100%;
     height: 40%;
 }
 
-.bgtraits .bgbox .bgbar,
-.bgtraits .traitsbox .traitsbar {
+.sheet-bgtraits .sheet-bgbox .sheet-bgbar,
+.sheet-bgtraits .sheet-traitsbox .sheet-traitsbar {
     display: flex;
     width: 5%;
     height: 100%;
@@ -756,32 +756,33 @@
     background-color: lightgrey;
 }
 
-.bgtraits .bgbox .bgbar p,
-.bgtraits .traitsbox .traitsbar p {
+.sheet-bgtraits .sheet-bgbox .sheet-bgbar p,
+.sheet-bgtraits .sheet-traitsbox .sheet-traitsbar p {
     writing-mode: vertical-rl;
     text-orientation: mixed;
     transform: rotate(-180deg);
 }
 
-.bgtraits .bgbox .bginfo,
-.bgtraits .traitsbox .traitsinfo {
+.sheet-bgtraits .sheet-bgbox .sheet-bginfo,
+.sheet-bgtraits .sheet-traitsbox .sheet-traitsinfo {
     display: flex;
     width: 95%;
     height: 100%;
+    justify-content: center;
 }
 
-.bgtraits textarea {
-    width: 100%;
+.sheet-bgtraits .sheet-bgbox .sheet-bginfo textarea,
+.sheet-bgtraits .sheet-traitsbox .sheet-traitsinfo textarea {
+    width: 95%;
     height: 100%;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-    margin-bottom: 0.3em;
+    margin: 0px;
+    padding: 0px;
     border: 0px;
     line-height: 1.7em;
     background-image: repeating-linear-gradient(white, white 1.5em, lightgrey 1.5em, lightgrey 1.7em, white 1.7em);
 }
 
-.archetypeFeat {
+.sheet-archetypeFeat {
     grid-row: 45 / span 4;
     grid-column: 5 / span 10;
     display: flex;
@@ -789,7 +790,7 @@
     border: 1px solid black;
 }
 
-.archetypeFeat .header {
+.sheet-archetypeFeat .sheet-header {
     width: 100%;
     height: max-content;
     background-color: aliceblue;
@@ -797,12 +798,12 @@
     justify-content: center;
 }
 
-.archetypeFeat .header * {
+.sheet-archetypeFeat .sheet-header * {
     margin: 0px;
     padding: 0px;
 }
 
-.archetypeFeat .content {
+.sheet-archetypeFeat .sheet-content {
     width: 100%;
     display: flex;
     align-items: center;
@@ -811,13 +812,13 @@
     padding: 0px;
 }
 
-.archetypeFeat .content #title {
+.sheet-archetypeFeat .sheet-content #title {
     font-weight: bold;
     margin: 0px;
     padding: 0px;
 }
 
-.xpbar {
+.sheet-xpbar {
     display: flex;
     width: 100%;
     grid-column: 1 / span 14;
@@ -825,7 +826,7 @@
     height: 100%;
 }
 
-.xpbar .xpstuff {
+.sheet-xpbar .sheet-xpstuff {
     display: flex;
     width: 20%;
     height: 100%;
@@ -834,7 +835,7 @@
     align-items: center;
 }
 
-.xpbar .xpstuff::after {
+.sheet-xpbar .sheet-xpstuff::after {
     content: "";
     width: 100%;
     height: 3px;
@@ -843,23 +844,23 @@
     left: 0;
 }
 
-.xpbar .xpstuff::after {
+.sheet-xpbar .sheet-xpstuff::after {
     transform: scaleX(0);
 }
 
-.xpbar .xpstuff:hover::after {
+.sheet-xpbar .sheet-xpstuff:hover::after {
     transition-duration: 500ms;
     transform: scaleX(1);
 }
 
-.xpbar .xpstuff .lbel {
+.sheet-xpbar .sheet-xpstuff .sheet-lbel {
     margin: 0px;
     padding: 0px;
     width: 40%;
     text-align: center;
 }
 
-.xpbar .xpstuff input[type=number].content {
+.sheet-xpbar .sheet-xpstuff input[type=number].sheet-content {
     border-left: 0px;
     border-right: 0px;
     border-top: 0px;
@@ -870,12 +871,12 @@
     padding: 0px;
 }
 
-.xpbar .xpstuff input[type=number].content::-webkit-outer-spin-button,
-.xpbar .xpstuff input[type=number].content::-webkit-inner-spin-button {
+.sheet-xpbar .sheet-xpstuff input[type=number].sheet-content::-webkit-outer-spin-button,
+.sheet-xpbar .sheet-xpstuff input[type=number].sheet-content::-webkit-inner-spin-button {
     display: none;
 }
 
-.xpbar .bar {
+.sheet-xpbar .sheet-bar {
     display: flex;
     width: 80%;
     overflow: hidden;
@@ -883,6 +884,6 @@
     background-color: beige;
 }
 
-.xpbar .bar div {
+.sheet-xpbar .sheet-bar div {
     background-color: black;
 }

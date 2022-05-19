@@ -23,11 +23,11 @@ class SmallAttr extends React.Component {
 
     render() {
         return (
-            <span className='smallAttr'>
-                <h4 className='header'>{this.header}</h4>
-                <div className="contentRow">
-                    <input className="value" type="number" value={this.state.value} onChange={this.getModifier} />
-                    <ModifierBox key={this.state.modifier} small_desc={this.small_desc} modifier={this.state.modifier} className="attr_mod" style={{ "height": "44px" }} />
+            <span className='sheet-smallAttr'>
+                <h4 className='sheet-header'>{this.header}</h4>
+                <div className="sheet-contentRow">
+                    <input name={"raw_" + this.header.substring(this.header.indexOf("(") + 1, this.header.indexOf(")")).toLowerCase()} className="sheet-value" type="number" value={this.state.value} onChange={this.getModifier} />
+                    <ModifierBox key={this.state.modifier} small_desc={this.small_desc} modifier={this.state.modifier} className="sheet-attr_mod" style={{ "height": "44px" }} />
                 </div>
             </span>)
     }
@@ -35,19 +35,19 @@ class SmallAttr extends React.Component {
 
 class GunBar extends React.Component {
     render() {
-        return <span className='gunBar'><p >{this.props.children}</p></span>
+        return <span className='sheet-gunBar'><p >{this.props.children}</p></span>
     }
 }
 
 class LongAttrHeader extends React.Component {
     constructor(props) {
         super(props)
-        if (this.props.header_rows === "1") this.header_class = "oneRow"
-        else this.header_class = "twoRow"
+        if (this.props.header_rows === "1") this.header_class = "sheet-oneRow"
+        else this.header_class = "sheet-twoRow"
         this.title = this.props.title
     }
     render() {
-        return <h2 style={this.props.style} className={this.header_class + " longAttrHeader"}>{this.title}</h2>
+        return <h2 style={this.props.style} className={this.header_class + " sheet-longAttrHeader"}>{this.title}</h2>
     }
 }
 class LongAttr extends React.Component {
@@ -81,7 +81,7 @@ class LongAttr extends React.Component {
     }
 
     render() {
-        return <div className="longAttr" style={this.props.style}>
+        return <div className="sheet-longAttr" style={this.props.style}>
             {this.items}
         </div>
     }
@@ -89,8 +89,8 @@ class LongAttr extends React.Component {
 
 class Health extends React.Component {
     render() {
-        return <div className='health' style={this.props.style}>
-            <HeaderCurMaxMod header="health" cur="1" max="25" mod="0" mod_label="Regen" curEditable={true} modEditable={true} />
+        return <div className='sheet-health' style={this.props.style}>
+            <HeaderCurMaxMod header="health" cur="1" max="25" mod="0" mod_label="Regen" curEditable={true} modEditable={true} curName="attr_cur_health" modName="attr_health_regen" />
         </div>
     }
 }
@@ -108,15 +108,19 @@ class HeaderCurMaxMod extends React.Component {
         this.curEditable = this.props.curEditable || false;
         this.maxEditable = this.props.maxEditable || false;
         this.modEditable = this.props.modEditable || false;
+
+        this.curName = this.props.curName || "";
+        this.maxName = this.props.maxName || "";
+        this.modName = this.props.modName || "";
     }
 
     render() {
-        return <div className='headerCurMaxMod' style={this.props.style}>
-            <h3 className="header">{this.header}</h3>
-            <div className="contentRow" >
-                <MainAndLabelBox className="current" main={this.cur} label="current" editable={this.curEditable} />
-                <MainAndLabelBox className="max" main={this.max} label="max" editable={this.maxEditable} />
-                <MainAndLabelBox className="mod" main={this.mod} label={this.mod_label} editable={this.modEditable} />
+        return <div className='sheet-headerCurMaxMod' style={this.props.style}>
+            <h3 className="sheet-header">{this.header}</h3>
+            <div className="sheet-contentRow" >
+                <MainAndLabelBox className="sheet-current" main={this.cur} label="current" editable={this.curEditable} inputName={this.curName} />
+                <MainAndLabelBox className="sheet-max" main={this.max} label="max" editable={this.maxEditable} inputName={this.maxName} />
+                <MainAndLabelBox className="sheet-mod" main={this.mod} label={this.mod_label} editable={this.modEditable} inputName={this.modName} />
             </div>
         </div>
     }
@@ -126,16 +130,17 @@ class MainAndLabelBox extends React.Component {
         super(props)
         this.main = props.main
         this.label = props.label
-        this.className = "mainAndLabelBox"
+        this.className = "sheet-mainAndLabelBox"
         if (typeof (this.props.className) == "string") this.className += " " + this.props.className
         this.editable = this.props.editable || false;
+        this.inputName = this.props.editable ? (this.props.inputName || "") : "";
     }
 
     render() {
         return <div className={this.className} >
-            {!this.editable && <p className="main" > {this.main}</p >}
-            {this.editable && <input className="main" defaultValue={this.main} type="number" />}
-            <p className="lbel">{this.label}</p>
+            {!this.editable && <p className="sheet-main" > {this.main}</p >}
+            {this.editable && <input className="sheet-main" defaultValue={this.main} type="number" name={this.inputName} />}
+            <p className="sheet-lbel">{this.label}</p>
         </div>
     }
 }
@@ -147,14 +152,12 @@ class Checks extends React.Component {
         this.accMod = props.accMod;
         this.mstMod = props.mstMod;
     }
-    componentDidUpdate() {
-    }
 
     render() {
         // the lists in the keys are merely to provide stability to the key system
         // by making each key unique
-        return <div className="checks" style={this.props.style}>
-            <p className="header">Checks</p>
+        return <div className="sheet-checks" style={this.props.style}>
+            <p className="sheet-header">Checks</p>
             <ChecksItem title="Interact" mod1name="acc" mod2name="misc" mod1val={this.accMod} mod2val="0" key={[this.accMod, 0]} />
             <ChecksItem title="Talk" mod1name="spd" mod2name="misc" mod1val={this.spdMod} mod2val="0" key={[this.spdMod, 1]} />
             <ChecksItem title="Insight" mod1name="acc" mod2name="misc" mod1val={this.accMod} mod2val="0" key={[this.accMod, 2]} />
@@ -178,13 +181,13 @@ class ChecksItem extends React.Component {
     }
     render() {
         return (
-            <div className="checksItem">
-                <h2 className='checksItemTitle'>{this.title}</h2>
-                <LongModifierBox small_desc={this.mod1name} modifier={this.mod1val} className="val1" />
+            <div className="sheet-checksItem">
+                <h2 className='sheet-checksItemTitle'>{this.title}</h2>
+                <LongModifierBox small_desc={this.mod1name} modifier={this.mod1val} className="sheet-val1" />
                 <p>+</p>
-                <LongModifierBox small_desc={this.mod2name} modifier={this.mod2val} className="val2" />
+                <LongModifierBox small_desc={this.mod2name} modifier={this.mod2val} className="sheet-val2" />
                 <p>=</p>
-                <LargeModifierBox small_desc="" modifier={this.finalVal} className="val3" />
+                <LargeModifierBox small_desc="" modifier={this.finalVal} className="sheet-val3" />
             </div>
         )
     }
@@ -196,11 +199,11 @@ class Melee extends React.Component {
         this.mod = props.mod
     }
     render() {
-        return <div className='melee' style={this.props.style}>
-            <h3 className="header">Melee Die</h3>
-            <div className='row1'>
-                <MainAndLabelBox main="1d10" label="" className="die" />
-                <ModifierBox className="dmgmd" modifier={"+" + this.mod} small_desc="+DMG" />
+        return <div className='sheet-melee' style={this.props.style}>
+            <h3 className="sheet-header">Melee Die</h3>
+            <div className='sheet-row1'>
+                <MainAndLabelBox main="1d10" label="" className="sheet-die" />
+                <ModifierBox className="sheet-dmgmd" modifier={"+" + this.mod} small_desc="+DMG" />
             </div>
         </div>
     }
@@ -208,17 +211,17 @@ class Melee extends React.Component {
 
 class Grenades extends React.Component {
     render() {
-        return <div className="grenades" style={this.props.style}>
+        return <div className="sheet-grenades" style={this.props.style}>
 
-            <div className='header'><h3>Grenades</h3></div>
-            <div className="row1">
-                <div className="type"><input type="text"></input><p>TYPE</p></div>
-                <div className="damage"><input type="number"></input><p>DAMAGE</p></div>
+            <div className='sheet-header'><h3>Grenades</h3></div>
+            <div className="sheet-row1">
+                <div className="sheet-type"><input type="text"></input><p>TYPE</p></div>
+                <div className="sheet-damage"><input type="number"></input><p>DAMAGE</p></div>
             </div>
-            <div className="row2">
-                <div className="info"><p>INFO</p><textarea style={{ "resize": "none" }}></textarea></div>
-                <div className='current'><input type="number" /><p>CURRENT</p></div>
-                <div className='max'><input type="number" /><p>MAX</p></div>
+            <div className="sheet-row2">
+                <div className="sheet-info"><p>INFO</p><textarea style={{ "resize": "none" }}></textarea></div>
+                <div className='sheet-current'><input type="number" /><p>CURRENT</p></div>
+                <div className='sheet-max'><input type="number" /><p>MAX</p></div>
             </div>
         </div>
     }
@@ -248,26 +251,26 @@ class Potions extends React.Component {
         }
     }
     render() {
-        return <div className="potions" style={this.props.style}>
-            <div className="header"><h3>Potions</h3></div>
-            <div className="txtbox"><input type="text" /></div>
-            <div className="txtbox"><input type="text" /></div>
-            <div className="txtbox"><input type="text" /></div>
-            <div className="txtbox lockable"><input value={this.state.value1} type="text" onChange={(event) => { this.lock_text(1, event) }} /></div>
-            <div className="txtbox lockable"><input value={this.state.value2} type="text" onChange={(event) => { this.lock_text(2, event) }} /></div>
+        return <div className="sheet-potions" style={this.props.style}>
+            <div className="sheet-header"><h3>Potions</h3></div>
+            <div className="sheet-txtbox"><input type="text" /></div>
+            <div className="sheet-txtbox"><input type="text" /></div>
+            <div className="sheet-txtbox"><input type="text" /></div>
+            <div className="sheet-txtbox sheet-lockable"><input value={this.state.value1} type="text" onChange={(event) => { this.lock_text(1, event) }} /></div>
+            <div className="sheet-txtbox sheet-lockable"><input value={this.state.value2} type="text" onChange={(event) => { this.lock_text(2, event) }} /></div>
         </div>
     }
 }
 
 class Shields extends React.Component {
     render() {
-        return <div className="shields" style={this.props.style}>
-            <div className='row1'>
-                <HeaderCurMaxMod header="shields" cur="2" max="15" mod="5" mod_label="Recharge" style={{ border: "none" }} curEditable={true} />
+        return <div className="sheet-shields" style={this.props.style}>
+            <div className='sheet-row1'>
+                <HeaderCurMaxMod header="shields" cur="2" max="15" mod="5" mod_label="Recharge" style={{ border: "none" }} curEditable={true} curName="attr_current_shields" />
             </div>
-            <div className="row2" >
-                <span className="shieldInput"><h5>shield type: </h5><p><Editable /></p></span>
-                <span className="shieldInput"><h5>info: </h5><textarea style={{ resize: "none" }} /></span>
+            <div className="sheet-row2" >
+                <span className="sheet-shieldInput"><h5>shield type: </h5><p><Editable /></p></span>
+                <span className="sheet-shieldInput"><h5>info: </h5><textarea style={{ resize: "none" }} /></span>
             </div>
         </div>
     }
@@ -275,18 +278,18 @@ class Shields extends React.Component {
 
 class BARank extends React.Component {
     render() {
-        return <div className="BARank">
-            <div className="header"><h3>Baddass Rank</h3><input type="number" defaultValue={1} /></div>
-            <div className="tokens"><p>Badass Tokens</p><input type="number" /></div>
+        return <div className="sheet-BARank">
+            <div className="sheet-header"><h3>Baddass Rank</h3><input type="number" defaultValue={1} /></div>
+            <div className="sheet-tokens"><p>Badass Tokens</p><input type="number" /></div>
         </div>
     }
 }
 
 class Gold extends React.Component {
     render() {
-        return <div className="gold" style={this.props.style}>
-            <div className='header'><h3>Gold</h3></div>
-            <div className='value'><input title='goldVal' type="number" className="value" defaultValue={0} /></div>
+        return <div className="sheet-gold" style={this.props.style}>
+            <div className='sheet-header'><h3>Gold</h3></div>
+            <div className='sheet-value'><input name='goldVal' type="number" className="sheet-value" defaultValue={0} /></div>
         </div>
     }
 }
@@ -297,7 +300,7 @@ class GunItem extends React.Component {
         this.gun = props.gunName
     }
     render() {
-        return <label className="gunItem">
+        return <label className="sheet-gunItem">
             <input type="checkbox" />
             <img src={"https://raw.githubusercontent.com/chrehall68/character-sheet/main/public/images/" + this.gun.replace(" ", "%20") + ".png"} alt={this.gun} />
             <p>{this.gun.toUpperCase()}</p>
@@ -306,8 +309,8 @@ class GunItem extends React.Component {
 }
 class FavoredGun extends React.Component {
     render() {
-        return <div className='favoredGun' style={this.props.style}>
-            <div className='header'><h4>Favored Gun</h4></div>
+        return <div className='sheet-favoredGun' style={this.props.style}>
+            <div className='sheet-header'><h4>Favored Gun</h4></div>
             <GunItem gunName='pistol' />
             <GunItem gunName='smg' />
             <GunItem gunName='combat rifle' />
@@ -326,10 +329,10 @@ class SkillsItem extends React.Component {
     }
 
     render() {
-        return <div className='item'>
-            <div className='itemHeader'>{this.header}</div>
-            <div className='content'><textarea style={{ "resize": "none" }} defaultValue={this.props.children} /></div>
-            <div className='level'>
+        return <div className='sheet-item'>
+            <div className='sheet-itemHeader'>{this.header}</div>
+            <div className='sheet-content'><textarea style={{ "resize": "none" }} defaultValue={this.props.children} /></div>
+            <div className='sheet-level'>
                 <input type="checkbox" title="level1" name="skillLevel" />
                 <input type="checkbox" title="level3" name="skillLevel" />
                 <input type="checkbox" title="level2" name="skillLevel" />
@@ -340,9 +343,9 @@ class SkillsItem extends React.Component {
 class Skills extends React.Component {
 
     render() {
-        return <div className='skills'>
-            <div className='header'><h3>Skills</h3></div>
-            <div className='itemWrapper'>
+        return <div className='sheet-skills'>
+            <div className='sheet-header'><h3>Skills</h3></div>
+            <div className='sheet-itemWrapper'>
                 <SkillsItem header="Quick Draw">
                     +2 Initiative Mod/SL.<br />+1/SL on Interact Checks
                 </SkillsItem>
@@ -369,15 +372,15 @@ class Skills extends React.Component {
 
 class BGandTraits extends React.Component {
     render() {
-        return <div className='bgtraits'>
-            <div className="header"><h3>Background & Traits</h3></div>
-            <div className="bgbox">
-                <div className="bgbar"><p>Background</p></div>
-                <div className="bginfo"><LimitedTextarea maxLines={5} style={{ "resize": "none" }} /></div>
+        return <div className='sheet-bgtraits'>
+            <div className="sheet-header"><h3>Background & Traits</h3></div>
+            <div className="sheet-bgbox">
+                <div className="sheet-bgbar"><p>Background</p></div>
+                <div className="sheet-bginfo"><LimitedTextarea maxLines={5} style={{ "resize": "none" }} /></div>
             </div>
-            <div className="traitsbox">
-                <div className="traitsbar"><p>Traits</p></div>
-                <div className="traitsinfo"><LimitedTextarea maxLines={5} style={{ "resize": "none" }} /></div>
+            <div className="sheet-traitsbox">
+                <div className="sheet-traitsbar"><p>Traits</p></div>
+                <div className="sheet-traitsinfo"><LimitedTextarea maxLines={5} style={{ "resize": "none" }} /></div>
             </div>
         </div>
     }
@@ -389,9 +392,9 @@ class ArchetypeFeat extends React.Component {
         this.props = props
     }
     render() {
-        return <div className='archetypeFeat'>
-            <div className='header'><h3>Archetype Feat</h3></div>
-            <div className='content'><p id="title">{this.props.title}</p><p>: {this.props.children}</p></div>
+        return <div className='sheet-archetypeFeat'>
+            <div className='sheet-header'><h3>Archetype Feat</h3></div>
+            <div className='sheet-content'><p id="title">{this.props.title}</p><p>: {this.props.children}</p></div>
         </div>
     }
 }
@@ -430,12 +433,12 @@ class XPBar extends React.Component {
     }
 
     render() {
-        return <div className="xpbar">
-            <div className='xpstuff' >
-                <h5 className='lbel'>XP Bar</h5>
-                <input className="content" type="number" value={this.props.xp} onChange={this.updateBar} />
+        return <div className="sheet-xpbar">
+            <div className='sheet-xpstuff' >
+                <h5 className='sheet-lbel'>XP Bar</h5>
+                <input className="sheet-content" type="number" value={this.props.xp} onChange={this.updateBar} />
             </div>
-            <div className='bar'>
+            <div className='sheet-bar'>
                 <div key={this.state.xp} style={{ width: (this.state.xp / 100 * this.XP_PER_BOX / this.BOXES) + "%" }} />
             </div>
         </div>
@@ -470,7 +473,7 @@ export class Body extends React.Component {
     }
     render() {
         return (
-            <div className="body">
+            <div className="sheet-body">
                 <SmallAttr header="Accuracy (ACC)" value={this.state.accMod} small_desc="mod" changeHandler={this.attrChangeHandler} />
                 <SmallAttr header="Damage (DMG)" value={this.state.dmgMod} small_desc="mod" changeHandler={this.attrChangeHandler} />
                 <SmallAttr header="Speed (SPD)" value={this.state.spdMod} small_desc="mod" changeHandler={this.attrChangeHandler} />

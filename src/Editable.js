@@ -14,7 +14,7 @@ export class Editable extends React.Component {
 
     render() {
         return <input type="text" maxLength={this.maxChars} onKeyPress={this.onKeyPress} onChange={this.onChange}
-            val={this.state.value} className="editable"
+            val={this.state.value} className="sheet-editable"
             defaultValue={this.state.value}
             style={{
                 borderBottom: (this.state.value.length > 0 ? "none" : "1px solid black"),
