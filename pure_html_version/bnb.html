@@ -10,30 +10,25 @@
                     </div>
                     <div class="item arch">
                         <h3 class="box_label">Archetype: </h3>
-                        <h2 class="main_content"><input type="text" maxlength="12" val="Enforcer" class="editable"
-                                value="Enforcer" style="border-bottom: none; width: 10ch;"></h2>
+                        <h2 class="main_content"><input name="attr_Archetype" value="Enforcer"></h2>
                     </div>
                     <div class="item class">
                         <h3 class="box_label">Class: </h3>
-                        <h2 class="main_content"><input type="text" maxlength="12" val="Gunzerker" class="editable"
-                                value="Gunzerker" style="border-bottom: none; width: 10.7ch;"></h2>
+                        <h2 class="main_content"><input name="attr_Class" value="Gunzerker"></h2>
                     </div>
                 </div>
                 <div class="aRow">
                     <div class="item name">
                         <h3 class="box_label">Name: </h3>
-                        <h2 class="main_content"><input type="text" maxlength="12" val="" class="editable" value=""
-                                style="border-bottom: 1px solid black; width: 10ch;"></h2>
+                        <h2 class="main_content"><input name="attr_Name" value=""></h2>
                     </div>
                     <div class="item bg">
                         <h3 class="box_label">Background: </h3>
-                        <h2 class="main_content"><input type="text" maxlength="12" val="Buff" class="editable"
-                                value="Buff" style="border-bottom: none; width: 10ch;"></h2>
+                        <h2 class="main_content"><input name="attr_Background" value="Buff"></h2>
                     </div>
                     <div class="item lvl">
                         <h3 class="box_label">Level: </h3>
-                        <h2 class="main_content"><input type="text" maxlength="12" val="1" class="editable" value="1"
-                                style="border-bottom: none; width: 10ch;"></h2>
+                        <h2 class="main_content"><input name="attr_Level" value="1"></h2>
                     </div>
                 </div>
                 <div class="aRow">
@@ -54,7 +49,7 @@
             <div class="body"><span class="smallAttr">
                     <h4 class="header">Accuracy (ACC)</h4>
                     <div class="contentRow"><input class="value" type="number" value="0">
-                        <div class="attr_mod modifier">
+                        <div class="attr_mod modifier" style="height: 44px;">
                             <div class="mod">
                                 <p>0</p>
                             </div>
@@ -64,7 +59,7 @@
                 </span><span class="smallAttr">
                     <h4 class="header">Damage (DMG)</h4>
                     <div class="contentRow"><input class="value" type="number" value="0">
-                        <div class="attr_mod modifier">
+                        <div class="attr_mod modifier" style="height: 44px;">
                             <div class="mod">
                                 <p>0</p>
                             </div>
@@ -74,7 +69,7 @@
                 </span><span class="smallAttr">
                     <h4 class="header">Speed (SPD)</h4>
                     <div class="contentRow"><input class="value" type="number" value="0">
-                        <div class="attr_mod modifier">
+                        <div class="attr_mod modifier" style="height: 44px;">
                             <div class="mod">
                                 <p>0</p>
                             </div>
@@ -84,7 +79,7 @@
                 </span><span class="smallAttr">
                     <h4 class="header">Mastery (MST)</h4>
                     <div class="contentRow"><input class="value" type="number" value="0">
-                        <div class="attr_mod modifier">
+                        <div class="attr_mod modifier" style="height: 44px;">
                             <div class="mod">
                                 <p>0</p>
                             </div>
@@ -175,14 +170,14 @@
                         <h3 class="header">health</h3>
                         <div class="contentRow">
                             <div class="mainAndLabelBox current"><input class="main" type="number" value="1">
-                                <p class="label">current</p>
+                                <p class="lbel">current</p>
                             </div>
                             <div class="mainAndLabelBox max">
                                 <p class="main"> 25</p>
-                                <p class="label">max</p>
+                                <p class="lbel">max</p>
                             </div>
                             <div class="mainAndLabelBox mod"><input class="main" type="number" value="0">
-                                <p class="label">Regen</p>
+                                <p class="lbel">Regen</p>
                             </div>
                         </div>
                     </div>
@@ -303,7 +298,7 @@
                     <div class="row1">
                         <div class="mainAndLabelBox die">
                             <p class="main"> 1d10</p>
-                            <p class="label"></p>
+                            <p class="lbel"></p>
                         </div>
                         <div class="dmgmd modifier">
                             <div class="mod">
@@ -319,15 +314,15 @@
                             <h3 class="header">shields</h3>
                             <div class="contentRow">
                                 <div class="mainAndLabelBox current"><input class="main" type="number" value="2">
-                                    <p class="label">current</p>
+                                    <p class="lbel">current</p>
                                 </div>
                                 <div class="mainAndLabelBox max">
                                     <p class="main"> 15</p>
-                                    <p class="label">max</p>
+                                    <p class="lbel">max</p>
                                 </div>
                                 <div class="mainAndLabelBox mod">
                                     <p class="main"> 5</p>
-                                    <p class="label">Recharge</p>
+                                    <p class="lbel">Recharge</p>
                                 </div>
                             </div>
                         </div>
@@ -488,7 +483,7 @@
                 </div>
                 <div class="xpbar">
                     <div class="xpstuff">
-                        <h5 class="label">XP Bar</h5><input class="content" type="number" value="">
+                        <h5 class="lbel">XP Bar</h5><input class="content" type="number" value="">
                     </div>
                     <div class="bar">
                         <div style="width: 0%;"></div>
@@ -497,4 +492,5 @@
             </div>
         </div>
     </div>
+
 </body>

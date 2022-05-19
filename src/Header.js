@@ -1,6 +1,5 @@
 import React from 'react'
 import { ModifierBox } from './ModifierBox'
-import { Editable } from './Editable'
 
 import "./Header.css"
 
@@ -16,7 +15,7 @@ class Item extends React.Component {
     render() {
         return <div className={this.cn} >
             <h3 className="box_label">{this.box_label}</h3>
-            <h2 className="main_content"><Editable initialVal={this.main_content} /></h2>
+            <h2 className="main_content"><input name={"attr_" + this.box_label.substr(0, this.box_label.indexOf(":")).replace(" ", "-")} defaultValue={this.main_content} type="text" /></h2>
         </div>
     }
 }

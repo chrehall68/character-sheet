@@ -22,6 +22,17 @@
 #header .item .main_content {
     justify-self: flex-start;
     align-self: center;
+
+}
+
+#header .item .main_content input {
+    background-color: inherit;
+    width: 80%;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    height: 1.5em;
+    font-size: inherit;
 }
 
 #header .aRow {

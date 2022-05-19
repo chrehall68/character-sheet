@@ -99,17 +99,6 @@
     margin: auto
 }
 
-.editable {
-    background-color: inherit;
-    border: none;
-    display: inherit;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin: inherit;
-    padding: inherit
-}
-
 #header {
     display: flex;
     flex-wrap: wrap;
@@ -134,6 +123,16 @@
 #header .item .main_content {
     align-self: center;
     justify-self: flex-start
+}
+
+#header .item .main_content input {
+    background-color: inherit;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    font-size: inherit;
+    height: 1.5em;
+    width: 80%
 }
 
 #header .aRow {
@@ -335,7 +334,7 @@
     display: none
 }
 
-.mainAndLabelBox .label {
+.mainAndLabelBox .lbel {
     font-size: 8px;
     height: 33.3%;
     margin: 0;
@@ -694,7 +693,9 @@
 .grenades .row2 .info p {
     height: 20%;
     margin: 0;
-    padding: 0
+    padding: 0;
+    text-align: center;
+    width: 100%
 }
 
 .grenades .row2 .info textarea {
@@ -709,8 +710,12 @@
 
 .grenades .row2 .current,
 .grenades .row2 .max {
-    font-size: xx-small;
     width: 20%
+}
+
+.grenades .row2 .current p,
+.grenades .row2 .max p {
+    font-size: 70%
 }
 
 .grenades .row2 .current input[type=number],
@@ -958,6 +963,7 @@
 .bgtraits textarea {
     background-image: repeating-linear-gradient(#fff, #fff 1.5em, #d3d3d3 0, #d3d3d3 1.7em, #fff 0);
     border: 0;
+    height: 100%;
     line-height: 1.7em;
     margin-bottom: .3em;
     margin-left: 2.5%;
@@ -1015,8 +1021,9 @@
 }
 
 .xpbar .xpstuff {
+    align-items: center;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     width: 20%
 }
 
@@ -1037,21 +1044,22 @@
     transition-duration: .5s
 }
 
-.xpbar .xpstuff .label {
+.xpbar .xpstuff .lbel {
     margin: 0;
     padding: 0;
     text-align: center;
-    width: 100%
+    width: 40%
 }
 
-.xpbar .xpstuff .content {
+.xpbar .xpstuff input[type=number].content {
     border-left: 0;
     border-right: 0;
     border-top: 0;
+    height: 70%;
     margin: 0;
     padding: 0;
     text-align: center;
-    width: 80%
+    width: 50%
 }
 
 .xpbar .xpstuff input[type=number].content::-webkit-inner-spin-button,
@@ -1071,14 +1079,25 @@
     background-color: #000
 }
 
+.editable {
+    background-color: inherit;
+    border: none;
+    display: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: inherit;
+    padding: inherit
+}
+
 .App {
     border: 1px solid #000;
-    font-family: Times New Roman, Times, serif;
+    font-family: Konexy, Times New Roman, Times, serif;
     height: 1320px;
     width: 1020px
 }
 
 p {
-    font-family: Times New Roman, Times, serif !important;
+    font-family: Konexy, Times New Roman, Times, serif !important;
     line-height: unset !important
 }

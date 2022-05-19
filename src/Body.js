@@ -135,7 +135,7 @@ class MainAndLabelBox extends React.Component {
         return <div className={this.className} >
             {!this.editable && <p className="main" > {this.main}</p >}
             {this.editable && <input className="main" defaultValue={this.main} type="number" />}
-            <p className="label">{this.label}</p>
+            <p className="lbel">{this.label}</p>
         </div>
     }
 }
@@ -432,7 +432,7 @@ class XPBar extends React.Component {
     render() {
         return <div className="xpbar">
             <div className='xpstuff' >
-                <h5 className='label'>XP Bar</h5>
+                <h5 className='lbel'>XP Bar</h5>
                 <input className="content" type="number" value={this.props.xp} onChange={this.updateBar} />
             </div>
             <div className='bar'>
