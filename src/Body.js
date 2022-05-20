@@ -201,7 +201,15 @@ class Melee extends React.Component {
         return <div className='sheet-melee' style={this.props.style}>
             <h3 className="sheet-header">Melee Die</h3>
             <div className='sheet-row1'>
-                <MainAndLabelBox main="1d10" label="" className="sheet-die" />
+                <div className="sheet-die" >
+                    <select name="attr_dtype" class="dtype">
+                        <option value="d4">d4</option>
+                        <option value="d6">d6</option>
+                        <option value="d8">d8</option>
+                        <option value="d10">d10</option>
+                        <option value="d12">d12</option>
+                    </select>
+                </div>
                 <ModifierBox className="sheet-dmgmd" modifier={"+" + this.mod} small_desc="+DMG" />
             </div>
         </div>
