@@ -1108,13 +1108,13 @@
 
 .sheet-App {
     border: 1px solid #000;
-    font-family: Konexy, Times New Roman, Times, serif;
+    font-family: Technophile, Times New Roman, Times, serif;
     height: 1320px;
     width: 1020px
 }
 
 p {
-    font-family: Konexy, Times New Roman, Times, serif !important;
+    font-family: Technophile, Times New Roman, Times, serif !important;
     line-height: unset !important
 }
 
