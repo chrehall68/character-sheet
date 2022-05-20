@@ -5,22 +5,18 @@
 }
 */
 
-@font-face {
-    font-family: 'Technophile';
-    src: url('https://github.com/chrehall68/character-sheet/blob/5cbeba5c4d1e6dc9a0e1620b1e3550c6e301e1d6/fonts/TechnophileDemo-8Mq5n.ttf') format('truetype');
-}
 
 .sheet-App {
     /** Scale it to be 8.5 by 11 (like a pdf or piece of paper) */
     width: 1020px;
     height: 1320px;
 
-    font-family: 'Technophile', 'Times New Roman', Times, serif;
+    font-family: 'Konexy', 'Times New Roman', Times, serif;
     border: 1px solid black;
 }
 
 p {
-    font-family: 'Technophile', 'Times New Roman', Times, serif !important;
+    font-family: 'Konexy', 'Times New Roman', Times, serif !important;
     line-height: unset !important;
 }
 
