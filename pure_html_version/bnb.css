@@ -6,13 +6,13 @@
     flex-wrap: wrap;
     float: right;
     margin: 0;
+    max-width: 50px;
     min-height: 30px;
     min-width: 40px;
     vertical-align: bottom
 }
 
 .sheet-modifier p.sheet-small {
-    float: left;
     font-size: 10px;
     margin: 0;
     max-height: 40%;
@@ -28,12 +28,19 @@
     width: 100%
 }
 
-.sheet-modifier .sheet-mod p {
+.sheet-modifier .sheet-mod input[type=number] {
+    border: 0;
     font-size: x-large;
     font-weight: 700;
     margin: 0;
     padding: 0;
-    text-align: center
+    text-align: center;
+    width: 100%
+}
+
+.sheet-modifier .sheet-mod input[type=number]::-webkit-inner-spin-button,
+.sheet-modifier .sheet-mod input[type=number]::-webkit-outer-spin-button {
+    display: none
 }
 
 .sheet-largeModifier {
@@ -70,7 +77,8 @@
     width: 100%
 }
 
-.sheet-largeModifier .sheet-mod p {
+.sheet-largeModifier .sheet-mod input {
+    border: 0;
     font-size: 30px;
     font-weight: 700;
     margin: 0;
@@ -79,24 +87,33 @@
     width: 100%
 }
 
+.sheet-largeModifier .sheet-mod input[type=number]::-webkit-inner-spin-button,
+.sheet-largeModifier .sheet-mod input[type=number]::-webkit-outer-spin-button {
+    display: none
+}
+
 .sheet-longModifier {
+    align-items: center;
     border: 1px solid #000;
-    display: grid;
-    grid-template-areas: "small mod";
+    display: flex;
     height: 60px;
     width: 60px
 }
 
 .sheet-longModifier .sheet-small {
     font-size: 10px;
-    grid-area: small;
-    margin: auto
+    margin: 0;
+    padding: 0;
+    width: 50%
 }
 
 .sheet-longModifier .sheet-mod {
+    border: 0;
     font-size: 20px;
-    grid-area: mod;
-    margin: auto
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 50%
 }
 
 #sheet-header {
@@ -311,8 +328,8 @@
     width: 100%
 }
 
-.sheet-mainAndLabelBox input[type=number].sheet-main,
-.sheet-mainAndLabelBox p.sheet-main {
+.sheet-mainAndLabelBox input[type=number].sheet-main {
+    border: 0;
     font-size: 25px;
     font-weight: 700;
     height: 66.6%;
@@ -320,10 +337,6 @@
     padding: 0;
     text-align: center;
     width: 100%
-}
-
-.sheet-mainAndLabelBox input[type=number].sheet-main {
-    border: 0
 }
 
 .sheet-mainAndLabelBox input[type=number].sheet-main::-webkit-inner-spin-button,
@@ -449,6 +462,17 @@
     width: 80%
 }
 
+.sheet-melee .sheet-die select {
+    border: 0;
+    font-size: large;
+    font-weight: 700;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%
+}
+
 .sheet-melee .sheet-dmgmd {
     display: flex;
     height: 100%;
@@ -532,6 +556,7 @@
 }
 
 .sheet-gold .sheet-value input[type=number] {
+    border: 0;
     font-size: x-large;
     height: 100%;
     text-align: right;
@@ -866,6 +891,16 @@
     width: 100%
 }
 
+.sheet-skills .sheet-item .sheet-itemHeader input {
+    border: 0;
+    font-weight: 700;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%
+}
+
 .sheet-skills .sheet-item .sheet-content {
     display: flex;
     height: 60%;
@@ -1071,17 +1106,6 @@
     background-color: #000
 }
 
-.sheet-editable {
-    background-color: inherit;
-    border: none;
-    display: inherit;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin: inherit;
-    padding: inherit
-}
-
 .sheet-App {
     border: 1px solid #000;
     font-family: Konexy, Times New Roman, Times, serif;
@@ -1092,4 +1116,8 @@
 p {
     font-family: Konexy, Times New Roman, Times, serif !important;
     line-height: unset !important
+}
+
+input:disabled {
+    background-color: inherit
 }

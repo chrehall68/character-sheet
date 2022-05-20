@@ -8,11 +8,11 @@
     vertical-align: bottom;
     margin: 0px;
     min-width: 40px;
+    max-width: 50px;
     min-height: 30px;
 }
 
 .sheet-modifier p.sheet-small {
-    float: left;
     font-size: 10px;
     max-height: 40%;
     width: 100%;
@@ -28,12 +28,19 @@
     width: 100%;
 }
 
-.sheet-modifier .sheet-mod p {
+.sheet-modifier .sheet-mod input[type=number] {
     font-size: x-large;
     font-weight: bold;
     text-align: center;
     margin: 0px;
     padding: 0px;
+    width: 100%;
+    border: 0px;
+}
+
+.sheet-modifier .sheet-mod input[type=number]::-webkit-inner-spin-button,
+.sheet-modifier .sheet-mod input[type=number]::-webkit-outer-spin-button {
+    display: none;
 }
 
 .sheet-largeModifier {
@@ -70,31 +77,41 @@
     display: flex;
 }
 
-.sheet-largeModifier .sheet-mod p {
+.sheet-largeModifier .sheet-mod input[type=number] {
     margin: 0px;
     padding: 0px;
+    border: 0px;
     font-size: 30px;
     text-align: center;
     font-weight: bold;
     width: 100%;
 }
 
+.sheet-largeModifier .sheet-mod input[type=number]::-webkit-inner-spin-button,
+.sheet-largeModifier .sheet-mod input[type=number]::-webkit-outer-spin-button {
+    display: none;
+}
+
 .sheet-longModifier {
-    display: grid;
-    grid-template-areas: "small mod";
+    display: flex;
     border: 1px solid black;
     width: 60px;
     height: 60px;
+    align-items: center;
 }
 
 .sheet-longModifier .sheet-small {
-    grid-area: small;
+    width: 50%;
     font-size: 10px;
-    margin: auto auto;
+    margin: 0px;
+    padding: 0px;
 }
 
 .sheet-longModifier .sheet-mod {
-    grid-area: mod;
+    width: 50%;
     font-size: 20px;
-    margin: auto auto;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    text-align: center;
 }

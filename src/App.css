@@ -18,3 +18,7 @@ p {
     font-family: 'Konexy', 'Times New Roman', Times, serif !important;
     line-height: unset !important;
 }
+
+input:disabled {
+    background-color: inherit;
+}

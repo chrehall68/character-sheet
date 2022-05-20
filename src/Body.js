@@ -11,13 +11,7 @@ class SmallAttr extends React.Component {
         this.header = props.header
         this.small_desc = props.small_desc
 
-        this.state = { value: props.value, modifier: props.value / 2 }
         this.changeHandler = this.props.changeHandler || function (t) { console.log(t) }
-    }
-
-    getModifier = (event) => {
-        if (Math.abs(event.target.value) < 1000) { this.setState({ value: event.target.value, modifier: event.target.value / 2 }, () => this.changeHandler(this)) }
-        else { this.setState({ value: 999 * Math.sign(event.target.value), modifier: 999 * Math.sign(event.target.value) / 2 }, () => this.changeHandler(this)) }
     }
 
     render() {
@@ -25,8 +19,11 @@ class SmallAttr extends React.Component {
             <span className='sheet-smallAttr'>
                 <h4 className='sheet-header'>{this.header}</h4>
                 <div className="sheet-contentRow">
-                    <input name={"attr_raw_" + this.header.substring(this.header.indexOf("(") + 1, this.header.indexOf(")")).toLowerCase()} className="sheet-value" type="number" value={this.state.value} onChange={this.getModifier} />
-                    <ModifierBox key={this.state.modifier} small_desc={this.small_desc} modifier={this.state.modifier} className="sheet-attr_mod" style={{ "height": "44px" }} />
+                    <input name={"attr_raw_" + this.header.substring(this.header.indexOf("(") + 1, this.header.indexOf(")")).toLowerCase()} className="sheet-value" type="number" />
+                    <ModifierBox small_desc={this.small_desc} className="sheet-attr_mod" style={{ "height": "44px" }}
+                        name={"attr_" + this.header.substring(this.header.indexOf("(") + 1, this.header.indexOf(")")).toLowerCase() + "_mod"}
+                        modifier={"(@{raw_" + this.header.substring(this.header.indexOf("(") + 1, this.header.indexOf(")")).toLowerCase() + "}/2)"}
+                    />
                 </div>
             </span>)
     }
@@ -89,7 +86,7 @@ class LongAttr extends React.Component {
 class Health extends React.Component {
     render() {
         return <div className='sheet-health' style={this.props.style}>
-            <HeaderCurMaxMod header="health" cur="1" max="25" mod="0" mod_label="Regen" curEditable={true} modEditable={true} curName="attr_cur_health" modName="attr_health_regen" />
+            <HeaderCurMaxMod header="health" cur="1" max="25" mod="0" mod_label="Regen" curEditable={true} modEditable={true} curName="attr_cur_health" modName="attr_health_regen" maxName="attr_cur_health_max" />
         </div>
     }
 }
@@ -132,13 +129,13 @@ class MainAndLabelBox extends React.Component {
         this.className = "sheet-mainAndLabelBox"
         if (typeof (this.props.className) == "string") this.className += " " + this.props.className
         this.editable = this.props.editable || false;
-        this.inputName = this.props.editable ? (this.props.inputName || "") : "";
+        this.inputName = this.props.inputName || "";
+        console.log("editable? " + this.editable)
     }
 
     render() {
         return <div className={this.className} >
-            {!this.editable && <p className="sheet-main" > {this.main}</p >}
-            {this.editable && <input className="sheet-main" defaultValue={this.main} type="number" name={this.inputName} />}
+            <input className="sheet-main" defaultValue={this.main} type="number" name={this.inputName} disabled={!this.editable} />
             <p className="sheet-lbel">{this.label}</p>
         </div>
     }
@@ -202,7 +199,7 @@ class Melee extends React.Component {
             <h3 className="sheet-header">Melee Die</h3>
             <div className='sheet-row1'>
                 <div className="sheet-die" >
-                    <select name="attr_dtype" class="dtype">
+                    <select name="attr_dtype" className="dtype">
                         <option value="d4">d4</option>
                         <option value="d6">d6</option>
                         <option value="d8">d8</option>
@@ -455,56 +452,29 @@ class XPBar extends React.Component {
 }
 
 export class Body extends React.Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            spdMod: 0,
-            accMod: 0,
-            dmgMod: 0,
-            mstMod: 0
-        }
-    }
-    attrChangeHandler = (obj) => {
-        if (obj.header === "Accuracy (ACC)") {
-            this.setState({ spdMod: this.state.spdMod, accMod: obj.state.modifier, dmgMod: this.state.dmgMod, mstMod: this.state.mstMod })
-        }
-        if (obj.header === "Damage (DMG)") {
-            this.setState({ spdMod: this.state.spdMod, accMod: this.state.accMod, dmgMod: obj.state.modifier, mstMod: this.state.mstMod })
-        }
-        if (obj.header === "Speed (SPD)") {
-            this.setState({ spdMod: obj.state.modifier, accMod: this.state.accMod, dmgMod: this.state.dmgMod, mstMod: this.state.mstMod })
-        }
-        if (obj.header === "Mastery (MST)") {
-            this.setState({ spdMod: this.state.spdMod, accMod: this.state.accMod, dmgMod: this.state.dmgMod, mstMod: obj.state.modifier })
-        }
-    }
     render() {
         return (
             <div className="sheet-body">
-                <SmallAttr header="Accuracy (ACC)" value={this.state.accMod} small_desc="mod" changeHandler={this.attrChangeHandler} />
-                <SmallAttr header="Damage (DMG)" value={this.state.dmgMod} small_desc="mod" changeHandler={this.attrChangeHandler} />
-                <SmallAttr header="Speed (SPD)" value={this.state.spdMod} small_desc="mod" changeHandler={this.attrChangeHandler} />
-                <SmallAttr header="Mastery (MST)" value={this.state.mstMod} small_desc="mod" changeHandler={this.attrChangeHandler} />
+                <SmallAttr header="Accuracy (ACC)" small_desc="mod" />
+                <SmallAttr header="Damage (DMG)" small_desc="mod" />
+                <SmallAttr header="Speed (SPD)" small_desc="mod" />
+                <SmallAttr header="Mastery (MST)" small_desc="mod" />
 
                 <LongAttrHeader title="Initiative" header_rows="2" />
-                <LongAttr mods={[1, this.state.spdMod, "_"]} small_descs={["Baddass Rank", "SPD Mod", "MISC Mod"]} key={[this.state.spdMod, 0]} />
+                <LongAttr mods={["(@{BARank})", "(@{raw_spd})", 0]} small_descs={["Baddass Rank", "SPD Mod", "MISC Mod"]} />
 
                 <GunBar>Current Gun</GunBar>
                 <GunBar>Gun Slot 2</GunBar>
                 <GunBar>Gun Slot 3</GunBar>
 
                 <LongAttrHeader title="Movement" header_rows="1" style={{ gridColumn: "9/span 2", gridrow: "5 / span 2" }} />
-                <LongAttr mods={[3, this.state.spdMod, "_"]} small_descs={["static mod", "SPD Mod", "MISC Mod"]} style={{ gridColumn: "11 / span 4" }}
-                    key={[this.state.spdMod, 1]} />
+                <LongAttr mods={[3, "(@{raw_spd})", 0]} small_descs={["static mod", "SPD Mod", "MISC Mod"]} style={{ gridColumn: "11 / span 4" }} />
 
                 <Health style={{ gridRow: "7/span 4" }} />
 
-                <Checks style={{ gridRow: "7/span 15" }} spdMod={this.state.spdMod}
-                    accMod={this.state.accMod} mstMod={this.state.mstMod}
-                    key={[this.state.accMod, this.state.dmgMod, this.state.spdMod, this.state.mstMod]} />
+                <Checks style={{ gridRow: "7/span 15" }} />
 
-                <Melee style={{ gridRow: "9/span 4" }} key={this.state.dmgMod} mod={this.state.dmgMod} />
+                <Melee style={{ gridRow: "9/span 4" }} />
 
                 <Shields style={{ gridRow: "11 / span 7" }} />
 
