@@ -22,4 +22,5 @@ p {
 
 input:disabled {
     background-color: inherit;
+    color: black;
 }

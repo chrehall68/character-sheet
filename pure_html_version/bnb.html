@@ -6,9 +6,7 @@
             <div id="sheet-header">
                 <div class="sheet-row">
                     <div class="sheet-title sheet-item">
-                        <h1 class="sheet-main_content"><img 
-                        src="https://raw.githubusercontent.com/chrehall68/character-sheet/main/public/images/bnblogo.png"
-                        alt="logo">BNB</h1>
+                        <h1 class="sheet-main_content">BNB</h1>
                     </div>
                     <div class="sheet-item sheet-arch">
                         <h3 class="sheet-box_label">Archetype: </h3>
@@ -86,29 +84,31 @@
                 <h2 class="sheet-twoRow sheet-longAttrHeader">Initiative</h2>
                 <div class="sheet-longAttr">
                     <div class="sheet-largeModifier">
-                        <div class="sheet-mod"><input disabled="" type="number" value="(@{BARank})" name="attr_a"></div>
+                        <div class="sheet-mod"><input type="number" disabled="" name="attr_Baddass_Rank0"
+                                value="(@{BARank})"></div>
                         <div class="sheet-small">
                             <p>Baddass Rank</p>
                         </div>
                     </div>
                     <p>+</p>
                     <div class="sheet-largeModifier">
-                        <div class="sheet-mod"><input disabled="" type="number" value="(@{raw_spd})" name="attr_b">
-                        </div>
+                        <div class="sheet-mod"><input type="number" disabled="" name="attr_SPD_Mod0"
+                                value="(@{spd_mod})"></div>
                         <div class="sheet-small">
                             <p>SPD Mod</p>
                         </div>
                     </div>
                     <p>+</p>
                     <div class="sheet-largeModifier">
-                        <div class="sheet-mod"><input disabled="" value="0"></div>
+                        <div class="sheet-mod"><input type="number" name="attr_MISC_Mod0" value="0"></div>
                         <div class="sheet-small">
                             <p>MISC Mod</p>
                         </div>
                     </div>
                     <p>=</p>
                     <div class="sheet-modifier" style="width: 40px;">
-                        <div class="sheet-mod"><input name="" type="number" disabled="" value="+0"></div>
+                        <div class="sheet-mod"><input name="attr_calculated0" type="number" disabled=""
+                                value="(@{Baddass_Rank0})+(@{SPD_Mod0})+(@{MISC_Mod0})"></div>
                         <p class="sheet-small"></p>
                     </div>
                 </div><span class="sheet-gunBar">
@@ -121,29 +121,30 @@
                 <h2 class="sheet-oneRow sheet-longAttrHeader" style="grid-column: 9 / span 2;">Movement</h2>
                 <div class="sheet-longAttr" style="grid-column: 11 / span 4;">
                     <div class="sheet-largeModifier">
-                        <div class="sheet-mod"><input disabled="" value="3"></div>
+                        <div class="sheet-mod"><input type="number" disabled="" name="attr_static_mod1" value="3"></div>
                         <div class="sheet-small">
                             <p>static mod</p>
                         </div>
                     </div>
                     <p>+</p>
                     <div class="sheet-largeModifier">
-                        <div class="sheet-mod"><input disabled="" type="number" value="(@{raw_spd})" name="attr_c">
-                        </div>
+                        <div class="sheet-mod"><input type="number" disabled="" name="attr_SPD_Mod1"
+                                value="(@{spd_mod})"></div>
                         <div class="sheet-small">
                             <p>SPD Mod</p>
                         </div>
                     </div>
                     <p>+</p>
                     <div class="sheet-largeModifier">
-                        <div class="sheet-mod"><input disabled="" value="0"></div>
+                        <div class="sheet-mod"><input type="number" name="attr_MISC_Mod1" value="0"></div>
                         <div class="sheet-small">
                             <p>MISC Mod</p>
                         </div>
                     </div>
                     <p>=</p>
                     <div class="sheet-modifier" style="width: 40px;">
-                        <div class="sheet-mod"><input name="" type="number" disabled="" value="3"></div>
+                        <div class="sheet-mod"><input name="attr_calculated1" type="number" disabled=""
+                                value="(@{static_mod1})+(@{SPD_Mod1})+(@{MISC_Mod1})"></div>
                         <p class="sheet-small"></p>
                     </div>
                 </div>
@@ -171,85 +172,103 @@
                     <div class="sheet-checksItem">
                         <h2 class="sheet-checksItemTitle">Interact</h2>
                         <div class="sheet-val1 sheet-longModifier">
-                            <p class="sheet-small">acc <br>mod</p><input class="sheet-mod" value="">
+                            <p class="sheet-small">acc <br>mod</p><input class="sheet-mod" type="number" disabled=""
+                                name="attr_acc0" value="(@{acc_mod})">
                         </div>
                         <p>+</p>
                         <div class="sheet-val2 sheet-longModifier">
-                            <p class="sheet-small">misc <br>mod</p><input class="sheet-mod" value="0">
+                            <p class="sheet-small">misc <br>mod</p><input class="sheet-mod" type="number"
+                                name="attr_misc0" value="0">
                         </div>
                         <p>=</p>
                         <div class="sheet-val3 sheet-largeModifier">
-                            <div class="sheet-mod"><input disabled="" value="NaN"></div>
+                            <div class="sheet-mod"><input type="number" disabled="" name="attr_calculatedLong0"
+                                    value="(@{acc0})+(@{misc0})"></div>
                         </div>
                     </div>
                     <div class="sheet-checksItem">
                         <h2 class="sheet-checksItemTitle">Talk</h2>
                         <div class="sheet-val1 sheet-longModifier">
-                            <p class="sheet-small">spd <br>mod</p><input class="sheet-mod" value="">
+                            <p class="sheet-small">spd <br>mod</p><input class="sheet-mod" type="number" disabled=""
+                                name="attr_spd1" value="(@{spd_mod})">
                         </div>
                         <p>+</p>
                         <div class="sheet-val2 sheet-longModifier">
-                            <p class="sheet-small">misc <br>mod</p><input class="sheet-mod" value="0">
+                            <p class="sheet-small">misc <br>mod</p><input class="sheet-mod" type="number"
+                                name="attr_misc1" value="0">
                         </div>
                         <p>=</p>
                         <div class="sheet-val3 sheet-largeModifier">
-                            <div class="sheet-mod"><input disabled="" value="NaN"></div>
+                            <div class="sheet-mod"><input type="number" disabled="" name="attr_calculatedLong1"
+                                    value="(@{spd1})+(@{misc1})"></div>
                         </div>
                     </div>
                     <div class="sheet-checksItem">
                         <h2 class="sheet-checksItemTitle">Insight</h2>
                         <div class="sheet-val1 sheet-longModifier">
-                            <p class="sheet-small">acc <br>mod</p><input class="sheet-mod" value="">
+                            <p class="sheet-small">acc <br>mod</p><input class="sheet-mod" type="number" disabled=""
+                                name="attr_acc2" value="(@{acc_mod})">
                         </div>
                         <p>+</p>
                         <div class="sheet-val2 sheet-longModifier">
-                            <p class="sheet-small">misc <br>mod</p><input class="sheet-mod" value="0">
+                            <p class="sheet-small">misc <br>mod</p><input class="sheet-mod" type="number"
+                                name="attr_misc2" value="0">
                         </div>
                         <p>=</p>
                         <div class="sheet-val3 sheet-largeModifier">
-                            <div class="sheet-mod"><input disabled="" value="NaN"></div>
+                            <div class="sheet-mod"><input type="number" disabled="" name="attr_calculatedLong2"
+                                    value="(@{acc2})+(@{misc2})"></div>
                         </div>
                     </div>
                     <div class="sheet-checksItem">
                         <h2 class="sheet-checksItemTitle">Sneak</h2>
                         <div class="sheet-val1 sheet-longModifier">
-                            <p class="sheet-small">MST <br>mod</p><input class="sheet-mod" value="">
+                            <p class="sheet-small">MST <br>mod</p><input class="sheet-mod" type="number" disabled=""
+                                name="attr_MST3" value="(@{mst_mod})">
                         </div>
                         <p>+</p>
                         <div class="sheet-val2 sheet-longModifier">
-                            <p class="sheet-small">misc <br>mod</p><input class="sheet-mod" value="0">
+                            <p class="sheet-small">misc <br>mod</p><input class="sheet-mod" type="number"
+                                name="attr_misc3" value="0">
                         </div>
                         <p>=</p>
                         <div class="sheet-val3 sheet-largeModifier">
-                            <div class="sheet-mod"><input disabled="" value="NaN"></div>
+                            <div class="sheet-mod"><input type="number" disabled="" name="attr_calculatedLong3"
+                                    value="(@{MST3})+(@{misc3})"></div>
                         </div>
                     </div>
                     <div class="sheet-checksItem">
                         <h2 class="sheet-checksItemTitle">Search</h2>
                         <div class="sheet-val1 sheet-longModifier">
-                            <p class="sheet-small">MST <br>mod</p><input class="sheet-mod" value="">
+                            <p class="sheet-small">MST <br>mod</p><input class="sheet-mod" type="number" disabled=""
+                                name="attr_MST4" value="(@{mst_mod})">
                         </div>
                         <p>+</p>
                         <div class="sheet-val2 sheet-longModifier">
-                            <p class="sheet-small">misc <br>mod</p><input class="sheet-mod" value="0">
+                            <p class="sheet-small">misc <br>mod</p><input class="sheet-mod" type="number"
+                                name="attr_misc4" value="0">
                         </div>
                         <p>=</p>
                         <div class="sheet-val3 sheet-largeModifier">
-                            <div class="sheet-mod"><input disabled="" value="NaN"></div>
+                            <div class="sheet-mod"><input type="number" disabled="" name="attr_calculatedLong4"
+                                    value="(@{MST4})+(@{misc4})"></div>
                         </div>
                     </div>
                     <div class="sheet-checksItem">
                         <h2 class="sheet-checksItemTitle">Traverse</h2>
                         <div class="sheet-val1 sheet-longModifier">
-                            <p class="sheet-small">SPD <br>mod</p><input class="sheet-mod" value="">
+                            <p class="sheet-small">SPD <br>mod</p><input class="sheet-mod" type="number" disabled=""
+                                name="attr_SPD5" value="(@{spd_mod})">
                         </div>
                         <p>+</p>
                         <div class="sheet-val2 sheet-longModifier">
-                            <p class="sheet-small">misc <br>mod</p><input class="sheet-mod" value="0">
+                            <p class="sheet-small">misc <br>mod</p><input class="sheet-mod" type="number"
+                                name="attr_misc5" value="0">
                         </div>
                         <p>=</p>
                         <div class="sheet-val3 sheet-largeModifier">
-                            <div class="sheet-mod"><input disabled="" value="NaN"></div>
+                            <div class="sheet-mod"><input type="number" disabled="" name="attr_calculatedLong5"
+                                    value="(@{SPD5})+(@{misc5})"></div>
                         </div>
                     </div>
                 </div>
@@ -264,7 +283,8 @@
                                 <option value="d12">d12</option>
                             </select></div>
                         <div class="sheet-dmgmd sheet-modifier">
-                            <div class="sheet-mod"><input name="" type="number" disabled="" value="+undefined"></div>
+                            <div class="sheet-mod"><input name="attr_melee_dmgmd" type="number" disabled=""
+                                    value="(@{dmg_mod})"></div>
                             <p class="sheet-small">+DMG</p>
                         </div>
                     </div>

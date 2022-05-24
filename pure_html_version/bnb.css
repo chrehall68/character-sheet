@@ -77,7 +77,7 @@
     width: 100%
 }
 
-.sheet-largeModifier .sheet-mod input {
+.sheet-largeModifier .sheet-mod input[type=number] {
     border: 0;
     font-size: 30px;
     font-weight: 700;
@@ -107,13 +107,18 @@
     width: 50%
 }
 
-.sheet-longModifier .sheet-mod {
+.sheet-longModifier input[type=number].sheet-mod {
     border: 0;
     font-size: 20px;
     margin: 0;
     padding: 0;
     text-align: center;
     width: 50%
+}
+
+.sheet-longModifier input[type=number].sheet-mod::-webkit-inner-spin-button,
+.sheet-longModifier input[type=number].sheet-mod::-webkit-outer-spin-button {
+    display: none
 }
 
 #sheet-header {
@@ -140,11 +145,6 @@
 #sheet-header .sheet-item .sheet-main_content {
     align-self: center;
     justify-self: flex-start
-}
-
-#sheet-header .sheet-item .sheet-main_content img{
-    height: fit-content;
-    width: fit-content;
 }
 
 #sheet-header .sheet-item .sheet-main_content input {
@@ -1124,5 +1124,6 @@ p {
 }
 
 input:disabled {
-    background-color: inherit
+    background-color: inherit;
+    color: #000
 }

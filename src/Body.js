@@ -55,11 +55,12 @@ class LongAttr extends React.Component {
     constructor(props) {
         super(props)
 
+        this.number = this.props.number || 0;
         this.mods = this.props.mods
         this.small_descs = this.props.small_descs
         this.items = this.mods.map((element, index) => {
             if (this.small_descs[index] != null) {
-                return <LargeModifierBox key={index} small_desc={this.small_descs[index]} modifier={element} />
+                return <LargeModifierBox key={index} small_desc={this.small_descs[index]} modifier={element} name={"attr_" + this.small_descs[index].replace(" ", "_") + this.number} />
             }
             else return <h1>{this.modifier}</h1>
         });
@@ -70,10 +71,11 @@ class LongAttr extends React.Component {
         }
         this.items.splice(this.items.length * 2 - 2, 0, <p key="=">=</p>)
 
-        // get total for the last box
-        let total = 0
-        this.mods.forEach((element) => { if (typeof (element) == "number") total += element })
-        this.items.push(<ModifierBox key={this.items.length} style={{ width: "40px", height: "40 px" }} small_desc="" modifier={"+" + total} />)
+        let calc_name = "";
+        this.small_descs.forEach((val) => { calc_name += "(@{" + val.replace(" ", "_") + this.number + "})+" })
+        calc_name = calc_name.substring(0, calc_name.lastIndexOf("+"));
+        console.log(calc_name);
+        this.items.push(<ModifierBox key={this.items.length} style={{ width: "40px", height: "40 px" }} small_desc="" name={"attr_calculated" + this.number} modifier={calc_name} />)
     }
 
     render() {
@@ -154,12 +156,12 @@ class Checks extends React.Component {
         // by making each key unique
         return <div className="sheet-checks" style={this.props.style}>
             <p className="sheet-header">Checks</p>
-            <ChecksItem title="Interact" mod1name="acc" mod2name="misc" mod1val={this.accMod} mod2val="0" key={[this.accMod, 0]} />
-            <ChecksItem title="Talk" mod1name="spd" mod2name="misc" mod1val={this.spdMod} mod2val="0" key={[this.spdMod, 1]} />
-            <ChecksItem title="Insight" mod1name="acc" mod2name="misc" mod1val={this.accMod} mod2val="0" key={[this.accMod, 2]} />
-            <ChecksItem title="Sneak" mod1name="MST" mod2name="misc" mod1val={this.mstMod} mod2val="0" key={[this.mstMod, 3]} />
-            <ChecksItem title="Search" mod1name="MST" mod2name="misc" mod1val={this.mstMod} mod2val="0" key={[this.mstMod, 4]} />
-            <ChecksItem title="Traverse" mod1name="SPD" mod2name="misc" mod1val={this.spdMod} mod2val="0" key={[this.spdMod, 5]} />
+            <ChecksItem title="Interact" mod1name="acc" mod2name="misc" mod1val={this.accMod} mod2val="0" number={0} />
+            <ChecksItem title="Talk" mod1name="spd" mod2name="misc" mod1val={this.spdMod} mod2val="0" number={1} />
+            <ChecksItem title="Insight" mod1name="acc" mod2name="misc" mod1val={this.accMod} mod2val="0" number={2} />
+            <ChecksItem title="Sneak" mod1name="MST" mod2name="misc" mod1val={this.mstMod} mod2val="0" number={3} />
+            <ChecksItem title="Search" mod1name="MST" mod2name="misc" mod1val={this.mstMod} mod2val="0" number={4} />
+            <ChecksItem title="Traverse" mod1name="SPD" mod2name="misc" mod1val={this.spdMod} mod2val="0" number={5} />
         </div>
     }
 }
@@ -172,18 +174,19 @@ class ChecksItem extends React.Component {
         this.mod1val = this.props.mod1val
         this.mod2val = this.props.mod2val
 
-        this.finalVal = `${Number(this.mod1val) + Number(this.mod2val)}`
-        this.finalVal = (this.finalVal >= 0 ? "+" + this.finalVal : "" + this.finalVal)
+        this.number = props.number
+        this.finalName = ""
+        this.finalName = "(@{" + this.mod1name + this.number + "})+(@{" + this.mod2name + this.number + "})"
     }
     render() {
         return (
             <div className="sheet-checksItem">
                 <h2 className='sheet-checksItemTitle'>{this.title}</h2>
-                <LongModifierBox small_desc={this.mod1name} modifier={this.mod1val} className="sheet-val1" />
+                <LongModifierBox small_desc={this.mod1name} modifier={this.mod1val} className="sheet-val1" name={"attr_" + this.mod1name + this.number} />
                 <p>+</p>
-                <LongModifierBox small_desc={this.mod2name} modifier={this.mod2val} className="sheet-val2" />
+                <LongModifierBox small_desc={this.mod2name} modifier={this.mod2val} className="sheet-val2" name={"attr_" + this.mod2name + this.number} />
                 <p>=</p>
-                <LargeModifierBox small_desc="" modifier={this.finalVal} className="sheet-val3" />
+                <LargeModifierBox small_desc="" name={"attr_calculatedLong" + this.number} modifier={this.finalName} className="sheet-val3" />
             </div>
         )
     }
@@ -207,7 +210,7 @@ class Melee extends React.Component {
                         <option value="d12">d12</option>
                     </select>
                 </div>
-                <ModifierBox className="sheet-dmgmd" modifier={"+" + this.mod} small_desc="+DMG" />
+                <ModifierBox className="sheet-dmgmd" name="attr_melee_dmgmd" modifier={"(@{dmg_mod})"} small_desc="+DMG" />
             </div>
         </div>
     }
@@ -461,18 +464,18 @@ export class Body extends React.Component {
                 <SmallAttr header="Mastery (MST)" small_desc="mod" />
 
                 <LongAttrHeader title="Initiative" header_rows="2" />
-                <LongAttr mods={["(@{BARank})", "(@{raw_spd})", 0]} small_descs={["Baddass Rank", "SPD Mod", "MISC Mod"]} />
+                <LongAttr mods={["(@{BARank})", "(@{spd_mod})", 0]} small_descs={["Baddass Rank", "SPD Mod", "MISC Mod"]} number={0} />
 
                 <GunBar>Current Gun</GunBar>
                 <GunBar>Gun Slot 2</GunBar>
                 <GunBar>Gun Slot 3</GunBar>
 
                 <LongAttrHeader title="Movement" header_rows="1" style={{ gridColumn: "9/span 2", gridrow: "5 / span 2" }} />
-                <LongAttr mods={[3, "(@{raw_spd})", 0]} small_descs={["static mod", "SPD Mod", "MISC Mod"]} style={{ gridColumn: "11 / span 4" }} />
+                <LongAttr mods={[3, "(@{spd_mod})", 0]} small_descs={["static mod", "SPD Mod", "MISC Mod"]} style={{ gridColumn: "11 / span 4" }} number={1} />
 
                 <Health style={{ gridRow: "7/span 4" }} />
 
-                <Checks style={{ gridRow: "7/span 15" }} />
+                <Checks style={{ gridRow: "7/span 15" }} spdMod="(@{spd_mod})" mstMod="(@{mst_mod})" accMod="(@{acc_mod})" />
 
                 <Melee style={{ gridRow: "9/span 4" }} />
 
