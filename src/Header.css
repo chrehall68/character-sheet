@@ -25,6 +25,13 @@
 
 }
 
+#sheet-header .sheet-item .sheet-main_content img{
+    display: flex;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
 #sheet-header .sheet-item .sheet-main_content input {
     background-color: inherit;
     width: 80%;

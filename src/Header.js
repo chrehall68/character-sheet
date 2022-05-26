@@ -27,7 +27,9 @@ export class Header extends React.Component {
             <div id="sheet-header">
                 <div className="sheet-row">
                     <div className="sheet-title sheet-item">
-                        <h1 className="sheet-main_content">BNB</h1>
+                        <h1 className="sheet-main_content">
+                            <img src={"https://raw.githubusercontent.com/chrehall68/character-sheet/main/public/images/bnblogo.png"} alt={"help"}/>
+                        </h1>
                     </div>
                     <Item box_label="Archetype: " main_content="Enforcer" className="sheet-arch" />
                     <Item box_label="Class: " main_content="Gunzerker" className="sheet-class" />
