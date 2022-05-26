@@ -22,7 +22,7 @@ class SmallAttr extends React.Component {
                     <input name={"attr_raw_" + this.header.substring(this.header.indexOf("(") + 1, this.header.indexOf(")")).toLowerCase()} className="sheet-value" type="number" />
                     <ModifierBox small_desc={this.small_desc} className="sheet-attr_mod" style={{ "height": "44px" }}
                         name={"attr_" + this.header.substring(this.header.indexOf("(") + 1, this.header.indexOf(")")).toLowerCase() + "_mod"}
-                        modifier={"(@{raw_" + this.header.substring(this.header.indexOf("(") + 1, this.header.indexOf(")")).toLowerCase() + "}/2)"}
+                        modifier={"(floor(@{raw_" + this.header.substring(this.header.indexOf("(") + 1, this.header.indexOf(")")).toLowerCase() + "}/2))"}
                     />
                 </div>
             </span>)
@@ -88,7 +88,7 @@ class LongAttr extends React.Component {
 class Health extends React.Component {
     render() {
         return <div className='sheet-health' style={this.props.style}>
-            <HeaderCurMaxMod header="health" cur="1" max="25" mod="0" mod_label="Regen" curEditable={true} modEditable={true} curName="attr_cur_health" modName="attr_health_regen" maxName="attr_cur_health_max" />
+            <HeaderCurMaxMod header="health" cur="1" max="25" mod="0" mod_label="Regen" curEditable={true} modEditable={true} maxEditable={true} curName="attr_cur_health" modName="attr_health_regen" maxName="attr_cur_health_max" />
         </div>
     }
 }
@@ -273,7 +273,7 @@ class Shields extends React.Component {
     render() {
         return <div className="sheet-shields" style={this.props.style}>
             <div className='sheet-row1'>
-                <HeaderCurMaxMod header="shields" cur="2" max="15" mod="5" mod_label="Recharge" style={{ border: "none" }} curEditable={true} curName="attr_current_shields" />
+                <HeaderCurMaxMod header="shields" cur="2" max="15" mod="5" mod_label="Recharge" style={{ border: "none" }} curEditable={true} modEditable={true} maxEditable={true} curName="attr_current_shields" modName="attr_shields_regen" maxName="attr_current_shields_max" />
             </div>
             <div className="sheet-row2" >
                 <span className="sheet-shieldInput"><h5>shield type: </h5><p><input type="text" name="attr_shield_type" /></p></span>
@@ -305,10 +305,11 @@ class GunItem extends React.Component {
     constructor(props) {
         super(props)
         this.gun = props.gunName
+        this.number = props.number
     }
     render() {
         return <label className="sheet-gunItem">
-            <input type="checkbox" />
+            <input type="checkbox" name={"attr_selected_gun" + this.number} />
             <img src={"https://raw.githubusercontent.com/chrehall68/character-sheet/main/public/images/" + this.gun.replace(" ", "%20") + ".png"} alt={this.gun} />
             <p>{this.gun.toUpperCase()}</p>
         </label>
@@ -318,12 +319,12 @@ class FavoredGun extends React.Component {
     render() {
         return <div className='sheet-favoredGun' style={this.props.style}>
             <div className='sheet-header'><h4>Favored Gun</h4></div>
-            <GunItem gunName='pistol' />
-            <GunItem gunName='smg' />
-            <GunItem gunName='combat rifle' />
-            <GunItem gunName='shotgun' />
-            <GunItem gunName='sniper' />
-            <GunItem gunName='rocket launcher' />
+            <GunItem gunName='pistol' number={1} />
+            <GunItem gunName='smg' number={2} />
+            <GunItem gunName='combat rifle' number={3} />
+            <GunItem gunName='shotgun' number={4} />
+            <GunItem gunName='sniper' number={5} />
+            <GunItem gunName='rocket launcher' number={6} />
         </div >
     }
 }
@@ -341,9 +342,9 @@ class SkillsItem extends React.Component {
             <div className='sheet-itemHeader'><input type="text" defaultValue={this.header} name={"attr_skillname_" + this.number} /></div>
             <div className='sheet-content'><textarea style={{ "resize": "none" }} defaultValue={this.props.children} name={"attr_skillcontent_" + this.number} /></div>
             <div className='sheet-level'>
-                <input type="checkbox" title="level1" name="skillLevel" />
-                <input type="checkbox" title="level3" name="skillLevel" />
-                <input type="checkbox" title="level2" name="skillLevel" />
+                <input type="checkbox" title="level1" name={"attr_skillLevel" + this.number + "_1"} defaultValue="1" />
+                <input type="checkbox" title="level3" name={"attr_skillLevel" + this.number + "_2"} defaultValue="1" />
+                <input type="checkbox" title="level2" name={"attr_skillLevel" + this.number + "_3"} defaultValue="1" />
             </div>
         </div>
     }
@@ -401,8 +402,8 @@ class ArchetypeFeat extends React.Component {
     }
     render() {
         return <div className='sheet-archetypeFeat'>
-            <div className='sheet-header'><h3>Archetype Feat</h3></div>
-            <div className='sheet-content'><p id="title">{this.props.title}</p><p>: {this.props.children}</p></div>
+            <h3>Archetype Feat</h3>
+            <textarea name='attr_archetypeFeat' style={{ resize: 'none' }} />
         </div>
     }
 }
@@ -414,30 +415,6 @@ class XPBar extends React.Component {
         this.BOXES = 10
         this.state = { xp: this.props.xp || 0 }
         this.good = true
-    }
-
-    updateBar = async (event) => {
-        if (event.target.value < 0 || event.target.value > 1000) return;
-
-        if (event.target.value < this.state.xp) {
-            for (let i = this.state.xp; i >= event.target.value && this.good; i--) {
-                this.setState({ xp: i })
-                await wait(0.001)
-            }
-        }
-        else {
-            for (let i = this.state.xp; i <= event.target.value && this.good; i++) {
-                this.setState({ xp: i })
-                await wait(0.001)
-            }
-        }
-    }
-
-    componentWillUnmount() {
-        this.good = false;
-    }
-    componentDidMount() {
-        this.good = true;
     }
 
     render() {

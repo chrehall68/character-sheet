@@ -809,34 +809,23 @@
     display: flex;
     flex-wrap: wrap;
     border: 1px solid black;
+    overflow: hidden;
 }
 
-.sheet-archetypeFeat .sheet-header {
+.sheet-archetypeFeat h3 {
+    margin: 0px;
+    padding: 0px;
     width: 100%;
-    height: max-content;
-    background-color: aliceblue;
-    display: flex;
-    justify-content: center;
+    height: 30%;
+    text-align: center;
 }
 
-.sheet-archetypeFeat .sheet-header * {
+.sheet-archetypeFeat textarea {
     margin: 0px;
     padding: 0px;
-}
-
-.sheet-archetypeFeat .sheet-content {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0px;
-    padding: 0px;
-}
-
-.sheet-archetypeFeat .sheet-content #title {
-    font-weight: bold;
-    margin: 0px;
-    padding: 0px;
+    height: 70%;
+    text-align: center;
 }
 
 .sheet-xpbar {

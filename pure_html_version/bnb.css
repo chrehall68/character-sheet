@@ -1010,36 +1010,24 @@
     display: flex;
     flex-wrap: wrap;
     grid-column: 5/span 10;
-    grid-row: 45/span 4
+    grid-row: 45/span 4;
+    overflow: hidden
 }
 
-.sheet-archetypeFeat .sheet-header {
-    background-color: #f0f8ff;
-    display: flex;
-    height: -webkit-max-content;
-    height: max-content;
-    justify-content: center;
-    width: 100%
-}
-
-.sheet-archetypeFeat .sheet-header * {
-    margin: 0;
-    padding: 0
-}
-
-.sheet-archetypeFeat .sheet-content {
-    align-items: center;
-    display: flex;
-    justify-content: center;
+.sheet-archetypeFeat h3 {
+    height: 30%;
     margin: 0;
     padding: 0;
+    text-align: center;
     width: 100%
 }
 
-.sheet-archetypeFeat .sheet-content #title {
-    font-weight: 700;
+.sheet-archetypeFeat textarea {
+    height: 70%;
     margin: 0;
-    padding: 0
+    padding: 0;
+    text-align: center;
+    width: 100%
 }
 
 .sheet-xpbar {

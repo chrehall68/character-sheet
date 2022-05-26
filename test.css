@@ -1,0 +1,122 @@
+#yes {
+    background-color: red;
+    width: 80%;
+    height: 50%;
+}
+
+
+input[type="range"] {
+    -webkit-appearance: none;
+    margin-right: 15px;
+    width: 200px;
+    height: 7px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    background-image: linear-gradient(#ff4500, #ff4500);
+    background-size: 70% 100%;
+    background-repeat: no-repeat;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #ff4500;
+    cursor: ew-resize;
+    box-shadow: 0 0 2px 0 #555;
+    transition: background .3s ease-in-out;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+div.sheet-toxbar {
+    width: 230px;
+    height: 20px;
+    border: 2px solid black;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+input.sheet-toxbar[value="0"]~div.sheet-toxbar {
+    background: white;
+}
+
+input.sheet-toxbar[value="0"]~div.sheet-toxbar::before {
+    content: "NO TOXICITY";
+}
+
+input.sheet-toxbar[value="1"]~div.sheet-toxbar {
+    background: linear-gradient(to left, white 90%, #255200 5%, #449600 95%, #adfc03 100%);
+}
+
+input.sheet-toxbar[value="2"]~div.sheet-toxbar {
+    background: linear-gradient(to left, white 80%, #255200 10%, #449600 90%, #adfc03 100%);
+}
+
+input.sheet-toxbar[value="3"]~div.sheet-toxbar {
+    background: linear-gradient(to left, white 70%, #255200 20%, #449600 80%, #adfc03 100%);
+}
+
+input.sheet-toxbar[value="4"]~div.sheet-toxbar {
+    background: linear-gradient(to left, white 60%, #255200 30%, #449600 70%, #adfc03 100%);
+}
+
+input.sheet-toxbar[value="5"]~div.sheet-toxbar {
+    background: linear-gradient(to left, white 50%, #255200 40%, #449600 60%, #adfc03 80%);
+}
+
+input.sheet-toxbar[value="5"]~div.sheet-toxbar::before {
+    content: "HALF TOXICITY";
+}
+
+input.sheet-toxbar[value="6"]~div.sheet-toxbar {
+    background: linear-gradient(to left, white 40%, #255200 40%, #449600 50%, #adfc03 70%);
+}
+
+input.sheet-toxbar[value="7"]~div.sheet-toxbar {
+    background: linear-gradient(to left, white 30%, #255200 30%, #449600 40%, #adfc03 60%);
+}
+
+input.sheet-toxbar[value="7"]~div.sheet-toxbar::before {
+    content: "HIGH TOXICITY";
+}
+
+input.sheet-toxbar[value="8"]~div.sheet-toxbar {
+    background: linear-gradient(to left, white 20%, #255200 20%, #449600 30%, #adfc03 50%);
+}
+
+input.sheet-toxbar[value="8"]~div.sheet-toxbar::before {
+    content: "HIGH TOXICITY";
+}
+
+input.sheet-toxbar[value="9"]~div.sheet-toxbar {
+    background: linear-gradient(to left, white 10%, #255200 10%, #449600 20%, #adfc03 40%);
+}
+
+input.sheet-toxbar[value="9"]~div.sheet-toxbar::before {
+    content: "HIGH TOXICITY";
+}
+
+input.sheet-toxbar[value="10"]~div.sheet-toxbar {
+    background: linear-gradient(to left, #255200 1%, #449600 10%, #adfc03 30%);
+}
+
+input.sheet-toxbar[value="10"]~div.sheet-toxbar::before {
+    content: "MAXIMUM TOXICITY - DANGER!";
+}
+
+input.sheet-toxbar[value="11"]~div.sheet-toxbar {
+    background: linear-gradient(to left, #255200 1%, #449600 10%, #adfc03 30%);
+}
+
+input.sheet-toxbar[value="11"]~div.sheet-toxbar::before {
+    content: "POISONED!";
+}

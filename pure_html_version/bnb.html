@@ -49,7 +49,7 @@
                     <div class="sheet-contentRow"><input name="attr_raw_acc" class="sheet-value" type="number">
                         <div class="sheet-attr_mod sheet-modifier" style="height: 44px;">
                             <div class="sheet-mod"><input name="attr_acc_mod" type="number" disabled=""
-                                    value="(@{raw_acc}/2)"></div>
+                                    value="(floor(@{raw_acc}/2))"></div>
                             <p class="sheet-small">mod</p>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                     <div class="sheet-contentRow"><input name="attr_raw_dmg" class="sheet-value" type="number">
                         <div class="sheet-attr_mod sheet-modifier" style="height: 44px;">
                             <div class="sheet-mod"><input name="attr_dmg_mod" type="number" disabled=""
-                                    value="(@{raw_dmg}/2)"></div>
+                                    value="(floor(@{raw_dmg}/2))"></div>
                             <p class="sheet-small">mod</p>
                         </div>
                     </div>
@@ -67,7 +67,7 @@
                     <div class="sheet-contentRow"><input name="attr_raw_spd" class="sheet-value" type="number">
                         <div class="sheet-attr_mod sheet-modifier" style="height: 44px;">
                             <div class="sheet-mod"><input name="attr_spd_mod" type="number" disabled=""
-                                    value="(@{raw_spd}/2)"></div>
+                                    value="(floor(@{raw_spd}/2))"></div>
                             <p class="sheet-small">mod</p>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                     <div class="sheet-contentRow"><input name="attr_raw_mst" class="sheet-value" type="number">
                         <div class="sheet-attr_mod sheet-modifier" style="height: 44px;">
                             <div class="sheet-mod"><input name="attr_mst_mod" type="number" disabled=""
-                                    value="(@{raw_mst}/2)"></div>
+                                    value="(floor(@{raw_mst}/2))"></div>
                             <p class="sheet-small">mod</p>
                         </div>
                     </div>
@@ -157,7 +157,7 @@
                                 <p class="sheet-lbel">current</p>
                             </div>
                             <div class="sheet-mainAndLabelBox sheet-max"><input class="sheet-main" type="number"
-                                    name="attr_cur_health_max" disabled="" value="25">
+                                    name="attr_cur_health_max" value="25">
                                 <p class="sheet-lbel">max</p>
                             </div>
                             <div class="sheet-mainAndLabelBox sheet-mod"><input class="sheet-main" type="number"
@@ -299,11 +299,11 @@
                                     <p class="sheet-lbel">current</p>
                                 </div>
                                 <div class="sheet-mainAndLabelBox sheet-max"><input class="sheet-main" type="number"
-                                        name="" disabled="" value="15">
+                                        name="attr_max_shields" value="15">
                                     <p class="sheet-lbel">max</p>
                                 </div>
                                 <div class="sheet-mainAndLabelBox sheet-mod"><input class="sheet-main" type="number"
-                                        name="" disabled="" value="5">
+                                        name="attr_shields_regen" value="5">
                                     <p class="sheet-lbel">Recharge</p>
                                 </div>
                             </div>
@@ -376,9 +376,10 @@
                             <div class="sheet-content"><textarea name="attr_skillcontent_1"
                                     style="resize: none;">+2 Initiative Mod/SL.,[object Object],+1/SL on Interact Checks</textarea>
                             </div>
-                            <div class="sheet-level"><input type="checkbox" title="level1" name="skillLevel"><input
-                                    type="checkbox" title="level3" name="skillLevel"><input type="checkbox"
-                                    title="level2" name="skillLevel"></div>
+                            <div class="sheet-level"><input type="checkbox" title="level1" name="attr_skillLevel1"
+                                    value="1"><input type="checkbox" title="level3" name="attr_skillLevel1"
+                                    value="1"><input type="checkbox" title="level2" name="attr_skillLevel1" value="1">
+                            </div>
                         </div>
                         <div class="sheet-item">
                             <div class="sheet-itemHeader"><input type="text" name="attr_skillname_2"
@@ -386,9 +387,10 @@
                             <div class="sheet-content"><textarea name="attr_skillcontent_2"
                                     style="resize: none;">Increase max grenades by 1/SL. Increase max potions by 1+MST Mod</textarea>
                             </div>
-                            <div class="sheet-level"><input type="checkbox" title="level1" name="skillLevel"><input
-                                    type="checkbox" title="level3" name="skillLevel"><input type="checkbox"
-                                    title="level2" name="skillLevel"></div>
+                            <div class="sheet-level"><input type="checkbox" title="level1" name="attr_skillLevel2"
+                                    value="1"><input type="checkbox" title="level3" name="attr_skillLevel2"
+                                    value="1"><input type="checkbox" title="level2" name="attr_skillLevel2" value="1">
+                            </div>
                         </div>
                         <div class="sheet-item">
                             <div class="sheet-itemHeader"><input type="text" name="attr_skillname_3" value="Incite">
@@ -396,9 +398,10 @@
                             <div class="sheet-content"><textarea name="attr_skillcontent_3"
                                     style="resize: none;">The first time you take Damage during an encounter, gain Extra Movement. +1/SL on Traverse Checks.</textarea>
                             </div>
-                            <div class="sheet-level"><input type="checkbox" title="level1" name="skillLevel"><input
-                                    type="checkbox" title="level3" name="skillLevel"><input type="checkbox"
-                                    title="level2" name="skillLevel"></div>
+                            <div class="sheet-level"><input type="checkbox" title="level1" name="attr_skillLevel3"
+                                    value="1"><input type="checkbox" title="level3" name="attr_skillLevel3"
+                                    value="1"><input type="checkbox" title="level2" name="attr_skillLevel3" value="1">
+                            </div>
                         </div>
                         <div class="sheet-item">
                             <div class="sheet-itemHeader"><input type="text" name="attr_skillname_4"
@@ -406,9 +409,10 @@
                             <div class="sheet-content"><textarea name="attr_skillcontent_4"
                                     style="resize: none;">10+MST Mod Health.,[object Object],+5 Health Regen/SL.</textarea>
                             </div>
-                            <div class="sheet-level"><input type="checkbox" title="level1" name="skillLevel"><input
-                                    type="checkbox" title="level3" name="skillLevel"><input type="checkbox"
-                                    title="level2" name="skillLevel"></div>
+                            <div class="sheet-level"><input type="checkbox" title="level1" name="attr_skillLevel4"
+                                    value="1"><input type="checkbox" title="level3" name="attr_skillLevel4"
+                                    value="1"><input type="checkbox" title="level2" name="attr_skillLevel4" value="1">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -432,40 +436,34 @@
                 <div class="sheet-favoredGun">
                     <div class="sheet-header">
                         <h4>Favored Gun</h4>
-                    </div><label class="sheet-gunItem"><input type="checkbox"><img
+                    </div><label class="sheet-gunItem"><input type="checkbox" name="attr_selected_gun"><img
                             src="https://raw.githubusercontent.com/chrehall68/character-sheet/main/public/images/pistol.png"
                             alt="pistol">
                         <p>PISTOL</p>
-                    </label><label class="sheet-gunItem"><input type="checkbox"><img
+                    </label><label class="sheet-gunItem"><input type="checkbox" name="attr_selected_gun"><img
                             src="https://raw.githubusercontent.com/chrehall68/character-sheet/main/public/images/smg.png"
                             alt="smg">
                         <p>SMG</p>
-                    </label><label class="sheet-gunItem"><input type="checkbox"><img
+                    </label><label class="sheet-gunItem"><input type="checkbox" name="attr_selected_gun"><img
                             src="https://raw.githubusercontent.com/chrehall68/character-sheet/main/public/images/combat%20rifle.png"
                             alt="combat rifle">
                         <p>COMBAT RIFLE</p>
-                    </label><label class="sheet-gunItem"><input type="checkbox"><img
+                    </label><label class="sheet-gunItem"><input type="checkbox" name="attr_selected_gun"><img
                             src="https://raw.githubusercontent.com/chrehall68/character-sheet/main/public/images/shotgun.png"
                             alt="shotgun">
                         <p>SHOTGUN</p>
-                    </label><label class="sheet-gunItem"><input type="checkbox"><img
+                    </label><label class="sheet-gunItem"><input type="checkbox" name="attr_selected_gun"><img
                             src="https://raw.githubusercontent.com/chrehall68/character-sheet/main/public/images/sniper.png"
                             alt="sniper">
                         <p>SNIPER</p>
-                    </label><label class="sheet-gunItem"><input type="checkbox"><img
+                    </label><label class="sheet-gunItem"><input type="checkbox" name="attr_selected_gun"><img
                             src="https://raw.githubusercontent.com/chrehall68/character-sheet/main/public/images/rocket%20launcher.png"
                             alt="rocket launcher">
                         <p>ROCKET LAUNCHER</p>
                     </label>
                 </div>
                 <div class="sheet-archetypeFeat">
-                    <div class="sheet-header">
-                        <h3>Archetype Feat</h3>
-                    </div>
-                    <div class="sheet-content">
-                        <p id="title">FLEX</p>
-                        <p>: The first time your Shields are depleted in an encounter, gain 1 Badass Token.</p>
-                    </div>
+                    <h3>Archetype Feat</h3><textarea name="attr_archetypeFeat" style="resize: none;"></textarea>
                 </div>
                 <div class="sheet-xpbar">
                     <div class="sheet-xpstuff">

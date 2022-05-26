@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="./test.css" />
+
+<body>
+    <input type="number" value="33" name="attr_a" style="width: 100%;" />
+    <input type="range" min="0" max="100" id="yes" value="(@{a})" name="attr_b" />
+
+    <div class="sheet-container">
+        <input type='number' name='attr_toxcur' value='0'>
+        <input type='number' name='attr_toxmax' value='100'>
+        <input type='hidden' type='number' value='@{toxicv}' name="attr_toxbar" class="sheet-hidden sheet-toxbar"
+            disabled='true'>
+        <div class="sheet-toxbar"></div>
+    </div>
+
+</body>
+
+<script type="text/worker">
+    on("change:a sheet:opened", function(){
+        getAttrs(["a"], function(values){ setAttrs({"b":parseInt(values.a) | 0})})
+    }) 
+</script>
+<script type="text/worker">
+    on("sheet:opened change:toxcur change:toxmax", function() {
+       getAttrs(["toxcur", "toxmax"], function(values) {
+        var maximum = values.toxmax;
+        var current = values.toxcur;
+        var toxPercent = [0,10,20,30,40,50,60,70,80,90,100,999];
+        for(let i = 0; i < toxPercent.length; i++) {
+        if(current <= (maximum * toxPercent[i]/ 100)){ 
+        tvalue = i;
+        console.log("Toxic value is " + tvalue)
+        break; 
+        }
+        }
+                setAttrs({
+                "toxicv":tvalue
+            });
+      });
+    });
+    </script>
+
+</html>
