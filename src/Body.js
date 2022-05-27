@@ -3,7 +3,6 @@ import "./Body.css"
 
 import { ModifierBox, LargeModifierBox, LongModifierBox } from './ModifierBox'
 import { LimitedTextarea } from './limitedTextarea'
-import { wait } from '@testing-library/user-event/dist/utils'
 
 class SmallAttr extends React.Component {
     constructor(props) {
@@ -411,21 +410,26 @@ class ArchetypeFeat extends React.Component {
 class XPBar extends React.Component {
     constructor(props) {
         super(props)
-        this.XP_PER_BOX = 100
-        this.BOXES = 10
-        this.state = { xp: this.props.xp || 0 }
-        this.good = true
+        this.state = { xp: this.props.xp || 0, maxXp: this.props.maxXp || 100 }
+    }
+
+    updateBar = (event) => {
+        this.setState({ xp: event.target.value, maxXp: this.state.maxXp });
+    }
+    updateBarMax = (event) => {
+        this.setState({ xp: this.state.xp, maxXp: event.target.value });
     }
 
     render() {
         return <div className="sheet-xpbar">
             <div className='sheet-xpstuff' >
                 <h5 className='sheet-lbel'>XP Bar</h5>
-                <input className="sheet-content" type="number" value={this.props.xp} onChange={this.updateBar} />
+                <div className="sheet-curMax">
+                    <input className="sheet-content" name="attr_curxp" type="number" value={this.state.xp} onChange={this.updateBar} />
+                    <input className="sheet-content" name="attr_curxp_max" type="number" value={this.state.maxXp} onChange={this.updateBarMax} />
+                </div>
             </div>
-            <div className='sheet-bar'>
-                <div key={this.state.xp} style={{ width: (this.state.xp / 100 * this.XP_PER_BOX / this.BOXES) + "%" }} />
-            </div>
+            <div className='sheet-bar' key={[this.state.xp, this.state.maxXp]} style={{ "background": "linear-gradient(to left, white " + (100 - parseInt(this.state.xp / this.state.maxXp * 100)) + "%, #255200 5%, #449600 95%, #adfc03 100%)" }} />
         </div>
     }
 
