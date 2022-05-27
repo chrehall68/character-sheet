@@ -834,6 +834,7 @@
     grid-column: 1 / span 14;
     grid-row: 49 / span 2;
     height: 100%;
+    justify-content: space-between;
 }
 
 .sheet-xpbar .sheet-xpstuff {
@@ -870,30 +871,456 @@
     text-align: center;
 }
 
-.sheet-xpbar .sheet-xpstuff input[type=number].sheet-content {
-    border-left: 0px;
-    border-right: 0px;
-    border-top: 0px;
-    text-align: center;
-    width: 50%;
+.sheet-xpbar .sheet-xpstuff .sheet-curMax {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.sheet-xpbar .sheet-xpstuff label.sheet-content {
+    width: 45%;
     height: 70%;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.sheet-xpbar .sheet-xpstuff .sheet-content p {
+    width: 50%;
     margin: 0px;
     padding: 0px;
 }
 
-.sheet-xpbar .sheet-xpstuff input[type=number].sheet-content::-webkit-outer-spin-button,
-.sheet-xpbar .sheet-xpstuff input[type=number].sheet-content::-webkit-inner-spin-button {
+.sheet-xpbar .sheet-xpstuff .sheet-content input[type=number] {
+    width: 50%;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.sheet-xpbar .sheet-xpstuff .sheet-content input[type=number]::-webkit-outer-spin-button,
+.sheet-xpbar .sheet-xpstuff .sheet-content input[type=number]::-webkit-inner-spin-button {
     display: none;
 }
 
-.sheet-xpbar .sheet-bar {
+.sheet-xpbar .sheet-barstuff {
     display: flex;
-    width: 80%;
-    overflow: hidden;
-    height: 100%;
-    background-color: beige;
+    width: 75%;
 }
 
-.sheet-xpbar .sheet-bar div {
-    background-color: black;
+.sheet-xpbar .sheet-barstuff input.sheet-hidden {
+    display: none;
+}
+
+.sheet-xpbar .sheet-barstuff div.sheet-bar {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+}
+
+/* This is styles for the pure js version of xp bar*/
+.sheet-xpbar .sheet-barstuff input[value="0"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 100%, black 100%, black 0%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="1"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 99%, black 99%, black 1%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="2"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 98%, black 98%, black 2%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="3"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 97%, black 97%, black 3%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="4"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 96%, black 96%, black 4%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="5"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 95%, black 95%, black 5%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="6"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 94%, black 94%, black 6%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="7"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 93%, black 93%, black 7%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="8"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 92%, black 92%, black 8%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="9"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 91%, black 91%, black 9%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="10"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 90%, black 90%, black 10%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="11"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 89%, black 89%, black 11%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="12"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 88%, black 88%, black 12%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="13"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 87%, black 87%, black 13%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="14"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 86%, black 86%, black 14%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="15"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 85%, black 85%, black 15%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="16"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 84%, black 84%, black 16%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="17"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 83%, black 83%, black 17%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="18"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 82%, black 82%, black 18%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="19"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 81%, black 81%, black 19%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="20"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 80%, black 80%, black 20%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="21"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 79%, black 79%, black 21%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="22"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 78%, black 78%, black 22%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="23"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 77%, black 77%, black 23%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="24"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 76%, black 76%, black 24%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="25"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 75%, black 75%, black 25%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="26"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 74%, black 74%, black 26%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="27"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 73%, black 73%, black 27%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="28"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 72%, black 72%, black 28%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="29"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 71%, black 71%, black 29%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="30"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 70%, black 70%, black 30%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="31"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 69%, black 69%, black 31%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="32"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 68%, black 68%, black 32%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="33"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 67%, black 67%, black 33%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="34"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 66%, black 66%, black 34%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="35"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 65%, black 65%, black 35%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="36"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 64%, black 64%, black 36%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="37"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 63%, black 63%, black 37%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="38"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 62%, black 62%, black 38%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="39"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 61%, black 61%, black 39%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="40"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 60%, black 60%, black 40%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="41"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 59%, black 59%, black 41%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="42"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 58%, black 58%, black 42%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="43"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 57%, black 57%, black 43%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="44"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 56%, black 56%, black 44%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="45"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 55%, black 55%, black 45%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="46"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 54%, black 54%, black 46%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="47"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 53%, black 53%, black 47%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="48"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 52%, black 52%, black 48%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="49"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 51%, black 51%, black 49%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="50"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 50%, black 50%, black 50%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="51"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 49%, black 49%, black 51%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="52"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 48%, black 48%, black 52%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="53"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 47%, black 47%, black 53%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="54"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 46%, black 46%, black 54%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="55"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 45%, black 45%, black 55%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="56"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 44%, black 44%, black 56%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="57"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 43%, black 43%, black 57%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="58"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 42%, black 42%, black 58%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="59"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 41%, black 41%, black 59%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="60"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 40%, black 40%, black 60%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="61"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 39%, black 39%, black 61%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="62"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 38%, black 38%, black 62%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="63"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 37%, black 37%, black 63%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="64"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 36%, black 36%, black 64%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="65"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 35%, black 35%, black 65%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="66"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 34%, black 34%, black 66%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="67"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 33%, black 33%, black 67%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="68"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 32%, black 32%, black 68%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="69"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 31%, black 31%, black 69%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="70"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 30%, black 30%, black 70%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="71"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 29%, black 29%, black 71%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="72"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 28%, black 28%, black 72%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="73"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 27%, black 27%, black 73%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="74"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 26%, black 26%, black 74%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="75"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 25%, black 25%, black 75%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="76"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 24%, black 24%, black 76%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="77"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 23%, black 23%, black 77%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="78"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 22%, black 22%, black 78%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="79"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 21%, black 21%, black 79%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="80"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 20%, black 20%, black 80%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="81"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 19%, black 19%, black 81%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="82"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 18%, black 18%, black 82%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="83"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 17%, black 17%, black 83%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="84"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 16%, black 16%, black 84%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="85"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 15%, black 15%, black 85%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="86"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 14%, black 14%, black 86%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="87"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 13%, black 13%, black 87%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="88"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 12%, black 12%, black 88%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="89"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 11%, black 11%, black 89%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="90"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 10%, black 10%, black 90%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="91"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 9%, black 9%, black 91%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="92"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 8%, black 8%, black 92%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="93"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 7%, black 7%, black 93%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="94"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 6%, black 6%, black 94%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="95"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 5%, black 5%, black 95%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="96"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 4%, black 4%, black 96%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="97"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 3%, black 3%, black 97%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="98"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 2%, black 2%, black 98%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="99"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 1%, black 1%, black 99%);
+}
+
+.sheet-xpbar .sheet-barstuff input[value="100"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(to left, white 0%, black 0%, black 100%);
 }

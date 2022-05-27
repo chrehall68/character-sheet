@@ -1,1 +1,1550 @@
-.sheet-modifier{border:2px solid #000;border-bottom-right-radius:10px;border-top-left-radius:10px;display:flex;flex-wrap:wrap;float:right;margin:0;max-width:50px;min-height:30px;min-width:40px;vertical-align:bottom}.sheet-modifier p.sheet-small{font-size:10px;margin:0;max-height:40%;padding:0;width:100%}.sheet-modifier .sheet-mod{align-items:center;display:flex;justify-content:center;min-height:60%;width:100%}.sheet-modifier .sheet-mod input[type=number]{border:0;font-size:x-large;font-weight:700;margin:0;padding:0;text-align:center;width:100%}.sheet-modifier .sheet-mod input[type=number]::-webkit-inner-spin-button,.sheet-modifier .sheet-mod input[type=number]::-webkit-outer-spin-button{display:none}.sheet-largeModifier{align-content:center;border:2px solid #000;border-bottom-right-radius:10px;border-top-left-radius:10px;display:flex;flex-wrap:wrap;height:60px;margin:0;overflow:hidden;padding:0;width:60px}.sheet-largeModifier div.sheet-small{display:flex;max-height:30%;width:100%}.sheet-largeModifier .sheet-small p{font-size:10px;margin:0;padding:0;width:100%}.sheet-largeModifier div.sheet-mod{display:flex;max-height:100%;min-height:70%;width:100%}.sheet-largeModifier .sheet-mod input[type=number]{border:0;font-size:30px;font-weight:700;margin:0;padding:0;text-align:center;width:100%}.sheet-largeModifier .sheet-mod input[type=number]::-webkit-inner-spin-button,.sheet-largeModifier .sheet-mod input[type=number]::-webkit-outer-spin-button{display:none}.sheet-longModifier{align-items:center;border:1px solid #000;display:flex;height:60px;width:60px}.sheet-longModifier .sheet-small{font-size:10px;margin:0;padding:0;width:50%}.sheet-longModifier input[type=number].sheet-mod{border:0;font-size:20px;margin:0;padding:0;text-align:center;width:50%}.sheet-longModifier input[type=number].sheet-mod::-webkit-inner-spin-button,.sheet-longModifier input[type=number].sheet-mod::-webkit-outer-spin-button{display:none}#sheet-header{display:flex;flex-wrap:wrap;height:20%}#sheet-header .sheet-item{background-color:#add8e6;border:2px solid #000;display:flex;height:75px;overflow:hidden}#sheet-header .sheet-item .sheet-box_label{align-self:flex-start;justify-self:flex-start;margin:0;width:20%}#sheet-header .sheet-item .sheet-main_content{align-self:center;justify-self:flex-start}#sheet-header .sheet-item .sheet-main_content img{display:flex;height:100%;margin:0;width:100%}#sheet-header .sheet-item .sheet-main_content input{background-color:inherit;border-left:0;border-right:0;border-top:0;font-size:inherit;height:1.5em;width:80%}#sheet-header .sheet-row{display:flex;height:33.3%;width:100%}#sheet-header .sheet-arch,#sheet-header .sheet-bg,#sheet-header .sheet-class,#sheet-header .sheet-name{display:flex;height:100%;width:40%}#sheet-header .sheet-lvl,#sheet-header .sheet-title{display:flex;height:100%;width:20%}#sheet-header .sheet-skill{display:flex;height:100%;width:100%}#sheet-header .sheet-skill textarea.sheet-last{height:100%;margin:0;padding:0;width:75%}#sheet-header .sheet-skill textarea.sheet-last::-webkit-scrollbar{display:none}#sheet-header .sheet-skill .sheet-mod_wrapper{align-items:flex-end;display:flex;height:100%;justify-content:flex-end;width:5%}#sheet-header .sheet-skill .sheet-mod_wrapper .sheet-mod{height:50%;width:100%}.sheet-body{grid-row-gap:.5%;grid-column-gap:.5%;border:2px solid #000;-webkit-column-gap:.5%;column-gap:.5%;display:grid;grid-auto-flow:dense;grid-template-columns:repeat(auto-fit,6.16%);grid-template-rows:repeat(auto-fit,1.5%);height:80%;row-gap:.5%}.sheet-smallAttr{border:2px solid #000;border-bottom-left-radius:15px;border-bottom-right-radius:15px;display:flex;flex-wrap:wrap;grid-column:span 2;grid-row:span 4;overflow:hidden}.sheet-smallAttr .sheet-header{border-bottom:1px solid #000;height:30%;margin:0;text-align:center;width:100%}.sheet-smallAttr .sheet-contentRow{align-items:center;display:flex;height:70%;justify-content:space-around;width:100%}.sheet-smallAttr input[type=number].sheet-value{border:0;font-size:larger;text-align:center;width:50%}.sheet-smallAttr input[type=number].sheet-value::-webkit-inner-spin-button,.sheet-smallAttr input[type=number].sheet-value::-webkit-outer-spin-button{display:none}.sheet-smallAttr .sheet-attr_mod{display:inline;vertical-align:middle}.sheet-gunBar{border:2px solid #000;display:block;grid-column:span 1;grid-row:span 15;overflow:hidden;-webkit-transform:translateX(33.3%);transform:translateX(33.3%);width:66.6%}.sheet-gunBar p{overflow:visible;text-align:center;-webkit-transform:rotate(-90deg) translateX(-150%) translateY(-50%);transform:rotate(-90deg) translateX(-150%) translateY(-50%);width:-webkit-max-content;width:max-content}.sheet-longAttrHeader{align-items:center;border-bottom:1px solid #000;border-left:1px solid #000;border-top:1px solid #000;display:flex;justify-content:center;width:136px}.sheet-oneRow{grid-row:span 2;height:33px;text-align:center}.sheet-oneRow,.sheet-twoRow{grid-column:span 2;margin:0 auto;padding:0 auto}.sheet-twoRow{grid-row:span 4}.sheet-longAttr{align-items:center;grid-column:span 4;grid-row:span 4}.sheet-longAttr,.sheet-mainAndLabelBox{border:1px solid #000;display:flex;height:100%;justify-content:center}.sheet-mainAndLabelBox{flex-wrap:wrap;width:100%}.sheet-mainAndLabelBox input[type=number].sheet-main{border:0;font-size:25px;font-weight:700;height:66.6%;margin:0;padding:0;text-align:center;width:100%}.sheet-mainAndLabelBox input[type=number].sheet-main::-webkit-inner-spin-button,.sheet-mainAndLabelBox input[type=number].sheet-main::-webkit-outer-spin-button{display:none}.sheet-mainAndLabelBox .sheet-lbel{font-size:8px;height:33.3%;margin:0;padding:0;text-align:center;width:100%}.sheet-health{grid-column:span 4;grid-row:span 4}.sheet-headerCurMaxMod{border:1px solid #000;border-top-left-radius:10px;border-top-right-radius:10px;display:flex;flex-wrap:wrap;height:100%;justify-content:flex-start;overflow:hidden;width:100%}.sheet-headerCurMaxMod .sheet-header{height:30%;margin:0;padding:0;text-align:center;width:100%}.sheet-headerCurMaxMod .sheet-contentRow{display:flex;height:70%;justify-content:flex-start;width:100%}.sheet-headerCurMaxMod .sheet-current,.sheet-headerCurMaxMod .sheet-max{display:flex;width:40%}.sheet-headerCurMaxMod .sheet-mod{display:flex;width:20%}.sheet-checks{border:1px solid #000;display:flex;flex-wrap:wrap;grid-column:span 6;grid-row:span 15}.sheet-checks .sheet-header{background-color:azure;border-bottom:1px solid #000;height:-webkit-min-content;height:min-content;margin:0;padding:0;text-align:center;width:100%}.sheet-checksItem{align-items:center;display:flex;height:15%;justify-content:space-between;width:100%}.sheet-checksItem .sheet-checksItemTitle{width:20%}.sheet-checksItem .sheet-val1,.sheet-checksItem .sheet-val2,.sheet-checksItem .sheet-val3{height:80%}.sheet-melee{border:1px solid #000;display:flex;flex-wrap:wrap;grid-column:span 4;grid-row:span 4}.sheet-melee .sheet-header{height:30%;margin:0;padding:0;text-align:center;width:100%}.sheet-melee .sheet-row1{display:flex;height:70%;overflow:hidden;width:100%}.sheet-melee .sheet-die{display:flex;height:100%;width:80%}.sheet-melee .sheet-die select{border:0;font-size:large;font-weight:700;height:100%;margin:0;padding:0;text-align:center;width:100%}.sheet-melee .sheet-dmgmd{display:flex;height:100%;width:20%}.sheet-shields{border:1px solid #000;border-bottom-left-radius:10px;border-bottom-right-radius:10px;border-top-right-radius:10px;display:flex;flex-wrap:wrap;grid-column:span 4;grid-row:span 7;overflow:hidden}.sheet-shields .sheet-row1{border-bottom:1px solid #000;height:50%;width:100%}.sheet-shields .sheet-row2{flex-wrap:wrap;height:50%;justify-content:flex-start;width:100%}.sheet-shields .sheet-shieldInput{align-items:center;display:flex;height:50%;justify-content:flex-start;overflow:hidden}.sheet-shields .sheet-shieldInput h5,.sheet-shields .sheet-shieldInput p{font-size:smaller;width:35%}.sheet-shields .sheet-shieldInput textarea{font-size:smaller;height:75%;margin:0;padding:0;width:65%}.sheet-gold{border:1px solid #000;grid-column:span 4;grid-row:span 3;overflow:hidden}.sheet-gold div.sheet-header{align-items:center;background-color:gray;display:inline-flex;height:100%;margin:0;padding:0;vertical-align:top;width:-webkit-max-content;width:max-content;width:15%}.sheet-gold .sheet-value{display:inline-flex;float:right;height:100%;margin:0;padding:0;width:85%}.sheet-gold .sheet-value input[type=number]{border:0;font-size:x-large;height:100%;text-align:right;width:100%}.sheet-BARank{border:1px solid #000;display:flex;grid-column:span 4;grid-row:span 4;overflow:hidden}.sheet-BARank div.sheet-header{border-right:1px solid #000;display:flex;flex-wrap:wrap;height:100%;justify-content:center;margin:0;overflow:hidden;padding:0;width:50%}.sheet-BARank div.sheet-header h3{align-self:flex-start;background-color:grey;display:block;height:30%;margin:0;overflow:hidden;padding:0;text-align:center;width:100%}.sheet-BARank div.sheet-header input[type=number]{align-self:flex-end;border:0;display:block;font-size:2em;font-weight:700;height:70%;margin:0;overflow:hidden;padding:0;text-align:center;width:80%}.sheet-BARank div.sheet-tokens{border:0;display:flex;flex-wrap:wrap;justify-content:center;margin:0;padding:0;vertical-align:top;width:50%}.sheet-BARank div.sheet-tokens p{height:30%;margin:0;padding:0;text-align:start;width:100%}.sheet-BARank div.sheet-tokens input[type=number]{border:0;font-size:2em;font-weight:700;height:70%;margin:0;overflow:hidden;padding:0;text-align:center;width:80%}.sheet-grenades{align-items:flex-start;border:1px solid #000;display:flex;flex-wrap:wrap;font-size:smaller;grid-column:span 4;grid-row:18/span 9}.sheet-grenades .sheet-header{background-color:#f08080;height:10%;overflow:hidden;width:100%}.sheet-grenades .sheet-header h3{margin:0;padding:0;text-align:center}.sheet-grenades .sheet-row1{display:flex;height:35%;justify-content:flex-start;width:100%}.sheet-grenades .sheet-row1 .sheet-damage,.sheet-grenades .sheet-row1 .sheet-type,.sheet-grenades .sheet-row2 .sheet-current,.sheet-grenades .sheet-row2 .sheet-info,.sheet-grenades .sheet-row2 .sheet-max{border:1px solid #000;display:flex;flex-wrap:wrap;height:100%;justify-content:center;overflow:hidden}.sheet-grenades .sheet-row1 .sheet-type{width:60%}.sheet-grenades .sheet-row1 .sheet-damage{width:40%}.sheet-grenades .sheet-row1 .sheet-damage input[type=number],.sheet-grenades .sheet-row1 .sheet-type input[type=text]{border:0;border-bottom:1px solid #000;font-size:large;height:50%;text-align:center;width:80%}.sheet-grenades .sheet-row2{display:flex;height:50%;justify-content:flex-start}.sheet-grenades .sheet-row2 .sheet-info{width:60%}.sheet-grenades .sheet-row2 .sheet-info p{height:20%;margin:0;padding:0;text-align:center;width:100%}.sheet-grenades .sheet-row2 .sheet-info textarea{border:0;border-bottom:1px solid #000;font-size:small;height:80%;margin:0;padding:0;width:80%}.sheet-grenades .sheet-row2 .sheet-current,.sheet-grenades .sheet-row2 .sheet-max{width:20%}.sheet-grenades .sheet-row2 .sheet-current p,.sheet-grenades .sheet-row2 .sheet-max p{font-size:70%}.sheet-grenades .sheet-row2 .sheet-current input[type=number],.sheet-grenades .sheet-row2 .sheet-max input[type=number]{border:0;border-bottom:1px solid #000;font-size:large;height:60%;margin:0;padding:0;text-align:center;width:90%}.sheet-potions{border:1px solid #000;display:flex;flex-wrap:wrap;font-size:smaller;font-style:normal;grid-column:span 4;grid-row:27/span 9;justify-content:center;overflow:hidden}.sheet-potions .sheet-header{background-color:#fff8dc;display:flex;justify-content:center;width:100%}.sheet-potions .sheet-header h3{margin:0;padding:0}.sheet-potions .sheet-txtbox{align-items:center;display:flex;height:12.5%;justify-content:center;width:95%}.sheet-potions .sheet-txtbox input[type=text]{background-color:transparent;border:0;border-bottom:1px solid grey;font-size:large;height:100%;width:100%}.sheet-potions .sheet-txtbox.sheet-lockable{background-image:url(data:image/png;base64,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);background-repeat:no-repeat;background-size:auto 100%}.sheet-favoredGun{align-content:space-between;border:1px solid #000;display:flex;flex-wrap:wrap;grid-column:span 4;grid-row:36/span 13}.sheet-favoredGun .sheet-header{background-color:#ffebcd;display:flex;height:10%;width:100%}.sheet-favoredGun .sheet-header *{margin:0;padding:0;text-align:center;width:100%}.sheet-favoredGun label.sheet-gunItem{align-items:center;display:flex;height:14.16%;margin:0;padding:0;width:100%}.sheet-favoredGun .sheet-gunItem *{display:inline-block;font-size:small;margin:0;padding:0;vertical-align:top}.sheet-favoredGun .sheet-gunItem img{height:auto;width:30%}.sheet-skills{border:1px solid #000;grid-column:5/span 10;grid-row:22/span 8}.sheet-skills .sheet-header{align-items:center;background-color:violet;display:flex;height:20%;justify-content:center;text-align:center}.sheet-skills .sheet-header h3{margin:0;padding:0}.sheet-skills .sheet-itemWrapper{align-content:center;display:flex;flex-wrap:wrap;height:80%;justify-content:space-around;vertical-align:middle;width:100%}.sheet-skills .sheet-item{border:1px solid #000;display:flex;flex-wrap:wrap;height:90%;text-align:center;vertical-align:middle;width:20%}.sheet-skills .sheet-item .sheet-itemHeader{display:flex;height:20%;justify-content:center;overflow:hidden;width:100%}.sheet-skills .sheet-item .sheet-itemHeader input{border:0;font-weight:700;height:100%;margin:0;padding:0;text-align:center;width:100%}.sheet-skills .sheet-item .sheet-content{display:flex;height:60%;margin:0;padding:0;width:100%}.sheet-skills .sheet-item .sheet-content textarea{font-size:small;height:100%;margin:0;padding:0;text-align:center}.sheet-skills .sheet-item .sheet-content textarea::-webkit-scrollbar{display:none}.sheet-skills .sheet-item .sheet-level{align-self:flex-end;display:flex;justify-content:center;width:100%}.sheet-bgtraits{align-content:space-between;border:1px solid #000;display:flex;flex-wrap:wrap;grid-column:5/span 10;grid-row:30/span 15;margin:0}.sheet-bgtraits .sheet-header{align-items:center;display:flex;height:-webkit-max-content;height:max-content;justify-content:center;overflow:hidden;width:100%}.sheet-bgtraits .sheet-header h3{margin:0;padding:0}.sheet-bgtraits .sheet-bgbox,.sheet-bgtraits .sheet-traitsbox{display:flex;height:40%;width:100%}.sheet-bgtraits .sheet-bgbox .sheet-bgbar,.sheet-bgtraits .sheet-traitsbox .sheet-traitsbar{align-items:center;background-color:#d3d3d3;display:flex;height:100%;justify-content:center;width:5%}.sheet-bgtraits .sheet-bgbox .sheet-bgbar p,.sheet-bgtraits .sheet-traitsbox .sheet-traitsbar p{-webkit-text-orientation:mixed;text-orientation:mixed;-webkit-transform:rotate(-180deg);transform:rotate(-180deg);-webkit-writing-mode:vertical-rl;-ms-writing-mode:tb-rl;writing-mode:vertical-rl}.sheet-bgtraits .sheet-bgbox .sheet-bginfo,.sheet-bgtraits .sheet-traitsbox .sheet-traitsinfo{display:flex;height:100%;justify-content:center;width:95%}.sheet-bgtraits .sheet-bgbox .sheet-bginfo textarea,.sheet-bgtraits .sheet-traitsbox .sheet-traitsinfo textarea{background-image:repeating-linear-gradient(#fff,#fff 1.5em,#d3d3d3 0,#d3d3d3 1.7em,#fff 0);border:0;height:100%;line-height:1.7em;margin:0;padding:0;width:95%}.sheet-archetypeFeat{border:1px solid #000;display:flex;flex-wrap:wrap;grid-column:5/span 10;grid-row:45/span 4;overflow:hidden}.sheet-archetypeFeat h3{height:30%;margin:0;padding:0;text-align:center;width:100%}.sheet-archetypeFeat textarea{height:70%;margin:0;padding:0;text-align:center;width:100%}.sheet-xpbar{display:flex;grid-column:1/span 14;grid-row:49/span 2;height:100%;width:100%}.sheet-xpbar .sheet-xpstuff{align-items:center;display:flex;flex-wrap:wrap;height:100%;justify-content:space-around;width:20%}.sheet-xpbar .sheet-xpstuff:after{background-color:#000;bottom:0;content:"";height:3px;left:0;-webkit-transform:scaleX(0);transform:scaleX(0);width:100%}.sheet-xpbar .sheet-xpstuff:hover:after{-webkit-transform:scaleX(1);transform:scaleX(1);transition-duration:.5s}.sheet-xpbar .sheet-xpstuff .sheet-lbel{margin:0;padding:0;text-align:center;width:40%}.sheet-xpbar .sheet-xpstuff input[type=number].sheet-content{border-left:0;border-right:0;border-top:0;height:70%;margin:0;padding:0;text-align:center;width:50%}.sheet-xpbar .sheet-xpstuff input[type=number].sheet-content::-webkit-inner-spin-button,.sheet-xpbar .sheet-xpstuff input[type=number].sheet-content::-webkit-outer-spin-button{display:none}.sheet-xpbar .sheet-bar{background-color:beige;display:flex;height:100%;overflow:hidden;width:80%}.sheet-xpbar .sheet-bar div{background-color:#000}.sheet-App{border:1px solid #000;font-family:Konexy,Times New Roman,Times,serif;height:1320px;width:1020px}p{font-family:Konexy,Times New Roman,Times,serif!important;line-height:unset!important}input:disabled{background-color:inherit;color:#000}
+.sheet-modifier {
+    border: 2px solid #000;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    float: right;
+    margin: 0;
+    max-width: 50px;
+    min-height: 30px;
+    min-width: 40px;
+    vertical-align: bottom
+}
+
+.sheet-modifier p.sheet-small {
+    font-size: 10px;
+    margin: 0;
+    max-height: 40%;
+    padding: 0;
+    width: 100%
+}
+
+.sheet-modifier .sheet-mod {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 60%;
+    width: 100%
+}
+
+.sheet-modifier .sheet-mod input[type=number] {
+    border: 0;
+    font-size: x-large;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%
+}
+
+.sheet-modifier .sheet-mod input[type=number]::-webkit-inner-spin-button,
+.sheet-modifier .sheet-mod input[type=number]::-webkit-outer-spin-button {
+    display: none
+}
+
+.sheet-largeModifier {
+    align-content: center;
+    border: 2px solid #000;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 60px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 60px
+}
+
+.sheet-largeModifier div.sheet-small {
+    display: flex;
+    max-height: 30%;
+    width: 100%
+}
+
+.sheet-largeModifier .sheet-small p {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    width: 100%
+}
+
+.sheet-largeModifier div.sheet-mod {
+    display: flex;
+    max-height: 100%;
+    min-height: 70%;
+    width: 100%
+}
+
+.sheet-largeModifier .sheet-mod input[type=number] {
+    border: 0;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%
+}
+
+.sheet-largeModifier .sheet-mod input[type=number]::-webkit-inner-spin-button,
+.sheet-largeModifier .sheet-mod input[type=number]::-webkit-outer-spin-button {
+    display: none
+}
+
+.sheet-longModifier {
+    align-items: center;
+    border: 1px solid #000;
+    display: flex;
+    height: 60px;
+    width: 60px
+}
+
+.sheet-longModifier .sheet-small {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    width: 50%
+}
+
+.sheet-longModifier input[type=number].sheet-mod {
+    border: 0;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 50%
+}
+
+.sheet-longModifier input[type=number].sheet-mod::-webkit-inner-spin-button,
+.sheet-longModifier input[type=number].sheet-mod::-webkit-outer-spin-button {
+    display: none
+}
+
+#sheet-header {
+    display: flex;
+    flex-wrap: wrap;
+    height: 20%
+}
+
+#sheet-header .sheet-item {
+    background-color: #add8e6;
+    border: 2px solid #000;
+    display: flex;
+    height: 75px;
+    overflow: hidden
+}
+
+#sheet-header .sheet-item .sheet-box_label {
+    align-self: flex-start;
+    justify-self: flex-start;
+    margin: 0;
+    width: 20%
+}
+
+#sheet-header .sheet-item .sheet-main_content {
+    align-self: center;
+    justify-self: flex-start
+}
+
+#sheet-header .sheet-item .sheet-main_content img {
+    display: flex;
+    height: 100%;
+    margin: 0;
+    width: 100%
+}
+
+#sheet-header .sheet-item .sheet-main_content input {
+    background-color: inherit;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    font-size: inherit;
+    height: 1.5em;
+    width: 80%
+}
+
+#sheet-header .sheet-row {
+    display: flex;
+    height: 33.3%;
+    width: 100%
+}
+
+#sheet-header .sheet-arch,
+#sheet-header .sheet-bg,
+#sheet-header .sheet-class,
+#sheet-header .sheet-name {
+    display: flex;
+    height: 100%;
+    width: 40%
+}
+
+#sheet-header .sheet-lvl,
+#sheet-header .sheet-title {
+    display: flex;
+    height: 100%;
+    width: 20%
+}
+
+#sheet-header .sheet-skill {
+    display: flex;
+    height: 100%;
+    width: 100%
+}
+
+#sheet-header .sheet-skill textarea.sheet-last {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 75%
+}
+
+#sheet-header .sheet-skill textarea.sheet-last::-webkit-scrollbar {
+    display: none
+}
+
+#sheet-header .sheet-skill .sheet-mod_wrapper {
+    align-items: flex-end;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    width: 5%
+}
+
+#sheet-header .sheet-skill .sheet-mod_wrapper .sheet-mod {
+    height: 50%;
+    width: 100%
+}
+
+.sheet-body {
+    grid-row-gap: .5%;
+    grid-column-gap: .5%;
+    border: 2px solid #000;
+    -webkit-column-gap: .5%;
+    column-gap: .5%;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fit, 6.16%);
+    grid-template-rows: repeat(auto-fit, 1.5%);
+    height: 80%;
+    row-gap: .5%
+}
+
+.sheet-smallAttr {
+    border: 2px solid #000;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: span 2;
+    grid-row: span 4;
+    overflow: hidden
+}
+
+.sheet-smallAttr .sheet-header {
+    border-bottom: 1px solid #000;
+    height: 30%;
+    margin: 0;
+    text-align: center;
+    width: 100%
+}
+
+.sheet-smallAttr .sheet-contentRow {
+    align-items: center;
+    display: flex;
+    height: 70%;
+    justify-content: space-around;
+    width: 100%
+}
+
+.sheet-smallAttr input[type=number].sheet-value {
+    border: 0;
+    font-size: larger;
+    text-align: center;
+    width: 50%
+}
+
+.sheet-smallAttr input[type=number].sheet-value::-webkit-inner-spin-button,
+.sheet-smallAttr input[type=number].sheet-value::-webkit-outer-spin-button {
+    display: none
+}
+
+.sheet-smallAttr .sheet-attr_mod {
+    display: inline;
+    vertical-align: middle
+}
+
+.sheet-gunBar {
+    border: 2px solid #000;
+    display: block;
+    grid-column: span 1;
+    grid-row: span 15;
+    overflow: hidden;
+    -webkit-transform: translateX(33.3%);
+    transform: translateX(33.3%);
+    width: 66.6%
+}
+
+.sheet-gunBar p {
+    overflow: visible;
+    text-align: center;
+    -webkit-transform: rotate(-90deg) translateX(-150%) translateY(-50%);
+    transform: rotate(-90deg) translateX(-150%) translateY(-50%);
+    width: -webkit-max-content;
+    width: max-content
+}
+
+.sheet-longAttrHeader {
+    align-items: center;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    border-top: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    width: 136px
+}
+
+.sheet-oneRow {
+    grid-row: span 2;
+    height: 33px;
+    text-align: center
+}
+
+.sheet-oneRow,
+.sheet-twoRow {
+    grid-column: span 2;
+    margin: 0 auto;
+    padding: 0 auto
+}
+
+.sheet-twoRow {
+    grid-row: span 4
+}
+
+.sheet-longAttr {
+    align-items: center;
+    grid-column: span 4;
+    grid-row: span 4
+}
+
+.sheet-longAttr,
+.sheet-mainAndLabelBox {
+    border: 1px solid #000;
+    display: flex;
+    height: 100%;
+    justify-content: center
+}
+
+.sheet-mainAndLabelBox {
+    flex-wrap: wrap;
+    width: 100%
+}
+
+.sheet-mainAndLabelBox input[type=number].sheet-main {
+    border: 0;
+    font-size: 25px;
+    font-weight: 700;
+    height: 66.6%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%
+}
+
+.sheet-mainAndLabelBox input[type=number].sheet-main::-webkit-inner-spin-button,
+.sheet-mainAndLabelBox input[type=number].sheet-main::-webkit-outer-spin-button {
+    display: none
+}
+
+.sheet-mainAndLabelBox .sheet-lbel {
+    font-size: 8px;
+    height: 33.3%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%
+}
+
+.sheet-health {
+    grid-column: span 4;
+    grid-row: span 4
+}
+
+.sheet-headerCurMaxMod {
+    border: 1px solid #000;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: flex-start;
+    overflow: hidden;
+    width: 100%
+}
+
+.sheet-headerCurMaxMod .sheet-header {
+    height: 30%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%
+}
+
+.sheet-headerCurMaxMod .sheet-contentRow {
+    display: flex;
+    height: 70%;
+    justify-content: flex-start;
+    width: 100%
+}
+
+.sheet-headerCurMaxMod .sheet-current,
+.sheet-headerCurMaxMod .sheet-max {
+    display: flex;
+    width: 40%
+}
+
+.sheet-headerCurMaxMod .sheet-mod {
+    display: flex;
+    width: 20%
+}
+
+.sheet-checks {
+    border: 1px solid #000;
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: span 6;
+    grid-row: span 15
+}
+
+.sheet-checks .sheet-header {
+    background-color: azure;
+    border-bottom: 1px solid #000;
+    height: -webkit-min-content;
+    height: min-content;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%
+}
+
+.sheet-checksItem {
+    align-items: center;
+    display: flex;
+    height: 15%;
+    justify-content: space-between;
+    width: 100%
+}
+
+.sheet-checksItem .sheet-checksItemTitle {
+    width: 20%
+}
+
+.sheet-checksItem .sheet-val1,
+.sheet-checksItem .sheet-val2,
+.sheet-checksItem .sheet-val3 {
+    height: 80%
+}
+
+.sheet-melee {
+    border: 1px solid #000;
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: span 4;
+    grid-row: span 4
+}
+
+.sheet-melee .sheet-header {
+    height: 30%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%
+}
+
+.sheet-melee .sheet-row1 {
+    display: flex;
+    height: 70%;
+    overflow: hidden;
+    width: 100%
+}
+
+.sheet-melee .sheet-die {
+    display: flex;
+    height: 100%;
+    width: 80%
+}
+
+.sheet-melee .sheet-die select {
+    border: 0;
+    font-size: large;
+    font-weight: 700;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%
+}
+
+.sheet-melee .sheet-dmgmd {
+    display: flex;
+    height: 100%;
+    width: 20%
+}
+
+.sheet-shields {
+    border: 1px solid #000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: span 4;
+    grid-row: span 7;
+    overflow: hidden
+}
+
+.sheet-shields .sheet-row1 {
+    border-bottom: 1px solid #000;
+    height: 50%;
+    width: 100%
+}
+
+.sheet-shields .sheet-row2 {
+    flex-wrap: wrap;
+    height: 50%;
+    justify-content: flex-start;
+    width: 100%
+}
+
+.sheet-shields .sheet-shieldInput {
+    align-items: center;
+    display: flex;
+    height: 50%;
+    justify-content: flex-start;
+    overflow: hidden
+}
+
+.sheet-shields .sheet-shieldInput h5,
+.sheet-shields .sheet-shieldInput p {
+    font-size: smaller;
+    width: 35%
+}
+
+.sheet-shields .sheet-shieldInput textarea {
+    font-size: smaller;
+    height: 75%;
+    margin: 0;
+    padding: 0;
+    width: 65%
+}
+
+.sheet-gold {
+    border: 1px solid #000;
+    grid-column: span 4;
+    grid-row: span 3;
+    overflow: hidden
+}
+
+.sheet-gold div.sheet-header {
+    align-items: center;
+    background-color: gray;
+    display: inline-flex;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    width: -webkit-max-content;
+    width: max-content;
+    width: 15%
+}
+
+.sheet-gold .sheet-value {
+    display: inline-flex;
+    float: right;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 85%
+}
+
+.sheet-gold .sheet-value input[type=number] {
+    border: 0;
+    font-size: x-large;
+    height: 100%;
+    text-align: right;
+    width: 100%
+}
+
+.sheet-BARank {
+    border: 1px solid #000;
+    display: flex;
+    grid-column: span 4;
+    grid-row: span 4;
+    overflow: hidden
+}
+
+.sheet-BARank div.sheet-header {
+    border-right: 1px solid #000;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 50%
+}
+
+.sheet-BARank div.sheet-header h3 {
+    align-self: flex-start;
+    background-color: grey;
+    display: block;
+    height: 30%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    width: 100%
+}
+
+.sheet-BARank div.sheet-header input[type=number] {
+    align-self: flex-end;
+    border: 0;
+    display: block;
+    font-size: 2em;
+    font-weight: 700;
+    height: 70%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    width: 80%
+}
+
+.sheet-BARank div.sheet-tokens {
+    border: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    width: 50%
+}
+
+.sheet-BARank div.sheet-tokens p {
+    height: 30%;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    width: 100%
+}
+
+.sheet-BARank div.sheet-tokens input[type=number] {
+    border: 0;
+    font-size: 2em;
+    font-weight: 700;
+    height: 70%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    width: 80%
+}
+
+.sheet-grenades {
+    align-items: flex-start;
+    border: 1px solid #000;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: smaller;
+    grid-column: span 4;
+    grid-row: 18/span 9
+}
+
+.sheet-grenades .sheet-header {
+    background-color: #f08080;
+    height: 10%;
+    overflow: hidden;
+    width: 100%
+}
+
+.sheet-grenades .sheet-header h3 {
+    margin: 0;
+    padding: 0;
+    text-align: center
+}
+
+.sheet-grenades .sheet-row1 {
+    display: flex;
+    height: 35%;
+    justify-content: flex-start;
+    width: 100%
+}
+
+.sheet-grenades .sheet-row1 .sheet-damage,
+.sheet-grenades .sheet-row1 .sheet-type,
+.sheet-grenades .sheet-row2 .sheet-current,
+.sheet-grenades .sheet-row2 .sheet-info,
+.sheet-grenades .sheet-row2 .sheet-max {
+    border: 1px solid #000;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+    overflow: hidden
+}
+
+.sheet-grenades .sheet-row1 .sheet-type {
+    width: 60%
+}
+
+.sheet-grenades .sheet-row1 .sheet-damage {
+    width: 40%
+}
+
+.sheet-grenades .sheet-row1 .sheet-damage input[type=number],
+.sheet-grenades .sheet-row1 .sheet-type input[type=text] {
+    border: 0;
+    border-bottom: 1px solid #000;
+    font-size: large;
+    height: 50%;
+    text-align: center;
+    width: 80%
+}
+
+.sheet-grenades .sheet-row2 {
+    display: flex;
+    height: 50%;
+    justify-content: flex-start
+}
+
+.sheet-grenades .sheet-row2 .sheet-info {
+    width: 60%
+}
+
+.sheet-grenades .sheet-row2 .sheet-info p {
+    height: 20%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%
+}
+
+.sheet-grenades .sheet-row2 .sheet-info textarea {
+    border: 0;
+    border-bottom: 1px solid #000;
+    font-size: small;
+    height: 80%;
+    margin: 0;
+    padding: 0;
+    width: 80%
+}
+
+.sheet-grenades .sheet-row2 .sheet-current,
+.sheet-grenades .sheet-row2 .sheet-max {
+    width: 20%
+}
+
+.sheet-grenades .sheet-row2 .sheet-current p,
+.sheet-grenades .sheet-row2 .sheet-max p {
+    font-size: 70%
+}
+
+.sheet-grenades .sheet-row2 .sheet-current input[type=number],
+.sheet-grenades .sheet-row2 .sheet-max input[type=number] {
+    border: 0;
+    border-bottom: 1px solid #000;
+    font-size: large;
+    height: 60%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 90%
+}
+
+.sheet-potions {
+    border: 1px solid #000;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: smaller;
+    font-style: normal;
+    grid-column: span 4;
+    grid-row: 27/span 9;
+    justify-content: center;
+    overflow: hidden
+}
+
+.sheet-potions .sheet-header {
+    background-color: #fff8dc;
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+
+.sheet-potions .sheet-header h3 {
+    margin: 0;
+    padding: 0
+}
+
+.sheet-potions .sheet-txtbox {
+    align-items: center;
+    display: flex;
+    height: 12.5%;
+    justify-content: center;
+    width: 95%
+}
+
+.sheet-potions .sheet-txtbox input[type=text] {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid grey;
+    font-size: large;
+    height: 100%;
+    width: 100%
+}
+
+.sheet-potions .sheet-txtbox.sheet-lockable {
+    background-image: url(data:image/png;base64,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);
+    background-repeat: no-repeat;
+    background-size: auto 100%
+}
+
+.sheet-favoredGun {
+    align-content: space-between;
+    border: 1px solid #000;
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: span 4;
+    grid-row: 36/span 13
+}
+
+.sheet-favoredGun .sheet-header {
+    background-color: #ffebcd;
+    display: flex;
+    height: 10%;
+    width: 100%
+}
+
+.sheet-favoredGun .sheet-header * {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%
+}
+
+.sheet-favoredGun label.sheet-gunItem {
+    align-items: center;
+    display: flex;
+    height: 14.16%;
+    margin: 0;
+    padding: 0;
+    width: 100%
+}
+
+.sheet-favoredGun .sheet-gunItem * {
+    display: inline-block;
+    font-size: small;
+    margin: 0;
+    padding: 0;
+    vertical-align: top
+}
+
+.sheet-favoredGun .sheet-gunItem img {
+    height: auto;
+    width: 30%
+}
+
+.sheet-skills {
+    border: 1px solid #000;
+    grid-column: 5/span 10;
+    grid-row: 22/span 8
+}
+
+.sheet-skills .sheet-header {
+    align-items: center;
+    background-color: violet;
+    display: flex;
+    height: 20%;
+    justify-content: center;
+    text-align: center
+}
+
+.sheet-skills .sheet-header h3 {
+    margin: 0;
+    padding: 0
+}
+
+.sheet-skills .sheet-itemWrapper {
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: 80%;
+    justify-content: space-around;
+    vertical-align: middle;
+    width: 100%
+}
+
+.sheet-skills .sheet-item {
+    border: 1px solid #000;
+    display: flex;
+    flex-wrap: wrap;
+    height: 90%;
+    text-align: center;
+    vertical-align: middle;
+    width: 20%
+}
+
+.sheet-skills .sheet-item .sheet-itemHeader {
+    display: flex;
+    height: 20%;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%
+}
+
+.sheet-skills .sheet-item .sheet-itemHeader input {
+    border: 0;
+    font-weight: 700;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%
+}
+
+.sheet-skills .sheet-item .sheet-content {
+    display: flex;
+    height: 60%;
+    margin: 0;
+    padding: 0;
+    width: 100%
+}
+
+.sheet-skills .sheet-item .sheet-content textarea {
+    font-size: small;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center
+}
+
+.sheet-skills .sheet-item .sheet-content textarea::-webkit-scrollbar {
+    display: none
+}
+
+.sheet-skills .sheet-item .sheet-level {
+    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+
+.sheet-bgtraits {
+    align-content: space-between;
+    border: 1px solid #000;
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 5/span 10;
+    grid-row: 30/span 15;
+    margin: 0
+}
+
+.sheet-bgtraits .sheet-header {
+    align-items: center;
+    display: flex;
+    height: -webkit-max-content;
+    height: max-content;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%
+}
+
+.sheet-bgtraits .sheet-header h3 {
+    margin: 0;
+    padding: 0
+}
+
+.sheet-bgtraits .sheet-bgbox,
+.sheet-bgtraits .sheet-traitsbox {
+    display: flex;
+    height: 40%;
+    width: 100%
+}
+
+.sheet-bgtraits .sheet-bgbox .sheet-bgbar,
+.sheet-bgtraits .sheet-traitsbox .sheet-traitsbar {
+    align-items: center;
+    background-color: #d3d3d3;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 5%
+}
+
+.sheet-bgtraits .sheet-bgbox .sheet-bgbar p,
+.sheet-bgtraits .sheet-traitsbox .sheet-traitsbar p {
+    -webkit-text-orientation: mixed;
+    text-orientation: mixed;
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl
+}
+
+.sheet-bgtraits .sheet-bgbox .sheet-bginfo,
+.sheet-bgtraits .sheet-traitsbox .sheet-traitsinfo {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 95%
+}
+
+.sheet-bgtraits .sheet-bgbox .sheet-bginfo textarea,
+.sheet-bgtraits .sheet-traitsbox .sheet-traitsinfo textarea {
+    background-image: repeating-linear-gradient(#fff, #fff 1.5em, #d3d3d3 0, #d3d3d3 1.7em, #fff 0);
+    border: 0;
+    height: 100%;
+    line-height: 1.7em;
+    margin: 0;
+    padding: 0;
+    width: 95%
+}
+
+.sheet-archetypeFeat {
+    border: 1px solid #000;
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 5/span 10;
+    grid-row: 45/span 4;
+    overflow: hidden
+}
+
+.sheet-archetypeFeat h3 {
+    height: 30%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%
+}
+
+.sheet-archetypeFeat textarea {
+    height: 70%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%
+}
+
+.sheet-xpbar {
+    display: flex;
+    grid-column: 1/span 14;
+    grid-row: 49/span 2;
+    height: 100%;
+    justify-content: space-between;
+    width: 100%
+}
+
+.sheet-xpbar .sheet-xpstuff {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-around;
+    width: 20%
+}
+
+.sheet-xpbar .sheet-xpstuff:after {
+    background-color: #000;
+    bottom: 0;
+    content: "";
+    height: 3px;
+    left: 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    width: 100%
+}
+
+.sheet-xpbar .sheet-xpstuff:hover:after {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    transition-duration: .5s
+}
+
+.sheet-xpbar .sheet-xpstuff .sheet-lbel {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 40%
+}
+
+.sheet-xpbar .sheet-xpstuff .sheet-curMax {
+    display: flex;
+    justify-content: space-between;
+    width: 100%
+}
+
+.sheet-xpbar .sheet-xpstuff label.sheet-content {
+    display: flex;
+    height: 70%;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    width: 45%
+}
+
+.sheet-xpbar .sheet-xpstuff .sheet-content p {
+    margin: 0;
+    padding: 0;
+    width: 50%
+}
+
+.sheet-xpbar .sheet-xpstuff .sheet-content input[type=number] {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 50%
+}
+
+.sheet-xpbar .sheet-xpstuff .sheet-content input[type=number]::-webkit-inner-spin-button,
+.sheet-xpbar .sheet-xpstuff .sheet-content input[type=number]::-webkit-outer-spin-button {
+    display: none
+}
+
+.sheet-xpbar .sheet-barstuff {
+    display: flex;
+    width: 75%
+}
+
+.sheet-xpbar .sheet-barstuff input.sheet-hidden {
+    display: none
+}
+
+.sheet-xpbar .sheet-barstuff div.sheet-bar {
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+    width: 100%
+}
+
+.sheet-xpbar .sheet-barstuff input[value="0"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 100%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="1"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 99%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="2"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 98%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="3"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 97%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="4"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 96%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="5"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 95%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="6"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 94%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="7"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 93%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="8"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 92%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="9"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 91%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="10"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 90%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="11"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 89%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="12"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 88%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="13"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 87%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="14"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 86%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="15"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 85%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="16"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 84%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="17"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 83%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="18"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 82%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="19"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 81%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="20"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 80%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="21"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 79%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="22"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 78%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="23"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 77%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="24"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 76%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="25"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 75%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="26"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 74%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="27"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 73%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="28"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 72%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="29"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 71%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="30"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 70%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="31"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 69%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="32"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 68%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="33"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 67%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="34"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 66%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="35"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 65%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="36"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 64%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="37"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 63%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="38"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 62%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="39"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 61%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="40"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 60%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="41"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 59%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="42"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 58%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="43"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 57%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="44"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 56%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="45"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 55%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="46"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 54%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="47"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 53%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="48"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 52%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="49"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 51%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="50"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 50%, #000 0, #000 0)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="51"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 49%, #000 0, #000 51%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="52"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 48%, #000 0, #000 52%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="53"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 47%, #000 0, #000 53%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="54"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 46%, #000 0, #000 54%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="55"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 45%, #000 0, #000 55%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="56"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 44%, #000 0, #000 56%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="57"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 43%, #000 0, #000 57%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="58"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 42%, #000 0, #000 58%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="59"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 41%, #000 0, #000 59%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="60"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 40%, #000 0, #000 60%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="61"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 39%, #000 0, #000 61%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="62"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 38%, #000 0, #000 62%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="63"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 37%, #000 0, #000 63%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="64"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 36%, #000 0, #000 64%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="65"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 35%, #000 0, #000 65%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="66"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 34%, #000 0, #000 66%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="67"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 33%, #000 0, #000 67%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="68"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 32%, #000 0, #000 68%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="69"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 31%, #000 0, #000 69%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="70"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 30%, #000 0, #000 70%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="71"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 29%, #000 0, #000 71%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="72"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 28%, #000 0, #000 72%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="73"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 27%, #000 0, #000 73%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="74"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 26%, #000 0, #000 74%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="75"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 25%, #000 0, #000 75%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="76"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 24%, #000 0, #000 76%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="77"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 23%, #000 0, #000 77%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="78"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 22%, #000 0, #000 78%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="79"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 21%, #000 0, #000 79%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="80"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 20%, #000 0, #000 80%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="81"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 19%, #000 0, #000 81%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="82"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 18%, #000 0, #000 82%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="83"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 17%, #000 0, #000 83%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="84"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 16%, #000 0, #000 84%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="85"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 15%, #000 0, #000 85%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="86"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 14%, #000 0, #000 86%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="87"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 13%, #000 0, #000 87%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="88"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 12%, #000 0, #000 88%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="89"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 11%, #000 0, #000 89%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="90"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 10%, #000 0, #000 90%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="91"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 9%, #000 0, #000 91%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="92"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 8%, #000 0, #000 92%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="93"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 7%, #000 0, #000 93%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="94"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 6%, #000 0, #000 94%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="95"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 5%, #000 0, #000 95%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="96"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 4%, #000 0, #000 96%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="97"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 3%, #000 0, #000 97%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="98"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 2%, #000 0, #000 98%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="99"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 1%, #000 0, #000 99%)
+}
+
+.sheet-xpbar .sheet-barstuff input[value="100"].sheet-valholder~div.sheet-bar {
+    background: linear-gradient(270deg, #fff 0, #000 0, #000)
+}
+
+.sheet-App {
+    border: 1px solid #000;
+    font-family: Konexy, Times New Roman, Times, serif;
+    height: 1320px;
+    width: 1020px
+}
+
+p {
+    font-family: Konexy, Times New Roman, Times, serif !important;
+    line-height: unset !important
+}
+
+input:disabled {
+    background-color: inherit;
+    color: #000
+}

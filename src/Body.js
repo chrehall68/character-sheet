@@ -73,7 +73,6 @@ class LongAttr extends React.Component {
         let calc_name = "";
         this.small_descs.forEach((val) => { calc_name += "(@{" + val.replace(" ", "_") + this.number + "})+" })
         calc_name = calc_name.substring(0, calc_name.lastIndexOf("+"));
-        console.log(calc_name);
         this.items.push(<ModifierBox key={this.items.length} style={{ width: "40px", height: "40 px" }} small_desc="" name={"attr_calculated" + this.number} modifier={calc_name} />)
     }
 
@@ -131,7 +130,6 @@ class MainAndLabelBox extends React.Component {
         if (typeof (this.props.className) == "string") this.className += " " + this.props.className
         this.editable = this.props.editable || false;
         this.inputName = this.props.inputName || "";
-        console.log("editable? " + this.editable)
     }
 
     render() {
@@ -425,11 +423,14 @@ class XPBar extends React.Component {
             <div className='sheet-xpstuff' >
                 <h5 className='sheet-lbel'>XP Bar</h5>
                 <div className="sheet-curMax">
-                    <input className="sheet-content" name="attr_curxp" type="number" value={this.state.xp} onChange={this.updateBar} />
-                    <input className="sheet-content" name="attr_curxp_max" type="number" value={this.state.maxXp} onChange={this.updateBarMax} />
+                    <label className="sheet-content" ><p>Cur:</p><input name="attr_curxp" type="number" value={this.state.xp} onChange={this.updateBar} /></label>
+                    <label className='sheet-content' ><p>Max:</p><input name="attr_maxxp" type="number" value={this.state.maxXp} onChange={this.updateBarMax} /></label>
                 </div>
             </div>
-            <div className='sheet-bar' key={[this.state.xp, this.state.maxXp]} style={{ "background": "linear-gradient(to left, white " + (100 - parseInt(this.state.xp / this.state.maxXp * 100)) + "%, #255200 5%, #449600 95%, #adfc03 100%)" }} />
+            <div className="sheet-barstuff">
+                <input name="attr_curxpholder" type='hidden' disabled='true' defaultValue={"(@{curxpval})"} className="sheet-valholder sheet-hidden" />
+                <div className='sheet-bar' key={[this.state.xp, this.state.maxXp]} />
+            </div>
         </div>
     }
 
