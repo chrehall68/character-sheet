@@ -39,7 +39,8 @@
               class="sheet-main_content sheet-last" style="resize: none;"></textarea>
             <div class="sheet-mod_wrapper">
               <div class="sheet-mod sheet-modifier">
-                <div class="sheet-mod"><input name="" type="number" disabled="" value="1"></div>
+                <div class="sheet-mod"><input name="attr_mstmodHeader" type="number" disabled="" value="(@{mst_mod})">
+                </div>
                 <p class="sheet-small">MST</p>
               </div>
             </div>
@@ -86,8 +87,7 @@
         <h2 class="sheet-twoRow sheet-longAttrHeader">Initiative</h2>
         <div class="sheet-longAttr">
           <div class="sheet-largeModifier">
-            <div class="sheet-mod"><input type="number" disabled="" name="attr_Baddass_Rank0" value="(@{BARank})">
-            </div>
+            <div class="sheet-mod"><input type="number" disabled="" name="attr_Baddass_Rank0" value="(@{BARank})"></div>
             <div class="sheet-small">
               <p>Baddass Rank</p>
             </div>
@@ -366,15 +366,13 @@
             <div class="sheet-item">
               <div class="sheet-itemHeader"><input type="text" name="attr_skillname_1" value="Quick Draw"></div>
               <div class="sheet-content"><textarea name="attr_skillcontent_1"
-                  style="resize: none;">+2 Initiative Mod/SL.,[object Object],+1/SL on Interact Checks</textarea>
-              </div>
+                  style="resize: none;">+2 Initiative Mod/SL.,[object Object],+1/SL on Interact Checks</textarea></div>
               <div class="sheet-level"><input type="checkbox" title="level1" name="attr_skillLevel1_1" value="1"><input
                   type="checkbox" title="level3" name="attr_skillLevel1_2" value="1"><input type="checkbox"
                   title="level2" name="attr_skillLevel1_3" value="1"></div>
             </div>
             <div class="sheet-item">
-              <div class="sheet-itemHeader"><input type="text" name="attr_skillname_2" value="Filled to The Brim">
-              </div>
+              <div class="sheet-itemHeader"><input type="text" name="attr_skillname_2" value="Filled to The Brim"></div>
               <div class="sheet-content"><textarea name="attr_skillcontent_2"
                   style="resize: none;">Increase max grenades by 1/SL. Increase max potions by 1+MST Mod</textarea>
               </div>
@@ -466,7 +464,6 @@
       </div>
     </div>
   </div>
-
 
   <script type="text/worker">
     on("sheet:opened change:curxp change:maxxp", function() {  

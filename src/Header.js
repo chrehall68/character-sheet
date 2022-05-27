@@ -28,7 +28,7 @@ export class Header extends React.Component {
                 <div className="sheet-row">
                     <div className="sheet-title sheet-item">
                         <h1 className="sheet-main_content">
-                            <img src={"https://raw.githubusercontent.com/chrehall68/character-sheet/main/public/images/bnblogo.png"} alt={"help"}/>
+                            <img src={"https://raw.githubusercontent.com/chrehall68/character-sheet/main/public/images/bnblogo.png"} alt={"help"} />
                         </h1>
                     </div>
                     <Item box_label="Archetype: " main_content="Enforcer" className="sheet-arch" />
@@ -44,7 +44,7 @@ export class Header extends React.Component {
                         <h3 className="sheet-box_label">Action Skill: </h3>
                         <textarea name='attr_action_skill' className="sheet-main_content sheet-last" style={{ "resize": "none" }} />
                         <div className="sheet-mod_wrapper">
-                            <ModifierBox modifier="+1" small_desc="MST" className="sheet-mod" />
+                            <ModifierBox name="attr_mstmodHeader" modifier="(@{mst_mod})" small_desc="MST" className="sheet-mod" />
                         </div>
                     </div>
                 </div>
